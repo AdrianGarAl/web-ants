@@ -1,0 +1,216 @@
+/* =========================
+   Home internal services
+   ========================= */
+
+.internal-services-home {
+  width: 100%;
+  margin: 2rem 0 0;
+  padding: 3rem 0;
+  overflow-x: clip;
+
+  background: #e6ecea  ;
+  background-color: #e6ecea  ;
+}
+
+.internal-services-home__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.internal-services-home__header {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.internal-services-home__header h2 {
+  margin: 0 0 1rem;
+
+  font-family: var(--font-heading, "Space Grotesk", sans-serif);
+  font-size: 2.5rem;
+  color: #000;
+}
+
+.internal-services-home__description p {
+  margin: 0.3rem 0;
+  color: #000;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem 2.6rem;
+  align-items: stretch;
+
+  padding: 2rem 0;
+}
+
+.service-card {
+  --svc-p: 0;
+  --svc-depth: 1;
+  --svc-hover-y: 0px;
+
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+
+  padding: 1.2rem 1.35rem;
+
+  background: #d4dbd9  ;
+  background-color: #d4dbd9  ;
+  border: 1px solid #000;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  opacity: calc(0.55 + (var(--svc-p) * 0.45));
+  will-change: transform, opacity;
+
+  transition:
+    opacity 0.2s linear,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.service-card:hover {
+  --svc-hover-y: -4px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.service-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.service-card img:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+.service-card p {
+  max-width: 100%;
+  margin: 0;
+
+  color: #000  ;
+  font-family: var(--font-body, "IBM Plex Sans", sans-serif);
+  font-size: 0.9rem;
+  line-height: 1.45;
+  text-align: center  ;
+  white-space: nowrap;
+}
+
+.home-internal-services-card-btn {
+  margin-top: 0.2rem;
+}
+
+.services-grid .service-card:nth-child(3n + 1) {
+  transform:
+    translateX(calc((-90px + (90px * var(--svc-p))) * var(--svc-depth)))
+    translateY(var(--svc-hover-y));
+}
+
+.services-grid .service-card:nth-child(3n + 2) {
+  transform: translateY(var(--svc-hover-y));
+}
+
+.services-grid .service-card:nth-child(3n) {
+  transform:
+    translateX(calc((90px - (90px * var(--svc-p))) * var(--svc-depth)))
+    translateY(var(--svc-hover-y));
+}
+
+.internal-services-home__note {
+  max-width: 800px;
+  margin: 0.1rem auto;
+  padding: 2rem;
+
+  border-radius: 12px;
+
+  text-align: center;
+}
+
+.internal-services-home__note p {
+  margin: 0.3rem 0;
+  color: #000;
+}
+
+.internal-services-home__note p:last-child {
+  margin-bottom: 1.5rem;
+}
+
+.internal-services-home__note a:not(.btn) {
+  color: #000;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .internal-services-home__inner {
+    max-width: 100%;
+  }
+
+  .services-grid {
+    width: min(760px, 100%);
+    margin: 0 auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-items: center;
+    gap: 1rem 6rem;
+  }
+
+  .service-card {
+    max-width: 330px;
+  }
+
+  .services-grid .service-card:nth-child(odd) {
+    transform:
+      translateX(calc((-90px + (90px * var(--svc-p))) * var(--svc-depth)))
+      translateY(var(--svc-hover-y));
+  }
+
+  .services-grid .service-card:nth-child(even) {
+    transform:
+      translateX(calc((90px - (90px * var(--svc-p))) * var(--svc-depth)))
+      translateY(var(--svc-hover-y));
+  }
+}
+
+@media (max-width: 768px) {
+  .internal-services-home {
+    padding: 3rem 0;
+  }
+
+  .internal-services-home__inner {
+    padding: 0 1.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    width: min(430px, 100%);
+    max-width: none;
+    justify-self: center;
+  }
+
+  .services-grid .service-card:nth-child(odd) {
+    transform:
+      translateX(calc((-90px + (90px * var(--svc-p))) * var(--svc-depth)))
+      translateY(var(--svc-hover-y));
+  }
+
+  .services-grid .service-card:nth-child(even) {
+    transform:
+      translateX(calc((90px - (90px * var(--svc-p))) * var(--svc-depth)))
+      translateY(var(--svc-hover-y));
+  }
+
+  .internal-services-home__note {
+    padding: 1.5rem;
+  }
+}

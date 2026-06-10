@@ -1,0 +1,37 @@
+/* =========================
+   Home about
+   ========================= */
+
+
+.home-about {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+
+.home-about__title {
+  margin: 2rem 0;
+  font-weight: 700;
+  font-family: var(--font-heading, "Space Grotesk", sans-serif);
+  color: #000;
+}
+
+
+.home-about__text {
+  font-family: var(--font-body, "IBM Plex Sans", sans-serif);
+  color: #000;
+}
+
+.home-about__text p {
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+.home-about__cta {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+

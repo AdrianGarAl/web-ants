@@ -1,0 +1,250 @@
+/* =========================
+   Gaia Lab hero
+   ========================= */
+
+#gaia-lab-hero {
+  --hero-bg-color: #19d88e;
+  --hero-image-width: min(506px, 84vw);
+}
+
+/* =========================
+   Gaia Lab intro
+   ========================= */
+
+.gaia-section {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.gaia-section__inner {
+  max-width: var(--gaia-section-inner-width, 1000px);
+  margin: 0 auto;
+  padding: var(--gaia-section-padding, 2.6rem 1.5rem);
+}
+
+.gaia-section__inner--center {
+  text-align: center;
+}
+
+.gaia-section__title {
+  margin: 0 0 1rem;
+  font-family: var(--font-heading, "Space Grotesk", sans-serif);
+  font-size: var(--gaia-section-title-size, 2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: lowercase;
+}
+
+.gaia-section__title--preserve-case {
+  text-transform: none;
+}
+
+.gaia-section__text,
+.gaia-block__content,
+.gaia-section__followup {
+  font-family: var(--font-body, "IBM Plex Sans", sans-serif);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.gaia-section__text p,
+.gaia-block__content p,
+.gaia-section__followup p {
+  margin: 0 0 1rem;
+}
+
+.gaia-section__text > :last-child,
+.gaia-block__content > :last-child,
+.gaia-section__followup > :last-child {
+  margin-bottom: 0;
+}
+
+.gaia-section--dark {
+  background: #132a25;
+  color: #e9efed;
+}
+
+.gaia-section--gray {
+  background: #e6ecea;
+  color: #000;
+}
+
+.gaia-section--fluor {
+  background: #19d88e;
+  color: #000;
+}
+
+.gaia-section--transparent,
+.gaia-section--default {
+  background: #f5f7f7;
+  color: #000;
+}
+
+.gaia-section--dark,
+.gaia-section--dark p,
+.gaia-section--dark h3,
+.gaia-section--dark h4,
+.gaia-section--dark strong,
+.gaia-section--dark a {
+  color: #e9efed;
+}
+
+.gaia-block + .gaia-block {
+  margin-top: 2.2rem;
+}
+
+.gaia-block__title {
+  margin: 1.6rem 0 0.75rem;
+  font-family: var(--font-heading, "Space Grotesk", sans-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.gaia-wireless-connectivity__inline-title {
+  margin-top: 0;
+}
+
+.gaia-wireless-connectivity__block-title--iot {
+  margin-bottom: 3rem;
+}
+
+.gaia-block__split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 440px);
+  gap: 2rem;
+  align-items: center;
+}
+
+.gaia-block--reverse .gaia-block__split {
+  grid-template-columns: minmax(300px, 440px) minmax(0, 1fr);
+}
+
+.gaia-block--reverse .gaia-block__media {
+  order: 1;
+}
+
+.gaia-block--reverse .gaia-block__content {
+  order: 2;
+}
+
+.gaia-section__followup {
+  margin-top: 4.2rem;
+}
+
+.gaia-media {
+  text-align: center;
+  margin-top: 1.2rem;
+}
+
+.gaia-block__media .gaia-media {
+  margin-top: 0;
+}
+
+.gaia-media img {
+  width: var(--gaia-media-width, auto);
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+.gaia-intro__inner {
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+}
+
+
+.gaia-intro__text {
+  line-height: 1.7;
+}
+
+.gaia-intro__text p {
+  margin: 0 0 1rem;
+}
+
+.gaia-intro__related-title {
+  margin-top: 0.95rem;
+  margin-bottom: 0.6rem;
+}
+
+.gaia-intro__related {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-bottom: 1rem;
+}
+
+.gaia-lab-intro-btn {
+  width: 190px;
+  min-height: 44px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border: 1.5px solid #fff;
+  border-radius: 999px;
+
+  color: #19d88e;
+  background: transparent;
+
+  font-family: var(--font-body, "IBM Plex Sans", sans-serif);
+  font-size: 15px;
+
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.gaia-lab-intro-btn:hover {
+  background: #19d88e;
+  border:none;
+  color: #132a25;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   Gaia Lab page tweaks
+   ========================= */
+
+.gaia-lab-page-body .main-footer {
+  margin-top: 0;
+}
+
+.gaia-lab-page .gaia-section--dark a:not(.gaia-lab-btn) {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .gaia-block__split,
+  .gaia-block--reverse .gaia-block__split {
+    grid-template-columns: 1fr;
+  }
+
+  .gaia-block--reverse .gaia-block__media,
+  .gaia-block--reverse .gaia-block__content {
+    order: initial;
+  }
+}
+
+@media (max-width: 768px) {
+  #gaia-lab-hero {
+    --hero-mobile-min-height: 320px;
+    --hero-mobile-max-height: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .gaia-section__inner {
+    padding: 2rem 1rem;
+  }
+
+  .gaia-section__title {
+    font-size: 1.65rem;
+  }
+}
