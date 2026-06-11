@@ -2,234 +2,234 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>about ants on ants</title>
-    <link>https://AdrianGarAl.github.io/web-ants/</link>
+    <link>https://adriangaral.github.io/web-ants/</link>
     <description>Recent content in about ants on ants</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 01 Jun 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://AdrianGarAl.github.io/web-ants/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://adriangaral.github.io/web-ants/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>6G-SOC</title>
-      <link>https://AdrianGarAl.github.io/web-ants/research-projects/6g-soc/</link>
+      <link>https://adriangaral.github.io/web-ants/research-projects/6g-soc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/research-projects/6g-soc/</guid>
+      <guid>https://adriangaral.github.io/web-ants/research-projects/6g-soc/</guid>
       <description></description>
     </item>
     <item>
       <title>Ad hoc and Sensor Networks</title>
-      <link>https://AdrianGarAl.github.io/web-ants/research-lines/ad-hoc-and-sensor-networks/</link>
+      <link>https://adriangaral.github.io/web-ants/research-lines/ad-hoc-and-sensor-networks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/research-lines/ad-hoc-and-sensor-networks/</guid>
+      <guid>https://adriangaral.github.io/web-ants/research-lines/ad-hoc-and-sensor-networks/</guid>
       <description>&lt;p&gt;Ad hoc networks consist of a number of devices equipped with one or more wireless interfaces, which cooperate to provide wireless communications among them. Nodes which are not in the radio range of each other use other intermediate nodes as relays to find multi-hop paths towards a destination.&lt;/p&gt;&#xA;&lt;p&gt;Unlike ad hoc networks, in sensor networks the devices are usually static. However, the way they work based on off, on and idle states, makes the topology variable. In addition, usually available resources are lesser, and the &lt;strong&gt;scalability of the solutions&lt;/strong&gt; becomes a very important factor. This creates the need for localized algorithms rather than global or centralized ones.&lt;/p&gt;</description>
     </item>
     <item>
       <title>ANTONIO SKARMETA</title>
-      <link>https://AdrianGarAl.github.io/web-ants/members/skarmeta/</link>
+      <link>https://adriangaral.github.io/web-ants/members/skarmeta/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/members/skarmeta/</guid>
+      <guid>https://adriangaral.github.io/web-ants/members/skarmeta/</guid>
       <description>&lt;p&gt;Antonio Skarmeta obtained his PhD in Computer Science in 1995 and has been a Professor of Telematics Engineering since 2009.&lt;/p&gt;&#xA;&lt;p&gt;He has served as Vice-Rector for Infrastructure at the Faculty and as Director of the Department of Information and Communications Engineering.&lt;/p&gt;&#xA;&lt;p&gt;He coordinates the PhD program in Advanced Information and Telematics Technologies and the European Projects Office at the University of Murcia.&lt;/p&gt;&#xA;&lt;p&gt;He currently leads the Intelligent Systems and Telematics research group and participates in scientific committees and European projects.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Context-Aware Adaptive Multimedia</title>
-      <link>https://AdrianGarAl.github.io/web-ants/research-lines/context-aware-adaptive-multimedia/</link>
+      <link>https://adriangaral.github.io/web-ants/research-lines/context-aware-adaptive-multimedia/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/research-lines/context-aware-adaptive-multimedia/</guid>
+      <guid>https://adriangaral.github.io/web-ants/research-lines/context-aware-adaptive-multimedia/</guid>
       <description>&lt;p&gt;Context Aware Adaptive applications are those who are able to modify and adapt their operation to their environment.&lt;/p&gt;&#xA;&lt;p&gt;In particular, adaptive multimedia applications are a subset of those applications, which are able to adapt their internal components (e.g. &lt;strong&gt;audio and video codecs, rates, etc.&lt;/strong&gt;) to maximize the user&amp;rsquo;s satisfaction in terms of perceived quality. To make that decision they use information from their environment called context.&lt;/p&gt;</description>
     </item>
     <item>
       <title>JORGE BERNAL</title>
-      <link>https://AdrianGarAl.github.io/web-ants/members/jorge-bernal/</link>
+      <link>https://adriangaral.github.io/web-ants/members/jorge-bernal/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/members/jorge-bernal/</guid>
+      <guid>https://adriangaral.github.io/web-ants/members/jorge-bernal/</guid>
       <description>&lt;p&gt;Jorge Bernal Bernabé holds an MSc, Master&amp;rsquo;s, and PhD in Computer Science, as well as an MBA from the University of Murcia (Spain). He was accredited as a Full Professor by ANECA in 2020 and received the Best Doctoral Thesis Award from the School of Computer Science in 2015.&lt;/p&gt;&#xA;&lt;p&gt;In 2017, he was awarded a postdoctoral research fellowship funded by INCIBE, and in 2019, an AXA Research Fund postdoctoral fellowship. Since February 2023, he has been a Full Professor in the Department of Information and Communications Engineering.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Nereidas</title>
-      <link>https://AdrianGarAl.github.io/web-ants/research-projects/nereidas/</link>
+      <link>https://adriangaral.github.io/web-ants/research-projects/nereidas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/research-projects/nereidas/</guid>
+      <guid>https://adriangaral.github.io/web-ants/research-projects/nereidas/</guid>
       <description></description>
     </item>
     <item>
       <title>Osiris</title>
-      <link>https://AdrianGarAl.github.io/web-ants/research-projects/osiris/</link>
+      <link>https://adriangaral.github.io/web-ants/research-projects/osiris/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/research-projects/osiris/</guid>
+      <guid>https://adriangaral.github.io/web-ants/research-projects/osiris/</guid>
       <description></description>
     </item>
     <item>
       <title>Policy-Based Dynamic Management</title>
-      <link>https://AdrianGarAl.github.io/web-ants/research-lines/policy-based-dynamic-management/</link>
+      <link>https://adriangaral.github.io/web-ants/research-lines/policy-based-dynamic-management/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/research-lines/policy-based-dynamic-management/</guid>
+      <guid>https://adriangaral.github.io/web-ants/research-lines/policy-based-dynamic-management/</guid>
       <description>&lt;p&gt;Network, service and application management today faces numerous challenges, ones that older ways of doing things cannot solve. The concept of &lt;strong&gt;policy-based management (PBM)&lt;/strong&gt; addresses some of these problems and offers possible solutions.&lt;/p&gt;&#xA;&lt;p&gt;It provides a system-wide view of the network and its services and applications, and shifts the emphasis of network management and monitoring away from specific devices and interfaces towards &lt;strong&gt;users and applications.&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>6G·CoCoNet</title>
-      <link>https://AdrianGarAl.github.io/web-ants/research-projects/6gcoconet/</link>
+      <link>https://adriangaral.github.io/web-ants/research-projects/6gcoconet/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/research-projects/6gcoconet/</guid>
+      <guid>https://adriangaral.github.io/web-ants/research-projects/6gcoconet/</guid>
       <description></description>
     </item>
     <item>
       <title>Intelligent Transportation Systems</title>
-      <link>https://AdrianGarAl.github.io/web-ants/research-lines/intelligent-transportation-systems/</link>
+      <link>https://adriangaral.github.io/web-ants/research-lines/intelligent-transportation-systems/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/research-lines/intelligent-transportation-systems/</guid>
+      <guid>https://adriangaral.github.io/web-ants/research-lines/intelligent-transportation-systems/</guid>
       <description>&lt;p&gt;The work on Intelligent Transportation Systems (ITS) is especially focused on &lt;strong&gt;navigation systems&lt;/strong&gt; in general and location-based services, GNSS and inertial navigation, data fusion in road vehicle applications, mobile communications, vehicle communication, and electronic vehicle identification.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Gaia·6g</title>
-      <link>https://AdrianGarAl.github.io/web-ants/research-projects/gaia6g/</link>
+      <link>https://adriangaral.github.io/web-ants/research-projects/gaia6g/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/research-projects/gaia6g/</guid>
+      <guid>https://adriangaral.github.io/web-ants/research-projects/gaia6g/</guid>
       <description></description>
     </item>
     <item>
       <title>Optimization and Intelligent Data Analysis</title>
-      <link>https://AdrianGarAl.github.io/web-ants/research-lines/optimization-and-intelligent-data-analysis/</link>
+      <link>https://adriangaral.github.io/web-ants/research-lines/optimization-and-intelligent-data-analysis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/research-lines/optimization-and-intelligent-data-analysis/</guid>
+      <guid>https://adriangaral.github.io/web-ants/research-lines/optimization-and-intelligent-data-analysis/</guid>
       <description>&lt;p&gt;The objective of this line is &lt;strong&gt;extracting useful knowledge from large volumes of information&lt;/strong&gt;. We design and improve techniques of Data Intelligent Analysis and of Optimization to apply them to real problems of the logistic, economic-financial, bioinformatics type. The obtained models serve to understand better the behaviour of the problems and act in a more real way.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ambient Intelligent and Ubiquitous Computing</title>
-      <link>https://AdrianGarAl.github.io/web-ants/research-lines/ambient-intelligent-and-ubiquitous-computing/</link>
+      <link>https://adriangaral.github.io/web-ants/research-lines/ambient-intelligent-and-ubiquitous-computing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/research-lines/ambient-intelligent-and-ubiquitous-computing/</guid>
+      <guid>https://adriangaral.github.io/web-ants/research-lines/ambient-intelligent-and-ubiquitous-computing/</guid>
       <description>&lt;p&gt;This line is focused on the study of techniques for &lt;strong&gt;coordination and adaptiveness of ubiquitous services&lt;/strong&gt;. In this manner, complex systems composed by a large number of autonomous entities coordinate in a suitable manner. Besides, adaptiveness of such autonomous entities is studied — they are modelled by means of behaviour patterns.&lt;/p&gt;</description>
     </item>
     <item>
       <title>BlueAI</title>
-      <link>https://AdrianGarAl.github.io/web-ants/research-projects/blueai/</link>
+      <link>https://adriangaral.github.io/web-ants/research-projects/blueai/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/research-projects/blueai/</guid>
+      <guid>https://adriangaral.github.io/web-ants/research-projects/blueai/</guid>
       <description></description>
     </item>
     <item>
       <title>Advanced Security Services and AAA</title>
-      <link>https://AdrianGarAl.github.io/web-ants/research-lines/advanced-security-services-and-aaa/</link>
+      <link>https://adriangaral.github.io/web-ants/research-lines/advanced-security-services-and-aaa/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/research-lines/advanced-security-services-and-aaa/</guid>
+      <guid>https://adriangaral.github.io/web-ants/research-lines/advanced-security-services-and-aaa/</guid>
       <description>&lt;p&gt;Today there exist different solutions and services related with security, but they are highly heterogeneous and it is impossible to ensure a global and homogeneous system security solution.&lt;/p&gt;&#xA;&lt;p&gt;The definition of &lt;strong&gt;frameworks able to combine coherently&lt;/strong&gt; some of the current security technologies, services and protocols seems to be a real need for current and next-generation information systems.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Orciber 5g</title>
-      <link>https://AdrianGarAl.github.io/web-ants/research-projects/orciber-5g/</link>
+      <link>https://adriangaral.github.io/web-ants/research-projects/orciber-5g/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/research-projects/orciber-5g/</guid>
+      <guid>https://adriangaral.github.io/web-ants/research-projects/orciber-5g/</guid>
       <description></description>
     </item>
     <item>
       <title>Cerberus</title>
-      <link>https://AdrianGarAl.github.io/web-ants/research-projects/cerberus/</link>
+      <link>https://adriangaral.github.io/web-ants/research-projects/cerberus/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/research-projects/cerberus/</guid>
+      <guid>https://adriangaral.github.io/web-ants/research-projects/cerberus/</guid>
       <description></description>
     </item>
     <item>
       <title>Nemesis</title>
-      <link>https://AdrianGarAl.github.io/web-ants/research-projects/nemesis/</link>
+      <link>https://adriangaral.github.io/web-ants/research-projects/nemesis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/research-projects/nemesis/</guid>
+      <guid>https://adriangaral.github.io/web-ants/research-projects/nemesis/</guid>
       <description></description>
     </item>
     <item>
       <title>Reminder</title>
-      <link>https://AdrianGarAl.github.io/web-ants/research-projects/reminder/</link>
+      <link>https://adriangaral.github.io/web-ants/research-projects/reminder/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/research-projects/reminder/</guid>
+      <guid>https://adriangaral.github.io/web-ants/research-projects/reminder/</guid>
       <description></description>
     </item>
     <item>
       <title>Perseo</title>
-      <link>https://AdrianGarAl.github.io/web-ants/research-projects/perseo/</link>
+      <link>https://adriangaral.github.io/web-ants/research-projects/perseo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/research-projects/perseo/</guid>
+      <guid>https://adriangaral.github.io/web-ants/research-projects/perseo/</guid>
       <description></description>
     </item>
     <item>
       <title>Vinci</title>
-      <link>https://AdrianGarAl.github.io/web-ants/research-projects/vinci/</link>
+      <link>https://adriangaral.github.io/web-ants/research-projects/vinci/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/research-projects/vinci/</guid>
+      <guid>https://adriangaral.github.io/web-ants/research-projects/vinci/</guid>
       <description></description>
     </item>
     <item>
       <title>Geminis</title>
-      <link>https://AdrianGarAl.github.io/web-ants/research-projects/geminis/</link>
+      <link>https://adriangaral.github.io/web-ants/research-projects/geminis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/research-projects/geminis/</guid>
+      <guid>https://adriangaral.github.io/web-ants/research-projects/geminis/</guid>
       <description></description>
     </item>
     <item>
       <title>Eden</title>
-      <link>https://AdrianGarAl.github.io/web-ants/research-projects/eden/</link>
+      <link>https://adriangaral.github.io/web-ants/research-projects/eden/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/research-projects/eden/</guid>
+      <guid>https://adriangaral.github.io/web-ants/research-projects/eden/</guid>
       <description></description>
     </item>
     <item>
       <title>Demeter</title>
-      <link>https://AdrianGarAl.github.io/web-ants/research-projects/demeter/</link>
+      <link>https://adriangaral.github.io/web-ants/research-projects/demeter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/research-projects/demeter/</guid>
+      <guid>https://adriangaral.github.io/web-ants/research-projects/demeter/</guid>
       <description></description>
     </item>
     <item>
       <title>NEMESIS lanza una convocatoria para fortalecer y ampliar su red de parcelas experimentales para la salud del suelo en el Mediterráneo</title>
-      <link>https://AdrianGarAl.github.io/web-ants/news/nemesis-opencall/</link>
+      <link>https://adriangaral.github.io/web-ants/news/nemesis-opencall/</link>
       <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/news/nemesis-opencall/</guid>
+      <guid>https://adriangaral.github.io/web-ants/news/nemesis-opencall/</guid>
       <description>Los solicitantes seleccionados recibirán financiación y se integrarán en los Living Labs para desarrollar y probar soluciones frente a la degradación del suelo.</description>
     </item>
     <item>
       <title>La Cátedra OSIRIS organiza en la Universidad de Murcia el seminario internacional “Eyes on the Road”</title>
-      <link>https://AdrianGarAl.github.io/web-ants/news/osiris-eyes-on-the-road/</link>
+      <link>https://adriangaral.github.io/web-ants/news/osiris-eyes-on-the-road/</link>
       <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/news/osiris-eyes-on-the-road/</guid>
+      <guid>https://adriangaral.github.io/web-ants/news/osiris-eyes-on-the-road/</guid>
       <description>El encuentro reunió expertos en visión por computador y Edge AI para mostrar cómo transformar datos de tráfico urbano en inteligencia útil para ciudades más eficientes.</description>
     </item>
     <item>
       <title>Ciencia y tecnología para la agricultura sostenible en la II Feria Científica de Santomera</title>
-      <link>https://AdrianGarAl.github.io/web-ants/news/feria-cientifica-santomera/</link>
+      <link>https://adriangaral.github.io/web-ants/news/feria-cientifica-santomera/</link>
       <pubDate>Fri, 13 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/news/feria-cientifica-santomera/</guid>
+      <guid>https://adriangaral.github.io/web-ants/news/feria-cientifica-santomera/</guid>
       <description>Los proyectos OSIRIS y NEMESIS acercaron la investigación en agricultura digital y salud del suelo al público joven durante la II Feria Científica de Santomera.</description>
     </item>
     <item>
       <title>Investigadores del proyecto OSIRIS participan en el Máster en Big Data de la Universidad de Murcia</title>
-      <link>https://AdrianGarAl.github.io/web-ants/news/osiris-big-data-master/</link>
+      <link>https://adriangaral.github.io/web-ants/news/osiris-big-data-master/</link>
       <pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/news/osiris-big-data-master/</guid>
+      <guid>https://adriangaral.github.io/web-ants/news/osiris-big-data-master/</guid>
       <description>Los investigadores Adrián Cánovas Rodríguez y Yu Ye presentaron casos de uso de inteligencia artificial y análisis de datos aplicados a agricultura y medio ambiente en el Máster en Big Data de la Universidad de Murcia.</description>
     </item>
     <item>
       <title>La Universidad de Sofía visita la Universidad de Murcia para conocer los avances del proyecto OSIRIS</title>
-      <link>https://AdrianGarAl.github.io/web-ants/news/osiris-unibit/</link>
+      <link>https://adriangaral.github.io/web-ants/news/osiris-unibit/</link>
       <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/news/osiris-unibit/</guid>
+      <guid>https://adriangaral.github.io/web-ants/news/osiris-unibit/</guid>
       <description>La Cátedra OSIRIS mostró cómo la combinación de inteligencia artificial, sensorización avanzada e imágenes satelitales permite gestionar cultivos de forma más eficiente y sostenible, a partir de los desarrollos que se están aplicando en su invernadero experimental y plataforma de control inteligente.</description>
     </item>
     <item>
       <title>La Cátedra Osiris presenta en MobiSec 2025 un innovador sistema de aprendizaje federado para riego inteligente en entornos agrícolas semiáridos</title>
-      <link>https://AdrianGarAl.github.io/web-ants/news/osiris-en-mobisec/</link>
+      <link>https://adriangaral.github.io/web-ants/news/osiris-en-mobisec/</link>
       <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/news/osiris-en-mobisec/</guid>
+      <guid>https://adriangaral.github.io/web-ants/news/osiris-en-mobisec/</guid>
       <description>Presentado en Sapporo un sistema de aprendizaje federado embebido que combina IA, eficiencia energética y protección de datos para optimizar el riego en zonas semiáridas. Validado en parcelas de la Región de Murcia, demuestra su viabilidad en dispositivos autónomos alimentados por energía solar.</description>
     </item>
     <item>
       <title>La UMU presenta en la ExcellCity Winter School 2025 sus avances en el uso de imágenes satelitales para una agricultura más sostenible </title>
-      <link>https://AdrianGarAl.github.io/web-ants/news/osiris-nota-de-prensa/</link>
+      <link>https://adriangaral.github.io/web-ants/news/osiris-nota-de-prensa/</link>
       <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/news/osiris-nota-de-prensa/</guid>
+      <guid>https://adriangaral.github.io/web-ants/news/osiris-nota-de-prensa/</guid>
       <description>La Cátedra OSIRIS mostró en Sofía (Bulgaria) cómo la combinación de imágenes Sentinel-2, datos climáticos y modelos de IA permite monitorizar cultivos en tiempo real y optimizar el uso del agua, con resultados obtenidos en parcelas de la Región de Murcia.</description>
     </item>
     <item>
       <title>NEMESIS: a new Horizon Europe project to restore Mediterranean soils</title>
-      <link>https://AdrianGarAl.github.io/web-ants/news/nemesis/</link>
+      <link>https://adriangaral.github.io/web-ants/news/nemesis/</link>
       <pubDate>Tue, 14 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://AdrianGarAl.github.io/web-ants/news/nemesis/</guid>
+      <guid>https://adriangaral.github.io/web-ants/news/nemesis/</guid>
       <description>The NEMESIS project, funded by Horizon Europe, aims to combat desertification and restore soil health in vulnerable Mediterranean regions through five interconnected Living Labs. The University of Murcia joins an international consortium working on sustainable, community-driven soil solutions.</description>
     </item>
   </channel>
