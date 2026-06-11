@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const setHeaderHeight = () => {
     const height = Math.round(header.getBoundingClientRect().height || 78);
-    document.documentElement.style.setProperty("--topbar-current-height", `${height}px`);
+    header.style.setProperty("--topbar-current-height", `${height}px`);
   };
 
   const setOpen = (open) => {

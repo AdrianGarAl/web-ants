@@ -1,13 +1,12 @@
-:root {
+/* Contenedor principal */
+.topbar {
+
   --nav-height: 78px;
-  --topbar-bg: #1F1414; 
+  --topbar-bg: #1f1414;
   --topbar-current-height: var(--nav-height);
   --topbar-nav-link-size: 0.88rem;
   --topbar-burger-menu-link-size: 1.2rem;
-}
 
-/* Contenedor principal */
-.topbar {
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -344,4 +343,10 @@
     height: 34px;
     width: auto;
   }
+
+  .topbar-inner {
+    min-height: 62px;
+  }
+
+
 }

@@ -102,11 +102,14 @@
 }
 
 .gaia-wireless-connectivity__inline-title {
+  --gaia-wireless-inline-title-margin-bottom: 0.75rem;
   margin-top: 0;
+  margin-bottom: var(--gaia-wireless-inline-title-margin-bottom);
 }
 
+
 .gaia-wireless-connectivity__block-title--iot {
-  margin-bottom: 3rem;
+  --gaia-wireless-inline-title-margin-bottom: 3rem;
 }
 
 .gaia-block__split {
@@ -221,6 +224,10 @@
 }
 
 @media (max-width: 900px) {
+  .gaia-wireless-connectivity__inline-title {
+    --gaia-wireless-inline-title-margin-bottom: 0.75rem;
+  }
+
   .gaia-block__split,
   .gaia-block--reverse .gaia-block__split {
     grid-template-columns: 1fr;
