@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let currentPage = 1;
     let filteredItems = [...items];
+    let isRestoringState = false;
 
     const normalize = (value) => {
       return String(value || "").trim().toLowerCase();
@@ -51,6 +52,66 @@ document.addEventListener("DOMContentLoaded", () => {
       return matchesSearch && matchesSelects;
     };
 
+    const getPageFromURL = () => {
+      const params = new URLSearchParams(window.location.search);
+      const page = Number.parseInt(params.get("page") || "1", 10);
+
+      return Number.isNaN(page) || page < 1 ? 1 : page;
+    };
+
+    const restoreControlsFromURL = () => {
+      const params = new URLSearchParams(window.location.search);
+
+      if (search) {
+        search.value = params.get("q") || "";
+      }
+
+      selects.forEach((select) => {
+        const value = params.get(select.dataset.filterSelect);
+        const optionExists = Array.from(select.options).some((option) => {
+          return option.value === value;
+        });
+
+        select.value = value && optionExists ? value : "all";
+      });
+
+      currentPage = getPageFromURL();
+    };
+
+    const updateURL = () => {
+      if (isRestoringState) return;
+
+      const params = new URLSearchParams(window.location.search);
+
+      if (currentPage > 1) {
+        params.set("page", String(currentPage));
+      } else {
+        params.delete("page");
+      }
+
+      if (search && normalize(search.value)) {
+        params.set("q", search.value.trim());
+      } else {
+        params.delete("q");
+      }
+
+      selects.forEach((select) => {
+        const key = select.dataset.filterSelect;
+        const value = normalize(select.value);
+
+        if (value && value !== "all") {
+          params.set(key, select.value);
+        } else {
+          params.delete(key);
+        }
+      });
+
+      const query = params.toString();
+      const nextURL = `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash}`;
+
+      window.history.replaceState(null, "", nextURL);
+    };
+
     const render = () => {
       const totalPages = Math.max(1, Math.ceil(filteredItems.length / perPage));
 
@@ -86,20 +147,26 @@ document.addEventListener("DOMContentLoaded", () => {
       if (pagination) {
         pagination.hidden = totalPages <= 1 && Boolean(filteredItems.length);
       }
+
+      updateURL();
     };
 
-    const applyFilters = () => {
+    const applyFilters = (resetPage = true) => {
       filteredItems = items.filter(itemMatches);
-      currentPage = 1;
+
+      if (resetPage) {
+        currentPage = 1;
+      }
+
       render();
     };
 
     if (search) {
-      search.addEventListener("input", applyFilters);
+      search.addEventListener("input", () => applyFilters());
     }
 
     selects.forEach((select) => {
-      select.addEventListener("change", applyFilters);
+      select.addEventListener("change", () => applyFilters());
     });
 
     if (prev) {
@@ -120,6 +187,14 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    render();
+    window.addEventListener("popstate", () => {
+      isRestoringState = true;
+      restoreControlsFromURL();
+      applyFilters(false);
+      isRestoringState = false;
+    });
+
+    restoreControlsFromURL();
+    applyFilters(false);
   });
 });

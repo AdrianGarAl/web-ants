@@ -244,7 +244,6 @@
   padding: 0.8rem 1.5rem;
   font-family: var(--font-body, "IBM Plex Sans", sans-serif);
   font-size: var(--news-block-font-size, 1.05rem);
-  font-style: italic;
   color: #444;
   background: transparent;
 }
@@ -257,6 +256,8 @@
 .news-single-body blockquote > *:not(:last-child) {
   margin-bottom: var(--news-block-gap);
 }
+
+
 
 /* ---------- Enlaces finales a proyectos ---------- */
 
