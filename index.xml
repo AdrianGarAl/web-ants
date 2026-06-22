@@ -23,25 +23,11 @@
       <description>&lt;p&gt;Ad hoc networks consist of a number of devices equipped with one or more wireless interfaces, which cooperate to provide wireless communications among them. Nodes which are not in the radio range of each other use other intermediate nodes as relays to find multi-hop paths towards a destination.&lt;/p&gt;&#xA;&lt;p&gt;Unlike ad hoc networks, in sensor networks the devices are usually static. However, the way they work based on off, on and idle states, makes the topology variable. In addition, usually available resources are lesser, and the &lt;strong&gt;scalability of the solutions&lt;/strong&gt; becomes a very important factor. This creates the need for localized algorithms rather than global or centralized ones.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>ANTONIO SKARMETA</title>
-      <link>https://adriangaral.github.io/web-ants/members/skarmeta/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://adriangaral.github.io/web-ants/members/skarmeta/</guid>
-      <description>&lt;p&gt;Antonio Skarmeta obtained his PhD in Computer Science in 1995 and has been a Professor of Telematics Engineering since 2009.&lt;/p&gt;&#xA;&lt;p&gt;He has served as Vice-Rector for Infrastructure at the Faculty and as Director of the Department of Information and Communications Engineering.&lt;/p&gt;&#xA;&lt;p&gt;He coordinates the PhD program in Advanced Information and Telematics Technologies and the European Projects Office at the University of Murcia.&lt;/p&gt;&#xA;&lt;p&gt;He currently leads the Intelligent Systems and Telematics research group and participates in scientific committees and European projects.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Context-Aware Adaptive Multimedia</title>
       <link>https://adriangaral.github.io/web-ants/research-lines/context-aware-adaptive-multimedia/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://adriangaral.github.io/web-ants/research-lines/context-aware-adaptive-multimedia/</guid>
       <description>&lt;p&gt;Context Aware Adaptive applications are those who are able to modify and adapt their operation to their environment.&lt;/p&gt;&#xA;&lt;p&gt;In particular, adaptive multimedia applications are a subset of those applications, which are able to adapt their internal components (e.g. &lt;strong&gt;audio and video codecs, rates, etc.&lt;/strong&gt;) to maximize the user&amp;rsquo;s satisfaction in terms of perceived quality. To make that decision they use information from their environment called context.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>JORGE BERNAL</title>
-      <link>https://adriangaral.github.io/web-ants/members/jorge-bernal/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://adriangaral.github.io/web-ants/members/jorge-bernal/</guid>
-      <description>&lt;p&gt;Jorge Bernal Bernabé holds an MSc, Master&amp;rsquo;s, and PhD in Computer Science, as well as an MBA from the University of Murcia (Spain). He was accredited as a Full Professor by ANECA in 2020 and received the Best Doctoral Thesis Award from the School of Computer Science in 2015.&lt;/p&gt;&#xA;&lt;p&gt;In 2017, he was awarded a postdoctoral research fellowship funded by INCIBE, and in 2019, an AXA Research Fund postdoctoral fellowship. Since February 2023, he has been a Full Professor in the Department of Information and Communications Engineering.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Nereidas</title>
