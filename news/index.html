@@ -1,537 +1,598 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title> news </title>
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="" />
+<title>
+  
+    news
+  
+</title>
 
-    <link rel="icon" href="/web-ants/images/news/Favicon-News.ico" />
+<meta name="description" content="">
 
-    <link
-      rel="stylesheet"
-      href="/web-ants/css/main.8adc83c5b8fd2adf74234a89b4c5dc88025f08dde18a948b17b8fff54097392d.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/web-ants/css/partials/header.2d0058f17d23a0fe1facf19031d7228159028732811f94fc6599b1e6e0f8d3f4.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/web-ants/css/partials/footer.55b108ad202d214a21baf2497803f977a7008d2235a641d7556eb1961f56794d.css"
-    />
 
-    <link
-      rel="stylesheet"
-      href="/web-ants/css/news/news-section.4f950d4331777fb4f9e4c1c4d5e4191bc1e6e411d8226bd23fb29c0be1523f83.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/web-ants/css/partials/sections/hero.0e1418e7bbf8c592b1a2901c73ad27c4b439513ef154d4bb74cd27ee2c100551.css"
-    />
-  </head>
+<link rel="icon" href="/web-ants/images/news/Favicon-News.ico">
 
-  <body id="top" class="menu-main has-bleed-hero news-page">
-    <div class="page-wrap">
-      <header class="topbar">
-        <div class="topbar-inner">
-          <div class="topbar-branding">
-            <a class="topbar-logo-ants" href="/web-ants/">
-              <img src="/web-ants/images/ants/ants-logo.png" alt="ANTS" />
-            </a>
-          </div>
 
-          <button
-            class="topbar-menu-toggle"
-            type="button"
-            aria-label="Open main navigation"
-            aria-expanded="false"
-            aria-controls="site-navigation"
-          >
-            <span class="topbar-menu-toggle__bar" aria-hidden="true"></span>
-            <span class="topbar-menu-toggle__bar" aria-hidden="true"></span>
-            <span class="topbar-menu-toggle__bar" aria-hidden="true"></span>
-          </button>
 
-          <div class="topbar-actions">
-            <nav
-              id="site-navigation"
-              class="topbar-nav"
-              aria-label="Main navigation"
-            >
-              <div class="topbar-nav-item">
-                <a class="topbar-nav-link" href="/web-ants/"> about ants </a>
-              </div>
+<link rel="stylesheet" href="/web-ants/css/main.8adc83c5b8fd2adf74234a89b4c5dc88025f08dde18a948b17b8fff54097392d.css">
+<link rel="stylesheet" href="/web-ants/css/partials/header.2d0058f17d23a0fe1facf19031d7228159028732811f94fc6599b1e6e0f8d3f4.css">
+<link rel="stylesheet" href="/web-ants/css/partials/footer.55b108ad202d214a21baf2497803f977a7008d2235a641d7556eb1961f56794d.css">
 
-              <div class="topbar-nav-item">
-                <a class="topbar-nav-link" href="/web-ants/gaia-lab/">
-                  gaia lab
-                </a>
-              </div>
 
-              <div class="topbar-nav-item">
-                <a class="topbar-nav-link" href="/web-ants/research-projects/">
-                  research projects
-                </a>
-              </div>
 
-              <div class="topbar-nav-item">
-                <a class="topbar-nav-link" href="/web-ants/research-lines/">
-                  research lines
-                </a>
-              </div>
 
-              <div class="topbar-nav-item">
-                <a class="topbar-nav-link" href="/web-ants/news/"> news </a>
-              </div>
-            </nav>
 
-            <a
-              class="topbar-logo-umu"
-              href="https://www.um.es/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="/web-ants/images/umu-logo.png" alt="UMU" />
-            </a>
-          </div>
-        </div>
-      </header>
 
-      <main>
-        <section id="news-hero" class="section page-hero news-hero">
-          <div class="section__inner page-hero__inner">
-            <h1 class="page-hero__title">news</h1>
-          </div>
-        </section>
 
-        <section class="news-list-section" data-filter-list data-per-page="5">
-          <div class="news-tools">
-            <div class="news-search">
-              <label for="newsSearch"> Search news by keyword </label>
 
-              <input
-                id="newsSearch"
-                type="search"
-                placeholder="e.g. irrigation, satellite, Horizon Europe"
-                autocomplete="off"
-                data-filter-search
-              />
-            </div>
+  
+  <link rel="stylesheet" href="/web-ants/css/news/news-section.4f950d4331777fb4f9e4c1c4d5e4191bc1e6e411d8226bd23fb29c0be1523f83.css">
+  <link rel="stylesheet" href="/web-ants/css/partials/sections/hero.0e1418e7bbf8c592b1a2901c73ad27c4b439513ef154d4bb74cd27ee2c100551.css">
 
-            <div class="news-project-filter">
-              <label for="newsProjectFilter"> Project </label>
+</head>
 
-              <select id="newsProjectFilter" data-filter-select="project">
-                <option value="all"> All projects </option>
+<body id="top" class="menu-main has-bleed-hero news-page">
 
-                <option value="nemesis">Nemesis</option>
-
-                <option value="osiris">Osiris</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="news-list" data-filter-items>
-            <article
-              class="news-card"
-              data-filter-item
-              data-project="nemesis"
-              data-search="NEMESIS lanza una convocatoria para fortalecer y ampliar su red de parcelas experimentales para la salud del suelo en el Mediterráneo Los solicitantes seleccionados recibirán financiación y se integrarán en los Living Labs para desarrollar y probar soluciones frente a la degradación del suelo. nemesis"
-            >
-              <a
-                href="/web-ants/news/nemesis-opencall/"
-                class="news-card-img-link"
-              >
-                <img
-                  src="/web-ants/images/news/nemesis-opencall/Nemesis-opencall.png"
-                  alt="NEMESIS Open Call"
-                />
-              </a>
-
-              <div class="news-card-body">
-                <h2 class="news-card-title"
-                  >NEMESIS lanza una convocatoria para fortalecer y ampliar su
-                  red de parcelas experimentales para la salud del suelo en el
-                  Mediterráneo</h2
-                >
-
-                <p class="news-card-text">
-                  Los solicitantes seleccionados recibirán financiación y se
-                  integrarán en los Living Labs para desarrollar y probar
-                  soluciones frente a la degradación del suelo.
-                </p>
-
-                <a href="/web-ants/news/nemesis-opencall/" class="btn btn-news">
-                  Read more
-                </a>
-              </div>
-            </article>
-
-            <article
-              class="news-card"
-              data-filter-item
-              data-project="osiris"
-              data-search="La Cátedra OSIRIS organiza en la Universidad de Murcia el seminario internacional “Eyes on the Road” El encuentro reunió expertos en visión por computador y Edge AI para mostrar cómo transformar datos de tráfico urbano en inteligencia útil para ciudades más eficientes. osiris"
-            >
-              <a
-                href="/web-ants/news/osiris-eyes-on-the-road/"
-                class="news-card-img-link"
-              >
-                <img
-                  src="/web-ants/images/news/osiris-eyes-on-the-road/eyesontheroad.png"
-                  alt="Eyes on the Road seminar"
-                />
-              </a>
-
-              <div class="news-card-body">
-                <h2 class="news-card-title"
-                  >La Cátedra OSIRIS organiza en la Universidad de Murcia el
-                  seminario internacional “Eyes on the Road”</h2
-                >
-
-                <p class="news-card-text">
-                  El encuentro reunió expertos en visión por computador y Edge
-                  AI para mostrar cómo transformar datos de tráfico urbano en
-                  inteligencia útil para ciudades más eficientes.
-                </p>
-
-                <a
-                  href="/web-ants/news/osiris-eyes-on-the-road/"
-                  class="btn btn-news"
-                >
-                  Read more
-                </a>
-              </div>
-            </article>
-
-            <article
-              class="news-card"
-              data-filter-item
-              data-project="osiris|nemesis"
-              data-search="Ciencia y tecnología para la agricultura sostenible en la II Feria Científica de Santomera Los proyectos OSIRIS y NEMESIS acercaron la investigación en agricultura digital y salud del suelo al público joven durante la II Feria Científica de Santomera. osiris nemesis"
-            >
-              <a
-                href="/web-ants/news/feria-cientifica-santomera/"
-                class="news-card-img-link"
-              >
-                <img
-                  src="/web-ants/images/news/feria-cientifica-santomera/santomera.png"
-                  alt="II Feria Científica de Santomera"
-                />
-              </a>
-
-              <div class="news-card-body">
-                <h2 class="news-card-title"
-                  >Ciencia y tecnología para la agricultura sostenible en la II
-                  Feria Científica de Santomera</h2
-                >
-
-                <p class="news-card-text">
-                  Los proyectos OSIRIS y NEMESIS acercaron la investigación en
-                  agricultura digital y salud del suelo al público joven durante
-                  la II Feria Científica de Santomera.
-                </p>
-
-                <a
-                  href="/web-ants/news/feria-cientifica-santomera/"
-                  class="btn btn-news"
-                >
-                  Read more
-                </a>
-              </div>
-            </article>
-
-            <article
-              class="news-card"
-              data-filter-item
-              data-project="osiris"
-              data-search="Investigadores del proyecto OSIRIS participan en el Máster en Big Data de la Universidad de Murcia Los investigadores Adrián Cánovas Rodríguez y Yu Ye presentaron casos de uso de inteligencia artificial y análisis de datos aplicados a agricultura y medio ambiente en el Máster en Big Data de la Universidad de Murcia. osiris"
-            >
-              <a
-                href="/web-ants/news/osiris-big-data-master/"
-                class="news-card-img-link"
-              >
-                <img
-                  src="/web-ants/images/news/osiris-big-data-master/master.png"
-                  alt="Máster en Big Data UMU"
-                />
-              </a>
-
-              <div class="news-card-body">
-                <h2 class="news-card-title"
-                  >Investigadores del proyecto OSIRIS participan en el Máster en
-                  Big Data de la Universidad de Murcia</h2
-                >
-
-                <p class="news-card-text">
-                  Los investigadores Adrián Cánovas Rodríguez y Yu Ye
-                  presentaron casos de uso de inteligencia artificial y análisis
-                  de datos aplicados a agricultura y medio ambiente en el Máster
-                  en Big Data de la Universidad de Murcia.
-                </p>
-
-                <a
-                  href="/web-ants/news/osiris-big-data-master/"
-                  class="btn btn-news"
-                >
-                  Read more
-                </a>
-              </div>
-            </article>
-
-            <article
-              class="news-card"
-              data-filter-item
-              data-project="osiris"
-              data-search="La Universidad de Sofía visita la Universidad de Murcia para conocer los avances del proyecto OSIRIS La Cátedra OSIRIS mostró cómo la combinación de inteligencia artificial, sensorización avanzada e imágenes satelitales permite gestionar cultivos de forma más eficiente y sostenible, a partir de los desarrollos que se están aplicando en su invernadero experimental y plataforma de control inteligente. osiris"
-            >
-              <a
-                href="/web-ants/news/osiris-unibit/"
-                class="news-card-img-link"
-              >
-                <img
-                  src="/web-ants/images/news/osiris-unibit/unibit.png"
-                  alt="Universidad de Sofía visita UMU"
-                />
-              </a>
-
-              <div class="news-card-body">
-                <h2 class="news-card-title"
-                  >La Universidad de Sofía visita la Universidad de Murcia para
-                  conocer los avances del proyecto OSIRIS</h2
-                >
-
-                <p class="news-card-text">
-                  La Cátedra OSIRIS mostró cómo la combinación de inteligencia
-                  artificial, sensorización avanzada e imágenes satelitales
-                  permite gestionar cultivos de forma más eficiente y
-                  sostenible, a partir de los desarrollos que se están aplicando
-                  en su invernadero experimental y plataforma de control
-                  inteligente.
-                </p>
-
-                <a href="/web-ants/news/osiris-unibit/" class="btn btn-news">
-                  Read more
-                </a>
-              </div>
-            </article>
-
-            <article
-              class="news-card"
-              data-filter-item
-              data-project="osiris"
-              data-search="La Cátedra Osiris presenta en MobiSec 2025 un innovador sistema de aprendizaje federado para riego inteligente en entornos agrícolas semiáridos Presentado en Sapporo un sistema de aprendizaje federado embebido que combina IA, eficiencia energética y protección de datos para optimizar el riego en zonas semiáridas. Validado en parcelas de la Región de Murcia, demuestra su viabilidad en dispositivos autónomos alimentados por energía solar. osiris"
-            >
-              <a
-                href="/web-ants/news/osiris-en-mobisec/"
-                class="news-card-img-link"
-              >
-                <img
-                  src="/web-ants/images/news/osiris-en-mobisec/mobisec.png"
-                  alt="MobiSec 2025"
-                />
-              </a>
-
-              <div class="news-card-body">
-                <h2 class="news-card-title"
-                  >La Cátedra Osiris presenta en MobiSec 2025 un innovador
-                  sistema de aprendizaje federado para riego inteligente en
-                  entornos agrícolas semiáridos</h2
-                >
-
-                <p class="news-card-text">
-                  Presentado en Sapporo un sistema de aprendizaje federado
-                  embebido que combina IA, eficiencia energética y protección de
-                  datos para optimizar el riego en zonas semiáridas. Validado en
-                  parcelas de la Región de Murcia, demuestra su viabilidad en
-                  dispositivos autónomos alimentados por energía solar.
-                </p>
-
-                <a
-                  href="/web-ants/news/osiris-en-mobisec/"
-                  class="btn btn-news"
-                >
-                  Read more
-                </a>
-              </div>
-            </article>
-
-            <article
-              class="news-card"
-              data-filter-item
-              data-project="osiris"
-              data-search="La UMU presenta en la ExcellCity Winter School 2025 sus avances en el uso de imágenes satelitales para una agricultura más sostenible  La Cátedra OSIRIS mostró en Sofía (Bulgaria) cómo la combinación de imágenes Sentinel-2, datos climáticos y modelos de IA permite monitorizar cultivos en tiempo real y optimizar el uso del agua, con resultados obtenidos en parcelas de la Región de Murcia. osiris"
-            >
-              <a
-                href="/web-ants/news/osiris-nota-de-prensa/"
-                class="news-card-img-link"
-              >
-                <img
-                  src="/web-ants/images/news/osiris-nota-de-prensa/ndp.png"
-                  alt="ExcellCity Winter School 2025"
-                />
-              </a>
-
-              <div class="news-card-body">
-                <h2 class="news-card-title"
-                  >La UMU presenta en la ExcellCity Winter School 2025 sus
-                  avances en el uso de imágenes satelitales para una agricultura
-                  más sostenible
-                </h2>
-
-                <p class="news-card-text">
-                  La Cátedra OSIRIS mostró en Sofía (Bulgaria) cómo la
-                  combinación de imágenes Sentinel-2, datos climáticos y modelos
-                  de IA permite monitorizar cultivos en tiempo real y optimizar
-                  el uso del agua, con resultados obtenidos en parcelas de la
-                  Región de Murcia.
-                </p>
-
-                <a
-                  href="/web-ants/news/osiris-nota-de-prensa/"
-                  class="btn btn-news"
-                >
-                  Read more
-                </a>
-              </div>
-            </article>
-
-            <article
-              class="news-card"
-              data-filter-item
-              data-project="nemesis"
-              data-search="NEMESIS: a new Horizon Europe project to restore Mediterranean soils The NEMESIS project, funded by Horizon Europe, aims to combat desertification and restore soil health in vulnerable Mediterranean regions through five interconnected Living Labs. The University of Murcia joins an international consortium working on sustainable, community-driven soil solutions. nemesis"
-            >
-              <a href="/web-ants/news/nemesis/" class="news-card-img-link">
-                <img
-                  src="/web-ants/images/news/nemesis/nemesisnews.png"
-                  alt="NEMESIS Horizon Europe"
-                />
-              </a>
-
-              <div class="news-card-body">
-                <h2 class="news-card-title"
-                  >NEMESIS: a new Horizon Europe project to restore
-                  Mediterranean soils</h2
-                >
-
-                <p class="news-card-text">
-                  The NEMESIS project, funded by Horizon Europe, aims to combat
-                  desertification and restore soil health in vulnerable
-                  Mediterranean regions through five interconnected Living Labs.
-                  The University of Murcia joins an international consortium
-                  working on sustainable, community-driven soil solutions.
-                </p>
-
-                <a href="/web-ants/news/nemesis/" class="btn btn-news">
-                  Read more
-                </a>
-              </div>
-            </article>
-          </div>
-
-          <p class="news-empty" data-filter-empty hidden>
-            No news match your filters.
-          </p>
-
-          <div class="news-pagination" data-filter-pagination>
-            <button type="button" aria-label="Previous page" data-filter-prev>
-              ←
-            </button>
-
-            <span data-filter-info> 1 de 1 </span>
-
-            <button type="button" aria-label="Next page" data-filter-next>
-              →
-            </button>
-          </div>
-        </section>
-      </main>
-      <footer class="main-footer">
-        <div class="main-footer-inner">
-          <div class="footer-left">
-            <h2 class="footer-title">
-              a non stop<br />
-              workers<br />
-              research group
-            </h2>
-
-            <ul class="footer-items">
-              <li>
-                <a href="/web-ants/">about ants</a>
-              </li>
-
-              <li>
-                <a href="/web-ants/gaia-lab/">gaia lab</a>
-              </li>
-
-              <li>
-                <a href="/web-ants/research-projects/">research projects</a>
-              </li>
-
-              <li>
-                <a href="/web-ants/research-lines/">research lines</a>
-              </li>
-
-              <li>
-                <a href="/web-ants/news/">news</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer-brand">
-            <a
-              class="footer-umu-link"
-              href="https://www.um.es/web/informatica/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                class="footer-umu-logo"
-                src="/web-ants/images/umu-informatica-logo.png"
-                alt="Universidad de Murcia - Facultad de Informática"
-              />
-            </a>
-
-            <div class="footer-social">
-              <a
-                href="https://www.linkedin.com/company/ants-research-group/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Follow ants on <span>LinkedIn ↗</span>
-              </a>
-
-              <a
-                href="https://x.com/ants_fium"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Follow ants on <span>X ↗</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="footer-top">
-            <a class="footer-top-link" href="#top" aria-label="Back to top">
-              ↑
-            </a>
-          </div>
-        </div>
-      </footer>
+  <div class="page-wrap">
+    <header class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-branding">
+      
+      <a class="topbar-logo-ants" href="/web-ants/">
+        <img
+          src="/web-ants/images/ants/ants-logo.png"
+          alt="ANTS">
+      </a>
     </div>
 
-    <script
-      src="/web-ants/js/main-menu.43878e3d0786360ed8713c31c1f8fa5613b267ac8662b1edf64c38b66e536ea9.js"
-      defer
-    ></script>
+    <button
+      class="topbar-menu-toggle"
+      type="button"
+      aria-label="Open main navigation"
+      aria-expanded="false"
+      aria-controls="site-navigation"
+    >
+      <span class="topbar-menu-toggle__bar" aria-hidden="true"></span>
+      <span class="topbar-menu-toggle__bar" aria-hidden="true"></span>
+      <span class="topbar-menu-toggle__bar" aria-hidden="true"></span>
+    </button>
 
-    <script
-      src="/web-ants/js/filterable-list.90cb6a3404bdf63510979a5f525d2c7808e91a087d3c4e89cd3191177593da29.js"
-      defer
-    ></script>
-  </body>
+    <div class="topbar-actions">
+      
+      <nav id="site-navigation" class="topbar-nav" aria-label="Main navigation">
+        
+
+          <div class="topbar-nav-item ">
+            <a class="topbar-nav-link" href="/web-ants/">
+              about ants
+            </a>
+
+            
+          </div>
+
+        
+
+          <div class="topbar-nav-item ">
+            <a class="topbar-nav-link" href="/web-ants/gaia-lab/">
+              gaia lab
+            </a>
+
+            
+          </div>
+
+        
+
+          <div class="topbar-nav-item ">
+            <a class="topbar-nav-link" href="/web-ants/research-projects/">
+              research projects
+            </a>
+
+            
+          </div>
+
+        
+
+          <div class="topbar-nav-item ">
+            <a class="topbar-nav-link" href="/web-ants/research-lines/">
+              research lines
+            </a>
+
+            
+          </div>
+
+        
+
+          <div class="topbar-nav-item ">
+            <a class="topbar-nav-link" href="/web-ants/news/">
+              news
+            </a>
+
+            
+          </div>
+
+        
+      </nav>
+
+      
+      <a class="topbar-logo-umu" href="https://www.um.es/" target="_blank" rel="noopener noreferrer">
+        <img
+          src="/web-ants/images/umu-logo.png"
+          alt="UMU">
+      </a>
+    </div>
+  </div>
+</header>
+
+    <main>
+      
+
+  <section
+  id="news-hero"
+  class="section page-hero news-hero"
+>
+  <div class="section__inner page-hero__inner">
+
+    
+      
+        <h1 class="page-hero__title">news</h1>
+      
+
+    
+
+  </div>
+</section>
+
+  <section
+  class="news-list-section"
+  data-filter-list
+  data-per-page="5"
+>
+  <div class="news-tools">
+    <div class="news-search">
+      <label for="newsSearch">
+        Search news by keyword
+      </label>
+
+      <input
+        id="newsSearch"
+        type="search"
+        placeholder="e.g. irrigation, satellite, Horizon Europe"
+        autocomplete="off"
+        data-filter-search
+      >
+    </div>
+
+    <div class="news-project-filter">
+      <label for="newsProjectFilter">
+        Project
+      </label>
+
+      <select
+        id="newsProjectFilter"
+        data-filter-select="project"
+      >
+        <option value="all">
+          All projects
+        </option>
+
+        
+          <option value="nemesis">Nemesis</option>
+        
+          <option value="osiris">Osiris</option>
+        
+      </select>
+    </div>
+  </div>
+
+  <div class="news-list" data-filter-items>
+    
+      <article
+  class="news-card "
+  data-filter-item
+  data-project="nemesis"
+  data-search="NEMESIS lanza una convocatoria para fortalecer y ampliar su red de parcelas experimentales para la salud del suelo en el Mediterráneo Los solicitantes seleccionados recibirán financiación y se integrarán en los Living Labs para desarrollar y probar soluciones frente a la degradación del suelo. nemesis"
+>
+  
+    <a
+      href="/web-ants/news/nemesis-opencall/"
+      class="news-card-img-link"
+      
+    >
+      <img
+        src="/web-ants/images/news/nemesis-opencall/Nemesis-opencall.png"
+        alt="NEMESIS Open Call"
+      >
+    </a>
+  
+
+  <div class="news-card-body">
+    <h2 class="news-card-title">NEMESIS lanza una convocatoria para fortalecer y ampliar su red de parcelas experimentales para la salud del suelo en el Mediterráneo</h2>
+
+    <p class="news-card-text">
+      Los solicitantes seleccionados recibirán financiación y se integrarán en los Living Labs para desarrollar y probar soluciones frente a la degradación del suelo.
+    </p>
+
+    <a
+      href="/web-ants/news/nemesis-opencall/"
+      class="btn btn-news"
+      
+    >
+      Read more
+    </a>
+  </div>
+</article>
+
+    
+      <article
+  class="news-card "
+  data-filter-item
+  data-project="osiris"
+  data-search="La Cátedra OSIRIS organiza en la Universidad de Murcia el seminario internacional “Eyes on the Road” El encuentro reunió expertos en visión por computador y Edge AI para mostrar cómo transformar datos de tráfico urbano en inteligencia útil para ciudades más eficientes. osiris"
+>
+  
+    <a
+      href="/web-ants/news/osiris-eyes-on-the-road/"
+      class="news-card-img-link"
+      
+    >
+      <img
+        src="/web-ants/images/news/osiris-eyes-on-the-road/eyesontheroad.png"
+        alt="Eyes on the Road seminar"
+      >
+    </a>
+  
+
+  <div class="news-card-body">
+    <h2 class="news-card-title">La Cátedra OSIRIS organiza en la Universidad de Murcia el seminario internacional “Eyes on the Road”</h2>
+
+    <p class="news-card-text">
+      El encuentro reunió expertos en visión por computador y Edge AI para mostrar cómo transformar datos de tráfico urbano en inteligencia útil para ciudades más eficientes.
+    </p>
+
+    <a
+      href="/web-ants/news/osiris-eyes-on-the-road/"
+      class="btn btn-news"
+      
+    >
+      Read more
+    </a>
+  </div>
+</article>
+
+    
+      <article
+  class="news-card "
+  data-filter-item
+  data-project="osiris|nemesis"
+  data-search="Ciencia y tecnología para la agricultura sostenible en la II Feria Científica de Santomera Los proyectos OSIRIS y NEMESIS acercaron la investigación en agricultura digital y salud del suelo al público joven durante la II Feria Científica de Santomera. osiris nemesis"
+>
+  
+    <a
+      href="/web-ants/news/feria-cientifica-santomera/"
+      class="news-card-img-link"
+      
+    >
+      <img
+        src="/web-ants/images/news/feria-cientifica-santomera/santomera.png"
+        alt="II Feria Científica de Santomera"
+      >
+    </a>
+  
+
+  <div class="news-card-body">
+    <h2 class="news-card-title">Ciencia y tecnología para la agricultura sostenible en la II Feria Científica de Santomera</h2>
+
+    <p class="news-card-text">
+      Los proyectos OSIRIS y NEMESIS acercaron la investigación en agricultura digital y salud del suelo al público joven durante la II Feria Científica de Santomera.
+    </p>
+
+    <a
+      href="/web-ants/news/feria-cientifica-santomera/"
+      class="btn btn-news"
+      
+    >
+      Read more
+    </a>
+  </div>
+</article>
+
+    
+      <article
+  class="news-card "
+  data-filter-item
+  data-project="osiris"
+  data-search="Investigadores del proyecto OSIRIS participan en el Máster en Big Data de la Universidad de Murcia Los investigadores Adrián Cánovas Rodríguez y Yu Ye presentaron casos de uso de inteligencia artificial y análisis de datos aplicados a agricultura y medio ambiente en el Máster en Big Data de la Universidad de Murcia. osiris"
+>
+  
+    <a
+      href="/web-ants/news/osiris-big-data-master/"
+      class="news-card-img-link"
+      
+    >
+      <img
+        src="/web-ants/images/news/osiris-big-data-master/master.png"
+        alt="Máster en Big Data UMU"
+      >
+    </a>
+  
+
+  <div class="news-card-body">
+    <h2 class="news-card-title">Investigadores del proyecto OSIRIS participan en el Máster en Big Data de la Universidad de Murcia</h2>
+
+    <p class="news-card-text">
+      Los investigadores Adrián Cánovas Rodríguez y Yu Ye presentaron casos de uso de inteligencia artificial y análisis de datos aplicados a agricultura y medio ambiente en el Máster en Big Data de la Universidad de Murcia.
+    </p>
+
+    <a
+      href="/web-ants/news/osiris-big-data-master/"
+      class="btn btn-news"
+      
+    >
+      Read more
+    </a>
+  </div>
+</article>
+
+    
+      <article
+  class="news-card "
+  data-filter-item
+  data-project="osiris"
+  data-search="La Universidad de Sofía visita la Universidad de Murcia para conocer los avances del proyecto OSIRIS La Cátedra OSIRIS mostró cómo la combinación de inteligencia artificial, sensorización avanzada e imágenes satelitales permite gestionar cultivos de forma más eficiente y sostenible, a partir de los desarrollos que se están aplicando en su invernadero experimental y plataforma de control inteligente. osiris"
+>
+  
+    <a
+      href="/web-ants/news/osiris-unibit/"
+      class="news-card-img-link"
+      
+    >
+      <img
+        src="/web-ants/images/news/osiris-unibit/unibit.png"
+        alt="Universidad de Sofía visita UMU"
+      >
+    </a>
+  
+
+  <div class="news-card-body">
+    <h2 class="news-card-title">La Universidad de Sofía visita la Universidad de Murcia para conocer los avances del proyecto OSIRIS</h2>
+
+    <p class="news-card-text">
+      La Cátedra OSIRIS mostró cómo la combinación de inteligencia artificial, sensorización avanzada e imágenes satelitales permite gestionar cultivos de forma más eficiente y sostenible, a partir de los desarrollos que se están aplicando en su invernadero experimental y plataforma de control inteligente.
+    </p>
+
+    <a
+      href="/web-ants/news/osiris-unibit/"
+      class="btn btn-news"
+      
+    >
+      Read more
+    </a>
+  </div>
+</article>
+
+    
+      <article
+  class="news-card "
+  data-filter-item
+  data-project="osiris"
+  data-search="La Cátedra Osiris presenta en MobiSec 2025 un innovador sistema de aprendizaje federado para riego inteligente en entornos agrícolas semiáridos Presentado en Sapporo un sistema de aprendizaje federado embebido que combina IA, eficiencia energética y protección de datos para optimizar el riego en zonas semiáridas. Validado en parcelas de la Región de Murcia, demuestra su viabilidad en dispositivos autónomos alimentados por energía solar. osiris"
+>
+  
+    <a
+      href="/web-ants/news/osiris-en-mobisec/"
+      class="news-card-img-link"
+      
+    >
+      <img
+        src="/web-ants/images/news/osiris-en-mobisec/mobisec.png"
+        alt="MobiSec 2025"
+      >
+    </a>
+  
+
+  <div class="news-card-body">
+    <h2 class="news-card-title">La Cátedra Osiris presenta en MobiSec 2025 un innovador sistema de aprendizaje federado para riego inteligente en entornos agrícolas semiáridos</h2>
+
+    <p class="news-card-text">
+      Presentado en Sapporo un sistema de aprendizaje federado embebido que combina IA, eficiencia energética y protección de datos para optimizar el riego en zonas semiáridas. Validado en parcelas de la Región de Murcia, demuestra su viabilidad en dispositivos autónomos alimentados por energía solar.
+    </p>
+
+    <a
+      href="/web-ants/news/osiris-en-mobisec/"
+      class="btn btn-news"
+      
+    >
+      Read more
+    </a>
+  </div>
+</article>
+
+    
+      <article
+  class="news-card "
+  data-filter-item
+  data-project="osiris"
+  data-search="La UMU presenta en la ExcellCity Winter School 2025 sus avances en el uso de imágenes satelitales para una agricultura más sostenible  La Cátedra OSIRIS mostró en Sofía (Bulgaria) cómo la combinación de imágenes Sentinel-2, datos climáticos y modelos de IA permite monitorizar cultivos en tiempo real y optimizar el uso del agua, con resultados obtenidos en parcelas de la Región de Murcia. osiris"
+>
+  
+    <a
+      href="/web-ants/news/osiris-nota-de-prensa/"
+      class="news-card-img-link"
+      
+    >
+      <img
+        src="/web-ants/images/news/osiris-nota-de-prensa/ndp.png"
+        alt="ExcellCity Winter School 2025"
+      >
+    </a>
+  
+
+  <div class="news-card-body">
+    <h2 class="news-card-title">La UMU presenta en la ExcellCity Winter School 2025 sus avances en el uso de imágenes satelitales para una agricultura más sostenible </h2>
+
+    <p class="news-card-text">
+      La Cátedra OSIRIS mostró en Sofía (Bulgaria) cómo la combinación de imágenes Sentinel-2, datos climáticos y modelos de IA permite monitorizar cultivos en tiempo real y optimizar el uso del agua, con resultados obtenidos en parcelas de la Región de Murcia.
+    </p>
+
+    <a
+      href="/web-ants/news/osiris-nota-de-prensa/"
+      class="btn btn-news"
+      
+    >
+      Read more
+    </a>
+  </div>
+</article>
+
+    
+      <article
+  class="news-card "
+  data-filter-item
+  data-project="nemesis"
+  data-search="NEMESIS: a new Horizon Europe project to restore Mediterranean soils The NEMESIS project, funded by Horizon Europe, aims to combat desertification and restore soil health in vulnerable Mediterranean regions through five interconnected Living Labs. The University of Murcia joins an international consortium working on sustainable, community-driven soil solutions. nemesis"
+>
+  
+    <a
+      href="/web-ants/news/nemesis/"
+      class="news-card-img-link"
+      
+    >
+      <img
+        src="/web-ants/images/news/nemesis/nemesisnews.png"
+        alt="NEMESIS Horizon Europe"
+      >
+    </a>
+  
+
+  <div class="news-card-body">
+    <h2 class="news-card-title">NEMESIS: a new Horizon Europe project to restore Mediterranean soils</h2>
+
+    <p class="news-card-text">
+      The NEMESIS project, funded by Horizon Europe, aims to combat desertification and restore soil health in vulnerable Mediterranean regions through five interconnected Living Labs. The University of Murcia joins an international consortium working on sustainable, community-driven soil solutions.
+    </p>
+
+    <a
+      href="/web-ants/news/nemesis/"
+      class="btn btn-news"
+      
+    >
+      Read more
+    </a>
+  </div>
+</article>
+
+    
+  </div>
+
+  <p class="news-empty" data-filter-empty hidden>
+    No news match your filters.
+  </p>
+
+  <div class="news-pagination" data-filter-pagination>
+  <button type="button" aria-label="Previous page" data-filter-prev>
+    ←
+  </button>
+
+  <span data-filter-info>
+    1 de 1
+  </span>
+
+  <button type="button" aria-label="Next page" data-filter-next>
+    →
+  </button>
+</div>
+
+</section>
+
+
+
+    </main>
+    <footer class="main-footer">
+  <div class="main-footer-inner">
+
+    <div class="footer-left">
+      <h2 class="footer-title">
+        a non stop<br>
+        workers<br>
+        research group
+      </h2>
+
+      <ul class="footer-items">
+        
+          <li>
+            <a href="/web-ants/">about ants</a>
+          </li>
+        
+          <li>
+            <a href="/web-ants/gaia-lab/">gaia lab</a>
+          </li>
+        
+          <li>
+            <a href="/web-ants/research-projects/">research projects</a>
+          </li>
+        
+          <li>
+            <a href="/web-ants/research-lines/">research lines</a>
+          </li>
+        
+          <li>
+            <a href="/web-ants/news/">news</a>
+          </li>
+        
+      </ul>
+    </div>
+
+    <div class="footer-brand">
+      <a
+        class="footer-umu-link"
+        href="https://www.um.es/web/informatica/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          class="footer-umu-logo"
+          src="/web-ants/images/umu-informatica-logo.png"
+          alt="Universidad de Murcia - Facultad de Informática"
+        >
+      </a>
+
+      <div class="footer-social">
+        <a
+          href="https://www.linkedin.com/company/ants-research-group/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Follow ants on <span>LinkedIn ↗</span>
+        </a>
+
+        <a
+          href="https://x.com/ants_fium"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Follow ants on <span>X ↗</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <a class="footer-top-link" href="#top" aria-label="Back to top">
+        ↑
+      </a>
+    </div>
+
+  </div>
+</footer>
+  </div>
+
+  <script src="/web-ants/js/main-menu.43878e3d0786360ed8713c31c1f8fa5613b267ac8662b1edf64c38b66e536ea9.js" defer></script>
+  
+  <script src="/web-ants/js/filterable-list.90cb6a3404bdf63510979a5f525d2c7808e91a087d3c4e89cd3191177593da29.js" defer></script>
+
+
+</body>
 </html>
