@@ -1,1833 +1,1410 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="../../favicons-proyectos/FaviconORCIBER.ico"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="../../favicons-proyectos/FaviconORCIBERmobile.png"
-    />
-    <title>ORCIBER-5G</title>
-    <link rel="stylesheet" href="../../css-site/site.css?v=20260408-6" />
-    <style>
-      :root {
-        --nav-height: 64px;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../../favicons-proyectos/FaviconORCIBER.ico" />
+  <link rel="apple-touch-icon" href="../../favicons-proyectos/FaviconORCIBERmobile.png" />
+  <title>ORCIBER-5G</title>
+  <link rel="stylesheet" href="../../css-site/site.css?v=20260408-6" />
+  <style>
+    :root { --nav-height: 64px; }
+    body.orciber-theme {
+      --orciber-white: #ffffff;
+      --orciber-black: #000000;
+      --orciber-deep: #00157a;
+      --orciber-navy: #001fe1;
+      --orciber-sky: #008bff;
+      --orciber-gradient: linear-gradient(90deg, #001fe1 0%, #008bff 100%);
+      background: var(--orciber-white) !important;
+    }
+    body.orciber-theme #sb-site,
+    body.orciber-theme section#body {
+      background: var(--orciber-white) !important;
+    }
+    body.orciber-theme .osiris-project-topbar {
+      background: var(--orciber-deep) !important;
+      border-bottom: 0 !important;
+    }
+    body.orciber-theme .project-mobile-burger {
+      display: none;
+    }
+    body.orciber-theme .osiris-project-logo img {
+      height: 42px;
+      width: auto;
+    }
+    body.orciber-theme .osiris-project-nav a {
+      color: var(--orciber-white) !important;
+    }
+    body.orciber-theme .osiris-project-nav a:hover {
+      color: var(--orciber-sky) !important;
+      opacity: 1;
+    }
+    body.orciber-theme .main-footer {
+      background: var(--orciber-deep) !important;
+      border-top: 0 !important;
+    }
+    body.orciber-theme .footer-items a:hover,
+    body.orciber-theme .footer-social a:hover {
+      color: var(--orciber-sky) !important;
+    }
+    body.orciber-theme .footer-top-link {
+      border-color: var(--orciber-sky) !important;
+      color: var(--orciber-sky) !important;
+      background: transparent !important;
+      transition: transform 0.18s ease;
+    }
+    body.orciber-theme .main-footer a.footer-top-link,
+    body.orciber-theme .main-footer a.footer-top-link:link,
+    body.orciber-theme .main-footer a.footer-top-link:visited,
+    body.orciber-theme .main-footer a.footer-top-link:active {
+      color: var(--orciber-sky) !important;
+      border-color: var(--orciber-sky) !important;
+      background: transparent !important;
+    }
+    body.orciber-theme .footer-top-link:hover {
+      background: transparent !important;
+      border-color: var(--orciber-sky) !important;
+      color: var(--orciber-sky) !important;
+      transform: scale(1.08);
+    }
+    body.orciber-theme .orciber-hero {
+      width: 100vw;
+      margin: 0 calc(50% - 50vw);
+      height: 525px;
+      background: var(--orciber-gradient);
+      position: relative;
+      overflow: hidden;
+    }
+    body.orciber-theme .orciber-hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1000px;
+      height: 100%;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 160px;
+    }
+    body.orciber-theme .orciber-hero-logo-wrap {
+      flex: 0 0 auto;
+      margin-left: -60px;
+    }
+    body.orciber-theme .orciber-hero-logo {
+      height: 300px;
+      width: auto;
+      display: block;
+    }
+    body.orciber-theme .orciber-hero-copy {
+      max-width: 390px;
+    }
+    body.orciber-theme .orciber-hero-text {
+      margin: 0;
+      color: var(--orciber-white) !important;
+      font-size: 1.24rem;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-weight: 700;
+      line-height: 1.42;
+      text-align: left;
+    }
+    body.orciber-theme .orciber-hero-more {
+      margin-top: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: var(--orciber-white) !important;
+      text-decoration: none !important;
+      border-radius: 0;
+      padding: 0.62rem 1.1rem;
+      border: 1.5px solid var(--orciber-white) !important;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+    }
+    body.orciber-theme .orciber-hero-more:hover {
+      transform: translateY(-1px);
+      background: var(--orciber-white) !important;
+      color: var(--orciber-navy) !important;
+      border-color: var(--orciber-white) !important;
+    }
+    body.orciber-theme .orciber-hero-stars {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: auto;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.95;
+    }
+    body.orciber-theme .orciber-intro-wrap {
+      width: 100vw;
+      margin: 0 calc(50% - 50vw);
+      padding: 1.2rem;
+      box-sizing: border-box;
+      background: var(--orciber-white) !important;
+    }
+    body.orciber-theme .orciber-intro {
+      max-width: 1000px;
+      min-height: 218px;
+      margin: 0 auto;
+      background: var(--orciber-white);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.35rem 1.5rem;
+      box-sizing: border-box;
+    }
+    body.orciber-theme .orciber-intro-text {
+      margin: 0;
+      color: var(--orciber-navy) !important;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.05rem, 1.55vw, 1.45rem);
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: 0.03em;
+      text-transform: none;
+      text-wrap: balance;
+      max-width: 1000px;
+      text-align: center;
+    }
+    body.orciber-theme .orciber-intro-star {
+      position: absolute;
+      color: var(--orciber-navy);
+      line-height: 1;
+      pointer-events: none;
+      opacity: 0.9;
+      font-family: 'Space Grotesk', sans-serif;
+      text-shadow: 0 0 8px rgba(0, 31, 225, 0.16);
+    }
+    body.orciber-theme .orciber-intro-star--l {
+      left: 28px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2.2rem;
+    }
+    body.orciber-theme .orciber-intro-star--r {
+      right: 28px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2.2rem;
+    }
+    body.orciber-theme .orciber-funding {
+      width: 100vw;
+      margin: 0 calc(50% - 50vw);
+      background: #001fe1 !important;
+      background-color: #001fe1 !important;
+      height: 400px;
+      padding: 2.4rem 1.5rem 2.6rem;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+    }
+    body.orciber-theme .orciber-funding-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #001fe1 !important;
+      background-color: #001fe1 !important;
+    }
+    body.orciber-theme .orciber-funding-file {
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      background: transparent !important;
+      width: 750px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    body.orciber-theme .orciber-funding-row {
+      display: grid;
+      grid-template-columns: minmax(220px, 34%) minmax(0, 1fr);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    body.orciber-theme .orciber-funding-row:last-child {
+      border-bottom: 0;
+    }
+    body.orciber-theme .orciber-funding-k,
+    body.orciber-theme .orciber-funding-v {
+      padding: 0.72rem 0.86rem;
+      line-height: 1.3;
+      color: var(--orciber-white) !important;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    body.orciber-theme .orciber-funding-k {
+      border-right: 1px solid rgba(255, 255, 255, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 0.84rem;
+      font-weight: 700;
+      background: transparent !important;
+    }
+    body.orciber-theme .orciber-funding-v {
+      font-size: 0.98rem;
+      font-weight: 300;
+      letter-spacing: 0.015em;
+      background: transparent !important;
+    }
+    body.orciber-theme .orciber-funding-v--nowrap {
+      white-space: nowrap;
+      font-size: 0.9rem;
+      letter-spacing: 0;
+    }
+    body.orciber-theme .orciber-logos-module {
+      width: 100vw;
+      margin: 0 calc(50% - 50vw);
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+      background-image: none !important;
+      padding: 1.2rem 0 1.6rem;
+      box-sizing: border-box;
+    }
+    body.orciber-theme .orciber-logos-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.9rem;
+    }
+    body.orciber-theme .orciber-logos-image {
+      max-width: 1000px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    body.orciber-theme .orciber-logos-text {
+      margin: 0;
+      margin-top: -15px;
+      color: #000000 !important;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.66rem;
+      line-height: 1.15;
+      text-align: center;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+    body.orciber-theme .orciber-logos-module[aria-label*="post-footer"] .orciber-logos-text {
+      white-space: normal;
+      max-width: 920px;
+      line-height: 1.22;
+    }
+    body.orciber-theme .orciber-cpi-wrap {
+      width: 100vw;
+      margin: 0 calc(50% - 50vw);
+      background: #008bff !important;
+      background-color: #008bff !important;
+      padding: 2.3rem 1.5rem 2.1rem;
+      box-sizing: border-box;
+    }
+    body.orciber-theme .orciber-cpi-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+      padding-top: 0;
+      background: #008bff !important;
+      background-color: #008bff !important;
+    }
+    body.orciber-theme .orciber-cpi-box {
+      border: 2px solid #001fe1;
+      background: #008bff !important;
+      background-color: #008bff !important;
+      padding: 1.05rem 5.4rem 1rem;
+      text-align: center;
+      min-height: 68px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      box-sizing: border-box;
+    }
+    body.orciber-theme .orciber-cpi-text {
+      margin: 0;
+      color: #00157a !important;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(0.51rem, 0.9vw, 0.79rem);
+      line-height: 1.12;
+      letter-spacing: 0.06em;
+      font-weight: 300;
+      text-wrap: balance;
+    }
+    body.orciber-theme .orciber-cpi-tag {
+      margin: 0;
+      text-align: center;
+      color: #00157a !important;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(0.51rem, 0.9vw, 0.79rem);
+      line-height: 1;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+    }
+    body.orciber-theme .orciber-module-title-wrap {
+      width: 100vw;
+      margin: 0 calc(50% - 50vw);
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+      padding: 2.2rem 1.5rem 1.2rem;
+      box-sizing: border-box;
+    }
+    body.orciber-theme .orciber-module-title-wrap.is-gradient {
+      background: var(--orciber-gradient) !important;
+      background-color: #001fe1 !important;
+    }
+    body.orciber-theme .orciber-module-title-wrap.is-sky {
+      background: #008bff !important;
+      background-color: #008bff !important;
+    }
+    body.orciber-theme #impacto-mod {
+      padding-bottom: 4.4rem !important;
+    }
+    body.orciber-theme #impacto-mod,
+    body.orciber-theme #impacto-mod .orciber-module-title,
+    body.orciber-theme #impacto-mod .orciber-module-intro,
+    body.orciber-theme #impacto-mod .orciber-impact-step,
+    body.orciber-theme #impacto-mod .orciber-impact-step p,
+    body.orciber-theme #impacto-mod .orciber-impact-connector,
+    body.orciber-theme #impacto-mod .orciber-impact-star {
+      color: #00157a !important;
+    }
+    body.orciber-theme #impacto-mod .orciber-impact-step {
+      border-color: #00157a !important;
+    }
+    body.orciber-theme .orciber-module-title-wrap.is-gradient .orciber-module-title {
+      color: #ffffff !important;
+    }
+    body.orciber-theme .orciber-module-title-wrap.is-gradient .orciber-module-intro {
+      color: #ffffff !important;
+    }
+    body.orciber-theme .orciber-module-title-wrap.is-gradient .orciber-module-title-imago {
+      background: url("../../pages/15.orciber-5g/assets/imagoorciber.svg") center / contain no-repeat;
+    }
+    body.orciber-theme .orciber-module-title {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+      color: #00157a !important;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.65rem, 3.5vw, 2.7rem);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+    body.orciber-theme .orciber-module-intro {
+      max-width: 1000px;
+      margin: 0.95rem auto 0;
+      color: #00157a !important;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 1.03rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+    body.orciber-theme .orciber-module-title-imago {
+      display: inline-block;
+      width: 1.9em;
+      height: 1.9em;
+      margin-left: 0.28rem;
+      vertical-align: middle;
+      transform: translateY(-0.06em);
+      background: url("../../pages/15.orciber-5g/assets/imagoorciber-navy.svg") center / contain no-repeat;
+    }
+    body.orciber-theme #sobre-proyecto-mod,
+    body.orciber-theme #objetivos-mod,
+    body.orciber-theme #impacto-mod {
+      scroll-margin-top: calc(var(--nav-height) + 22px);
+    }
+    @media (max-width: 980px) {
+      body.orciber-theme .osiris-ants-logo {
+        display: none !important;
       }
-      body.orciber-theme {
-        --orciber-white: #ffffff;
-        --orciber-black: #000000;
-        --orciber-deep: #00157a;
-        --orciber-navy: #001fe1;
-        --orciber-sky: #008bff;
-        --orciber-gradient: linear-gradient(90deg, #001fe1 0%, #008bff 100%);
-        background: var(--orciber-white) !important;
+      body.orciber-theme .osiris-project-topbar-inner {
+        flex-wrap: nowrap !important;
       }
-      body.orciber-theme #sb-site,
-      body.orciber-theme section#body {
-        background: var(--orciber-white) !important;
-      }
-      body.orciber-theme .osiris-project-topbar {
-        background: var(--orciber-deep) !important;
-        border-bottom: 0 !important;
-      }
-      body.orciber-theme .project-mobile-burger {
-        display: none;
-      }
-      body.orciber-theme .osiris-project-logo img {
-        height: 42px;
-        width: auto;
-      }
-      body.orciber-theme .osiris-project-nav a {
-        color: var(--orciber-white) !important;
-      }
-      body.orciber-theme .osiris-project-nav a:hover {
-        color: var(--orciber-sky) !important;
-        opacity: 1;
-      }
-      body.orciber-theme .main-footer {
-        background: var(--orciber-deep) !important;
-        border-top: 0 !important;
-      }
-      body.orciber-theme .footer-items a:hover,
-      body.orciber-theme .footer-social a:hover {
-        color: var(--orciber-sky) !important;
-      }
-      body.orciber-theme .footer-top-link {
-        border-color: var(--orciber-sky) !important;
-        color: var(--orciber-sky) !important;
-        background: transparent !important;
-        transition: transform 0.18s ease;
-      }
-      body.orciber-theme .main-footer a.footer-top-link,
-      body.orciber-theme .main-footer a.footer-top-link:link,
-      body.orciber-theme .main-footer a.footer-top-link:visited,
-      body.orciber-theme .main-footer a.footer-top-link:active {
-        color: var(--orciber-sky) !important;
-        border-color: var(--orciber-sky) !important;
-        background: transparent !important;
-      }
-      body.orciber-theme .footer-top-link:hover {
-        background: transparent !important;
-        border-color: var(--orciber-sky) !important;
-        color: var(--orciber-sky) !important;
-        transform: scale(1.08);
+      body.mobile-ready.orciber-theme .osiris-project-logo,
+      body.orciber-theme .osiris-project-logo {
+        margin-right: auto !important;
+        margin-left: 0 !important;
       }
       body.orciber-theme .orciber-hero {
-        width: 100vw;
-        margin: 0 calc(50% - 50vw);
-        height: 525px;
-        background: var(--orciber-gradient);
-        position: relative;
-        overflow: hidden;
+        height: auto;
+        min-height: 0;
       }
       body.orciber-theme .orciber-hero-inner {
-        position: relative;
-        z-index: 2;
-        max-width: 1000px;
-        height: 100%;
-        width: 100%;
-        margin: 0 auto;
-        padding: 0 1.5rem;
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 160px;
-      }
-      body.orciber-theme .orciber-hero-logo-wrap {
-        flex: 0 0 auto;
-        margin-left: -60px;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem 1rem;
       }
       body.orciber-theme .orciber-hero-logo {
-        height: 300px;
-        width: auto;
-        display: block;
+        width: min(76vw, 330px);
+        height: auto;
+        max-height: none;
+        position: relative;
+        z-index: 3;
       }
-      body.orciber-theme .orciber-hero-copy {
-        max-width: 390px;
-      }
-      body.orciber-theme .orciber-hero-text {
-        margin: 0;
-        color: var(--orciber-white) !important;
-        font-size: 1.24rem;
-        font-family: "IBM Plex Sans", sans-serif;
-        font-weight: 700;
-        line-height: 1.42;
-        text-align: left;
-      }
-      body.orciber-theme .orciber-hero-more {
-        margin-top: 1rem;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        background: transparent;
-        color: var(--orciber-white) !important;
-        text-decoration: none !important;
-        border-radius: 0;
-        padding: 0.62rem 1.1rem;
-        border: 1.5px solid var(--orciber-white) !important;
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 0.92rem;
-        font-weight: 600;
-        letter-spacing: 0.04em;
-        transition:
-          transform 0.15s ease,
-          background-color 0.15s ease,
-          color 0.15s ease;
-      }
-      body.orciber-theme .orciber-hero-more:hover {
-        transform: translateY(-1px);
-        background: var(--orciber-white) !important;
-        color: var(--orciber-navy) !important;
-        border-color: var(--orciber-white) !important;
+      body.orciber-theme .orciber-hero-logo-wrap {
+        margin-left: 0;
       }
       body.orciber-theme .orciber-hero-stars {
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: auto;
-        z-index: 1;
-        pointer-events: none;
-        opacity: 0.95;
+        height: auto;
+        width: min(22vw, 98px);
+        top: 10px;
+        right: 6px;
+        opacity: 0.2;
       }
-      body.orciber-theme .orciber-intro-wrap {
-        width: 100vw;
-        margin: 0 calc(50% - 50vw);
-        padding: 1.2rem;
-        box-sizing: border-box;
-        background: var(--orciber-white) !important;
-      }
-      body.orciber-theme .orciber-intro {
-        max-width: 1000px;
-        min-height: 218px;
-        margin: 0 auto;
-        background: var(--orciber-white);
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1.35rem 1.5rem;
-        box-sizing: border-box;
-      }
-      body.orciber-theme .orciber-intro-text {
-        margin: 0;
-        color: var(--orciber-navy) !important;
-        font-family: "Space Grotesk", sans-serif;
-        font-size: clamp(1.05rem, 1.55vw, 1.45rem);
-        font-weight: 500;
-        line-height: 1.08;
-        letter-spacing: 0.03em;
-        text-transform: none;
-        text-wrap: balance;
-        max-width: 1000px;
+      body.orciber-theme .orciber-hero-copy {
+        max-width: 100%;
         text-align: center;
       }
-      body.orciber-theme .orciber-intro-star {
-        position: absolute;
-        color: var(--orciber-navy);
-        line-height: 1;
-        pointer-events: none;
-        opacity: 0.9;
-        font-family: "Space Grotesk", sans-serif;
-        text-shadow: 0 0 8px rgba(0, 31, 225, 0.16);
+      body.orciber-theme .orciber-hero-text {
+        font-size: 1.02rem;
+        line-height: 1.45;
+        text-align: center;
+      }
+      body.orciber-theme .orciber-hero-more {
+        margin-top: 0.85rem;
+      }
+      body.orciber-theme .orciber-intro {
+        min-height: 0;
+        padding: 1rem 1.1rem;
+        text-align: center;
+      }
+      body.orciber-theme .orciber-intro-text {
+        font-size: clamp(0.92rem, 4.3vw, 1.08rem);
+        line-height: 1.1;
+        letter-spacing: 0.02em;
       }
       body.orciber-theme .orciber-intro-star--l {
-        left: 28px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 2.2rem;
+        left: 8px;
+        font-size: 1.45rem;
       }
       body.orciber-theme .orciber-intro-star--r {
-        right: 28px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 2.2rem;
+        right: 8px;
+        font-size: 1.45rem;
       }
       body.orciber-theme .orciber-funding {
-        width: 100vw;
-        margin: 0 calc(50% - 50vw);
-        background: #001fe1 !important;
-        background-color: #001fe1 !important;
-        height: 400px;
-        padding: 2.4rem 1.5rem 2.6rem;
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
-      }
-      body.orciber-theme .orciber-funding-inner {
-        max-width: 1000px;
-        margin: 0 auto;
-        background: #001fe1 !important;
-        background-color: #001fe1 !important;
+        height: auto;
+        padding: 1.5rem 1rem 1.8rem;
       }
       body.orciber-theme .orciber-funding-file {
-        border: 1px solid rgba(255, 255, 255, 0.45);
-        background: transparent !important;
-        width: 750px;
-        max-width: 100%;
-        margin: 0 auto;
+        width: 100% !important;
+        max-width: 760px;
       }
       body.orciber-theme .orciber-funding-row {
-        display: grid;
-        grid-template-columns: minmax(220px, 34%) minmax(0, 1fr);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        grid-template-columns: 1fr !important;
+        height: auto !important;
       }
-      body.orciber-theme .orciber-funding-row:last-child {
-        border-bottom: 0;
+      body.orciber-theme .orciber-funding-k {
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.22);
       }
       body.orciber-theme .orciber-funding-k,
       body.orciber-theme .orciber-funding-v {
-        padding: 0.72rem 0.86rem;
-        line-height: 1.3;
-        color: var(--orciber-white) !important;
-        font-family: "Space Grotesk", sans-serif;
-      }
-      body.orciber-theme .orciber-funding-k {
-        border-right: 1px solid rgba(255, 255, 255, 0.3);
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        font-size: 0.84rem;
-        font-weight: 700;
-        background: transparent !important;
+        padding: 0.66rem 0.68rem;
       }
       body.orciber-theme .orciber-funding-v {
-        font-size: 0.98rem;
-        font-weight: 300;
-        letter-spacing: 0.015em;
-        background: transparent !important;
+        font-size: 0.92rem;
+        line-height: 1.34;
+        white-space: normal !important;
+        overflow: visible !important;
+        text-overflow: clip !important;
+        word-break: break-word;
       }
       body.orciber-theme .orciber-funding-v--nowrap {
-        white-space: nowrap;
-        font-size: 0.9rem;
-        letter-spacing: 0;
+        white-space: normal !important;
+        line-height: 1.34 !important;
+        min-height: 0 !important;
+        display: block !important;
+        word-break: break-word !important;
+        overflow-wrap: anywhere;
       }
       body.orciber-theme .orciber-logos-module {
-        width: 100vw;
-        margin: 0 calc(50% - 50vw);
-        background: #ffffff !important;
-        background-color: #ffffff !important;
-        background-image: none !important;
-        padding: 1.2rem 0 1.6rem;
-        box-sizing: border-box;
-      }
-      body.orciber-theme .orciber-logos-inner {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 0 1.5rem;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 0.9rem;
+        padding: 1rem 0 1.3rem;
       }
       body.orciber-theme .orciber-logos-image {
-        max-width: 1000px;
         width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
       }
       body.orciber-theme .orciber-logos-text {
-        margin: 0;
-        margin-top: -15px;
-        color: #000000 !important;
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 0.66rem;
-        line-height: 1.15;
-        text-align: center;
-        letter-spacing: 0.01em;
-        white-space: nowrap;
-      }
-      body.orciber-theme
-        .orciber-logos-module[aria-label*="post-footer"]
-        .orciber-logos-text {
-        white-space: normal;
-        max-width: 920px;
-        line-height: 1.22;
+        font-size: 0.58rem;
       }
       body.orciber-theme .orciber-cpi-wrap {
-        width: 100vw;
-        margin: 0 calc(50% - 50vw);
-        background: #008bff !important;
-        background-color: #008bff !important;
-        padding: 2.3rem 1.5rem 2.1rem;
-        box-sizing: border-box;
-      }
-      body.orciber-theme .orciber-cpi-inner {
-        max-width: 1000px;
-        margin: 0 auto;
-        position: relative;
-        padding-top: 0;
-        background: #008bff !important;
-        background-color: #008bff !important;
+        padding: 1.6rem 1rem 1.5rem;
       }
       body.orciber-theme .orciber-cpi-box {
-        border: 2px solid #001fe1;
-        background: #008bff !important;
-        background-color: #008bff !important;
-        padding: 1.05rem 5.4rem 1rem;
-        text-align: center;
-        min-height: 68px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 0.45rem;
-        box-sizing: border-box;
+        padding: 0.85rem 1rem 0.8rem;
       }
       body.orciber-theme .orciber-cpi-text {
-        margin: 0;
-        color: #00157a !important;
-        font-family: "Space Grotesk", sans-serif;
-        font-size: clamp(0.51rem, 0.9vw, 0.79rem);
-        line-height: 1.12;
-        letter-spacing: 0.06em;
-        font-weight: 300;
-        text-wrap: balance;
+        font-size: clamp(0.48rem, 2.4vw, 0.62rem);
+        line-height: 1.2;
+        letter-spacing: 0.03em;
       }
       body.orciber-theme .orciber-cpi-tag {
-        margin: 0;
-        text-align: center;
-        color: #00157a !important;
-        font-family: "Space Grotesk", sans-serif;
-        font-size: clamp(0.51rem, 0.9vw, 0.79rem);
-        line-height: 1;
-        font-weight: 400;
-        letter-spacing: 0.04em;
+        margin-top: 0.5rem;
+        font-size: clamp(0.48rem, 2.4vw, 0.62rem);
       }
       body.orciber-theme .orciber-module-title-wrap {
-        width: 100vw;
-        margin: 0 calc(50% - 50vw);
-        background: #ffffff !important;
-        background-color: #ffffff !important;
-        padding: 2.2rem 1.5rem 1.2rem;
-        box-sizing: border-box;
-      }
-      body.orciber-theme .orciber-module-title-wrap.is-gradient {
-        background: var(--orciber-gradient) !important;
-        background-color: #001fe1 !important;
-      }
-      body.orciber-theme .orciber-module-title-wrap.is-sky {
-        background: #008bff !important;
-        background-color: #008bff !important;
-      }
-      body.orciber-theme #impacto-mod {
-        padding-bottom: 4.4rem !important;
-      }
-      body.orciber-theme #impacto-mod,
-      body.orciber-theme #impacto-mod .orciber-module-title,
-      body.orciber-theme #impacto-mod .orciber-module-intro,
-      body.orciber-theme #impacto-mod .orciber-impact-step,
-      body.orciber-theme #impacto-mod .orciber-impact-step p,
-      body.orciber-theme #impacto-mod .orciber-impact-connector,
-      body.orciber-theme #impacto-mod .orciber-impact-star {
-        color: #00157a !important;
-      }
-      body.orciber-theme #impacto-mod .orciber-impact-step {
-        border-color: #00157a !important;
-      }
-      body.orciber-theme
-        .orciber-module-title-wrap.is-gradient
-        .orciber-module-title {
-        color: #ffffff !important;
-      }
-      body.orciber-theme
-        .orciber-module-title-wrap.is-gradient
-        .orciber-module-intro {
-        color: #ffffff !important;
-      }
-      body.orciber-theme
-        .orciber-module-title-wrap.is-gradient
-        .orciber-module-title-imago {
-        background: url("../../pages/15.orciber-5g/assets/imagoorciber.svg")
-          center / contain no-repeat;
+        padding: 1.5rem 1rem 1rem;
       }
       body.orciber-theme .orciber-module-title {
-        max-width: 1000px;
-        margin: 0 auto;
-        text-align: center;
-        color: #00157a !important;
-        font-family: "Space Grotesk", sans-serif;
-        font-size: clamp(1.65rem, 3.5vw, 2.7rem);
-        font-weight: 700;
-        line-height: 1.05;
-        letter-spacing: 0.11em;
-        text-transform: uppercase;
+        font-size: clamp(1.25rem, 6.4vw, 1.7rem);
+        letter-spacing: 0.08em;
       }
       body.orciber-theme .orciber-module-intro {
-        max-width: 1000px;
-        margin: 0.95rem auto 0;
-        color: #00157a !important;
-        font-family: "IBM Plex Sans", sans-serif;
-        font-size: 1.03rem;
-        line-height: 1.6;
-        text-align: center;
+        font-size: 0.94rem;
+        line-height: 1.5;
       }
-      body.orciber-theme .orciber-module-title-imago {
-        display: inline-block;
-        width: 1.9em;
-        height: 1.9em;
-        margin-left: 0.28rem;
-        vertical-align: middle;
-        transform: translateY(-0.06em);
-        background: url("../../pages/15.orciber-5g/assets/imagoorciber-navy.svg")
-          center / contain no-repeat;
+    }
+    @media (max-width: 640px) {
+      body.orciber-theme .orciber-hero-stars {
+        width: min(18vw, 74px);
+        top: 8px;
+        right: 4px;
+        opacity: 0.16;
       }
-      body.orciber-theme #sobre-proyecto-mod,
-      body.orciber-theme #objetivos-mod,
-      body.orciber-theme #impacto-mod {
-        scroll-margin-top: calc(var(--nav-height) + 22px);
-      }
-      @media (max-width: 980px) {
-        body.orciber-theme .osiris-ants-logo {
-          display: none !important;
-        }
-        body.orciber-theme .osiris-project-topbar-inner {
-          flex-wrap: nowrap !important;
-        }
-        body.mobile-ready.orciber-theme .osiris-project-logo,
-        body.orciber-theme .osiris-project-logo {
-          margin-right: auto !important;
-          margin-left: 0 !important;
-        }
-        body.orciber-theme .orciber-hero {
-          height: auto;
-          min-height: 0;
-        }
-        body.orciber-theme .orciber-hero-inner {
-          flex-direction: column;
-          gap: 1rem;
-          padding: 2rem 1rem;
-        }
-        body.orciber-theme .orciber-hero-logo {
-          width: min(76vw, 330px);
-          height: auto;
-          max-height: none;
-          position: relative;
-          z-index: 3;
-        }
-        body.orciber-theme .orciber-hero-logo-wrap {
-          margin-left: 0;
-        }
-        body.orciber-theme .orciber-hero-stars {
-          height: auto;
-          width: min(22vw, 98px);
-          top: 10px;
-          right: 6px;
-          opacity: 0.2;
-        }
-        body.orciber-theme .orciber-hero-copy {
-          max-width: 100%;
-          text-align: center;
-        }
-        body.orciber-theme .orciber-hero-text {
-          font-size: 1.02rem;
-          line-height: 1.45;
-          text-align: center;
-        }
-        body.orciber-theme .orciber-hero-more {
-          margin-top: 0.85rem;
-        }
-        body.orciber-theme .orciber-intro {
-          min-height: 0;
-          padding: 1rem 1.1rem;
-          text-align: center;
-        }
-        body.orciber-theme .orciber-intro-text {
-          font-size: clamp(0.92rem, 4.3vw, 1.08rem);
-          line-height: 1.1;
-          letter-spacing: 0.02em;
-        }
-        body.orciber-theme .orciber-intro-star--l {
-          left: 8px;
-          font-size: 1.45rem;
-        }
-        body.orciber-theme .orciber-intro-star--r {
-          right: 8px;
-          font-size: 1.45rem;
-        }
-        body.orciber-theme .orciber-funding {
-          height: auto;
-          padding: 1.5rem 1rem 1.8rem;
-        }
-        body.orciber-theme .orciber-funding-file {
-          width: 100% !important;
-          max-width: 760px;
-        }
-        body.orciber-theme .orciber-funding-row {
-          grid-template-columns: 1fr !important;
-          height: auto !important;
-        }
-        body.orciber-theme .orciber-funding-k {
-          border-right: 0;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.22);
-        }
-        body.orciber-theme .orciber-funding-k,
-        body.orciber-theme .orciber-funding-v {
-          padding: 0.66rem 0.68rem;
-        }
-        body.orciber-theme .orciber-funding-v {
-          font-size: 0.92rem;
-          line-height: 1.34;
-          white-space: normal !important;
-          overflow: visible !important;
-          text-overflow: clip !important;
-          word-break: break-word;
-        }
-        body.orciber-theme .orciber-funding-v--nowrap {
-          white-space: normal !important;
-          line-height: 1.34 !important;
-          min-height: 0 !important;
-          display: block !important;
-          word-break: break-word !important;
-          overflow-wrap: anywhere;
-        }
-        body.orciber-theme .orciber-logos-module {
-          padding: 1rem 0 1.3rem;
-        }
-        body.orciber-theme .orciber-logos-image {
-          width: 100%;
-        }
-        body.orciber-theme .orciber-logos-text {
-          font-size: 0.58rem;
-        }
-        body.orciber-theme .orciber-cpi-wrap {
-          padding: 1.6rem 1rem 1.5rem;
-        }
-        body.orciber-theme .orciber-cpi-box {
-          padding: 0.85rem 1rem 0.8rem;
-        }
-        body.orciber-theme .orciber-cpi-text {
-          font-size: clamp(0.48rem, 2.4vw, 0.62rem);
-          line-height: 1.2;
-          letter-spacing: 0.03em;
-        }
-        body.orciber-theme .orciber-cpi-tag {
-          margin-top: 0.5rem;
-          font-size: clamp(0.48rem, 2.4vw, 0.62rem);
-        }
-        body.orciber-theme .orciber-module-title-wrap {
-          padding: 1.5rem 1rem 1rem;
-        }
-        body.orciber-theme .orciber-module-title {
-          font-size: clamp(1.25rem, 6.4vw, 1.7rem);
-          letter-spacing: 0.08em;
-        }
-        body.orciber-theme .orciber-module-intro {
-          font-size: 0.94rem;
-          line-height: 1.5;
-        }
-      }
-      @media (max-width: 640px) {
-        body.orciber-theme .orciber-hero-stars {
-          width: min(18vw, 74px);
-          top: 8px;
-          right: 4px;
-          opacity: 0.16;
-        }
-      }
-      .project-content {
-        max-width: 1000px;
-        margin: 1rem auto 0;
-        padding: 0 1.5rem;
-        box-sizing: border-box;
-      }
-      .project-content img {
-        max-width: 100%;
-        height: auto;
-      }
-      body.orciber-theme .orciber-overview {
-        max-width: 1000px;
-        margin: 0 auto 2rem;
-        display: grid;
-        gap: 2rem;
-      }
+    }
+    .project-content {
+      max-width: 1000px;
+      margin: 1rem auto 0;
+      padding: 0 1.5rem;
+      box-sizing: border-box;
+    }
+    .project-content img {
+      max-width: 100%;
+      height: auto;
+    }
+    body.orciber-theme .orciber-overview {
+      max-width: 1000px;
+      margin: 0 auto 2rem;
+      display: grid;
+      gap: 2rem;
+    }
+    body.orciber-theme .orciber-overview-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 1.8rem;
+      align-items: stretch;
+    }
+    body.orciber-theme .orciber-overview-row.is-reverse .orciber-overview-text {
+      order: 2;
+    }
+    body.orciber-theme .orciber-overview-row.is-reverse .orciber-overview-media {
+      order: 1;
+    }
+    body.orciber-theme .orciber-overview-text p {
+      margin: 0;
+      color: #000000 !important;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 1.03rem;
+      line-height: 1.68;
+      text-wrap: pretty;
+    }
+    body.orciber-theme .orciber-overview-text {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      height: 100%;
+    }
+    body.orciber-theme .orciber-overview-text p.orciber-overview-offset-55 {
+      margin-top: 55px;
+    }
+    body.orciber-theme .orciber-overview-side-caption {
+      margin: 0;
+      color: #00157a !important;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.76rem;
+      line-height: 1.25;
+      font-weight: 500;
+      align-self: end;
+    }
+    body.orciber-theme .orciber-overview-side-caption.is-zsm {
+      text-align: right;
+      font-size: calc(0.38rem + 8px);
+      line-height: 1.05;
+      transform: translateY(-65px);
+      color: #00157a !important;
+    }
+    body.orciber-theme .orciber-overview-side-caption.is-cti {
+      text-align: left;
+      font-size: calc(0.38rem + 8px);
+      line-height: 1.05;
+      transform: translateY(-15px);
+      color: #00157a !important;
+    }
+    body.orciber-theme .orciber-overview-side-caption.is-bastion {
+      text-align: right;
+      font-size: calc(0.38rem + 8px);
+      line-height: 1.05;
+      transform: translateY(-15px);
+      color: #00157a !important;
+    }
+    body.orciber-theme .orciber-overview-media {
+      margin: 0;
+    }
+    body.orciber-theme .orciber-overview-media img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    body.orciber-theme .orciber-overview-caption {
+      display: none;
+    }
+    body.orciber-theme .orciber-goals-grid {
+      max-width: 1000px;
+      margin: 1.1rem auto 1.6rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.9rem;
+    }
+    body.orciber-theme .orciber-goal-card {
+      border: 1.5px solid rgba(255, 255, 255, 0.9);
+      background: transparent;
+      padding: 0.95rem 0.9rem 1rem;
+      box-sizing: border-box;
+      display: grid;
+      gap: 0.6rem;
+      align-content: start;
+      width: 220px;
+    }
+    body.orciber-theme .orciber-goal-head {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 0.55rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+    }
+    body.orciber-theme .orciber-goal-icon {
+      display: inline-block;
+      font-size: 2.9rem;
+      line-height: 1;
+      background: transparent !important;
+      color: #ffffff;
+    }
+    body.orciber-theme .orciber-goal-text {
+      margin: 0;
+      color: #ffffff !important;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 1rem;
+      line-height: 1.38;
+      font-weight: 700;
+      text-wrap: pretty;
+      text-align: center;
+    }
+    body.orciber-theme .orciber-goal-text strong {
+      color: #ffffff;
+      font-weight: 700;
+    }
+    body.orciber-theme .orciber-impact-map {
+      width: 100vw;
+      margin: 0 calc(50% - 50vw) 0;
+      background: #008bff !important;
+      background-color: #008bff !important;
+      padding: 1.1rem 1.5rem 3.4rem;
+      box-sizing: border-box;
+      position: relative;
+    }
+    body.orciber-theme .orciber-impact-map.is-inside {
+      width: auto;
+      margin: 1rem auto 0;
+      background: transparent !important;
+      background-color: transparent !important;
+      padding: 0;
+    }
+    body.orciber-theme .orciber-impact-map-inner {
+      max-width: 1000px;
+      min-height: 0;
+      margin: 0 auto;
+      position: relative;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: nowrap;
+    }
+    body.orciber-theme .orciber-impact-step {
+      flex: 1 1 0;
+      min-width: 0;
+      border-radius: 0;
+      border: 2px solid #00157a;
+      background: rgba(255, 255, 255, 0.12);
+      color: #00157a !important;
+      padding: 0.95rem 0.8rem;
+      box-sizing: border-box;
+      text-align: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.96rem;
+      line-height: 1.2;
+      font-weight: 500;
+      text-wrap: pretty;
+      min-height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    body.orciber-theme .orciber-impact-step p {
+      margin: 0;
+      color: #00157a !important;
+    }
+    body.orciber-theme .orciber-impact-connector {
+      flex: 0 0 auto;
+      align-self: center;
+      color: #00157a;
+      font-size: 1.05rem;
+      line-height: 1;
+      opacity: 0.85;
+      transform: translateY(-1px);
+    }
+    body.orciber-theme .orciber-impact-star {
+      position: absolute;
+      color: #00157a;
+      line-height: 1;
+      opacity: 0.28;
+      pointer-events: none;
+      font-family: 'Space Grotesk', sans-serif;
+      text-shadow: 0 0 6px rgba(0, 21, 122, 0.12);
+      z-index: 0;
+    }
+    body.orciber-theme .orciber-impact-star.s1 { left: 34px; top: 28px; font-size: 1.3rem; }
+    body.orciber-theme .orciber-impact-star.s2 { left: 295px; top: 42px; font-size: 1rem; }
+    body.orciber-theme .orciber-impact-star.s3 { left: 552px; top: 24px; font-size: 1.25rem; }
+    body.orciber-theme .orciber-impact-star.s4 { left: 786px; top: 50px; font-size: 1.1rem; }
+    body.orciber-theme .orciber-impact-star.s5 { left: 160px; bottom: -22px; font-size: 1.35rem; }
+    body.orciber-theme .orciber-impact-star.s6 { left: 470px; bottom: -30px; font-size: 1.1rem; }
+    body.orciber-theme .orciber-impact-star.s7 { right: 58px; bottom: -20px; font-size: 1.4rem; }
+    @media (max-width: 900px) {
       body.orciber-theme .orciber-overview-row {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-        gap: 1.8rem;
-        align-items: stretch;
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
       }
-      body.orciber-theme
-        .orciber-overview-row.is-reverse
-        .orciber-overview-text {
-        order: 2;
-      }
-      body.orciber-theme
-        .orciber-overview-row.is-reverse
-        .orciber-overview-media {
-        order: 1;
+      body.orciber-theme .orciber-overview-row.is-reverse .orciber-overview-text,
+      body.orciber-theme .orciber-overview-row.is-reverse .orciber-overview-media {
+        order: initial;
       }
       body.orciber-theme .orciber-overview-text p {
-        margin: 0;
-        color: #000000 !important;
-        font-family: "IBM Plex Sans", sans-serif;
-        font-size: 1.03rem;
-        line-height: 1.68;
-        text-wrap: pretty;
+        font-size: 0.98rem;
+        line-height: 1.62;
+        text-align: center;
       }
       body.orciber-theme .orciber-overview-text {
-        display: grid;
-        grid-template-rows: auto 1fr auto;
-        height: 100%;
-      }
-      body.orciber-theme .orciber-overview-text p.orciber-overview-offset-55 {
-        margin-top: 55px;
-      }
-      body.orciber-theme .orciber-overview-side-caption {
-        margin: 0;
-        color: #00157a !important;
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 0.76rem;
-        line-height: 1.25;
-        font-weight: 500;
-        align-self: end;
-      }
-      body.orciber-theme .orciber-overview-side-caption.is-zsm {
-        text-align: right;
-        font-size: calc(0.38rem + 8px);
-        line-height: 1.05;
-        transform: translateY(-65px);
-        color: #00157a !important;
-      }
-      body.orciber-theme .orciber-overview-side-caption.is-cti {
-        text-align: left;
-        font-size: calc(0.38rem + 8px);
-        line-height: 1.05;
-        transform: translateY(-15px);
-        color: #00157a !important;
-      }
-      body.orciber-theme .orciber-overview-side-caption.is-bastion {
-        text-align: right;
-        font-size: calc(0.38rem + 8px);
-        line-height: 1.05;
-        transform: translateY(-15px);
-        color: #00157a !important;
-      }
-      body.orciber-theme .orciber-overview-media {
-        margin: 0;
-      }
-      body.orciber-theme .orciber-overview-media img {
-        width: 100%;
-        height: auto;
         display: block;
+        height: auto;
       }
-      body.orciber-theme .orciber-overview-caption {
+      body.orciber-theme .orciber-overview-text .orciber-overview-side-caption {
         display: none;
       }
+      body.orciber-theme .orciber-overview-caption {
+        display: block;
+        margin-top: 0.62rem;
+        color: #00157a !important;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.82rem;
+        line-height: 1.35;
+        font-weight: 500;
+        text-align: center;
+      }
+      body.orciber-theme .orciber-overview-side-caption.is-zsm,
+      body.orciber-theme .orciber-overview-side-caption.is-cti,
+      body.orciber-theme .orciber-overview-side-caption.is-bastion {
+        transform: none;
+      }
       body.orciber-theme .orciber-goals-grid {
-        max-width: 1000px;
-        margin: 1.1rem auto 1.6rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.9rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        justify-items: center;
       }
       body.orciber-theme .orciber-goal-card {
-        border: 1.5px solid rgba(255, 255, 255, 0.9);
-        background: transparent;
-        padding: 0.95rem 0.9rem 1rem;
-        box-sizing: border-box;
-        display: grid;
-        gap: 0.6rem;
-        align-content: start;
-        width: 220px;
-      }
-      body.orciber-theme .orciber-goal-head {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-bottom: 0.55rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.9);
-      }
-      body.orciber-theme .orciber-goal-icon {
-        display: inline-block;
-        font-size: 2.9rem;
-        line-height: 1;
-        background: transparent !important;
-        color: #ffffff;
+        max-width: 100%;
+        width: min(100%, 520px);
+        margin-left: auto;
+        margin-right: auto;
       }
       body.orciber-theme .orciber-goal-text {
-        margin: 0;
-        color: #ffffff !important;
-        font-family: "IBM Plex Sans", sans-serif;
-        font-size: 1rem;
-        line-height: 1.38;
-        font-weight: 700;
-        text-wrap: pretty;
-        text-align: center;
-      }
-      body.orciber-theme .orciber-goal-text strong {
-        color: #ffffff;
-        font-weight: 700;
+        font-size: 0.96rem;
       }
       body.orciber-theme .orciber-impact-map {
-        width: 100vw;
-        margin: 0 calc(50% - 50vw) 0;
-        background: #008bff !important;
-        background-color: #008bff !important;
-        padding: 1.1rem 1.5rem 3.4rem;
-        box-sizing: border-box;
-        position: relative;
-      }
-      body.orciber-theme .orciber-impact-map.is-inside {
-        width: auto;
-        margin: 1rem auto 0;
-        background: transparent !important;
-        background-color: transparent !important;
-        padding: 0;
+        padding: 1rem 1rem 1.2rem;
       }
       body.orciber-theme .orciber-impact-map-inner {
-        max-width: 1000px;
-        min-height: 0;
-        margin: 0 auto;
-        position: relative;
-        display: flex;
-        align-items: stretch;
-        justify-content: center;
-        gap: 0.5rem;
-        flex-wrap: nowrap;
+        display: grid;
+        gap: 0.75rem;
+        grid-template-columns: 1fr;
       }
       body.orciber-theme .orciber-impact-step {
-        flex: 1 1 0;
-        min-width: 0;
+        width: 100%;
         border-radius: 0;
-        border: 2px solid #00157a;
-        background: rgba(255, 255, 255, 0.12);
-        color: #00157a !important;
-        padding: 0.95rem 0.8rem;
-        box-sizing: border-box;
-        text-align: center;
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 0.96rem;
-        line-height: 1.2;
-        font-weight: 500;
-        text-wrap: pretty;
-        min-height: 220px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      body.orciber-theme .orciber-impact-step p {
-        margin: 0;
-        color: #00157a !important;
+        font-size: 0.98rem;
+        line-height: 1.22;
+        padding: 0.88rem 0.86rem;
+        text-align: left;
+        min-height: 0;
       }
       body.orciber-theme .orciber-impact-connector {
-        flex: 0 0 auto;
-        align-self: center;
-        color: #00157a;
-        font-size: 1.05rem;
-        line-height: 1;
-        opacity: 0.85;
-        transform: translateY(-1px);
+        transform: rotate(90deg);
+        justify-self: center;
+        font-size: 1rem;
+        margin: -0.1rem 0;
       }
       body.orciber-theme .orciber-impact-star {
-        position: absolute;
-        color: #00157a;
-        line-height: 1;
-        opacity: 0.28;
-        pointer-events: none;
-        font-family: "Space Grotesk", sans-serif;
-        text-shadow: 0 0 6px rgba(0, 21, 122, 0.12);
-        z-index: 0;
+        display: none;
       }
-      body.orciber-theme .orciber-impact-star.s1 {
-        left: 34px;
-        top: 28px;
-        font-size: 1.3rem;
-      }
-      body.orciber-theme .orciber-impact-star.s2 {
-        left: 295px;
-        top: 42px;
-        font-size: 1rem;
-      }
-      body.orciber-theme .orciber-impact-star.s3 {
-        left: 552px;
-        top: 24px;
-        font-size: 1.25rem;
-      }
-      body.orciber-theme .orciber-impact-star.s4 {
-        left: 786px;
-        top: 50px;
-        font-size: 1.1rem;
-      }
-      body.orciber-theme .orciber-impact-star.s5 {
-        left: 160px;
-        bottom: -22px;
-        font-size: 1.35rem;
-      }
-      body.orciber-theme .orciber-impact-star.s6 {
-        left: 470px;
-        bottom: -30px;
-        font-size: 1.1rem;
-      }
-      body.orciber-theme .orciber-impact-star.s7 {
-        right: 58px;
-        bottom: -20px;
-        font-size: 1.4rem;
-      }
-      @media (max-width: 900px) {
-        body.orciber-theme .orciber-overview-row {
-          display: flex;
-          flex-direction: column;
-          gap: 0.85rem;
-        }
-        body.orciber-theme
-          .orciber-overview-row.is-reverse
-          .orciber-overview-text,
-        body.orciber-theme
-          .orciber-overview-row.is-reverse
-          .orciber-overview-media {
-          order: initial;
-        }
-        body.orciber-theme .orciber-overview-text p {
-          font-size: 0.98rem;
-          line-height: 1.62;
-          text-align: center;
-        }
-        body.orciber-theme .orciber-overview-text {
-          display: block;
-          height: auto;
-        }
-        body.orciber-theme
-          .orciber-overview-text
-          .orciber-overview-side-caption {
-          display: none;
-        }
-        body.orciber-theme .orciber-overview-caption {
-          display: block;
-          margin-top: 0.62rem;
-          color: #00157a !important;
-          font-family: "Space Grotesk", sans-serif;
-          font-size: 0.82rem;
-          line-height: 1.35;
-          font-weight: 500;
-          text-align: center;
-        }
-        body.orciber-theme .orciber-overview-side-caption.is-zsm,
-        body.orciber-theme .orciber-overview-side-caption.is-cti,
-        body.orciber-theme .orciber-overview-side-caption.is-bastion {
-          transform: none;
-        }
-        body.orciber-theme .orciber-goals-grid {
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: 0.75rem;
-          justify-items: center;
-        }
-        body.orciber-theme .orciber-goal-card {
-          max-width: 100%;
-          width: min(100%, 520px);
-          margin-left: auto;
-          margin-right: auto;
-        }
-        body.orciber-theme .orciber-goal-text {
-          font-size: 0.96rem;
-        }
-        body.orciber-theme .orciber-impact-map {
-          padding: 1rem 1rem 1.2rem;
-        }
-        body.orciber-theme .orciber-impact-map-inner {
-          display: grid;
-          gap: 0.75rem;
-          grid-template-columns: 1fr;
-        }
-        body.orciber-theme .orciber-impact-step {
-          width: 100%;
-          border-radius: 0;
-          font-size: 0.98rem;
-          line-height: 1.22;
-          padding: 0.88rem 0.86rem;
-          text-align: left;
-          min-height: 0;
-        }
-        body.orciber-theme .orciber-impact-connector {
-          transform: rotate(90deg);
-          justify-self: center;
-          font-size: 1rem;
-          margin: -0.1rem 0;
-        }
-        body.orciber-theme .orciber-impact-star {
-          display: none;
-        }
-      }
-    </style>
-  </head>
-  <body id="top" class="osiris-theme orciber-theme">
-    <div class="page-wrap">
-      <header class="topbar osiris-project-topbar">
-        <div class="osiris-project-topbar-inner">
-          <a
-            class="osiris-project-logo"
-            href="#top"
-            aria-label="Ir al inicio de ORCIBER-5G"
-          >
-            <img
-              src="../../pages/15.orciber-5g/assets/headerorciber.svg"
-              alt="ORCIBER header logo"
-            />
-          </a>
-          <nav class="osiris-project-nav">
-            <a href="#sobre-proyecto-mod">ABOUT</a>
-            <a href="#objetivos-mod">OBJETIVOS</a>
-            <a href="#impacto-mod">IMPACTO</a>
-          </nav>
-          <a
-            class="osiris-ants-logo"
-            href="../../index.html"
-            aria-label="Home ants"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="../../pages/01.ants-home/assets/ants_footer.png"
-              alt="ANTS"
-            />
+    }
+  </style>
+</head>
+<body id="top" class="osiris-theme orciber-theme">
+  <div class="page-wrap">
+    <header class="topbar osiris-project-topbar">
+      <div class="osiris-project-topbar-inner">
+        <a class="osiris-project-logo" href="#top" aria-label="Ir al inicio de ORCIBER-5G">
+          <img src="../../pages/15.orciber-5g/assets/headerorciber.svg" alt="ORCIBER header logo">
+        </a>
+        <nav class="osiris-project-nav">
+          <a href="#sobre-proyecto-mod">ABOUT</a>
+          <a href="#objetivos-mod">OBJETIVOS</a>
+          <a href="#impacto-mod">IMPACTO</a>
+        </nav>
+        <a class="osiris-ants-logo" href="../../index.html" aria-label="Home ants" target="_blank" rel="noopener noreferrer">
+          <img src="../../pages/01.ants-home/assets/ants_footer.png" alt="ANTS">
+        </a>
+      </div>
+    </header>
+    <section class="orciber-hero" aria-label="Hero ORCIBER-5G">
+      <div class="orciber-hero-inner">
+        <div class="orciber-hero-logo-wrap">
+          <img class="orciber-hero-logo" src="../../pages/15.orciber-5g/assets/logoorciber.svg" alt="ORCIBER-5G">
+        </div>
+        <div class="orciber-hero-copy">
+          <p class="orciber-hero-text">Orquestación de<br>Ciberseguridad<br>para Redes 5G</p>
+          <a class="btn orciber-hero-more" href="#sobre-proyecto-mod">
+            LEER MÁS <span style="font-size:1rem; line-height:1;">↓</span>
           </a>
         </div>
-      </header>
-      <section class="orciber-hero" aria-label="Hero ORCIBER-5G">
-        <div class="orciber-hero-inner">
-          <div class="orciber-hero-logo-wrap">
-            <img
-              class="orciber-hero-logo"
-              src="../../pages/15.orciber-5g/assets/logoorciber.svg"
-              alt="ORCIBER-5G"
-            />
+      </div>
+      <img class="orciber-hero-stars" src="../../pages/15.orciber-5g/assets/imagoorciber.svg" alt="" aria-hidden="true">
+    </section>
+    <section class="orciber-intro-wrap" aria-label="Introduccion ORCIBER-5G">
+      <div class="orciber-intro">
+        <span class="orciber-intro-star orciber-intro-star--l" aria-hidden="true">✦</span>
+        <p class="orciber-intro-text">ORCIBER-5G desarrolla soluciones avanzadas para la detección, respuesta y orquestación de ciberseguridad en redes 5G privadas, integrando inteligencia artificial explicable y tecnologías XDR para entornos críticos</p>
+        <span class="orciber-intro-star orciber-intro-star--r" aria-hidden="true">✦</span>
+      </div>
+    </section>
+    <section id="financiacion-mod" class="orciber-funding" aria-label="Financiacion ORCIBER-5G" style="background:#001fe1 !important; background-color:#001fe1 !important;">
+      <div class="orciber-funding-inner">
+        <div class="orciber-funding-file" role="group" aria-label="Ficha de financiación">
+          <div class="orciber-funding-row">
+            <span class="orciber-funding-k">Título</span>
+            <span class="orciber-funding-v">Orquestación de Ciberseguridad para Redes 5G</span>
           </div>
-          <div class="orciber-hero-copy">
-            <p class="orciber-hero-text"
-              >Orquestación de<br />Ciberseguridad<br />para Redes 5G</p
-            >
-            <a class="btn orciber-hero-more" href="#sobre-proyecto-mod">
-              LEER MÁS <span style="font-size: 1rem; line-height: 1">↓</span>
-            </a>
+          <div class="orciber-funding-row">
+            <span class="orciber-funding-k">Código del proyecto</span>
+            <span class="orciber-funding-v">CPI2-R09_ORC</span>
           </div>
-        </div>
-        <img
-          class="orciber-hero-stars"
-          src="../../pages/15.orciber-5g/assets/imagoorciber.svg"
-          alt=""
-          aria-hidden="true"
-        />
-      </section>
-      <section class="orciber-intro-wrap" aria-label="Introduccion ORCIBER-5G">
-        <div class="orciber-intro">
-          <span
-            class="orciber-intro-star orciber-intro-star--l"
-            aria-hidden="true"
-            >✦</span
-          >
-          <p class="orciber-intro-text"
-            >ORCIBER-5G desarrolla soluciones avanzadas para la detección,
-            respuesta y orquestación de ciberseguridad en redes 5G privadas,
-            integrando inteligencia artificial explicable y tecnologías XDR para
-            entornos críticos</p
-          >
-          <span
-            class="orciber-intro-star orciber-intro-star--r"
-            aria-hidden="true"
-            >✦</span
-          >
-        </div>
-      </section>
-      <section
-        id="financiacion-mod"
-        class="orciber-funding"
-        aria-label="Financiacion ORCIBER-5G"
-        style="
-          background: #001fe1 !important;
-          background-color: #001fe1 !important;
-        "
-      >
-        <div class="orciber-funding-inner">
-          <div
-            class="orciber-funding-file"
-            role="group"
-            aria-label="Ficha de financiación"
-          >
-            <div class="orciber-funding-row">
-              <span class="orciber-funding-k">Título</span>
-              <span class="orciber-funding-v"
-                >Orquestación de Ciberseguridad para Redes 5G</span
-              >
-            </div>
-            <div class="orciber-funding-row">
-              <span class="orciber-funding-k">Código del proyecto</span>
-              <span class="orciber-funding-v">CPI2-R09_ORC</span>
-            </div>
-            <div class="orciber-funding-row">
-              <span class="orciber-funding-k">Convocatoria</span>
-              <span class="orciber-funding-v orciber-funding-v--nowrap"
-                >CPP2022/002 - Servicios de I+D+i en materia de
-                ciberseguridad</span
-              >
-            </div>
-            <div class="orciber-funding-row">
-              <span class="orciber-funding-k">Actuaciones financiadas</span>
-              <span class="orciber-funding-v">2, 3, 4, 5 y 7</span>
-            </div>
-            <div class="orciber-funding-row">
-              <span class="orciber-funding-k">Duración</span>
-              <span class="orciber-funding-v">Julio 2023 - Noviembre 2025</span>
-            </div>
-            <div class="orciber-funding-row">
-              <span class="orciber-funding-k">Planificación</span>
-              <span class="orciber-funding-v"
-                >Distribuido en tres fases de desarrollo</span
-              >
-            </div>
+          <div class="orciber-funding-row">
+            <span class="orciber-funding-k">Convocatoria</span>
+            <span class="orciber-funding-v orciber-funding-v--nowrap">CPP2022/002 - Servicios de I+D+i en materia de ciberseguridad</span>
+          </div>
+          <div class="orciber-funding-row">
+            <span class="orciber-funding-k">Actuaciones financiadas</span>
+            <span class="orciber-funding-v">2, 3, 4, 5 y 7</span>
+          </div>
+          <div class="orciber-funding-row">
+            <span class="orciber-funding-k">Duración</span>
+            <span class="orciber-funding-v">Julio 2023 - Noviembre 2025</span>
+          </div>
+          <div class="orciber-funding-row">
+            <span class="orciber-funding-k">Planificación</span>
+            <span class="orciber-funding-v">Distribuido en tres fases de desarrollo</span>
           </div>
         </div>
-      </section>
-      <section
-        class="orciber-logos-module"
-        aria-label="Logos oficiales ORCIBER-5G"
-      >
-        <div class="orciber-logos-inner">
-          <img
-            class="orciber-logos-image"
-            src="../../pages/15.orciber-5g/assets/bandalogosINCIBE.jpg"
-            alt="Logos oficiales ORCIBER-5G"
-          />
-          <p class="orciber-logos-text"
-            >ORCIBER-5G financiado por "Unión Europea NextGeneration, PRTR a
-            través de INCIBE".</p
-          >
+      </div>
+    </section>
+    <section class="orciber-logos-module" aria-label="Logos oficiales ORCIBER-5G">
+      <div class="orciber-logos-inner">
+        <img class="orciber-logos-image" src="../../pages/15.orciber-5g/assets/bandalogosINCIBE.jpg" alt="Logos oficiales ORCIBER-5G">
+        <p class="orciber-logos-text">ORCIBER-5G financiado por "Unión Europea NextGeneration, PRTR a través de INCIBE".</p>
+      </div>
+    </section>
+    <section class="orciber-cpi-wrap" aria-label="Mensaje financiación CPI" style="background:#008bff !important; background-color:#008bff !important;">
+      <div class="orciber-cpi-inner">
+        <div class="orciber-cpi-box">
+          <p class="orciber-cpi-text">#CPI es una iniciativa cofinanciada por INCIBE a través del #PlanDeRecuperación y los fondos #NextGenerationEU</p>
+          <p class="orciber-cpi-tag">#IndustriaCPI</p>
         </div>
-      </section>
-      <section
-        class="orciber-cpi-wrap"
-        aria-label="Mensaje financiación CPI"
-        style="
-          background: #008bff !important;
-          background-color: #008bff !important;
-        "
-      >
-        <div class="orciber-cpi-inner">
-          <div class="orciber-cpi-box">
-            <p class="orciber-cpi-text"
-              >#CPI es una iniciativa cofinanciada por INCIBE a través del
-              #PlanDeRecuperación y los fondos #NextGenerationEU</p
-            >
-            <p class="orciber-cpi-tag">#IndustriaCPI</p>
-          </div>
-        </div>
-      </section>
-      <section
-        id="sobre-proyecto-mod"
-        class="orciber-module-title-wrap"
-        aria-label="Título módulo sobre el proyecto"
-      >
-        <h2 class="orciber-module-title"
-          >Sobre el proyecto
-          <span class="orciber-module-title-imago" aria-hidden="true"></span
-        ></h2>
-      </section>
-      <article id="orciber-contenido" class="content project-content">
-        <section
-          class="orciber-overview"
-          aria-label="Resumen visual del proyecto ORCIBER-5G"
-        >
-          <div class="orciber-overview-row">
-            <div class="orciber-overview-text">
-              <p
-                ><strong>ORCIBER-5G</strong> es un proyecto orientado al diseño
-                de mecanismos de orquestación de la seguridad para redes 5G, con
-                un enfoque centrado en servicios, despliegues multiusuario y
-                entornos de red heterogéneos. Su meta es facilitar la operación
-                y supervisión de la ciberseguridad en sistemas distribuidos de
-                forma dinámica y eficiente.</p
-              >
-              <p class="orciber-overview-side-caption is-zsm"
-                >Esquema del marco ZSM:<br />integración de funciones de
-                gestión,<br />orquestación e inteligencia a través<br />de
-                dominios heterogéneos, coordinados<br />mediante un tejido de
-                integración transversal.</p
-              >
-            </div>
-            <figure class="orciber-overview-media">
-              <img
-                src="../../pages/15.orciber-5g/assets/grafica1.png"
-                alt="Gráfica ORCIBER-5G 1"
-              />
-              <figcaption class="orciber-overview-caption"
-                >Esquema del marco ZSM: integración de funciones de gestión,
-                orquestación e inteligencia a través de dominios heterogéneos,
-                coordinados mediante un tejido de integración
-                transversal.</figcaption
-              >
-            </figure>
-          </div>
-          <div class="orciber-overview-row is-reverse">
-            <div class="orciber-overview-text">
-              <p class="orciber-overview-offset-55"
-                >A través de un enfoque modular y adaptable, el proyecto aborda
-                distintos dominios tecnológicos, como el control de acceso, la
-                detección de amenazas o la monitorización del comportamiento,
-                bajo una arquitectura común.</p
-              >
-              <p class="orciber-overview-side-caption is-cti"
-                >Intercambio de inteligencia de<br />ciberamenazas (CTI
-                Sharing): coordinación<br />entre múltiples operadores y
-                dominios<br />para compartir datos, gestionar políticas<br />y
-                orquestar la seguridad de forma conjunta.</p
-              >
-            </div>
-            <figure class="orciber-overview-media">
-              <img
-                src="../../pages/15.orciber-5g/assets/grafica2.png"
-                alt="Gráfica ORCIBER-5G 2"
-              />
-              <figcaption class="orciber-overview-caption"
-                >Intercambio de inteligencia de ciberamenazas (CTI Sharing):
-                coordinación entre múltiples operadores y dominios para
-                compartir datos, gestionar políticas y orquestar la seguridad de
-                forma conjunta.</figcaption
-              >
-            </figure>
-          </div>
-          <div class="orciber-overview-row">
-            <div class="orciber-overview-text">
-              <p
-                >Esta aproximación permite optimizar el despliegue de soluciones
-                de seguridad de manera coordinada, escalable y contextualizada,
-                integrando tanto funciones de detección como de decisión y
-                respuesta ante amenazas en tiempo real.</p
-              >
-              <p class="orciber-overview-side-caption is-bastion"
-                >Arquitectura local del sistema BASTION:<br />aplicación de
-                políticas, orquestación y análisis<br />de seguridad para
-                detectar y bloquear<br />ataques en tiempo real sobre<br />recursos
-                de red.</p
-              >
-            </div>
-            <figure class="orciber-overview-media">
-              <img
-                src="../../pages/15.orciber-5g/assets/grafica3.png"
-                alt="Gráfica ORCIBER-5G 3"
-              />
-              <figcaption class="orciber-overview-caption"
-                >Arquitectura local del sistema BASTION: aplicación de
-                políticas, orquestación y análisis de seguridad para detectar y
-                bloquear ataques en tiempo real sobre recursos de
-                red.</figcaption
-              >
-            </figure>
-          </div>
-        </section>
-        <section
-          id="objetivos-mod"
-          class="orciber-module-title-wrap is-gradient"
-          aria-label="Título módulo objetivos"
-        >
-          <h2 class="orciber-module-title"
-            >Objetivos
-            <span class="orciber-module-title-imago" aria-hidden="true"></span
-          ></h2>
-          <p class="orciber-module-intro"
-            >Este proyecto persigue desarrollar un sistema avanzado de
-            orquestación de ciberseguridad que permita proteger, monitorizar y
-            responder de forma inteligente a incidentes en redes 5G. Para ello,
-            se han definido los siguientes objetivos estratégicos:</p
-          >
-          <section
-            class="orciber-goals-grid"
-            aria-label="Siete objetivos estratégicos de ORCIBER-5G"
-          >
-            <article class="orciber-goal-card">
-              <div class="orciber-goal-head"
-                ><span class="orciber-goal-icon" aria-hidden="true"
-                  >🌐</span
-                ></div
-              >
-              <p class="orciber-goal-text"
-                ><strong
-                  >Diseñar un marco de orquestación de seguridad extremo a
-                  extremo (E2E)</strong
-                >
-                que integre múltiples dominios y permita una gestión
-                coordinada.</p
-              >
-            </article>
-            <article class="orciber-goal-card">
-              <div class="orciber-goal-head"
-                ><span class="orciber-goal-icon" aria-hidden="true"
-                  >⚙️</span
-                ></div
-              >
-              <p class="orciber-goal-text"
-                ><strong>Facilitar despliegues dinámicos y adaptativos</strong>
-                que soporten entornos multiusuario y heterogéneos en redes
-                5G.</p
-              >
-            </article>
-            <article class="orciber-goal-card">
-              <div class="orciber-goal-head"
-                ><span class="orciber-goal-icon" aria-hidden="true"
-                  >🤖</span
-                ></div
-              >
-              <p class="orciber-goal-text"
-                ><strong
-                  >Automatizar la detección de amenazas y anomalías</strong
-                >
-                mediante motores de analítica e inteligencia artificial.</p
-              >
-            </article>
-            <article class="orciber-goal-card">
-              <div class="orciber-goal-head"
-                ><span class="orciber-goal-icon" aria-hidden="true"
-                  >🛡️</span
-                ></div
-              >
-              <p class="orciber-goal-text"
-                ><strong
-                  >Optimizar la aplicación de políticas de seguridad</strong
-                >
-                con mecanismos comunes que permitan su validación, traducción y
-                refinamiento en diferentes dominios.</p
-              >
-            </article>
-            <article class="orciber-goal-card">
-              <div class="orciber-goal-head"
-                ><span class="orciber-goal-icon" aria-hidden="true"
-                  >⏱️</span
-                ></div
-              >
-              <p class="orciber-goal-text"
-                ><strong
-                  >Integrar la monitorización y el control en tiempo
-                  real</strong
-                >
-                para reforzar la resiliencia frente a ciberataques.</p
-              >
-            </article>
-            <article class="orciber-goal-card">
-              <div class="orciber-goal-head"
-                ><span class="orciber-goal-icon" aria-hidden="true"
-                  >📊</span
-                ></div
-              >
-              <p class="orciber-goal-text"
-                ><strong>Consolidar un enfoque modular y escalable</strong>,
-                capaz de adaptarse a distintas capas de red (core, edge,
-                acceso).</p
-              >
-            </article>
-            <article class="orciber-goal-card">
-              <div class="orciber-goal-head"
-                ><span class="orciber-goal-icon" aria-hidden="true"
-                  >🔗</span
-                ></div
-              >
-              <p class="orciber-goal-text"
-                ><strong
-                  >Fomentar la interoperabilidad entre actores y
-                  operadores</strong
-                >
-                mediante mecanismos de compartición de inteligencia y datos (CTI
-                Sharing).</p
-              >
-            </article>
-          </section>
-        </section>
-        <section
-          id="impacto-mod"
-          class="orciber-module-title-wrap is-sky"
-          aria-label="Título módulo impacto"
-          style="
-            background: #008bff !important;
-            background-color: #008bff !important;
-          "
-        >
-          <h2 class="orciber-module-title"
-            >Impacto
-            <span class="orciber-module-title-imago" aria-hidden="true"></span
-          ></h2>
-          <p class="orciber-module-intro"
-            >El proyecto ORCIBER‑5G generará un impacto significativo en
-            distintos niveles, tanto tecnológicos como estratégicos y sociales.
-            Sus principales aportaciones se articulan en los siguientes cinco
-            ejes:</p
-          >
-          <section
-            class="orciber-impact-map is-inside"
-            aria-label="Mapa de impacto ORCIBER-5G"
-          >
-            <div class="orciber-impact-map-inner">
-              <span class="orciber-impact-star s1" aria-hidden="true">✦</span>
-              <span class="orciber-impact-star s2" aria-hidden="true">✦</span>
-              <span class="orciber-impact-star s3" aria-hidden="true">✦</span>
-              <span class="orciber-impact-star s4" aria-hidden="true">✦</span>
-              <span class="orciber-impact-star s5" aria-hidden="true">✦</span>
-              <span class="orciber-impact-star s6" aria-hidden="true">✦</span>
-              <span class="orciber-impact-star s7" aria-hidden="true">✦</span>
-              <article class="orciber-impact-step">
-                <p
-                  >Consolidación de un marco de referencia en ciberseguridad
-                  para redes 5G privadas, que servirá de apoyo a futuros
-                  desarrollos en el ámbito nacional.</p
-                >
-              </article>
-              <span class="orciber-impact-connector" aria-hidden="true">➜</span>
-              <article class="orciber-impact-step">
-                <p
-                  >Contribución a la estrategia española y europea de
-                  ciberseguridad, reforzando la capacidad de anticipación y
-                  defensa frente a ciberamenazas.</p
-                >
-              </article>
-              <span class="orciber-impact-connector" aria-hidden="true">➜</span>
-              <article class="orciber-impact-step">
-                <p
-                  >Generación de conocimiento especializado en orquestación
-                  multidominio, con potencial de reutilización en otros sectores
-                  críticos.</p
-                >
-              </article>
-              <span class="orciber-impact-connector" aria-hidden="true">➜</span>
-              <article class="orciber-impact-step">
-                <p
-                  >Transferencia tecnológica hacia entornos industriales y
-                  académicos, acercando soluciones innovadoras a casos de uso
-                  concretos.</p
-                >
-              </article>
-              <span class="orciber-impact-connector" aria-hidden="true">➜</span>
-              <article class="orciber-impact-step">
-                <p
-                  >Incremento de la confianza en servicios digitales de nueva
-                  generación, favoreciendo la adopción segura de redes 5G en
-                  escenarios de alto valor.</p
-                >
-              </article>
-            </div>
-          </section>
-        </section></article
-      >
-      <footer class="main-footer" style="margin-top: 0 !important">
-        <div class="main-footer-inner">
-          <div>
-            <h2 class="footer-title"
-              >Orquestación de<br />Ciberseguridad<br />para Redes 5G</h2
-            >
-            <ul class="footer-items">
-              <li><a href="#sobre-proyecto-mod">About</a></li>
-              <li><a href="#objetivos-mod">Objetivos</a></li>
-              <li><a href="#impacto-mod">Impacto</a></li>
-            </ul>
-          </div>
-          <div class="footer-brand">
-            <a
-              class="footer-umu-link"
-              href="https://www.um.es/web/informatica/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                class="footer-umu-logo"
-                src="../../pages/01.ants-home/assets/Inform tica-RGB-Convivencia_A-BLTR.png"
-                alt="Facultad de Informática - Universidad de Murcia"
-              />
-            </a>
-            <div class="footer-brand-lower">
-              <a
-                class="footer-ants-link"
-                href="../../index.html"
-                aria-label="Home ants"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  class="footer-ants-logo"
-                  src="../../pages/01.ants-home/assets/ants_footer.png"
-                  alt="ANTS"
-                />
-              </a>
-              <div class="footer-social">
-                <a
-                  href="https://www.linkedin.com/company/ants-research-group/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Follow ants on
-                  <span class="footer-social-strong">LinkedIn ↗</span></a
-                >
-                <a
-                  href="https://x.com/ants_fium"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Follow ants on
-                  <span class="footer-social-strong">X ↗</span></a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="footer-top">
-            <a class="footer-top-link" href="#top" aria-label="Back to top"
-              >↑</a
-            >
-          </div>
-        </div>
-      </footer>
-      <section
-        class="orciber-logos-module"
-        aria-label="Logos oficiales ORCIBER-5G post-footer"
-      >
-        <div class="orciber-logos-inner">
-          <img
-            class="orciber-logos-image"
-            src="../../pages/15.orciber-5g/assets/bandalogosINCIBE.jpg"
-            alt="Logos oficiales ORCIBER-5G"
-          />
-          <p class="orciber-logos-text"
-            >Este sitio web es parte del proyecto ORCIBER-5G, financiado por la
-            “Unión Europea NextGeneration-EU,<br />Plan de Recuperación,
-            Transformación y Resiliencia, a través de INCIBE”.</p
-          >
-        </div>
-      </section>
+      </div>
+    </section>
+    <section id="sobre-proyecto-mod" class="orciber-module-title-wrap" aria-label="Título módulo sobre el proyecto">
+      <h2 class="orciber-module-title">Sobre el proyecto <span class="orciber-module-title-imago" aria-hidden="true"></span></h2>
+    </section>
+    <article id="orciber-contenido" class="content project-content">
+<section class="orciber-overview" aria-label="Resumen visual del proyecto ORCIBER-5G">
+  <div class="orciber-overview-row">
+    <div class="orciber-overview-text">
+      <p><strong>ORCIBER-5G</strong> es un proyecto orientado al diseño de mecanismos de orquestación de la seguridad para redes 5G, con un enfoque centrado en servicios, despliegues multiusuario y entornos de red heterogéneos. Su meta es facilitar la operación y supervisión de la ciberseguridad en sistemas distribuidos de forma dinámica y eficiente.</p>
+      <p class="orciber-overview-side-caption is-zsm">Esquema del marco ZSM:<br>integración de funciones de gestión,<br>orquestación e inteligencia a través<br>de dominios heterogéneos, coordinados<br>mediante un tejido de integración transversal.</p>
     </div>
+    <figure class="orciber-overview-media">
+      <img src="../../pages/15.orciber-5g/assets/grafica1.png" alt="Gráfica ORCIBER-5G 1">
+      <figcaption class="orciber-overview-caption">Esquema del marco ZSM: integración de funciones de gestión, orquestación e inteligencia a través de dominios heterogéneos, coordinados mediante un tejido de integración transversal.</figcaption>
+    </figure>
+  </div>
+  <div class="orciber-overview-row is-reverse">
+    <div class="orciber-overview-text">
+      <p class="orciber-overview-offset-55">A través de un enfoque modular y adaptable, el proyecto aborda distintos dominios tecnológicos, como el control de acceso, la detección de amenazas o la monitorización del comportamiento, bajo una arquitectura común.</p>
+      <p class="orciber-overview-side-caption is-cti">Intercambio de inteligencia de<br>ciberamenazas (CTI Sharing): coordinación<br>entre múltiples operadores y dominios<br>para compartir datos, gestionar políticas<br>y orquestar la seguridad de forma conjunta.</p>
+    </div>
+    <figure class="orciber-overview-media">
+      <img src="../../pages/15.orciber-5g/assets/grafica2.png" alt="Gráfica ORCIBER-5G 2">
+      <figcaption class="orciber-overview-caption">Intercambio de inteligencia de ciberamenazas (CTI Sharing): coordinación entre múltiples operadores y dominios para compartir datos, gestionar políticas y orquestar la seguridad de forma conjunta.</figcaption>
+    </figure>
+  </div>
+  <div class="orciber-overview-row">
+    <div class="orciber-overview-text">
+      <p>Esta aproximación permite optimizar el despliegue de soluciones de seguridad de manera coordinada, escalable y contextualizada, integrando tanto funciones de detección como de decisión y respuesta ante amenazas en tiempo real.</p>
+      <p class="orciber-overview-side-caption is-bastion">Arquitectura local del sistema BASTION:<br>aplicación de políticas, orquestación y análisis<br>de seguridad para detectar y bloquear<br>ataques en tiempo real sobre<br>recursos de red.</p>
+    </div>
+    <figure class="orciber-overview-media">
+      <img src="../../pages/15.orciber-5g/assets/grafica3.png" alt="Gráfica ORCIBER-5G 3">
+      <figcaption class="orciber-overview-caption">Arquitectura local del sistema BASTION: aplicación de políticas, orquestación y análisis de seguridad para detectar y bloquear ataques en tiempo real sobre recursos de red.</figcaption>
+    </figure>
+  </div>
+</section>
+<section id="objetivos-mod" class="orciber-module-title-wrap is-gradient" aria-label="Título módulo objetivos">
+  <h2 class="orciber-module-title">Objetivos <span class="orciber-module-title-imago" aria-hidden="true"></span></h2>
+  <p class="orciber-module-intro">Este proyecto persigue desarrollar un sistema avanzado de orquestación de ciberseguridad que permita proteger, monitorizar y responder de forma inteligente a incidentes en redes 5G. Para ello, se han definido los siguientes objetivos estratégicos:</p>
+  <section class="orciber-goals-grid" aria-label="Siete objetivos estratégicos de ORCIBER-5G">
+  <article class="orciber-goal-card">
+    <div class="orciber-goal-head"><span class="orciber-goal-icon" aria-hidden="true">🌐</span></div>
+    <p class="orciber-goal-text"><strong>Diseñar un marco de orquestación de seguridad extremo a extremo (E2E)</strong> que integre múltiples dominios y permita una gestión coordinada.</p>
+  </article>
+  <article class="orciber-goal-card">
+    <div class="orciber-goal-head"><span class="orciber-goal-icon" aria-hidden="true">⚙️</span></div>
+    <p class="orciber-goal-text"><strong>Facilitar despliegues dinámicos y adaptativos</strong> que soporten entornos multiusuario y heterogéneos en redes 5G.</p>
+  </article>
+  <article class="orciber-goal-card">
+    <div class="orciber-goal-head"><span class="orciber-goal-icon" aria-hidden="true">🤖</span></div>
+    <p class="orciber-goal-text"><strong>Automatizar la detección de amenazas y anomalías</strong> mediante motores de analítica e inteligencia artificial.</p>
+  </article>
+  <article class="orciber-goal-card">
+    <div class="orciber-goal-head"><span class="orciber-goal-icon" aria-hidden="true">🛡️</span></div>
+    <p class="orciber-goal-text"><strong>Optimizar la aplicación de políticas de seguridad</strong> con mecanismos comunes que permitan su validación, traducción y refinamiento en diferentes dominios.</p>
+  </article>
+  <article class="orciber-goal-card">
+    <div class="orciber-goal-head"><span class="orciber-goal-icon" aria-hidden="true">⏱️</span></div>
+    <p class="orciber-goal-text"><strong>Integrar la monitorización y el control en tiempo real</strong> para reforzar la resiliencia frente a ciberataques.</p>
+  </article>
+  <article class="orciber-goal-card">
+    <div class="orciber-goal-head"><span class="orciber-goal-icon" aria-hidden="true">📊</span></div>
+    <p class="orciber-goal-text"><strong>Consolidar un enfoque modular y escalable</strong>, capaz de adaptarse a distintas capas de red (core, edge, acceso).</p>
+  </article>
+  <article class="orciber-goal-card">
+    <div class="orciber-goal-head"><span class="orciber-goal-icon" aria-hidden="true">🔗</span></div>
+    <p class="orciber-goal-text"><strong>Fomentar la interoperabilidad entre actores y operadores</strong> mediante mecanismos de compartición de inteligencia y datos (CTI Sharing).</p>
+  </article>
+</section>
+</section>
+<section id="impacto-mod" class="orciber-module-title-wrap is-sky" aria-label="Título módulo impacto" style="background:#008bff !important; background-color:#008bff !important;">
+  <h2 class="orciber-module-title">Impacto <span class="orciber-module-title-imago" aria-hidden="true"></span></h2>
+  <p class="orciber-module-intro">El proyecto ORCIBER‑5G generará un impacto significativo en distintos niveles, tanto tecnológicos como estratégicos y sociales. Sus principales aportaciones se articulan en los siguientes cinco ejes:</p>
+  <section class="orciber-impact-map is-inside" aria-label="Mapa de impacto ORCIBER-5G">
+  <div class="orciber-impact-map-inner">
+    <span class="orciber-impact-star s1" aria-hidden="true">✦</span>
+    <span class="orciber-impact-star s2" aria-hidden="true">✦</span>
+    <span class="orciber-impact-star s3" aria-hidden="true">✦</span>
+    <span class="orciber-impact-star s4" aria-hidden="true">✦</span>
+    <span class="orciber-impact-star s5" aria-hidden="true">✦</span>
+    <span class="orciber-impact-star s6" aria-hidden="true">✦</span>
+    <span class="orciber-impact-star s7" aria-hidden="true">✦</span>
+    <article class="orciber-impact-step">
+      <p>Consolidación de un marco de referencia en ciberseguridad para redes 5G privadas, que servirá de apoyo a futuros desarrollos en el ámbito nacional.</p>
+    </article>
+    <span class="orciber-impact-connector" aria-hidden="true">➜</span>
+    <article class="orciber-impact-step">
+      <p>Contribución a la estrategia española y europea de ciberseguridad, reforzando la capacidad de anticipación y defensa frente a ciberamenazas.</p>
+    </article>
+    <span class="orciber-impact-connector" aria-hidden="true">➜</span>
+    <article class="orciber-impact-step">
+      <p>Generación de conocimiento especializado en orquestación multidominio, con potencial de reutilización en otros sectores críticos.</p>
+    </article>
+    <span class="orciber-impact-connector" aria-hidden="true">➜</span>
+    <article class="orciber-impact-step">
+      <p>Transferencia tecnológica hacia entornos industriales y académicos, acercando soluciones innovadoras a casos de uso concretos.</p>
+    </article>
+    <span class="orciber-impact-connector" aria-hidden="true">➜</span>
+    <article class="orciber-impact-step">
+      <p>Incremento de la confianza en servicios digitales de nueva generación, favoreciendo la adopción segura de redes 5G en escenarios de alto valor.</p>
+    </article>
+  </div>
+  </section>
+</section></article>
+    <footer class="main-footer" style="margin-top:0 !important;">
+      <div class="main-footer-inner">
+        <div>
+          <h2 class="footer-title">Orquestación de<br>Ciberseguridad<br>para Redes 5G</h2>
+          <ul class="footer-items">
+            <li><a href="#sobre-proyecto-mod">About</a></li>
+            <li><a href="#objetivos-mod">Objetivos</a></li>
+            <li><a href="#impacto-mod">Impacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-brand">
+          <a class="footer-umu-link" href="https://www.um.es/web/informatica/" target="_blank" rel="noopener noreferrer">
+            <img class="footer-umu-logo" src="../../pages/01.ants-home/assets/Inform tica-RGB-Convivencia_A-BLTR.png" alt="Facultad de Informática - Universidad de Murcia">
+          </a>
+          <div class="footer-brand-lower">
+            <a class="footer-ants-link" href="../../index.html" aria-label="Home ants" target="_blank" rel="noopener noreferrer">
+              <img class="footer-ants-logo" src="../../pages/01.ants-home/assets/ants_footer.png" alt="ANTS">
+            </a>
+            <div class="footer-social">
+              <a href="https://www.linkedin.com/company/ants-research-group/" target="_blank" rel="noopener noreferrer">Follow ants on <span class="footer-social-strong">LinkedIn ↗</span></a>
+              <a href="https://x.com/ants_fium" target="_blank" rel="noopener noreferrer">Follow ants on <span class="footer-social-strong">X ↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-top">
+          <a class="footer-top-link" href="#top" aria-label="Back to top">↑</a>
+        </div>
+      </div>
+    </footer>
+    <section class="orciber-logos-module" aria-label="Logos oficiales ORCIBER-5G post-footer">
+      <div class="orciber-logos-inner">
+        <img class="orciber-logos-image" src="../../pages/15.orciber-5g/assets/bandalogosINCIBE.jpg" alt="Logos oficiales ORCIBER-5G">
+        <p class="orciber-logos-text">Este sitio web es parte del proyecto ORCIBER-5G, financiado por la “Unión Europea NextGeneration-EU,<br>Plan de Recuperación, Transformación y Resiliencia, a través de INCIBE”.</p>
+      </div>
+    </section>
+  </div>
 
-    <script src="../../assets/js/mobile-project-menu.js?v=20260408-6"></script>
+  <script src="../../assets/js/mobile-project-menu.js?v=20260408-6"></script>
 
-    <script>
-      const ROUTE_MAP = {
-        "/en/ants-home": "en/ants-home/index.html",
-        "/en/ants-home/": "en/ants-home/index.html",
-        "/en/demeter-5-0": "en/demeter-5-0/index.html",
-        "/en/demeter-5-0/": "en/demeter-5-0/index.html",
-        "/en/gaialab": "en/gaialab/index.html",
-        "/en/gaialab/": "en/gaialab/index.html",
-        "/en/news": "en/news/index.html",
-        "/en/news/": "en/news/index.html",
-        "/en/news/nemesis": "en/news/nemesis/index.html",
-        "/en/news/nemesis/": "en/news/nemesis/index.html",
-        "/en/news/osiris-en-mobisec": "en/news/osiris-en-mobisec/index.html",
-        "/en/news/osiris-en-mobisec/": "en/news/osiris-en-mobisec/index.html",
-        "/en/news/osiris-nota-de-prensa":
-          "en/news/osiris-nota-de-prensa/index.html",
-        "/en/news/osiris-nota-de-prensa/":
-          "en/news/osiris-nota-de-prensa/index.html",
-        "/en/perseo": "en/es/perseo/index.html",
-        "/en/perseo/": "en/es/perseo/index.html",
-        "/en/es/perseo": "en/es/perseo/index.html",
-        "/en/es/perseo/": "en/es/perseo/index.html",
-        "/en/reminder": "en/reminder/index.html",
-        "/en/reminder/": "en/reminder/index.html",
-        "/en/reminder/ethicalissues": "en/reminder/ethicalissues/index.html",
-        "/en/reminder/ethicalissues/": "en/reminder/ethicalissues/index.html",
-        "/en/reminder/interdisciplinaryresearch":
-          "en/reminder/interdisciplinaryresearch/index.html",
-        "/en/reminder/interdisciplinaryresearch/":
-          "en/reminder/interdisciplinaryresearch/index.html",
-        "/en/reminder/partners": "en/reminder/partners/index.html",
-        "/en/reminder/partners/": "en/reminder/partners/index.html",
-        "/en/reminder/view-project-deliverables":
-          "en/reminder/view-project-deliverables/index.html",
-        "/en/reminder/view-project-deliverables/":
-          "en/reminder/view-project-deliverables/index.html",
-        "/en/research-lines": "en/research-lines/index.html",
-        "/en/research-lines/": "en/research-lines/index.html",
-        "/en/research-projects": "en/research-projects/index.html",
-        "/en/research-projects/": "en/research-projects/index.html",
-        "/en/vinci": "en/vinci/index.html",
-        "/en/vinci/": "en/vinci/index.html",
-        "/es/eden": "es/eden/index.html",
-        "/es/eden/": "es/eden/index.html",
-        "/es/geminis": "es/geminis/index.html",
-        "/es/geminis/": "es/geminis/index.html",
-        "/es/news": "es/news/feria-cientifica-santomera/index.html",
-        "/es/news/": "es/news/feria-cientifica-santomera/index.html",
-        "/es/news/feria-cientifica-santomera":
-          "es/news/feria-cientifica-santomera/index.html",
-        "/es/news/feria-cientifica-santomera/":
-          "es/news/feria-cientifica-santomera/index.html",
-        "/es/news/osiris-big-data-master":
-          "es/news/osiris-big-data-master/index.html",
-        "/es/news/osiris-big-data-master/":
-          "es/news/osiris-big-data-master/index.html",
-        "/es/news/osiris-unibit": "es/news/osiris-unibit/index.html",
-        "/es/news/osiris-unibit/": "es/news/osiris-unibit/index.html",
-        "/es/orciber-5g": "es/orciber-5g/index.html",
-        "/es/orciber-5g/": "es/orciber-5g/index.html",
-        "/es/osiris": "es/osiris/index.html",
-        "/es/osiris/": "es/osiris/index.html",
-        "/es/osiris/del-campo-a-la-mesa":
-          "es/osiris/del-campo-a-la-mesa/index.html",
-        "/es/osiris/del-campo-a-la-mesa/":
-          "es/osiris/del-campo-a-la-mesa/index.html",
-        "/es/osiris/impacto-y-beneficios":
-          "es/osiris/impacto-y-beneficios/index.html",
-        "/es/osiris/impacto-y-beneficios/":
-          "es/osiris/impacto-y-beneficios/index.html",
-        "/es/osiris/tecnologias-y-metodologia":
-          "es/osiris/tecnologias-y-metodologia/index.html",
-        "/es/osiris/tecnologias-y-metodologia/":
-          "es/osiris/tecnologias-y-metodologia/index.html",
-        "/es/perseo": "es/perseo/index.html",
-        "/es/perseo/": "es/perseo/index.html",
-        "/es/perseo/contexto": "es/perseo/contexto/index.html",
-        "/es/perseo/contexto/": "es/perseo/contexto/index.html",
-        "/es/perseo": "es/perseo/index.html",
-        "/es/perseo/": "es/perseo/index.html",
-        "en/ants-home": "en/ants-home/index.html",
-        "en/ants-home/": "en/ants-home/index.html",
-        "en/demeter-5-0": "en/demeter-5-0/index.html",
-        "en/demeter-5-0/": "en/demeter-5-0/index.html",
-        "en/gaialab": "en/gaialab/index.html",
-        "en/gaialab/": "en/gaialab/index.html",
-        "en/news": "en/news/index.html",
-        "en/news/": "en/news/index.html",
-        "en/news/nemesis": "en/news/nemesis/index.html",
-        "en/news/nemesis/": "en/news/nemesis/index.html",
-        "en/news/osiris-en-mobisec": "en/news/osiris-en-mobisec/index.html",
-        "en/news/osiris-en-mobisec/": "en/news/osiris-en-mobisec/index.html",
-        "en/news/osiris-nota-de-prensa":
-          "en/news/osiris-nota-de-prensa/index.html",
-        "en/news/osiris-nota-de-prensa/":
-          "en/news/osiris-nota-de-prensa/index.html",
-        "en/perseo": "en/es/perseo/index.html",
-        "en/perseo/": "en/es/perseo/index.html",
-        "en/es/perseo": "en/es/perseo/index.html",
-        "en/es/perseo/": "en/es/perseo/index.html",
-        "en/reminder": "en/reminder/index.html",
-        "en/reminder/": "en/reminder/index.html",
-        "en/reminder/ethicalissues": "en/reminder/ethicalissues/index.html",
-        "en/reminder/ethicalissues/": "en/reminder/ethicalissues/index.html",
-        "en/reminder/interdisciplinaryresearch":
-          "en/reminder/interdisciplinaryresearch/index.html",
-        "en/reminder/interdisciplinaryresearch/":
-          "en/reminder/interdisciplinaryresearch/index.html",
-        "en/reminder/partners": "en/reminder/partners/index.html",
-        "en/reminder/partners/": "en/reminder/partners/index.html",
-        "en/reminder/view-project-deliverables":
-          "en/reminder/view-project-deliverables/index.html",
-        "en/reminder/view-project-deliverables/":
-          "en/reminder/view-project-deliverables/index.html",
-        "en/research-lines": "en/research-lines/index.html",
-        "en/research-lines/": "en/research-lines/index.html",
-        "en/research-projects": "en/research-projects/index.html",
-        "en/research-projects/": "en/research-projects/index.html",
-        "en/vinci": "en/vinci/index.html",
-        "en/vinci/": "en/vinci/index.html",
-        "es/eden": "es/eden/index.html",
-        "es/eden/": "es/eden/index.html",
-        "es/geminis": "es/geminis/index.html",
-        "es/geminis/": "es/geminis/index.html",
-        "es/news": "es/news/feria-cientifica-santomera/index.html",
-        "es/news/": "es/news/feria-cientifica-santomera/index.html",
-        "es/news/feria-cientifica-santomera":
-          "es/news/feria-cientifica-santomera/index.html",
-        "es/news/feria-cientifica-santomera/":
-          "es/news/feria-cientifica-santomera/index.html",
-        "es/news/osiris-big-data-master":
-          "es/news/osiris-big-data-master/index.html",
-        "es/news/osiris-big-data-master/":
-          "es/news/osiris-big-data-master/index.html",
-        "es/news/osiris-unibit": "es/news/osiris-unibit/index.html",
-        "es/news/osiris-unibit/": "es/news/osiris-unibit/index.html",
-        "es/orciber-5g": "es/orciber-5g/index.html",
-        "es/orciber-5g/": "es/orciber-5g/index.html",
-        "es/osiris": "es/osiris/index.html",
-        "es/osiris/": "es/osiris/index.html",
-        "es/osiris/del-campo-a-la-mesa":
-          "es/osiris/del-campo-a-la-mesa/index.html",
-        "es/osiris/del-campo-a-la-mesa/":
-          "es/osiris/del-campo-a-la-mesa/index.html",
-        "es/osiris/impacto-y-beneficios":
-          "es/osiris/impacto-y-beneficios/index.html",
-        "es/osiris/impacto-y-beneficios/":
-          "es/osiris/impacto-y-beneficios/index.html",
-        "es/osiris/tecnologias-y-metodologia":
-          "es/osiris/tecnologias-y-metodologia/index.html",
-        "es/osiris/tecnologias-y-metodologia/":
-          "es/osiris/tecnologias-y-metodologia/index.html",
-        "es/perseo": "es/perseo/index.html",
-        "es/perseo/": "es/perseo/index.html",
-        "es/perseo/contexto": "es/perseo/contexto/index.html",
-        "es/perseo/contexto/": "es/perseo/contexto/index.html",
-        "es/perseo": "es/perseo/index.html",
-        "es/perseo/": "es/perseo/index.html",
-      };
-      const CURRENT_LANG = "es";
-      const CURRENT_ROUTE = "/es/orciber-5g/";
-      const ROOT_PREFIX = "../../";
-      const ASSET_BASE = "../../pages/15.orciber-5g/assets";
+  <script>
+    const ROUTE_MAP = {
+  "/en/ants-home": "en/ants-home/index.html",
+  "/en/ants-home/": "en/ants-home/index.html",
+  "/en/demeter-5-0": "en/demeter-5-0/index.html",
+  "/en/demeter-5-0/": "en/demeter-5-0/index.html",
+  "/en/gaialab": "en/gaialab/index.html",
+  "/en/gaialab/": "en/gaialab/index.html",
+  "/en/news": "en/news/index.html",
+  "/en/news/": "en/news/index.html",
+  "/en/news/nemesis": "en/news/nemesis/index.html",
+  "/en/news/nemesis/": "en/news/nemesis/index.html",
+  "/en/news/osiris-en-mobisec": "en/news/osiris-en-mobisec/index.html",
+  "/en/news/osiris-en-mobisec/": "en/news/osiris-en-mobisec/index.html",
+  "/en/news/osiris-nota-de-prensa": "en/news/osiris-nota-de-prensa/index.html",
+  "/en/news/osiris-nota-de-prensa/": "en/news/osiris-nota-de-prensa/index.html",
+  "/en/perseo": "en/es/perseo/index.html",
+  "/en/perseo/": "en/es/perseo/index.html",
+  "/en/es/perseo": "en/es/perseo/index.html",
+  "/en/es/perseo/": "en/es/perseo/index.html",
+  "/en/reminder": "en/reminder/index.html",
+  "/en/reminder/": "en/reminder/index.html",
+  "/en/reminder/ethicalissues": "en/reminder/ethicalissues/index.html",
+  "/en/reminder/ethicalissues/": "en/reminder/ethicalissues/index.html",
+  "/en/reminder/interdisciplinaryresearch": "en/reminder/interdisciplinaryresearch/index.html",
+  "/en/reminder/interdisciplinaryresearch/": "en/reminder/interdisciplinaryresearch/index.html",
+  "/en/reminder/partners": "en/reminder/partners/index.html",
+  "/en/reminder/partners/": "en/reminder/partners/index.html",
+  "/en/reminder/view-project-deliverables": "en/reminder/view-project-deliverables/index.html",
+  "/en/reminder/view-project-deliverables/": "en/reminder/view-project-deliverables/index.html",
+  "/en/research-lines": "en/research-lines/index.html",
+  "/en/research-lines/": "en/research-lines/index.html",
+  "/en/research-projects": "en/research-projects/index.html",
+  "/en/research-projects/": "en/research-projects/index.html",
+  "/en/vinci": "en/vinci/index.html",
+  "/en/vinci/": "en/vinci/index.html",
+  "/es/eden": "es/eden/index.html",
+  "/es/eden/": "es/eden/index.html",
+  "/es/geminis": "es/geminis/index.html",
+  "/es/geminis/": "es/geminis/index.html",
+  "/es/news": "es/news/feria-cientifica-santomera/index.html",
+  "/es/news/": "es/news/feria-cientifica-santomera/index.html",
+  "/es/news/feria-cientifica-santomera": "es/news/feria-cientifica-santomera/index.html",
+  "/es/news/feria-cientifica-santomera/": "es/news/feria-cientifica-santomera/index.html",
+  "/es/news/osiris-big-data-master": "es/news/osiris-big-data-master/index.html",
+  "/es/news/osiris-big-data-master/": "es/news/osiris-big-data-master/index.html",
+  "/es/news/osiris-unibit": "es/news/osiris-unibit/index.html",
+  "/es/news/osiris-unibit/": "es/news/osiris-unibit/index.html",
+  "/es/orciber-5g": "es/orciber-5g/index.html",
+  "/es/orciber-5g/": "es/orciber-5g/index.html",
+  "/es/osiris": "es/osiris/index.html",
+  "/es/osiris/": "es/osiris/index.html",
+  "/es/osiris/del-campo-a-la-mesa": "es/osiris/del-campo-a-la-mesa/index.html",
+  "/es/osiris/del-campo-a-la-mesa/": "es/osiris/del-campo-a-la-mesa/index.html",
+  "/es/osiris/impacto-y-beneficios": "es/osiris/impacto-y-beneficios/index.html",
+  "/es/osiris/impacto-y-beneficios/": "es/osiris/impacto-y-beneficios/index.html",
+  "/es/osiris/tecnologias-y-metodologia": "es/osiris/tecnologias-y-metodologia/index.html",
+  "/es/osiris/tecnologias-y-metodologia/": "es/osiris/tecnologias-y-metodologia/index.html",
+  "/es/perseo": "es/perseo/index.html",
+  "/es/perseo/": "es/perseo/index.html",
+  "/es/perseo/contexto": "es/perseo/contexto/index.html",
+  "/es/perseo/contexto/": "es/perseo/contexto/index.html",
+  "/es/perseo": "es/perseo/index.html",
+  "/es/perseo/": "es/perseo/index.html",
+  "en/ants-home": "en/ants-home/index.html",
+  "en/ants-home/": "en/ants-home/index.html",
+  "en/demeter-5-0": "en/demeter-5-0/index.html",
+  "en/demeter-5-0/": "en/demeter-5-0/index.html",
+  "en/gaialab": "en/gaialab/index.html",
+  "en/gaialab/": "en/gaialab/index.html",
+  "en/news": "en/news/index.html",
+  "en/news/": "en/news/index.html",
+  "en/news/nemesis": "en/news/nemesis/index.html",
+  "en/news/nemesis/": "en/news/nemesis/index.html",
+  "en/news/osiris-en-mobisec": "en/news/osiris-en-mobisec/index.html",
+  "en/news/osiris-en-mobisec/": "en/news/osiris-en-mobisec/index.html",
+  "en/news/osiris-nota-de-prensa": "en/news/osiris-nota-de-prensa/index.html",
+  "en/news/osiris-nota-de-prensa/": "en/news/osiris-nota-de-prensa/index.html",
+  "en/perseo": "en/es/perseo/index.html",
+  "en/perseo/": "en/es/perseo/index.html",
+  "en/es/perseo": "en/es/perseo/index.html",
+  "en/es/perseo/": "en/es/perseo/index.html",
+  "en/reminder": "en/reminder/index.html",
+  "en/reminder/": "en/reminder/index.html",
+  "en/reminder/ethicalissues": "en/reminder/ethicalissues/index.html",
+  "en/reminder/ethicalissues/": "en/reminder/ethicalissues/index.html",
+  "en/reminder/interdisciplinaryresearch": "en/reminder/interdisciplinaryresearch/index.html",
+  "en/reminder/interdisciplinaryresearch/": "en/reminder/interdisciplinaryresearch/index.html",
+  "en/reminder/partners": "en/reminder/partners/index.html",
+  "en/reminder/partners/": "en/reminder/partners/index.html",
+  "en/reminder/view-project-deliverables": "en/reminder/view-project-deliverables/index.html",
+  "en/reminder/view-project-deliverables/": "en/reminder/view-project-deliverables/index.html",
+  "en/research-lines": "en/research-lines/index.html",
+  "en/research-lines/": "en/research-lines/index.html",
+  "en/research-projects": "en/research-projects/index.html",
+  "en/research-projects/": "en/research-projects/index.html",
+  "en/vinci": "en/vinci/index.html",
+  "en/vinci/": "en/vinci/index.html",
+  "es/eden": "es/eden/index.html",
+  "es/eden/": "es/eden/index.html",
+  "es/geminis": "es/geminis/index.html",
+  "es/geminis/": "es/geminis/index.html",
+  "es/news": "es/news/feria-cientifica-santomera/index.html",
+  "es/news/": "es/news/feria-cientifica-santomera/index.html",
+  "es/news/feria-cientifica-santomera": "es/news/feria-cientifica-santomera/index.html",
+  "es/news/feria-cientifica-santomera/": "es/news/feria-cientifica-santomera/index.html",
+  "es/news/osiris-big-data-master": "es/news/osiris-big-data-master/index.html",
+  "es/news/osiris-big-data-master/": "es/news/osiris-big-data-master/index.html",
+  "es/news/osiris-unibit": "es/news/osiris-unibit/index.html",
+  "es/news/osiris-unibit/": "es/news/osiris-unibit/index.html",
+  "es/orciber-5g": "es/orciber-5g/index.html",
+  "es/orciber-5g/": "es/orciber-5g/index.html",
+  "es/osiris": "es/osiris/index.html",
+  "es/osiris/": "es/osiris/index.html",
+  "es/osiris/del-campo-a-la-mesa": "es/osiris/del-campo-a-la-mesa/index.html",
+  "es/osiris/del-campo-a-la-mesa/": "es/osiris/del-campo-a-la-mesa/index.html",
+  "es/osiris/impacto-y-beneficios": "es/osiris/impacto-y-beneficios/index.html",
+  "es/osiris/impacto-y-beneficios/": "es/osiris/impacto-y-beneficios/index.html",
+  "es/osiris/tecnologias-y-metodologia": "es/osiris/tecnologias-y-metodologia/index.html",
+  "es/osiris/tecnologias-y-metodologia/": "es/osiris/tecnologias-y-metodologia/index.html",
+  "es/perseo": "es/perseo/index.html",
+  "es/perseo/": "es/perseo/index.html",
+  "es/perseo/contexto": "es/perseo/contexto/index.html",
+  "es/perseo/contexto/": "es/perseo/contexto/index.html",
+  "es/perseo": "es/perseo/index.html",
+  "es/perseo/": "es/perseo/index.html"
+};
+    const CURRENT_LANG = 'es';
+    const CURRENT_ROUTE = '/es/orciber-5g/';
+    const ROOT_PREFIX = '../../';
+    const ASSET_BASE = '../../pages/15.orciber-5g/assets';
 
-      const hasProtocol = (v) => /^(https?:|mailto:|tel:|javascript:)/i.test(v);
-      const normalizeAntsRoute = (value) => {
-        try {
-          const u = new URL(value);
-          const host = (u.hostname || "").toLowerCase();
-          if (u.protocol !== "http:" && u.protocol !== "https:") return null;
-          if (host !== "ants.inf.um.es" && host !== "www.ants.inf.um.es")
-            return null;
-          return u.pathname || "/";
-        } catch {
-          return null;
-        }
-      };
-      const swapLang = (route) => {
-        const parts = route.replace(/^\/+/, "").split("/").filter(Boolean);
-        if (parts.length < 2) return null;
-        parts[0] = parts[0] === "en" ? "es" : parts[0] === "es" ? "en" : null;
-        if (!parts[0]) return null;
-        return "/" + parts.join("/");
-      };
-      const isMedia = (value) =>
-        /\.(png|jpe?g|gif|webp|svg|pdf|mp4|webm|mp3|ogg|txt|csv|css|js|ico)$/i.test(
-          value,
-        );
-      const mediaBaseName = (value) => {
-        const clean = value.split("?")[0].split("#")[0];
-        const parts = clean.split("/");
-        return parts[parts.length - 1] || clean;
-      };
-      const localizeMedia = (value) => {
-        const rawBase = mediaBaseName(value);
-        const base = (() => {
-          try {
-            return decodeURIComponent(rawBase);
-          } catch {
-            return rawBase;
-          }
-        })();
-        return (ASSET_BASE + "/" + base).replace(/\\/g, "/");
-      };
-
-      const normalizeRoute = (value) => {
-        const route = value.replace(/^\/+/, "").replace(/\/+$/, "");
-        if (!route) return CURRENT_LANG + "/";
-        const parts = route.split("/").filter(Boolean);
-        if (parts[0] === "en" || parts[0] === "es") return parts.join("/");
-        return CURRENT_LANG + "/" + parts.join("/");
-      };
-
-      const resolveRoute = (rawHref) => {
-        if (!rawHref || rawHref.startsWith("#")) return null;
-        const [href, hash] = rawHref.split("#", 2);
-        if (!href) return null;
-        const normalizedHref = normalizeAntsRoute(href) || href;
-        if (!normalizedHref.startsWith("/")) {
-          if (href.startsWith("http") || hasProtocol(href)) return null;
-          return null;
-        }
-
-        const candidates = [];
-        const route = normalizeRoute(normalizedHref);
-        candidates.push(route);
-        candidates.push(route + "/");
-        candidates.push(route.replace(/\/$/, ""));
-
-        for (const c of candidates) {
-          if (ROUTE_MAP[c])
-            return { path: ROUTE_MAP[c], hash: hash ? "#" + hash : "" };
-        }
-        const altRoute = swapLang(route);
-        if (altRoute) {
-          const altCandidates = [
-            altRoute,
-            altRoute + "/",
-            altRoute.replace(/\/$/, ""),
-          ];
-          for (const c of altCandidates) {
-            if (ROUTE_MAP[c])
-              return { path: ROUTE_MAP[c], hash: hash ? "#" + hash : "" };
-          }
-        }
+    const hasProtocol = (v) => /^(https?:|mailto:|tel:|javascript:)/i.test(v);
+    const normalizeAntsRoute = (value) => {
+      try {
+        const u = new URL(value);
+        const host = (u.hostname || '').toLowerCase();
+        if (u.protocol !== 'http:' && u.protocol !== 'https:') return null;
+        if (host !== 'ants.inf.um.es' && host !== 'www.ants.inf.um.es') return null;
+        return u.pathname || '/';
+      } catch {
         return null;
+      }
+    };
+    const swapLang = (route) => {
+      const parts = route.replace(/^\/+/, '').split('/').filter(Boolean);
+      if (parts.length < 2) return null;
+      parts[0] = parts[0] === 'en' ? 'es' : (parts[0] === 'es' ? 'en' : null);
+      if (!parts[0]) return null;
+      return '/' + parts.join('/');
+    };
+    const isMedia = (value) => /\.(png|jpe?g|gif|webp|svg|pdf|mp4|webm|mp3|ogg|txt|csv|css|js|ico)$/i.test(value);
+    const mediaBaseName = (value) => {
+      const clean = value.split('?')[0].split('#')[0];
+      const parts = clean.split('/');
+      return parts[parts.length - 1] || clean;
+    };
+    const localizeMedia = (value) => {
+      const rawBase = mediaBaseName(value);
+      const base = (() => {
+        try {
+          return decodeURIComponent(rawBase);
+        } catch {
+          return rawBase;
+        }
+      })();
+      return (ASSET_BASE + '/' + base).replace(/\\/g, '/');
+    };
+
+    const normalizeRoute = (value) => {
+      const route = value.replace(/^\/+/, '').replace(/\/+$/, '');
+      if (!route) return CURRENT_LANG + '/';
+      const parts = route.split('/').filter(Boolean);
+      if (parts[0] === 'en' || parts[0] === 'es') return parts.join('/');
+      return CURRENT_LANG + '/' + parts.join('/');
+    };
+
+    const resolveRoute = (rawHref) => {
+      if (!rawHref || rawHref.startsWith('#')) return null;
+      const [href, hash] = rawHref.split('#', 2);
+      if (!href) return null;
+      const normalizedHref = normalizeAntsRoute(href) || href;
+      if (!normalizedHref.startsWith('/')) {
+        if (href.startsWith('http') || hasProtocol(href)) return null;
+        return null;
+      }
+
+      const candidates = [];
+      const route = normalizeRoute(normalizedHref);
+      candidates.push(route);
+      candidates.push(route + '/');
+      candidates.push(route.replace(/\/$/, ''));
+
+      for (const c of candidates) {
+        if (ROUTE_MAP[c]) return { path: ROUTE_MAP[c], hash: hash ? '#' + hash : '' };
+      }
+      const altRoute = swapLang(route);
+      if (altRoute) {
+        const altCandidates = [altRoute, altRoute + '/', altRoute.replace(/\/$/, '')];
+        for (const c of altCandidates) {
+          if (ROUTE_MAP[c]) return { path: ROUTE_MAP[c], hash: hash ? '#' + hash : '' };
+        }
+      }
+      return null;
+    };
+
+    const resolveLocal = (base, href) => {
+      if (!href || href.startsWith('#')) return href;
+      const [clean, hash] = href.split('#', 2);
+      if (!clean) return href;
+
+      const resolved = resolveRoute(clean);
+      if (resolved) {
+        return (ROOT_PREFIX + resolved.path).replace(/\\/g, '/') + resolved.hash;
+      }
+
+      const antsHref = normalizeAntsRoute(clean);
+      if (antsHref && isMedia(antsHref)) {
+        return localizeMedia(antsHref) + (hash ? '#' + hash : '');
+      }
+
+      if (hasProtocol(clean) || /^(https?:)?\//.test(clean)) return href;
+      if (clean.startsWith('./') || clean.startsWith('../')) return href;
+      if (isMedia(clean)) {
+        return localizeMedia(clean) + (hash ? '#' + hash : '');
+      }
+      return clean;
+    };
+
+    document.querySelectorAll('a[href]').forEach((a) => {
+      const href = a.getAttribute('href');
+      const fixed = resolveLocal('', href);
+      if (fixed && fixed !== href) a.setAttribute('href', fixed);
+    });
+
+    const ASSET_MARK = 'pages/';
+    const ASSET_SEGMENT = ASSET_BASE.includes(ASSET_MARK)
+      ? (() => {
+          const i = ASSET_BASE.indexOf(ASSET_MARK);
+          return {
+            root: ASSET_BASE.slice(0, i) + ASSET_MARK,
+            segment: ASSET_BASE.slice(i + ASSET_MARK.length),
+          };
+        })()
+      : null;
+
+    const collectAssetCandidates = () => {
+      const out = [];
+      if (!ASSET_SEGMENT) return out;
+      let current = ASSET_SEGMENT.segment;
+      out.push(current);
+      while (current.includes('/')) {
+        current = current.slice(0, current.lastIndexOf('/'));
+        if (current) out.push(current);
+      }
+      if (!out.includes('01.ants-home/assets')) out.push('01.ants-home/assets');
+      return [...new Set(out)];
+    };
+
+    const assetCandidatePrefixes = collectAssetCandidates();
+
+    const setImageSrcWithFallback = (img, rawSrc) => {
+      if (!ASSET_SEGMENT || !rawSrc) return;
+      const fileName = (() => {
+        const rawBase = mediaBaseName(rawSrc);
+        try {
+          return decodeURIComponent(rawBase);
+        } catch {
+          return rawBase;
+        }
+      })();
+      const candidates = assetCandidatePrefixes.map((segment) =>
+        (ASSET_SEGMENT.root + segment + '/' + fileName).replace(/\\/g, '/')
+      );
+
+      let index = 0;
+      const onError = () => {
+        if (index >= candidates.length) return;
+        img.src = candidates[index];
+        index += 1;
       };
 
-      const resolveLocal = (base, href) => {
-        if (!href || href.startsWith("#")) return href;
-        const [clean, hash] = href.split("#", 2);
-        if (!clean) return href;
+      img.addEventListener('error', onError);
+      onError();
+    };
 
-        const resolved = resolveRoute(clean);
-        if (resolved) {
-          return (
-            (ROOT_PREFIX + resolved.path).replace(/\\/g, "/") + resolved.hash
-          );
-        }
-
-        const antsHref = normalizeAntsRoute(clean);
-        if (antsHref && isMedia(antsHref)) {
-          return localizeMedia(antsHref) + (hash ? "#" + hash : "");
-        }
-
-        if (hasProtocol(clean) || /^(https?:)?\//.test(clean)) return href;
-        if (clean.startsWith("./") || clean.startsWith("../")) return href;
-        if (isMedia(clean)) {
-          return localizeMedia(clean) + (hash ? "#" + hash : "");
-        }
-        return clean;
-      };
-
-      document.querySelectorAll("a[href]").forEach((a) => {
-        const href = a.getAttribute("href");
-        const fixed = resolveLocal("", href);
-        if (fixed && fixed !== href) a.setAttribute("href", fixed);
-      });
-
-      const ASSET_MARK = "pages/";
-      const ASSET_SEGMENT = ASSET_BASE.includes(ASSET_MARK)
-        ? (() => {
-            const i = ASSET_BASE.indexOf(ASSET_MARK);
-            return {
-              root: ASSET_BASE.slice(0, i) + ASSET_MARK,
-              segment: ASSET_BASE.slice(i + ASSET_MARK.length),
-            };
-          })()
-        : null;
-
-      const collectAssetCandidates = () => {
-        const out = [];
-        if (!ASSET_SEGMENT) return out;
-        let current = ASSET_SEGMENT.segment;
-        out.push(current);
-        while (current.includes("/")) {
-          current = current.slice(0, current.lastIndexOf("/"));
-          if (current) out.push(current);
-        }
-        if (!out.includes("01.ants-home/assets"))
-          out.push("01.ants-home/assets");
-        return [...new Set(out)];
-      };
-
-      const assetCandidatePrefixes = collectAssetCandidates();
-
-      const setImageSrcWithFallback = (img, rawSrc) => {
-        if (!ASSET_SEGMENT || !rawSrc) return;
-        const fileName = (() => {
-          const rawBase = mediaBaseName(rawSrc);
-          try {
-            return decodeURIComponent(rawBase);
-          } catch {
-            return rawBase;
-          }
-        })();
-        const candidates = assetCandidatePrefixes.map((segment) =>
-          (ASSET_SEGMENT.root + segment + "/" + fileName).replace(/\\/g, "/"),
-        );
-
-        let index = 0;
-        const onError = () => {
-          if (index >= candidates.length) return;
-          img.src = candidates[index];
-          index += 1;
-        };
-
-        img.addEventListener("error", onError);
-        onError();
-      };
-
-      document.querySelectorAll("img[src]").forEach((img) => {
-        const src = img.getAttribute("src");
-        if (!src || hasProtocol(src) || src.startsWith("data:")) return;
-        if (/^\//.test(src)) {
-          if (src.startsWith("/pages/")) return;
-          if (isMedia(src)) {
-            setImageSrcWithFallback(img, src);
-            return;
-          }
-          img.setAttribute(
-            "src",
-            (ROOT_PREFIX + src.replace(/^\//, "")).replace(/\\/g, "/"),
-          );
+    document.querySelectorAll('img[src]').forEach((img) => {
+      const src = img.getAttribute('src');
+      if (!src || hasProtocol(src) || src.startsWith('data:')) return;
+      if (/^\//.test(src)) {
+        if (src.startsWith('/pages/')) return;
+        if (isMedia(src)) {
+          setImageSrcWithFallback(img, src);
           return;
         }
-        if (!src.includes("../") && !src.includes("./") && isMedia(src)) {
-          setImageSrcWithFallback(img, src);
-        }
+        img.setAttribute('src', (ROOT_PREFIX + src.replace(/^\//, '')).replace(/\\/g, '/'));
+        return;
+      }
+      if (!src.includes('../') && !src.includes('./') && isMedia(src)) {
+        setImageSrcWithFallback(img, src);
+      }
+    });
+
+    document.querySelectorAll('[style]').forEach((el) => {
+      const style = el.getAttribute('style');
+      if (!style || !style.includes('url(')) return;
+
+      const nextStyle = style.replace(/url\(\s*([^)]*?)\s*\)/g, (m, raw) => {
+        const trimmed = raw.trim();
+        const quote = trimmed[0] === '"' || trimmed[0] === "'" ? trimmed[0] : '';
+        const rawPath = quote ? trimmed.slice(1, -1) : trimmed;
+        if (!rawPath || rawPath.startsWith('data:') || hasProtocol(rawPath)) return m;
+        if (!isMedia(rawPath)) return m;
+        return 'url(' + quote + localizeMedia(rawPath) + quote + ')';
       });
 
-      document.querySelectorAll("[style]").forEach((el) => {
-        const style = el.getAttribute("style");
-        if (!style || !style.includes("url(")) return;
-
-        const nextStyle = style.replace(/url\(\s*([^)]*?)\s*\)/g, (m, raw) => {
-          const trimmed = raw.trim();
-          const quote =
-            trimmed[0] === '"' || trimmed[0] === "'" ? trimmed[0] : "";
-          const rawPath = quote ? trimmed.slice(1, -1) : trimmed;
-          if (!rawPath || rawPath.startsWith("data:") || hasProtocol(rawPath))
-            return m;
-          if (!isMedia(rawPath)) return m;
-          return "url(" + quote + localizeMedia(rawPath) + quote + ")";
-        });
-
-        if (nextStyle !== style) {
-          el.setAttribute("style", nextStyle);
-        }
-      });
-    </script>
-  </body>
+      if (nextStyle !== style) {
+        el.setAttribute('style', nextStyle);
+      }
+    });
+  </script>
+</body>
 </html>

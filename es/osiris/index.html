@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../../favicons-proyectos/faviconosiris.ico" />
+  <link rel="apple-touch-icon" href="../../favicons-proyectos/faviconosirismobile.png" />
+<title>Osiris</title>
+  <link rel="stylesheet" href="../../css-site/site.css?v=20260408-6" />
+  <style>
+    .osiris-burger {
+      display: none;
+      border: 1px solid rgba(245, 241, 230, 0.35);
+      background: rgba(245, 241, 230, 0.12);
+      color: #f5f1e6;
+      width: 38px;
+      height: 38px;
+      padding: 0;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+    .osiris-burger-icon {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.35rem;
+      line-height: 1;
+      font-weight: 700;
+      display: inline-block;
+      transform: translateY(-1px);
+    }
+    @media (max-width: 980px) {
+      body.osiris-theme .osiris-project-topbar-inner {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+      }
+      .osiris-burger {
+        display: inline-flex !important;
+        order: 2 !important;
+        margin-left: auto !important;
+      }
+      body.osiris-theme .osiris-project-logo {
+        order: 1 !important;
+        margin-right: auto !important;
+      }
+      body.osiris-theme .osiris-ants-logo {
+        display: none !important;
+      }
+      body.osiris-theme .osiris-project-nav {
+        display: none !important;
+        order: 3 !important;
+        width: 100% !important;
+      }
+      body.osiris-menu-open.osiris-theme .osiris-project-nav {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.45rem !important;
+        margin-top: 0.2rem !important;
+        padding-top: 0.55rem !important;
+        border-top: 1px solid rgba(245, 241, 230, 0.28) !important;
+      }
+    }
+  </style>
+</head>
+<body id="top" class="osiris-theme mobile-ready">
+  <div class="page-wrap">
+    <header class="topbar osiris-project-topbar">
+      <div class="osiris-project-topbar-inner">
+        <a class="osiris-project-logo" href="../../es/osiris/index.html" aria-label="Sobre Osiris">
+          <img src="../../pages/10.osiris/assets/Logoheader.webp" alt="Osiris">
+        </a>
+        <button class="osiris-burger" type="button" id="osirisMobileToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="osirisMainNav">
+          <span class="osiris-burger-icon" aria-hidden="true">&#9776;</span>
+        </button>
+        <nav class="osiris-project-nav" id="osirisMainNav">
+          <a href="#sobre-osiris-mod">SOBRE OSIRIS</a>
+          <a href="#publicaciones-mod">PUBLICACIONES</a>
+          <a href="#noticias-mod">NOTICIAS Y DIFUSIÓN</a>
+          <a href="#objetivos-mod">OBJETIVOS</a>
+        </nav>
+        <a class="osiris-ants-logo" href="../../index.html" aria-label="Home ants" target="_blank" rel="noopener noreferrer">
+          <img src="../../pages/01.ants-home/assets/ants_footer.png" alt="ANTS">
+        </a>
+      </div>
+    </header>
+    <article class="content"><section class="osiris-hero">
+  <div class="osiris-hero-inner">
+    <div class="osiris-hero-logo">
+      <img src="logo.png" alt="OSIRIS">
+    </div>
+    <div class="osiris-hero-copy">
+      <p>
+        Osiris aplica IA, Big Data<br>
+        y tecnologías digitales<br>
+        para modernizar la agricultura,<br>
+        optimizar la producción,<br>
+        reducir el impacto ambiental<br>
+        y mejorar la eficiencia<br>
+        en toda la cadena de valor
+      </p>
+      <a class="btn osiris-hero-more" href="#sobre-osiris-mod">
+        LEER MÁS <span style="font-size:1rem; line-height:1;">↓</span>
+      </a>
+    </div>
+  </div>
+</section>
+<section style="width:100vw; height:220px; margin:0 calc(50% - 50vw); overflow:hidden;">
+  <img src="Franja.JPG" alt="Franja Osiris" style="width:100%; height:100%; object-fit:cover; object-position:center 70%; display:block;">
+</section>
+<section style="width:100vw; height:310px; margin:0 calc(50% - 50vw); background:#c9a063 !important; background-color:#c9a063 !important;">
+  <div style="max-width:1000px; height:100%; margin:0 auto; padding:2rem 1.5rem; box-sizing:border-box; display:flex; flex-direction:column; justify-content:center;">
+    <div style="display:flex; gap:1rem; margin-bottom:0.9rem;">
+      <div style="background:#273912 !important; color:#f5f1e6 !important; padding:0.78rem 1.4rem; border-radius:0 8px 0 8px; font-family:'IBM Plex Sans', sans-serif; font-weight:600; font-size:0.88rem; min-width:270px; display:flex; align-items:center; justify-content:center; text-align:center;">
+        CONVOCATORIA DE AYUDAS
+      </div>
+      <div style="border:2px solid #273912 !important; color:#273912 !important; background:#c9a063 !important; padding:0.78rem 1.4rem; border-radius:0 8px 0 8px; font-family:'IBM Plex Sans', sans-serif; font-size:0.88rem; font-weight:600; flex:1; display:flex; align-items:center; justify-content:center; text-align:center;">
+        Cátedras ENIA 2022 para la creación de cátedras universidad-empresa en IA
+      </div>
+    </div>
+    <div style="display:flex; gap:1rem; margin-bottom:0.9rem;">
+      <div style="background:#273912 !important; color:#f5f1e6 !important; padding:0.78rem 1.4rem; border-radius:0 8px 0 8px; font-family:'IBM Plex Sans', sans-serif; font-weight:600; font-size:0.88rem; min-width:270px; display:flex; align-items:center; justify-content:center; text-align:center;">
+        SUBPROGRAMA
+      </div>
+      <div style="border:2px solid #273912 !important; color:#273912 !important; background:#c9a063 !important; padding:0.78rem 1.4rem; border-radius:0 8px 0 8px; font-family:'IBM Plex Sans', sans-serif; font-size:0.88rem; font-weight:600; flex:1; display:flex; align-items:center; justify-content:center; text-align:center;">
+        Apoyo a la Creación de Nuevas Cátedras en IA
+      </div>
+    </div>
+    <div style="display:flex; gap:1rem;">
+      <div style="display:flex; gap:0.5rem; flex:1;">
+        <div style="background:#273912 !important; color:#f5f1e6 !important; padding:0.78rem 1.2rem; border-radius:0 8px 0 8px; font-family:'IBM Plex Sans', sans-serif; font-weight:600; font-size:0.88rem; display:flex; align-items:center; justify-content:center; white-space:nowrap;">
+          Nº DE EXPEDIENTE
+        </div>
+        <div style="border:2px solid #273912 !important; color:#273912 !important; background:#c9a063 !important; padding:0.78rem 1.2rem; border-radius:0 8px 0 8px; font-family:'IBM Plex Sans', sans-serif; font-size:0.88rem; font-weight:600; flex:1; display:flex; align-items:center; justify-content:center; text-align:center; white-space:nowrap;">
+          TSI-100921-2023-1
+        </div>
+      </div>
+      <div style="display:flex; gap:0.5rem; flex:1;">
+        <div style="background:#273912 !important; color:#f5f1e6 !important; padding:0.78rem 1.2rem; border-radius:0 8px 0 8px; font-family:'IBM Plex Sans', sans-serif; font-weight:600; font-size:0.88rem; display:flex; align-items:center; justify-content:center; white-space:nowrap;">
+          ENTIDAD
+        </div>
+        <div style="border:2px solid #273912 !important; color:#273912 !important; background:#c9a063 !important; padding:0.78rem 1.2rem; border-radius:0 8px 0 8px; font-family:'IBM Plex Sans', sans-serif; font-size:0.88rem; font-weight:600; flex:1; display:flex; align-items:center; justify-content:center; text-align:center; white-space:nowrap;">
+          Universidad de Murcia
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section style="width:100vw; height:115px; margin:0 calc(50% - 50vw); background:#f5f1e6 !important; padding:0 1.5rem; box-sizing:border-box; display:flex; align-items:center; justify-content:center;">
+  <div style="width:100%; display:flex; justify-content:center;">
+    <img src="logosoficiales.png" alt="Logos oficiales Osiris" style="max-width:765px; width:85%; height:auto; display:block;">
+  </div>
+</section>
+<!-- TÍTULO SOBRE OSIRIS -->
+<section id="sobre-osiris-mod" style="scroll-margin-top:86px; width:100vw; margin:0 calc(50% - 50vw) 0; background:#273912 !important; background-color:#273912 !important; padding:3.5rem 0 4rem;">
+<h2 id="sobre-osiris" style="
+  color: #f5f1e6 !important;
+  text-align: center !important;
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: clamp(2rem, 4vw, 3rem) !important;
+  margin: 1.2rem auto 2rem auto !important;
+  max-width: 1000px !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase;
+">
+  SOBRE OSIRIS
+</h2>
+<!-- TEXTO -->
+<div style="max-width: 900px; margin: 0 auto 2.5rem auto; padding: 0 2rem; text-align: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 1.05rem; line-height: 1.7; color: #f5f1e6 !important;">
+  <p style="margin: 0 0 1.2rem 0; color: #f5f1e6 !important;">
+    <strong>El Subprograma Estatal de Acciones Estratégicas</strong> incluye dentro de las <strong>agrupaciones temáticas</strong> el tema <strong>alimentación, bioeconomía y medio natural</strong> en la cual se pretende <strong>priorizar y dar respuesta a los desafíos</strong> a que se enfrentan <strong>sectores estratégicos</strong> para España como son el <strong>agroalimentario</strong>.
+  </p>
+  <p style="margin: 0; color: #f5f1e6 !important;">
+    Siguiendo la <strong>hoja de ruta de la Unión Europea</strong> y los <strong>objetivos recogidos en el Pacto Verde</strong>, la cátedra espera <strong>fusionar e impulsar el uso de tecnologías digitales</strong>, desde una <strong>visión integrada</strong> de todos los actores de la cadena de valor, de forma que se alcance una <strong>producción inteligente y sostenible de alimentos seguros, saludables y de calidad</strong>.
+  </p>
+</div>
+<!-- CARDS CON BOTONES ALINEADOS (igual que lo tenías) -->
+<div class="osiris-cards-grid">
+
+  <div class="osiris-card">
+    <img src="tomate.png" alt="Tecnologías">
+    <h3 style="color:#273912 !important;">TECNOLOGÍAS<br>Y METODOLOGÍA</h3>
+    <p style="color:#273912 !important;">Big Data, IA y más: conoce las herramientas que impulsan el cambio</p>
+    <a href="/es/osiris/tecnologias-y-metodologia" class="btn">CÓMO FUNCIONA</a>
+  </div>
+
+  <div class="osiris-card">
+    <img src="tractor.png" alt="Del campo">
+    <h3 style="color:#273912 !important;">DEL CAMPO<br>A LA MESA</h3>
+    <p style="color:#273912 !important;">Cómo optimizamos cada paso: desde la producción hasta tu mesa</p>
+    <a href="/es/osiris/del-campo-a-la-mesa" class="btn">VER PROCESOS</a>
+  </div>
+
+  <div class="osiris-card">
+    <img src="investigadora.png" alt="Impacto">
+    <h3 style="color:#273912 !important;">IMPACTO<br>Y BENEFICIOS</h3>
+    <p style="color:#273912 !important;">Mejoras ambientales y económicas: menos impacto, más eficiencia</p>
+    <a href="/es/osiris/impacto-y-beneficios" class="btn">DESCUBRIR IMPACTO</a>
+  </div>
+
+</div>
+</section>
+<section style="width:100vw; height:300px; margin:0 calc(50% - 50vw); overflow:hidden; background:#c9a063 !important; background-color:#c9a063 !important; display:flex; align-items:center;">
+  <div style="width:100%; background:#c9a063 !important; background-color:#c9a063 !important;">
+    <div style="overflow:hidden; background:#c9a063 !important; background-color:#c9a063 !important;">
+      <div id="osirisFlowTrack" style="display:flex; gap:0.8rem; width:max-content; padding:0; will-change:transform;">
+        <img src="1.png" alt="Osiris 1" style="width:300px; height:190px; object-fit:cover; border-radius:12px; display:block;">
+        <img src="2.png" alt="Osiris 2" style="width:300px; height:190px; object-fit:cover; border-radius:12px; display:block;">
+        <img src="3.png" alt="Osiris 3" style="width:300px; height:190px; object-fit:cover; border-radius:12px; display:block;">
+        <img src="4.png" alt="Osiris 4" style="width:300px; height:190px; object-fit:cover; border-radius:12px; display:block;">
+        <img src="5.png" alt="Osiris 5" style="width:300px; height:190px; object-fit:cover; border-radius:12px; display:block;">
+        <img src="6.png" alt="Osiris 6" style="width:300px; height:190px; object-fit:cover; border-radius:12px; display:block;">
+        <img src="7.png" alt="Osiris 7" style="width:300px; height:190px; object-fit:cover; border-radius:12px; display:block;">
+        <img src="8.png" alt="Osiris 8" style="width:300px; height:190px; object-fit:cover; border-radius:12px; display:block;">
+        <img src="9.png" alt="Osiris 9" style="width:300px; height:190px; object-fit:cover; border-radius:12px; display:block;">
+        <img src="10.png" alt="Osiris 10" style="width:300px; height:190px; object-fit:cover; border-radius:12px; display:block;">
+        <img src="11.png" alt="Osiris 11" style="width:300px; height:190px; object-fit:cover; border-radius:12px; display:block;">
+        <img src="12.png" alt="Osiris 12" style="width:300px; height:190px; object-fit:cover; border-radius:12px; display:block;">
+        <img src="1.png" alt="Osiris 1" style="width:300px; height:190px; object-fit:cover; border-radius:12px; display:block;">
+        <img src="2.png" alt="Osiris 2" style="width:300px; height:190px; object-fit:cover; border-radius:12px; display:block;">
+        <img src="3.png" alt="Osiris 3" style="width:300px; height:190px; object-fit:cover; border-radius:12px; display:block;">
+        <img src="4.png" alt="Osiris 4" style="width:300px; height:190px; object-fit:cover; border-radius:12px; display:block;">
+        <img src="5.png" alt="Osiris 5" style="width:300px; height:190px; object-fit:cover; border-radius:12px; display:block;">
+        <img src="6.png" alt="Osiris 6" style="width:300px; height:190px; object-fit:cover; border-radius:12px; display:block;">
+        <img src="7.png" alt="Osiris 7" style="width:300px; height:190px; object-fit:cover; border-radius:12px; display:block;">
+        <img src="8.png" alt="Osiris 8" style="width:300px; height:190px; object-fit:cover; border-radius:12px; display:block;">
+        <img src="9.png" alt="Osiris 9" style="width:300px; height:190px; object-fit:cover; border-radius:12px; display:block;">
+        <img src="10.png" alt="Osiris 10" style="width:300px; height:190px; object-fit:cover; border-radius:12px; display:block;">
+        <img src="11.png" alt="Osiris 11" style="width:300px; height:190px; object-fit:cover; border-radius:12px; display:block;">
+        <img src="12.png" alt="Osiris 12" style="width:300px; height:190px; object-fit:cover; border-radius:12px; display:block;">
+      </div>
+    </div>
+  </div>
+</section>
+  <script src="../../assets/js/mobile-project-menu.js?v=20260408-6"></script>
+
+<script>
+(() => {
+  const track = document.getElementById('osirisFlowTrack');
+  if (!track) return;
+  let offset = 0;
+  const speed = 0.45;
+  const loop = () => {
+    const half = track.scrollWidth / 2;
+    offset += speed;
+    if (offset >= half) offset = 0;
+    track.style.transform = `translateX(-${offset}px)`;
+    requestAnimationFrame(loop);
+  };
+  requestAnimationFrame(loop);
+})();
+</script>
+<!-- MÓDULO PUBLICACIONES A SANGRE -->
+<section id="publicaciones-mod" class="osiris-pub-module" style="scroll-margin-top:86px; width:100vw; margin:0 calc(50% - 50vw); background:#f5f1e6 !important; padding:4rem 0;">
+  <div style="max-width:1000px; margin:0 auto; padding:0 1.5rem;">
+  
+  <!-- TÍTULO -->
+  <h2 id="publicaciones" style="color: #273912 !important; text-align: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(2rem, 4vw, 3rem); margin: 0 0 1.5rem 0; letter-spacing: 0.12em; text-transform: uppercase;">
+    PUBLICACIONES
+  </h2>
+  
+  <!-- SUBTÍTULO -->
+  <p style="text-align: center; color: #273912 !important; font-family: 'IBM Plex Sans', sans-serif; font-size: 1.05rem; margin-bottom: 3rem;">
+    <strong style="color:#273912 !important;">Producción científica</strong> asociada a las líneas de investigación de la Cátedra <strong style="color:#273912 !important;">Osiris</strong>.
+  </p>
+  
+  <div style="display:flex; flex-wrap:wrap; gap:1.25rem; align-items:stretch;">
+  <!-- PUBLICACIÓN 1 -->
+  <div class="osiris-pub-card" style="flex:1 1 440px; background: #f5f1e6 !important; background-color: #f5f1e6 !important; padding: 1.2rem !important; border-radius: 16px; margin-bottom: 0; border: 2px solid #273912;">
+    <h3 style="color: #273912; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.2rem; margin: 0 0 0.8rem 0;">
+      Enhancing precision irrigation with TinyML: Advanced NDVI anomaly detection and model optimization
+    </h3>
+    <p style="color: #666; font-family: 'IBM Plex Sans', sans-serif; font-style: italic; margin: 0 0 0.5rem 0;">
+      Internet of Things · 2026
+    </p>
+    <p style="color: #273912; font-family: 'IBM Plex Sans', sans-serif; margin: 0 0 1.2rem 0;">
+      <strong>Autores:</strong> Carlos Hernández-Hidalgo · Aurora González-Vidal · Antonio F. Skarmeta
+    </p>
+    <a href="https://www.sciencedirect.com/science/article/pii/S2542660525003531" class="btn btn-osiris-pub" target="_blank" rel="noopener noreferrer">
+      IR A LA PUBLICACIÓN ↗
+    </a>
+  </div>
+  
+  <!-- PUBLICACIÓN 2 -->
+  <div class="osiris-pub-card" style="flex:1 1 440px; background: #f5f1e6 !important; background-color: #f5f1e6 !important; padding: 1.2rem !important; border-radius: 16px; border: 2px solid #273912;">
+    <h3 style="color: #273912; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.2rem; margin: 0 0 0.8rem 0;">
+      Advancing towards a marine digital twin platform: Modeling the mar menor coastal lagoon ecosystem in the south western Mediterranean
+    </h3>
+    <p style="color: #666; font-family: 'IBM Plex Sans', sans-serif; font-style: italic; margin: 0 0 0.5rem 0;">
+      Future Generation Computer Systems · 2026
+    </p>
+    <p style="color: #273912; font-family: 'IBM Plex Sans', sans-serif; margin: 0 0 1.2rem 0;">
+      <strong>Autores:</strong> Yu Ye · Aurora González-Vidal · Alejandro Cisterna-García · Ángel Pérez-Ruzafa · Miguel A. Zamora Izquierdo · Antonio F. Skarmeta
+    </p>
+    <a href="https://www.sciencedirect.com/science/article/pii/S0167739X2500559X" class="btn btn-osiris-pub" target="_blank" rel="noopener noreferrer">
+      IR A LA PUBLICACIÓN ↗
+    </a>
+  </div>
+  </div>
+  
+  </div>
+</section>
+<section id="noticias-mod" style="scroll-margin-top:86px; width:100vw; margin:0 calc(50% - 50vw); background:#273912 !important; padding:3rem 0;">
+<div style="max-width:1100px; margin:0 auto; padding:0 1.5rem;">
+<!-- TÍTULO NOTICIAS Y DIFUSIÓN -->
+<h2 id="noticias" style="
+  color: #f5f1e6 !important;
+  text-align: center !important;
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: clamp(2rem, 4vw, 3rem) !important;
+  margin: 0 auto 2rem auto !important;
+  max-width: 1100px !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase;
+">
+  NOTICIAS Y DIFUSIÓN
+</h2>
+<div style="
+  max-width: 900px;
+  margin: 0 auto 2.5rem auto;
+  text-align: center;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #f5f1e6;
+">
+  <strong>Noticias, notas de prensa y acciones de difusión</strong> que reflejan la actividad y el impacto del proyecto <strong>OSIRIS</strong>.
+</div>
+<!-- NEWS CARDS (3 visibles + paginación) -->
+<div class="osiris-news-paged" id="osirisNewsPaged">
+  <div class="osiris-news-grid" id="osirisNewsGrid">
+
+      <div class="osiris-news-card">
+        <a href="https://ants.inf.um.es/en/news/osiris-big-data-master" target="_blank" rel="noopener noreferrer">
+          <img src="master.png" alt="Máster en Big Data UMU">
+        </a>
+        <h3>Investigadores del proyecto OSIRIS participan en el Máster en Big Data de la Universidad de Murcia</h3>
+        <a href="https://ants.inf.um.es/en/news/osiris-big-data-master" class="btn btn-osiris-news" target="_blank" rel="noopener noreferrer">LEER NOTICIA</a>
+      </div>
+
+      <div class="osiris-news-card">
+        <a href="/en/news/osiris-nota-de-prensa" target="_blank" rel="noopener noreferrer">
+          <img src="excell.png" alt="ExcellCity">
+        </a>
+        <h3>La UMU presenta en la ExcellCity Winter School 2025 sus avances en el uso de imágenes satelitales para una agricultura más sostenible</h3>
+        <a href="/en/news/osiris-nota-de-prensa" class="btn btn-osiris-news" target="_blank" rel="noopener noreferrer">LEER NOTICIA</a>
+      </div>
+
+      <div class="osiris-news-card">
+        <a href="https://www.um.es/web/otri/investigadores/ebt/noticias/-/asset_publisher/IfOBheLpVfQ0/content/la-spin-off-de-la-umu-odins-celebra-su-d%C3%A9cimo-aniversario" target="_blank" rel="noopener noreferrer">
+          <img src="otri.png" alt="OTRI">
+        </a>
+        <h3>La 'spin off' de la UMU OdinS celebra su décimo aniversario</h3>
+        <a href="https://www.um.es/web/otri/investigadores/ebt/noticias/-/asset_publisher/IfOBheLpVfQ0/content/la-spin-off-de-la-umu-odins-celebra-su-d%C3%A9cimo-aniversario" class="btn btn-osiris-news" target="_blank" rel="noopener noreferrer">LEER NOTICIA</a>
+      </div>
+
+      <div class="osiris-news-card">
+        <a href="https://www.murciadiario.com/articulo/empresas/murciana-odins-cumple-10-anos/20240618150625111318.html" target="_blank" rel="noopener noreferrer">
+          <img src="murciadiario.png" alt="Murcia Diario">
+        </a>
+        <h3>La murciana OdinS cumple 10 años creando soluciones inteligentes</h3>
+        <a href="https://www.murciadiario.com/articulo/empresas/murciana-odins-cumple-10-anos/20240618150625111318.html" class="btn btn-osiris-news" target="_blank" rel="noopener noreferrer">LEER NOTICIA</a>
+      </div>
+
+      <div class="osiris-news-card">
+        <a href="https://www.um.es/web/ucc/proyectos/la-noche-de-los-investigadores" target="_blank" rel="noopener noreferrer">
+          <img src="noche.png" alt="Noche de los Investigadores">
+        </a>
+        <h3>La Cátedra Osiris participa en La Noche Europea de los Investigadores</h3>
+        <a href="https://www.um.es/web/ucc/proyectos/la-noche-de-los-investigadores" class="btn btn-osiris-news" target="_blank" rel="noopener noreferrer">MÁS INFO</a>
+      </div>
+
+      <div class="osiris-news-card">
+        <a href="/en/news/osiris-en-mobisec" target="_blank" rel="noopener noreferrer">
+          <img src="mobisec.png" alt="MobiSec">
+        </a>
+        <h3>La Cátedra Osiris presenta en MobiSec 2025 un innovador sistema de aprendizaje federado para riego inteligente en entornos agrícolas semiáridos</h3>
+        <a href="/en/news/osiris-en-mobisec" class="btn btn-osiris-news" target="_blank" rel="noopener noreferrer">LEER NOTICIA</a>
+      </div>
+
+      <div class="osiris-news-card">
+        <a href="https://ants.inf.um.es/en/news/osiris-unibit" target="_blank" rel="noopener noreferrer">
+          <img src="excell.png" alt="Universidad Sofía">
+        </a>
+        <h3>La Universidad de Sofía visita la Universidad de Murcia para conocer los avances del proyecto OSIRIS</h3>
+        <a href="https://ants.inf.um.es/en/news/osiris-unibit" class="btn btn-osiris-news" target="_blank" rel="noopener noreferrer">LEER NOTICIA</a>
+      </div>
+
+  </div>
+  <div class="osiris-news-pagination">
+    <button id="osirisNewsPrev" type="button" aria-label="Anterior">&#8592;</button>
+    <span id="osirisNewsPageLabel">1 de 3</span>
+    <button id="osirisNewsNext" type="button" aria-label="Siguiente">&#8594;</button>
+  </div>
+</div>
+<style>
+  .osiris-news-paged {
+    max-width: 1100px;
+    margin: 0 auto 3rem auto;
+  }
+  .osiris-news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+  .osiris-news-grid .osiris-news-card {
+    width: 100%;
+    min-width: 0 !important;
+    max-width: none !important;
+    box-sizing: border-box;
+    background: #f5f1e6 !important;
+    border: 2px solid #273912;
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .osiris-news-card a img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .osiris-news-card h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500; color: #273912;
+    margin: 0 0 1.2rem 0;
+    line-height: 1.4;
+    flex: 1;
+  }
+  .btn-osiris-news {
+    background: transparent !important;
+    color: #f5f1e6 !important;
+    border: 2px solid #273912 !important;
+    border-radius: 999px;
+    padding: 0.65rem 1.1rem;
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+      letter-spacing: 0.03em;
+  }
+  .btn-osiris-news:hover {
+    background: #273912 !important;
+    color: #f5f1e6 !important;
+  }
+  .osiris-news-pagination {
+    margin-top: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    color: #f5f1e6;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+  }
+  .osiris-news-pagination button {
+    background: transparent !important;
+    color: #f5f1e6 !important;
+    border: 1.5px solid #f5f1e6 !important;
+    border-radius: 999px;
+    min-width: 34px;
+    height: 34px;
+    font-size: 1rem !important;
+    cursor: pointer !important;
+    line-height: 1;
+  }
+  .osiris-news-pagination button:hover:not(:disabled) {
+    color: #c9a063 !important;
+    border-color: #c9a063 !important;
+  }
+  .osiris-news-pagination button:disabled {
+    opacity: 0.4;
+    cursor: default !important;
+  }
+  @media (max-width: 900px) {
+    .osiris-news-grid { grid-template-columns: 1fr; }
+  }
+</style>
+<script>
+(function(){
+  const grid = document.getElementById('osirisNewsGrid');
+  const prevBtn = document.getElementById('osirisNewsPrev');
+  const nextBtn = document.getElementById('osirisNewsNext');
+  const label = document.getElementById('osirisNewsPageLabel');
+  if (!grid || !prevBtn || !nextBtn || !label) return;
+
+  const cards = Array.from(grid.querySelectorAll('.osiris-news-card'));
+  const perPage = 3;
+  const total = Math.max(1, Math.ceil(cards.length / perPage));
+  let page = 0;
+
+  function render(){
+    cards.forEach(function(card, idx){
+      const inPage = idx >= page * perPage && idx < (page + 1) * perPage;
+      card.style.display = inPage ? 'flex' : 'none';
+    });
+    label.textContent = (page + 1) + ' de ' + total;
+    prevBtn.disabled = page === 0;
+    nextBtn.disabled = page === total - 1;
+  }
+
+  prevBtn.addEventListener('click', function(){ if (page > 0) { page--; render(); } });
+  nextBtn.addEventListener('click', function(){ if (page < total - 1) { page++; render(); } });
+  render();
+})();
+</script>
+</div>
+</section>
+<!-- TÍTULO OBJETIVOS -->
+<section id="objetivos-mod" style="scroll-margin-top:86px; padding-top:3rem;">
+<h2 id="objetivos" style="
+  color: #273912 !important;
+  text-align: center !important;
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: clamp(2rem, 4vw, 3rem) !important;
+  margin: 0 auto 2rem auto !important;
+  max-width: 1100px !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase;
+">
+  OBJETIVOS
+</h2>
+<div style="
+  max-width: 900px;
+  margin: 0 auto 2.5rem auto;
+  text-align: center;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #273912;
+">
+  <p style="color:#273912 !important;">
+El objetivo principal de este proyecto es la investigación en trazabilidad y optimización de procesos para el desarrollo de soluciones transversales en la cadena de valor en la <strong>industria agrícola</strong>. 
+
+Para ello, se harán uso de diferentes tecnologías habilitantes que conforman el ecosistema de la <strong>Industria 4.0 (IIoT, Inteligencia Artificial, Big Data Analytics, Edge Computing y Realidad Aumentada)</strong>.
+</p>
+
+<!-- OBJETIVOS DESPLEGABLES -->
+<div class="osiris-objectives">
+  
+  <!-- Objetivo 1 -->
+  <div class="objective-item" onclick="toggleObjective(this)">
+    <div class="objective-header">
+      <div class="objective-number">01</div>
+      <div class="objective-title">Crear una plataforma holística y transversal para servicios agroalimentarios</div>
+      <div class="objective-arrow">↗</div>
+    </div>
+    <div class="objective-content">
+      <ul>
+        <li>Integración de sensores</li>
+        <li>Modelado de datos (fusión) mediante la integración de datos sensoriales, satelitales y otras fuentes</li>
+        <li>Conexión con plataformas de análisis de datos AI4EU, DEEP-Hybrid-DataCloud a nivel europeo</li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Objetivo 2 -->
+  <div class="objective-item" onclick="toggleObjective(this)">
+    <div class="objective-header">
+      <div class="objective-number">02</div>
+      <div class="objective-title">Desarrollar tecnologías habilitantes para agricultura</div>
+      <div class="objective-arrow">↗</div>
+    </div>
+    <div class="objective-content">
+      <ul>
+        <li>Inteligencia Artificial, Big Data y realidad aumentada para los procesos agrícolas</li>
+        <li>Impacto del 5G y Edge Computing en los entornos agrícolas y explotaciones rurales con poca conectividad</li>
+        <li>Desarrollo del concepto de fincas inteligentes y conectadas</li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Objetivo 3 -->
+  <div class="objective-item" onclick="toggleObjective(this)">
+    <div class="objective-header">
+      <div class="objective-number">03</div>
+      <div class="objective-title">Mejorar la gestión de cultivos y monitorización de fincas</div>
+      <div class="objective-arrow">↗</div>
+    </div>
+    <div class="objective-content">
+      <ul>
+        <li>Extracción de índices de cultivo a través de imágenes satelitales</li>
+        <li>Estudio de la relación entre los índices y la productividad del cultivo</li>
+        <li>Sistemas predictivos basados en integración de datos y uso de la IA</li>
+        <li>Investigación sobre asociaciones entre la genética de las variedades frutales y de verduras utilizadas, y los descriptores básicos del suelo</li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Objetivo 4 -->
+  <div class="objective-item" onclick="toggleObjective(this)">
+    <div class="objective-header">
+      <div class="objective-number">04</div>
+      <div class="objective-title">Mejorar la eficiencia en el transporte de alimentos</div>
+      <div class="objective-arrow">↗</div>
+    </div>
+    <div class="objective-content">
+      <ul>
+        <li>Estudio de las agrupaciones de productos en el transporte para aumentar eficacia, reducir emisiones y mantener calidad</li>
+        <li>Relación entre las variables ambientales y la calidad de los productos para determinar mejoras en la distribución</li>
+        <li>Predicción de la demanda de productos</li>
+        <li>Mejora de la trazabilidad mediante técnicas de blockchain</li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Objetivo 5 -->
+  <div class="objective-item" onclick="toggleObjective(this)">
+    <div class="objective-header">
+      <div class="objective-number">05</div>
+      <div class="objective-title">Crear un sistema inteligente del monitoreo de agua</div>
+      <div class="objective-arrow">↗</div>
+    </div>
+    <div class="objective-content">
+      <ul>
+        <li>Clasificar los tipos de agua y analizar las condiciones normales</li>
+        <li>Crear un sistema de alertas basado en la detección de anomalías</li>
+        <li>Réplicas virtuales de los sensores para simulación</li>
+        <li>Envasado inteligente para alargar la vida útil y reducir el desperdicio alimentario</li>
+      </ul>
+    </div>
+  </div>
+  
+</div>
+</section>
+
+<script>
+function toggleObjective(element) {
+  element.classList.toggle('active');
+}
+</script>
+
+</div></article>
+    <footer class="main-footer" style="margin-top:0 !important;">
+      <div class="main-footer-inner">
+        <div>
+          <h2 class="footer-title">Harvesting<br>the future<br>through innovation</h2>
+          <ul class="footer-items">
+            <li><a href="#sobre-osiris-mod">Sobre Osiris</a></li>
+            <li><a href="#publicaciones-mod">Publicaciones</a></li>
+            <li><a href="#noticias-mod">Noticias y difusión</a></li>
+            <li><a href="#objetivos-mod">Objetivos</a></li>
+          </ul>
+        </div>
+        <div class="footer-brand">
+          <a class="footer-umu-link" href="https://www.um.es/web/informatica/" target="_blank" rel="noopener noreferrer">
+            <img class="footer-umu-logo" src="../../pages/01.ants-home/assets/Inform tica-RGB-Convivencia_A-BLTR.png" alt="Facultad de Informática - Universidad de Murcia">
+          </a>
+          <div class="footer-brand-lower">
+            <a class="footer-ants-link" href="../../index.html" aria-label="Home ants" target="_blank" rel="noopener noreferrer">
+              <img class="footer-ants-logo" src="../../pages/01.ants-home/assets/ants_footer.png" alt="ANTS">
+            </a>
+            <div class="footer-social">
+              <a href="https://www.linkedin.com/company/ants-research-group/" target="_blank" rel="noopener noreferrer">Follow ants on <span class="footer-social-strong">LinkedIn ↗</span></a>
+              <a href="https://x.com/ants_fium" target="_blank" rel="noopener noreferrer">Follow ants on <span class="footer-social-strong">X ↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-top">
+          <a class="footer-top-link" href="#top" aria-label="Back to top">↑</a>
+        </div>
+      </div>
+    </footer>
+    <section style="width:100vw; height:115px; margin:0 calc(50% - 50vw); background:#f5f1e6 !important; display:flex; align-items:center; justify-content:center; padding:0 1.5rem; box-sizing:border-box;">
+      <img src="logosoficiales.png" alt="Logos oficiales" style="max-width:765px; width:85%; height:auto; display:block; margin:0 auto;">
+    </section>
+  </div>
+
+  <script>
+    (function () {
+      const menuToggle = document.getElementById('osirisMobileToggle');
+      const menuNav = document.getElementById('osirisMainNav');
+      const menuIcon = menuToggle ? menuToggle.querySelector('.osiris-burger-icon') : null;
+      if (!menuToggle || !menuNav) return;
+
+      const closeMenu = () => {
+        document.body.classList.remove('osiris-menu-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Abrir menu');
+        if (menuIcon) menuIcon.innerHTML = '&#9776;';
+      };
+
+      menuToggle.addEventListener('click', () => {
+        const isOpen = document.body.classList.toggle('osiris-menu-open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.setAttribute('aria-label', isOpen ? 'Cerrar menu' : 'Abrir menu');
+        if (menuIcon) menuIcon.innerHTML = isOpen ? '&#10005;' : '&#9776;';
+      });
+
+      menuNav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', closeMenu);
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 980) closeMenu();
+      });
+    })();
+  </script>
+
+  <script>
+    const ROUTE_MAP = {
+  "/en/ants-home": "en/ants-home/index.html",
+  "/en/ants-home/": "en/ants-home/index.html",
+  "/en/demeter-5-0": "en/demeter-5-0/index.html",
+  "/en/demeter-5-0/": "en/demeter-5-0/index.html",
+  "/en/gaialab": "en/gaialab/index.html",
+  "/en/gaialab/": "en/gaialab/index.html",
+  "/en/news": "en/news/index.html",
+  "/en/news/": "en/news/index.html",
+  "/en/news/nemesis": "en/news/nemesis/index.html",
+  "/en/news/nemesis/": "en/news/nemesis/index.html",
+  "/en/news/osiris-en-mobisec": "en/news/osiris-en-mobisec/index.html",
+  "/en/news/osiris-en-mobisec/": "en/news/osiris-en-mobisec/index.html",
+  "/en/news/osiris-nota-de-prensa": "en/news/osiris-nota-de-prensa/index.html",
+  "/en/news/osiris-nota-de-prensa/": "en/news/osiris-nota-de-prensa/index.html",
+  "/en/perseo": "en/es/perseo/index.html",
+  "/en/perseo/": "en/es/perseo/index.html",
+  "/en/es/perseo": "en/es/perseo/index.html",
+  "/en/es/perseo/": "en/es/perseo/index.html",
+  "/en/reminder": "en/reminder/index.html",
+  "/en/reminder/": "en/reminder/index.html",
+  "/en/reminder/ethicalissues": "en/reminder/ethicalissues/index.html",
+  "/en/reminder/ethicalissues/": "en/reminder/ethicalissues/index.html",
+  "/en/reminder/interdisciplinaryresearch": "en/reminder/interdisciplinaryresearch/index.html",
+  "/en/reminder/interdisciplinaryresearch/": "en/reminder/interdisciplinaryresearch/index.html",
+  "/en/reminder/partners": "en/reminder/partners/index.html",
+  "/en/reminder/partners/": "en/reminder/partners/index.html",
+  "/en/reminder/view-project-deliverables": "en/reminder/view-project-deliverables/index.html",
+  "/en/reminder/view-project-deliverables/": "en/reminder/view-project-deliverables/index.html",
+  "/en/research-lines": "en/research-lines/index.html",
+  "/en/research-lines/": "en/research-lines/index.html",
+  "/en/research-projects": "en/research-projects/index.html",
+  "/en/research-projects/": "en/research-projects/index.html",
+  "/en/vinci": "en/vinci/index.html",
+  "/en/vinci/": "en/vinci/index.html",
+  "/es/eden": "es/eden/index.html",
+  "/es/eden/": "es/eden/index.html",
+  "/es/geminis": "es/geminis/index.html",
+  "/es/geminis/": "es/geminis/index.html",
+  "/es/news": "es/news/feria-cientifica-santomera/index.html",
+  "/es/news/": "es/news/feria-cientifica-santomera/index.html",
+  "/es/news/feria-cientifica-santomera": "es/news/feria-cientifica-santomera/index.html",
+  "/es/news/feria-cientifica-santomera/": "es/news/feria-cientifica-santomera/index.html",
+  "/es/news/osiris-big-data-master": "es/news/osiris-big-data-master/index.html",
+  "/es/news/osiris-big-data-master/": "es/news/osiris-big-data-master/index.html",
+  "/es/news/osiris-unibit": "es/news/osiris-unibit/index.html",
+  "/es/news/osiris-unibit/": "es/news/osiris-unibit/index.html",
+  "/es/orciber-5g": "es/orciber-5g/index.html",
+  "/es/orciber-5g/": "es/orciber-5g/index.html",
+  "/es/osiris": "es/osiris/index.html",
+  "/es/osiris/": "es/osiris/index.html",
+  "/es/osiris/del-campo-a-la-mesa": "es/osiris/del-campo-a-la-mesa/index.html",
+  "/es/osiris/del-campo-a-la-mesa/": "es/osiris/del-campo-a-la-mesa/index.html",
+  "/es/osiris/impacto-y-beneficios": "es/osiris/impacto-y-beneficios/index.html",
+  "/es/osiris/impacto-y-beneficios/": "es/osiris/impacto-y-beneficios/index.html",
+  "/es/osiris/tecnologias-y-metodologia": "es/osiris/tecnologias-y-metodologia/index.html",
+  "/es/osiris/tecnologias-y-metodologia/": "es/osiris/tecnologias-y-metodologia/index.html",
+  "/es/perseo": "es/perseo/index.html",
+  "/es/perseo/": "es/perseo/index.html",
+  "/es/perseo/contexto": "es/perseo/contexto/index.html",
+  "/es/perseo/contexto/": "es/perseo/contexto/index.html",
+  "/es/perseo": "es/es/perseo/index.html",
+  "/es/perseo/": "es/es/perseo/index.html",
+  "en/ants-home": "en/ants-home/index.html",
+  "en/ants-home/": "en/ants-home/index.html",
+  "en/demeter-5-0": "en/demeter-5-0/index.html",
+  "en/demeter-5-0/": "en/demeter-5-0/index.html",
+  "en/gaialab": "en/gaialab/index.html",
+  "en/gaialab/": "en/gaialab/index.html",
+  "en/news": "en/news/index.html",
+  "en/news/": "en/news/index.html",
+  "en/news/nemesis": "en/news/nemesis/index.html",
+  "en/news/nemesis/": "en/news/nemesis/index.html",
+  "en/news/osiris-en-mobisec": "en/news/osiris-en-mobisec/index.html",
+  "en/news/osiris-en-mobisec/": "en/news/osiris-en-mobisec/index.html",
+  "en/news/osiris-nota-de-prensa": "en/news/osiris-nota-de-prensa/index.html",
+  "en/news/osiris-nota-de-prensa/": "en/news/osiris-nota-de-prensa/index.html",
+  "en/perseo": "en/es/perseo/index.html",
+  "en/perseo/": "en/es/perseo/index.html",
+  "en/es/perseo": "en/es/perseo/index.html",
+  "en/es/perseo/": "en/es/perseo/index.html",
+  "en/reminder": "en/reminder/index.html",
+  "en/reminder/": "en/reminder/index.html",
+  "en/reminder/ethicalissues": "en/reminder/ethicalissues/index.html",
+  "en/reminder/ethicalissues/": "en/reminder/ethicalissues/index.html",
+  "en/reminder/interdisciplinaryresearch": "en/reminder/interdisciplinaryresearch/index.html",
+  "en/reminder/interdisciplinaryresearch/": "en/reminder/interdisciplinaryresearch/index.html",
+  "en/reminder/partners": "en/reminder/partners/index.html",
+  "en/reminder/partners/": "en/reminder/partners/index.html",
+  "en/reminder/view-project-deliverables": "en/reminder/view-project-deliverables/index.html",
+  "en/reminder/view-project-deliverables/": "en/reminder/view-project-deliverables/index.html",
+  "en/research-lines": "en/research-lines/index.html",
+  "en/research-lines/": "en/research-lines/index.html",
+  "en/research-projects": "en/research-projects/index.html",
+  "en/research-projects/": "en/research-projects/index.html",
+  "en/vinci": "en/vinci/index.html",
+  "en/vinci/": "en/vinci/index.html",
+  "es/eden": "es/eden/index.html",
+  "es/eden/": "es/eden/index.html",
+  "es/geminis": "es/geminis/index.html",
+  "es/geminis/": "es/geminis/index.html",
+  "es/news": "es/news/feria-cientifica-santomera/index.html",
+  "es/news/": "es/news/feria-cientifica-santomera/index.html",
+  "es/news/feria-cientifica-santomera": "es/news/feria-cientifica-santomera/index.html",
+  "es/news/feria-cientifica-santomera/": "es/news/feria-cientifica-santomera/index.html",
+  "es/news/osiris-big-data-master": "es/news/osiris-big-data-master/index.html",
+  "es/news/osiris-big-data-master/": "es/news/osiris-big-data-master/index.html",
+  "es/news/osiris-unibit": "es/news/osiris-unibit/index.html",
+  "es/news/osiris-unibit/": "es/news/osiris-unibit/index.html",
+  "es/orciber-5g": "es/orciber-5g/index.html",
+  "es/orciber-5g/": "es/orciber-5g/index.html",
+  "es/osiris": "es/osiris/index.html",
+  "es/osiris/": "es/osiris/index.html",
+  "es/osiris/del-campo-a-la-mesa": "es/osiris/del-campo-a-la-mesa/index.html",
+  "es/osiris/del-campo-a-la-mesa/": "es/osiris/del-campo-a-la-mesa/index.html",
+  "es/osiris/impacto-y-beneficios": "es/osiris/impacto-y-beneficios/index.html",
+  "es/osiris/impacto-y-beneficios/": "es/osiris/impacto-y-beneficios/index.html",
+  "es/osiris/tecnologias-y-metodologia": "es/osiris/tecnologias-y-metodologia/index.html",
+  "es/osiris/tecnologias-y-metodologia/": "es/osiris/tecnologias-y-metodologia/index.html",
+  "es/perseo": "es/perseo/index.html",
+  "es/perseo/": "es/perseo/index.html",
+  "es/perseo/contexto": "es/perseo/contexto/index.html",
+  "es/perseo/contexto/": "es/perseo/contexto/index.html",
+  "es/perseo": "es/es/perseo/index.html",
+  "es/perseo/": "es/es/perseo/index.html"
+};
+    const CURRENT_LANG = 'es';
+    const CURRENT_ROUTE = '/es/osiris/';
+    const ROOT_PREFIX = '../../';
+    const ASSET_BASE = '../../pages/10.osiris/assets';
+
+    const hasProtocol = (v) => /^(https?:|mailto:|tel:|javascript:)/i.test(v);
+    const normalizeAntsRoute = (value) => {
+      try {
+        const u = new URL(value);
+        const host = (u.hostname || '').toLowerCase();
+        if (u.protocol !== 'http:' && u.protocol !== 'https:') return null;
+        if (host !== 'ants.inf.um.es' && host !== 'www.ants.inf.um.es') return null;
+        return u.pathname || '/';
+      } catch {
+        return null;
+      }
+    };
+    const swapLang = (route) => {
+      const parts = route.replace(/^\/+/, '').split('/').filter(Boolean);
+      if (parts.length < 2) return null;
+      parts[0] = parts[0] === 'en' ? 'es' : (parts[0] === 'es' ? 'en' : null);
+      if (!parts[0]) return null;
+      return '/' + parts.join('/');
+    };
+    const isMedia = (value) => /\.(png|jpe?g|gif|webp|svg|pdf|mp4|webm|mp3|ogg|txt|csv|css|js|ico)$/i.test(value);
+    const mediaBaseName = (value) => {
+      const clean = value.split('?')[0].split('#')[0];
+      const parts = clean.split('/');
+      return parts[parts.length - 1] || clean;
+    };
+    const localizeMedia = (value) => {
+      const rawBase = mediaBaseName(value);
+      const base = (() => {
+        try {
+          return decodeURIComponent(rawBase);
+        } catch {
+          return rawBase;
+        }
+      })();
+      return (ASSET_BASE + '/' + base).replace(/\\/g, '/');
+    };
+
+    const normalizeRoute = (value) => {
+      const route = value.replace(/^\/+/, '').replace(/\/+$/, '');
+      if (!route) return CURRENT_LANG + '/';
+      const parts = route.split('/').filter(Boolean);
+      if (parts[0] === 'en' || parts[0] === 'es') return parts.join('/');
+      return CURRENT_LANG + '/' + parts.join('/');
+    };
+
+    const resolveRoute = (rawHref) => {
+      if (!rawHref || rawHref.startsWith('#')) return null;
+      const [href, hash] = rawHref.split('#', 2);
+      if (!href) return null;
+      const normalizedHref = normalizeAntsRoute(href) || href;
+      if (!normalizedHref.startsWith('/')) {
+        if (href.startsWith('http') || hasProtocol(href)) return null;
+        return null;
+      }
+
+      const candidates = [];
+      const route = normalizeRoute(normalizedHref);
+      candidates.push(route);
+      candidates.push(route + '/');
+      candidates.push(route.replace(/\/$/, ''));
+
+      for (const c of candidates) {
+        if (ROUTE_MAP[c]) return { path: ROUTE_MAP[c], hash: hash ? '#' + hash : '' };
+      }
+      const altRoute = swapLang(route);
+      if (altRoute) {
+        const altCandidates = [altRoute, altRoute + '/', altRoute.replace(/\/$/, '')];
+        for (const c of altCandidates) {
+          if (ROUTE_MAP[c]) return { path: ROUTE_MAP[c], hash: hash ? '#' + hash : '' };
+        }
+      }
+      return null;
+    };
+
+    const resolveLocal = (base, href) => {
+      if (!href || href.startsWith('#')) return href;
+      const [clean, hash] = href.split('#', 2);
+      if (!clean) return href;
+
+      const resolved = resolveRoute(clean);
+      if (resolved) {
+        return (ROOT_PREFIX + resolved.path).replace(/\\/g, '/') + resolved.hash;
+      }
+
+      const antsHref = normalizeAntsRoute(clean);
+      if (antsHref && isMedia(antsHref)) {
+        return localizeMedia(antsHref) + (hash ? '#' + hash : '');
+      }
+
+      if (hasProtocol(clean) || /^(https?:)?\//.test(clean)) return href;
+      if (clean.startsWith('./') || clean.startsWith('../')) return href;
+      if (isMedia(clean)) {
+        return localizeMedia(clean) + (hash ? '#' + hash : '');
+      }
+      return clean;
+    };
+
+    document.querySelectorAll('a[href]').forEach((a) => {
+      const href = a.getAttribute('href');
+      const fixed = resolveLocal('', href);
+      if (fixed && fixed !== href) a.setAttribute('href', fixed);
+    });
+
+    const ASSET_MARK = 'pages/';
+    const ASSET_SEGMENT = ASSET_BASE.includes(ASSET_MARK)
+      ? (() => {
+          const i = ASSET_BASE.indexOf(ASSET_MARK);
+          return {
+            root: ASSET_BASE.slice(0, i) + ASSET_MARK,
+            segment: ASSET_BASE.slice(i + ASSET_MARK.length),
+          };
+        })()
+      : null;
+
+    const collectAssetCandidates = () => {
+      const out = [];
+      if (!ASSET_SEGMENT) return out;
+      let current = ASSET_SEGMENT.segment;
+      out.push(current);
+      while (current.includes('/')) {
+        current = current.slice(0, current.lastIndexOf('/'));
+        if (current) out.push(current);
+      }
+      if (!out.includes('01.ants-home/assets')) out.push('01.ants-home/assets');
+      return [...new Set(out)];
+    };
+
+    const assetCandidatePrefixes = collectAssetCandidates();
+
+    const setImageSrcWithFallback = (img, rawSrc) => {
+      if (!ASSET_SEGMENT || !rawSrc) return;
+      const fileName = (() => {
+        const rawBase = mediaBaseName(rawSrc);
+        try {
+          return decodeURIComponent(rawBase);
+        } catch {
+          return rawBase;
+        }
+      })();
+      const candidates = assetCandidatePrefixes.map((segment) =>
+        (ASSET_SEGMENT.root + segment + '/' + fileName).replace(/\\/g, '/')
+      );
+
+      let index = 0;
+      const onError = () => {
+        if (index >= candidates.length) return;
+        img.src = candidates[index];
+        index += 1;
+      };
+
+      img.addEventListener('error', onError);
+      onError();
+    };
+
+    document.querySelectorAll('img[src]').forEach((img) => {
+      const src = img.getAttribute('src');
+      if (!src || hasProtocol(src) || src.startsWith('data:')) return;
+      if (/^\//.test(src)) {
+        if (src.startsWith('/pages/')) return;
+        if (isMedia(src)) {
+          setImageSrcWithFallback(img, src);
+          return;
+        }
+        img.setAttribute('src', (ROOT_PREFIX + src.replace(/^\//, '')).replace(/\\/g, '/'));
+        return;
+      }
+      if (!src.includes('../') && !src.includes('./') && isMedia(src)) {
+        setImageSrcWithFallback(img, src);
+      }
+    });
+
+    document.querySelectorAll('[style]').forEach((el) => {
+      const style = el.getAttribute('style');
+      if (!style || !style.includes('url(')) return;
+
+      const nextStyle = style.replace(/url\(\s*([^)]*?)\s*\)/g, (m, raw) => {
+        const trimmed = raw.trim();
+        const quote = trimmed[0] === '"' || trimmed[0] === "'" ? trimmed[0] : '';
+        const rawPath = quote ? trimmed.slice(1, -1) : trimmed;
+        if (!rawPath || rawPath.startsWith('data:') || hasProtocol(rawPath)) return m;
+        if (!isMedia(rawPath)) return m;
+        return 'url(' + quote + localizeMedia(rawPath) + quote + ')';
+      });
+
+      if (nextStyle !== style) {
+        el.setAttribute('style', nextStyle);
+      }
+    });
+  </script>
+</body>
+</html>

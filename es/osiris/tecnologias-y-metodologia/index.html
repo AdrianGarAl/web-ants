@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../../../favicons-proyectos/faviconosiris.ico" />
+  <link rel="apple-touch-icon" href="../../../favicons-proyectos/faviconosirismobile.png" />
+<title>Tecnologías y Metodología</title>
+  <link rel="stylesheet" href="../../../css/site.css?v=20260408-6" />
+  <style>
+    .osiris-burger {
+      display: none;
+      border: 1px solid rgba(245, 241, 230, 0.35);
+      background: rgba(245, 241, 230, 0.12);
+      color: #f5f1e6;
+      width: 38px;
+      height: 38px;
+      padding: 0;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+    .osiris-burger-icon {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.35rem;
+      line-height: 1;
+      font-weight: 700;
+      display: inline-block;
+      transform: translateY(-1px);
+    }
+    @media (max-width: 980px) {
+      body.osiris-theme .osiris-project-topbar-inner {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+      }
+      .osiris-burger {
+        display: inline-flex !important;
+        order: 2 !important;
+        margin-left: auto !important;
+      }
+      body.osiris-theme .osiris-project-logo {
+        order: 1 !important;
+        margin-right: auto !important;
+      }
+      body.osiris-theme .osiris-ants-logo {
+        display: none !important;
+      }
+      body.osiris-theme .osiris-project-nav {
+        display: none !important;
+        order: 3 !important;
+        width: 100% !important;
+      }
+      body.osiris-menu-open.osiris-theme .osiris-project-nav {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.45rem !important;
+        margin-top: 0.2rem !important;
+        padding-top: 0.55rem !important;
+        border-top: 1px solid rgba(245, 241, 230, 0.28) !important;
+      }
+    }
+  </style>
+  </head>
+<body id="top" class="osiris-theme mobile-ready">
+  <div class="page-wrap">
+    <header class="topbar osiris-project-topbar">
+      <div class="osiris-project-topbar-inner">
+        <a class="osiris-project-logo" href="../../../es/osiris/index.html" aria-label="Sobre Osiris">
+          <img src="../../../pages/10.osiris/assets/Logoheader.webp" alt="Osiris">
+        </a>
+        <button class="osiris-burger" type="button" id="osirisMobileToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="osirisMainNav">
+          <span class="osiris-burger-icon" aria-hidden="true">&#9776;</span>
+        </button>
+        <nav class="osiris-project-nav" id="osirisMainNav">
+          <a href="../../../es/osiris/index.html#sobre-osiris-mod">SOBRE OSIRIS</a>
+          <a href="../../../es/osiris/index.html#publicaciones-mod">PUBLICACIONES</a>
+          <a href="../../../es/osiris/index.html#noticias-mod">NOTICIAS Y DIFUSIÓN</a>
+          <a href="../../../es/osiris/index.html#objetivos-mod">OBJETIVOS</a>
+        </nav>
+        <a class="osiris-ants-logo" href="../../../index.html" aria-label="Home ants" target="_blank" rel="noopener noreferrer">
+          <img src="../../../pages/01.ants-home/assets/ants_footer.png" alt="ANTS">
+        </a>
+      </div>
+    </header>
+    <article class="content"><!-- CABECERA CON IMAGEN -->
+<div style="max-width: 1100px; margin: 3rem auto 5rem auto; padding: 0; background: #fff; border-radius: 24px; overflow: hidden; border: 2px solid #273912;">
+  <div style="display: flex; align-items: center; gap: 0;">
+    <div style="flex: 0 0 22.5%; height: 350px; background: url('tomate.png'); background-size: 80%; background-position: 1.5cm center; background-repeat: no-repeat;"></div>
+    <div style="flex: 1; padding: 3rem;">
+      <h2 style="color: #273912 !important; font-family: 'Space Grotesk', sans-serif !important; font-weight: 700 !important; font-size: clamp(2rem, 3.5vw, 2.8rem) !important; margin: 0 0 1.5rem 0 !important; letter-spacing: 0.12em !important; text-transform: uppercase; line-height: 1.2;">
+        TECNOLOGÍAS Y METODOLOGÍA
+      </h2>
+      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1.05rem; line-height: 1.7; color: #273912; margin: 0; font-weight: 600;">
+        Un ecosistema tecnológico avanzado que integra <strong>IA, Big Data, Edge Computing y Blockchain</strong> para transformar la cadena de valor agroalimentaria.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- BLOQUES ALTERNADOS -->
+<div style="max-width: 900px; margin: 0 auto; padding: 0 2rem; font-family: 'IBM Plex Sans', sans-serif; font-size: 1.05rem; line-height: 1.8; color: #1a1a1a !important;">
+
+  <!-- BLOQUE 1: número izquierda, texto derecha -->
+  <div style="display: flex; gap: 2.5rem; align-items: flex-start; margin-bottom: 3rem;">
+    <div style="flex: 0 0 160px; text-align: right;">
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: 3rem; font-weight: 700; color: #273912; line-height: 1;">01</div>
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 500; color: #273912; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.3rem;">Captación de datos</div>
+    </div>
+    <div style="flex: 1; border-left: 2px solid #273912; padding-left: 2rem;">
+      <p style="margin: 0 0 1rem 0; text-align: left !important;">Se investigará en mecanismos de <strong>ingesta de datos desde múltiples fuentes heterogéneas</strong> que conforman los diferentes dispositivos IIoT, en toda la cadena de valor desde el campo hasta la mesa. Se trabajará con <strong>sensores específicos optimizados</strong> para cada tipo de fuente: estaciones agrometeorológicas, sensores de nutrientes NPK, pH, entre otros.</p>
+      <p style="margin: 0; text-align: left !important;">Se ingerirán también datos de los sistemas existentes en la etapa agropecuaria tanto a nivel <strong>IT</strong> (ERP, CRM, MES) como a nivel <strong>OT</strong> (SCADA, PLC, OPC-UA, PPMP).</p>
+    </div>
+  </div>
+
+  <!-- BLOQUE 2: texto izquierda, número derecha -->
+  <div style="display: flex; gap: 2.5rem; align-items: flex-start; margin-bottom: 3rem;">
+    <div style="flex: 1; border-right: 2px solid #273912; padding-right: 2rem;">
+      <p style="margin: 0 0 1rem 0; text-align: left !important;">Toda la información será recogida por una arquitectura <strong>Big Data Analytics</strong> haciendo uso de tecnologías open-source como Apache Hadoop, Kafka, Spark y Hive. Se emplearán plataformas de datos abiertos como <strong>Copernicus</strong> para imágenes satelitales.</p>
+      <p style="margin: 0; text-align: left !important;">Se recogerá además información de <strong>redes sociales</strong> para obtener el feedback de los principales actores, aplicando técnicas de Inteligencia Artificial.</p>
+    </div>
+    <div style="flex: 0 0 160px; text-align: left;">
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: 3rem; font-weight: 700; color: #273912; line-height: 1;">02</div>
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 500; color: #273912; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.3rem;">Big Data Analytics</div>
+    </div>
+  </div>
+
+  <!-- BLOQUE 3: número izquierda, texto derecha -->
+  <div style="display: flex; gap: 2.5rem; align-items: flex-start; margin-bottom: 3rem;">
+    <div style="flex: 0 0 160px; text-align: right;">
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: 3rem; font-weight: 700; color: #273912; line-height: 1;">03</div>
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 500; color: #273912; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.3rem;">Toma de decisiones</div>
+    </div>
+    <div style="flex: 1; border-left: 2px solid #273912; padding-left: 2rem;">
+      <p style="margin: 0 0 1rem 0; text-align: left !important;">La aplicación de estrategias de <strong>ayudas a la toma de decisión (DSS)</strong> basados en IA, la instalación de sensores y redes de comunicación permitirá el desarrollo de automatismos dentro del concepto de <strong>Internet de las Cosas (IoT)</strong>.</p>
+      <p style="margin: 0; text-align: left !important;">Se trabajará en el desarrollo de <strong>aplicaciones avanzadas</strong> que ayuden a los usuarios en sistemas de control y producción agroalimentaria, aprovechando la investigación de grupos y empresas de la Región de Murcia.</p>
+    </div>
+  </div>
+
+  <!-- BLOQUE 4: texto izquierda, número derecha -->
+  <div style="display: flex; gap: 2.5rem; align-items: flex-start; margin-bottom: 3rem;">
+    <div style="flex: 1; border-right: 2px solid #273912; padding-right: 2rem;">
+      <p style="margin: 0 0 1rem 0; text-align: left !important;">Toda la información será almacenada en un <strong>registro distribuido</strong> (blockchain, grafos acíclicos dirigidos) para garantizar la trazabilidad de todos los procesos. Esto asegurará el <strong>origen y los análisis sanitarios</strong> de los productos, estableciendo contratos inteligentes con proveedores y transportistas.</p>
+      <p style="margin: 0; text-align: left !important;">Se permitirán bonificaciones o penalizaciones según la <strong>calidad de los servicios logísticos</strong>.</p>
+    </div>
+    <div style="flex: 0 0 160px; text-align: left;">
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: 3rem; font-weight: 700; color: #273912; line-height: 1;">04</div>
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 500; color: #273912; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.3rem;">Blockchain</div>
+    </div>
+  </div>
+
+  <!-- BLOQUE 5: número izquierda, texto derecha -->
+  <div style="display: flex; gap: 2.5rem; align-items: flex-start; margin-bottom: 3rem;">
+    <div style="flex: 0 0 160px; text-align: right;">
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: 3rem; font-weight: 700; color: #273912; line-height: 1;">05</div>
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 500; color: #273912; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.3rem;">Edge Computing</div>
+    </div>
+    <div style="flex: 1; border-left: 2px solid #273912; padding-left: 2rem;">
+      <p style="margin: 0 0 1rem 0; text-align: left !important;">Mediante el uso de tecnologías de <strong>computación en el borde (Edge Computing)</strong> se reducirá la cantidad de información transmitida y procesada en la nube.</p>
+      <p style="margin: 0; text-align: left !important;">Esto permitirá preprocesar datos en nodos edge, reducir costes cloud, ejecutar modelos de Machine Learning con menor latencia y mejorar la disponibilidad en <strong>zonas rurales con conectividad inestable</strong>.</p>
+    </div>
+  </div>
+
+  <!-- BLOQUE 6: texto izquierda, número derecha -->
+  <div style="display: flex; gap: 2.5rem; align-items: flex-start; margin-bottom: 3rem;">
+    <div style="flex: 1; border-right: 2px solid #273912; padding-right: 2rem;">
+      <p style="margin: 0 0 1rem 0; text-align: left !important;">Se investigarán nuevas tecnologías de <strong>Virtualización de Funciones de Red (NFV)</strong>, Redes Definidas por Software (SDN) y Aprendizaje por refuerzo profundo (DRL).</p>
+      <p style="margin: 0; text-align: left !important;">Esto permitirá implementar <strong>Redes Virtuales Edge-IoT</strong> en escenarios de agroindustria con configuración remota, dinámica y automatizada según las necesidades cambiantes.</p>
+    </div>
+    <div style="flex: 0 0 160px; text-align: left;">
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: 3rem; font-weight: 700; color: #273912; line-height: 1;">06</div>
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 500; color: #273912; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.3rem;">Redes inteligentes</div>
+    </div>
+  </div>
+
+  <!-- BLOQUE 7: número izquierda, texto derecha -->
+  <div style="display: flex; gap: 2.5rem; align-items: flex-start; margin-bottom: 3rem;">
+    <div style="flex: 0 0 160px; text-align: right;">
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: 3rem; font-weight: 700; color: #273912; line-height: 1;">07</div>
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 500; color: #273912; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.3rem;">IA y predicción</div>
+    </div>
+    <div style="flex: 1; border-left: 2px solid #273912; padding-left: 2rem;">
+      <p style="margin: 0 0 1rem 0; text-align: left !important;">Se desarrollará un <strong>motor cognitivo</strong> basado en algoritmos neurosimbólicos profundos que detectará anomalías en productos, plagas en cultivos y predecirá fallos en equipos industriales (<strong>mantenimiento predictivo</strong>).</p>
+      <p style="margin: 0; text-align: left !important;">Todas estas soluciones estarán basadas en el concepto de <strong>Inteligencia Artificial Explicable (XAI)</strong> para garantizar decisiones comprensibles y transparentes.</p>
+    </div>
+  </div>
+
+  <!-- BLOQUE 8: texto izquierda, número derecha -->
+  <div style="display: flex; gap: 2.5rem; align-items: flex-start; margin-bottom: 3rem;">
+    <div style="flex: 1; border-right: 2px solid #273912; padding-right: 2rem;">
+      <p style="margin: 0 0 1rem 0; text-align: left !important;">La propuesta se apoyará en <strong>Aprendizaje por refuerzo profundo multiagente</strong> y <strong>Aprendizaje federado</strong> (Federated Learning), permitiendo que todas las explotaciones colaboren en la creación de modelos inteligentes <strong>sin intercambiar datos sensibles</strong>.</p>
+    </div>
+    <div style="flex: 0 0 160px; text-align: left;">
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: 3rem; font-weight: 700; color: #273912; line-height: 1;">08</div>
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 500; color: #273912; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.3rem;">IA colaborativa</div>
+    </div>
+  </div>
+
+  <!-- BLOQUE 9: número izquierda, texto derecha -->
+  <div style="display: flex; gap: 2.5rem; align-items: flex-start; margin-bottom: 4rem;">
+    <div style="flex: 0 0 160px; text-align: right;">
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: 3rem; font-weight: 700; color: #273912; line-height: 1;">09</div>
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 500; color: #273912; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.3rem;">Realidad Aumentada</div>
+    </div>
+    <div style="flex: 1; border-left: 2px solid #273912; padding-left: 2rem;">
+      <p style="margin: 0 0 1rem 0; text-align: left !important;">Se diseñarán e implementarán interfaces de <strong>Realidad Aumentada y percepción multimodal</strong>, incluyendo tecnología háptica para reducir riesgos laborales y mejorar la formación de trabajadores.</p>
+      <p style="margin: 0; text-align: left !important;">Además, se desarrollarán herramientas de <strong>Business Intelligence y reporting</strong> para facilitar la toma de decisiones estratégicas en entornos agroindustriales.</p>
+    </div>
+  </div>
+
+  <!-- DESTACADO FINAL -->
+  <div style="text-align: center; padding: 2.5rem 3rem; margin: 0 0 4rem 0; background: rgba(39, 57, 18, 0.08); border-radius: 16px;">
+    <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1.15rem; font-weight: 300; line-height: 1.8; color: #273912 !important; margin: 0; text-align: center !important;">
+      La digitalización y la aplicación de tecnologías habilitantes que conforman el ecosistema de la <strong>Industria 4.0 (IIoT, Inteligencia Artificial, Big Data Analytics, Edge Computing y Realidad Aumentada)</strong> en todos los ámbitos del sector agroalimentario es una tarea que va a contribuir de forma decisiva a modernizar el sector, incluyendo desarrollos de aplicación tanto del sector productivo como del sector de la transformación agroalimentaria.
+    </p>
+  </div>
+
+</div>
+</div></article>
+    <footer class="main-footer" style="margin-top:0 !important;">
+      <div class="main-footer-inner">
+        <div>
+          <h2 class="footer-title">Harvesting<br>the future<br>through innovation</h2>
+          <ul class="footer-items">
+            <li><a href="../../../es/osiris/index.html#sobre-osiris-mod">Sobre Osiris</a></li>
+            <li><a href="../../../es/osiris/index.html#publicaciones-mod">Publicaciones</a></li>
+            <li><a href="../../../es/osiris/index.html#noticias-mod">Noticias y difusión</a></li>
+            <li><a href="../../../es/osiris/index.html#objetivos-mod">Objetivos</a></li>
+          </ul>
+        </div>
+        <div class="footer-brand">
+          <a class="footer-umu-link" href="https://www.um.es/web/informatica/" target="_blank" rel="noopener noreferrer">
+            <img class="footer-umu-logo" src="../../../pages/01.ants-home/assets/Inform tica-RGB-Convivencia_A-BLTR.png" alt="Facultad de Informática - Universidad de Murcia">
+          </a>
+          <div class="footer-brand-lower">
+            <a class="footer-ants-link" href="../../../index.html" aria-label="Home ants" target="_blank" rel="noopener noreferrer">
+              <img class="footer-ants-logo" src="../../../pages/01.ants-home/assets/ants_footer.png" alt="ANTS">
+            </a>
+            <div class="footer-social">
+              <a href="https://www.linkedin.com/company/ants-research-group/" target="_blank" rel="noopener noreferrer">Follow ants on <span class="footer-social-strong">LinkedIn ↗</span></a>
+              <a href="https://x.com/ants_fium" target="_blank" rel="noopener noreferrer">Follow ants on <span class="footer-social-strong">X ↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-top">
+          <a class="footer-top-link" href="#top" aria-label="Back to top">↑</a>
+        </div>
+      </div>
+    </footer>
+    <section style="width:100vw; height:115px; margin:0 calc(50% - 50vw); background:#f5f1e6 !important; display:flex; align-items:center; justify-content:center; padding:0 1.5rem; box-sizing:border-box;">
+      <img src="logosoficiales.png" alt="Logos oficiales" style="max-width:765px; width:85%; height:auto; display:block; margin:0 auto;">
+    </section>
+  </div>
+
+  <script src="../../../assets/js/mobile-project-menu.js?v=20260408-6"></script>
+
+  <script>
+    (function () {
+      const menuToggle = document.getElementById('osirisMobileToggle');
+      const menuNav = document.getElementById('osirisMainNav');
+      const menuIcon = menuToggle ? menuToggle.querySelector('.osiris-burger-icon') : null;
+      if (!menuToggle || !menuNav) return;
+
+      const closeMenu = () => {
+        document.body.classList.remove('osiris-menu-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Abrir menu');
+        if (menuIcon) menuIcon.innerHTML = '&#9776;';
+      };
+
+      menuToggle.addEventListener('click', () => {
+        const isOpen = document.body.classList.toggle('osiris-menu-open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.setAttribute('aria-label', isOpen ? 'Cerrar menu' : 'Abrir menu');
+        if (menuIcon) menuIcon.innerHTML = isOpen ? '&#10005;' : '&#9776;';
+      });
+
+      menuNav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', closeMenu);
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 980) closeMenu();
+      });
+    })();
+  </script>
+
+  <script>
+    const ROUTE_MAP = {
+  "/en/ants-home": "en/ants-home/index.html",
+  "/en/ants-home/": "en/ants-home/index.html",
+  "/en/demeter-5-0": "en/demeter-5-0/index.html",
+  "/en/demeter-5-0/": "en/demeter-5-0/index.html",
+  "/en/gaialab": "en/gaialab/index.html",
+  "/en/gaialab/": "en/gaialab/index.html",
+  "/en/news": "en/news/index.html",
+  "/en/news/": "en/news/index.html",
+  "/en/news/nemesis": "en/news/nemesis/index.html",
+  "/en/news/nemesis/": "en/news/nemesis/index.html",
+  "/en/news/osiris-en-mobisec": "en/news/osiris-en-mobisec/index.html",
+  "/en/news/osiris-en-mobisec/": "en/news/osiris-en-mobisec/index.html",
+  "/en/news/osiris-nota-de-prensa": "en/news/osiris-nota-de-prensa/index.html",
+  "/en/news/osiris-nota-de-prensa/": "en/news/osiris-nota-de-prensa/index.html",
+  "/en/perseo": "en/es/perseo/index.html",
+  "/en/perseo/": "en/es/perseo/index.html",
+  "/en/es/perseo": "en/es/perseo/index.html",
+  "/en/es/perseo/": "en/es/perseo/index.html",
+  "/en/reminder": "en/reminder/index.html",
+  "/en/reminder/": "en/reminder/index.html",
+  "/en/reminder/ethicalissues": "en/reminder/ethicalissues/index.html",
+  "/en/reminder/ethicalissues/": "en/reminder/ethicalissues/index.html",
+  "/en/reminder/interdisciplinaryresearch": "en/reminder/interdisciplinaryresearch/index.html",
+  "/en/reminder/interdisciplinaryresearch/": "en/reminder/interdisciplinaryresearch/index.html",
+  "/en/reminder/partners": "en/reminder/partners/index.html",
+  "/en/reminder/partners/": "en/reminder/partners/index.html",
+  "/en/reminder/view-project-deliverables": "en/reminder/view-project-deliverables/index.html",
+  "/en/reminder/view-project-deliverables/": "en/reminder/view-project-deliverables/index.html",
+  "/en/research-lines": "en/research-lines/index.html",
+  "/en/research-lines/": "en/research-lines/index.html",
+  "/en/research-projects": "en/research-projects/index.html",
+  "/en/research-projects/": "en/research-projects/index.html",
+  "/en/vinci": "en/vinci/index.html",
+  "/en/vinci/": "en/vinci/index.html",
+  "/es/eden": "es/eden/index.html",
+  "/es/eden/": "es/eden/index.html",
+  "/es/geminis": "es/geminis/index.html",
+  "/es/geminis/": "es/geminis/index.html",
+  "/es/news": "es/news/feria-cientifica-santomera/index.html",
+  "/es/news/": "es/news/feria-cientifica-santomera/index.html",
+  "/es/news/feria-cientifica-santomera": "es/news/feria-cientifica-santomera/index.html",
+  "/es/news/feria-cientifica-santomera/": "es/news/feria-cientifica-santomera/index.html",
+  "/es/news/osiris-big-data-master": "es/news/osiris-big-data-master/index.html",
+  "/es/news/osiris-big-data-master/": "es/news/osiris-big-data-master/index.html",
+  "/es/news/osiris-unibit": "es/news/osiris-unibit/index.html",
+  "/es/news/osiris-unibit/": "es/news/osiris-unibit/index.html",
+  "/es/orciber-5g": "es/orciber-5g/index.html",
+  "/es/orciber-5g/": "es/orciber-5g/index.html",
+  "/es/osiris": "es/osiris/index.html",
+  "/es/osiris/": "es/osiris/index.html",
+  "/es/osiris/del-campo-a-la-mesa": "es/osiris/del-campo-a-la-mesa/index.html",
+  "/es/osiris/del-campo-a-la-mesa/": "es/osiris/del-campo-a-la-mesa/index.html",
+  "/es/osiris/impacto-y-beneficios": "es/osiris/impacto-y-beneficios/index.html",
+  "/es/osiris/impacto-y-beneficios/": "es/osiris/impacto-y-beneficios/index.html",
+  "/es/osiris/tecnologias-y-metodologia": "es/osiris/tecnologias-y-metodologia/index.html",
+  "/es/osiris/tecnologias-y-metodologia/": "es/osiris/tecnologias-y-metodologia/index.html",
+  "/es/perseo": "es/perseo/index.html",
+  "/es/perseo/": "es/perseo/index.html",
+  "/es/perseo/contexto": "es/perseo/contexto/index.html",
+  "/es/perseo/contexto/": "es/perseo/contexto/index.html",
+  "/es/perseo": "es/es/perseo/index.html",
+  "/es/perseo/": "es/es/perseo/index.html",
+  "en/ants-home": "en/ants-home/index.html",
+  "en/ants-home/": "en/ants-home/index.html",
+  "en/demeter-5-0": "en/demeter-5-0/index.html",
+  "en/demeter-5-0/": "en/demeter-5-0/index.html",
+  "en/gaialab": "en/gaialab/index.html",
+  "en/gaialab/": "en/gaialab/index.html",
+  "en/news": "en/news/index.html",
+  "en/news/": "en/news/index.html",
+  "en/news/nemesis": "en/news/nemesis/index.html",
+  "en/news/nemesis/": "en/news/nemesis/index.html",
+  "en/news/osiris-en-mobisec": "en/news/osiris-en-mobisec/index.html",
+  "en/news/osiris-en-mobisec/": "en/news/osiris-en-mobisec/index.html",
+  "en/news/osiris-nota-de-prensa": "en/news/osiris-nota-de-prensa/index.html",
+  "en/news/osiris-nota-de-prensa/": "en/news/osiris-nota-de-prensa/index.html",
+  "en/perseo": "en/es/perseo/index.html",
+  "en/perseo/": "en/es/perseo/index.html",
+  "en/es/perseo": "en/es/perseo/index.html",
+  "en/es/perseo/": "en/es/perseo/index.html",
+  "en/reminder": "en/reminder/index.html",
+  "en/reminder/": "en/reminder/index.html",
+  "en/reminder/ethicalissues": "en/reminder/ethicalissues/index.html",
+  "en/reminder/ethicalissues/": "en/reminder/ethicalissues/index.html",
+  "en/reminder/interdisciplinaryresearch": "en/reminder/interdisciplinaryresearch/index.html",
+  "en/reminder/interdisciplinaryresearch/": "en/reminder/interdisciplinaryresearch/index.html",
+  "en/reminder/partners": "en/reminder/partners/index.html",
+  "en/reminder/partners/": "en/reminder/partners/index.html",
+  "en/reminder/view-project-deliverables": "en/reminder/view-project-deliverables/index.html",
+  "en/reminder/view-project-deliverables/": "en/reminder/view-project-deliverables/index.html",
+  "en/research-lines": "en/research-lines/index.html",
+  "en/research-lines/": "en/research-lines/index.html",
+  "en/research-projects": "en/research-projects/index.html",
+  "en/research-projects/": "en/research-projects/index.html",
+  "en/vinci": "en/vinci/index.html",
+  "en/vinci/": "en/vinci/index.html",
+  "es/eden": "es/eden/index.html",
+  "es/eden/": "es/eden/index.html",
+  "es/geminis": "es/geminis/index.html",
+  "es/geminis/": "es/geminis/index.html",
+  "es/news": "es/news/feria-cientifica-santomera/index.html",
+  "es/news/": "es/news/feria-cientifica-santomera/index.html",
+  "es/news/feria-cientifica-santomera": "es/news/feria-cientifica-santomera/index.html",
+  "es/news/feria-cientifica-santomera/": "es/news/feria-cientifica-santomera/index.html",
+  "es/news/osiris-big-data-master": "es/news/osiris-big-data-master/index.html",
+  "es/news/osiris-big-data-master/": "es/news/osiris-big-data-master/index.html",
+  "es/news/osiris-unibit": "es/news/osiris-unibit/index.html",
+  "es/news/osiris-unibit/": "es/news/osiris-unibit/index.html",
+  "es/orciber-5g": "es/orciber-5g/index.html",
+  "es/orciber-5g/": "es/orciber-5g/index.html",
+  "es/osiris": "es/osiris/index.html",
+  "es/osiris/": "es/osiris/index.html",
+  "es/osiris/del-campo-a-la-mesa": "es/osiris/del-campo-a-la-mesa/index.html",
+  "es/osiris/del-campo-a-la-mesa/": "es/osiris/del-campo-a-la-mesa/index.html",
+  "es/osiris/impacto-y-beneficios": "es/osiris/impacto-y-beneficios/index.html",
+  "es/osiris/impacto-y-beneficios/": "es/osiris/impacto-y-beneficios/index.html",
+  "es/osiris/tecnologias-y-metodologia": "es/osiris/tecnologias-y-metodologia/index.html",
+  "es/osiris/tecnologias-y-metodologia/": "es/osiris/tecnologias-y-metodologia/index.html",
+  "es/perseo": "es/perseo/index.html",
+  "es/perseo/": "es/perseo/index.html",
+  "es/perseo/contexto": "es/perseo/contexto/index.html",
+  "es/perseo/contexto/": "es/perseo/contexto/index.html",
+  "es/perseo": "es/es/perseo/index.html",
+  "es/perseo/": "es/es/perseo/index.html"
+};
+    const CURRENT_LANG = 'es';
+    const CURRENT_ROUTE = '/es/osiris/tecnologias-y-metodologia/';
+    const ROOT_PREFIX = '../../../';
+    const ASSET_BASE = '../../../pages/10.osiris/assets/tecnologias-y-metodologia';
+
+    const hasProtocol = (v) => /^(https?:|mailto:|tel:|javascript:)/i.test(v);
+    const normalizeAntsRoute = (value) => {
+      try {
+        const u = new URL(value);
+        const host = (u.hostname || '').toLowerCase();
+        if (u.protocol !== 'http:' && u.protocol !== 'https:') return null;
+        if (host !== 'ants.inf.um.es' && host !== 'www.ants.inf.um.es') return null;
+        return u.pathname || '/';
+      } catch {
+        return null;
+      }
+    };
+    const swapLang = (route) => {
+      const parts = route.replace(/^\/+/, '').split('/').filter(Boolean);
+      if (parts.length < 2) return null;
+      parts[0] = parts[0] === 'en' ? 'es' : (parts[0] === 'es' ? 'en' : null);
+      if (!parts[0]) return null;
+      return '/' + parts.join('/');
+    };
+    const isMedia = (value) => /\.(png|jpe?g|gif|webp|svg|pdf|mp4|webm|mp3|ogg|txt|csv|css|js|ico)$/i.test(value);
+    const mediaBaseName = (value) => {
+      const clean = value.split('?')[0].split('#')[0];
+      const parts = clean.split('/');
+      return parts[parts.length - 1] || clean;
+    };
+    const localizeMedia = (value) => {
+      const rawBase = mediaBaseName(value);
+      const base = (() => {
+        try {
+          return decodeURIComponent(rawBase);
+        } catch {
+          return rawBase;
+        }
+      })();
+      return (ASSET_BASE + '/' + base).replace(/\\/g, '/');
+    };
+
+    const normalizeRoute = (value) => {
+      const route = value.replace(/^\/+/, '').replace(/\/+$/, '');
+      if (!route) return CURRENT_LANG + '/';
+      const parts = route.split('/').filter(Boolean);
+      if (parts[0] === 'en' || parts[0] === 'es') return parts.join('/');
+      return CURRENT_LANG + '/' + parts.join('/');
+    };
+
+    const resolveRoute = (rawHref) => {
+      if (!rawHref || rawHref.startsWith('#')) return null;
+      const [href, hash] = rawHref.split('#', 2);
+      if (!href) return null;
+      const normalizedHref = normalizeAntsRoute(href) || href;
+      if (!normalizedHref.startsWith('/')) {
+        if (href.startsWith('http') || hasProtocol(href)) return null;
+        return null;
+      }
+
+      const candidates = [];
+      const route = normalizeRoute(normalizedHref);
+      candidates.push(route);
+      candidates.push(route + '/');
+      candidates.push(route.replace(/\/$/, ''));
+
+      for (const c of candidates) {
+        if (ROUTE_MAP[c]) return { path: ROUTE_MAP[c], hash: hash ? '#' + hash : '' };
+      }
+      const altRoute = swapLang(route);
+      if (altRoute) {
+        const altCandidates = [altRoute, altRoute + '/', altRoute.replace(/\/$/, '')];
+        for (const c of altCandidates) {
+          if (ROUTE_MAP[c]) return { path: ROUTE_MAP[c], hash: hash ? '#' + hash : '' };
+        }
+      }
+      return null;
+    };
+
+    const resolveLocal = (base, href) => {
+      if (!href || href.startsWith('#')) return href;
+      const [clean, hash] = href.split('#', 2);
+      if (!clean) return href;
+
+      const resolved = resolveRoute(clean);
+      if (resolved) {
+        return (ROOT_PREFIX + resolved.path).replace(/\\/g, '/') + resolved.hash;
+      }
+
+      const antsHref = normalizeAntsRoute(clean);
+      if (antsHref && isMedia(antsHref)) {
+        return localizeMedia(antsHref) + (hash ? '#' + hash : '');
+      }
+
+      if (hasProtocol(clean) || /^(https?:)?\//.test(clean)) return href;
+      if (clean.startsWith('./') || clean.startsWith('../')) return href;
+      if (isMedia(clean)) {
+        return localizeMedia(clean) + (hash ? '#' + hash : '');
+      }
+      return clean;
+    };
+
+    document.querySelectorAll('a[href]').forEach((a) => {
+      const href = a.getAttribute('href');
+      const fixed = resolveLocal('', href);
+      if (fixed && fixed !== href) a.setAttribute('href', fixed);
+    });
+
+    const ASSET_MARK = 'pages/';
+    const ASSET_SEGMENT = ASSET_BASE.includes(ASSET_MARK)
+      ? (() => {
+          const i = ASSET_BASE.indexOf(ASSET_MARK);
+          return {
+            root: ASSET_BASE.slice(0, i) + ASSET_MARK,
+            segment: ASSET_BASE.slice(i + ASSET_MARK.length),
+          };
+        })()
+      : null;
+
+    const collectAssetCandidates = () => {
+      const out = [];
+      if (!ASSET_SEGMENT) return out;
+      let current = ASSET_SEGMENT.segment;
+      out.push(current);
+      while (current.includes('/')) {
+        current = current.slice(0, current.lastIndexOf('/'));
+        if (current) out.push(current);
+      }
+      if (!out.includes('01.ants-home/assets')) out.push('01.ants-home/assets');
+      return [...new Set(out)];
+    };
+
+    const assetCandidatePrefixes = collectAssetCandidates();
+
+    const setImageSrcWithFallback = (img, rawSrc) => {
+      if (!ASSET_SEGMENT || !rawSrc) return;
+      const fileName = (() => {
+        const rawBase = mediaBaseName(rawSrc);
+        try {
+          return decodeURIComponent(rawBase);
+        } catch {
+          return rawBase;
+        }
+      })();
+      const candidates = assetCandidatePrefixes.map((segment) =>
+        (ASSET_SEGMENT.root + segment + '/' + fileName).replace(/\\/g, '/')
+      );
+
+      let index = 0;
+      const onError = () => {
+        if (index >= candidates.length) return;
+        img.src = candidates[index];
+        index += 1;
+      };
+
+      img.addEventListener('error', onError);
+      onError();
+    };
+
+    document.querySelectorAll('img[src]').forEach((img) => {
+      const src = img.getAttribute('src');
+      if (!src || hasProtocol(src) || src.startsWith('data:')) return;
+      if (/^\//.test(src)) {
+        if (src.startsWith('/pages/')) return;
+        if (isMedia(src)) {
+          setImageSrcWithFallback(img, src);
+          return;
+        }
+        img.setAttribute('src', (ROOT_PREFIX + src.replace(/^\//, '')).replace(/\\/g, '/'));
+        return;
+      }
+      if (!src.includes('../') && !src.includes('./') && isMedia(src)) {
+        setImageSrcWithFallback(img, src);
+      }
+    });
+
+    document.querySelectorAll('[style]').forEach((el) => {
+      const style = el.getAttribute('style');
+      if (!style || !style.includes('url(')) return;
+
+      const nextStyle = style.replace(/url\(\s*([^)]*?)\s*\)/g, (m, raw) => {
+        const trimmed = raw.trim();
+        const quote = trimmed[0] === '"' || trimmed[0] === "'" ? trimmed[0] : '';
+        const rawPath = quote ? trimmed.slice(1, -1) : trimmed;
+        if (!rawPath || rawPath.startsWith('data:') || hasProtocol(rawPath)) return m;
+        if (!isMedia(rawPath)) return m;
+        return 'url(' + quote + localizeMedia(rawPath) + quote + ')';
+      });
+
+      if (nextStyle !== style) {
+        el.setAttribute('style', nextStyle);
+      }
+    });
+  </script>
+</body>
+</html>
