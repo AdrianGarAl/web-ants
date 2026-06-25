@@ -1,0 +1,2915 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../favicons-proyectos/Favicongaia6g.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="../../favicons-proyectos/Favicongaia6gmobile.png"
+    />
+    <title>Gaia·6G</title>
+    <link rel="stylesheet" href="../../css-site/site.css?v=20260408-6" />
+    <style>
+      :root {
+        --nav-height: 64px;
+        --coconet-primary: #e6ecea;
+        --coconet-deep: #132a25;
+        --coconet-accent: #19d88e;
+        --coconet-white: #ffffff;
+      }
+      body.coconet-theme {
+        background: var(--coconet-white) !important;
+      }
+      body.coconet-theme .osiris-project-topbar {
+        background: var(--coconet-primary) !important;
+        z-index: 9999 !important;
+        overflow: visible !important;
+      }
+      body.coconet-theme .osiris-project-topbar-inner {
+        overflow: visible !important;
+      }
+      body.coconet-theme .osiris-project-nav {
+        overflow: visible !important;
+        position: relative;
+        z-index: 10000 !important;
+      }
+      body.coconet-theme .osiris-project-nav a {
+        color: var(--coconet-deep) !important;
+      }
+      body.coconet-theme .osiris-project-nav a:hover {
+        color: var(--coconet-deep) !important;
+        opacity: 0.8;
+      }
+      body.coconet-theme .osiris-project-nav .osiris-nav-secondary {
+        display: none;
+      }
+      body.coconet-theme .osiris-nav-more {
+        position: relative;
+        display: inline-block;
+      }
+      body.coconet-theme .osiris-nav-more-trigger {
+        list-style: none;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        color: var(--coconet-deep) !important;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 0.82rem;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        white-space: nowrap;
+        user-select: none;
+        line-height: 1;
+      }
+      body.coconet-theme .osiris-nav-more-trigger::-webkit-details-marker {
+        display: none;
+      }
+      body.coconet-theme .osiris-nav-more-trigger::after {
+        content: "▾";
+        font-size: 0.72em;
+        line-height: 1;
+        transform: translateY(-0.02em);
+      }
+      body.coconet-theme .osiris-nav-more-trigger:hover {
+        opacity: 0.8;
+      }
+      body.coconet-theme
+        .osiris-nav-more[open]
+        .osiris-nav-more-trigger::after {
+        transform: translateY(-0.02em) rotate(180deg);
+      }
+      body.coconet-theme .osiris-nav-more-menu {
+        display: none;
+        position: absolute;
+        top: calc(100% + 6px);
+        right: 0;
+        min-width: 0;
+        width: max-content;
+        padding: 0.24rem;
+        border-radius: 10px;
+        border: 1px solid rgba(19, 42, 37, 0.28);
+        background: #e6ecea !important;
+        background-color: #e6ecea !important;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+        z-index: 12000 !important;
+      }
+      body.coconet-theme .osiris-nav-more-menu a {
+        display: block;
+        padding: 0.34rem 0.48rem;
+        border-radius: 8px;
+        color: var(--coconet-deep) !important;
+        opacity: 1 !important;
+        text-decoration: none;
+        white-space: nowrap;
+        background: transparent !important;
+        background-color: transparent !important;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 0.78rem;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+      body.coconet-theme .osiris-nav-more-menu a:hover {
+        background: rgba(19, 42, 37, 0.08) !important;
+        background-color: rgba(19, 42, 37, 0.08) !important;
+        color: var(--coconet-deep) !important;
+        opacity: 0.8 !important;
+      }
+      body.coconet-theme .osiris-nav-more[open] .osiris-nav-more-menu {
+        display: block;
+      }
+      body.coconet-theme .osiris-project-logo img {
+        height: 42px;
+        width: auto;
+      }
+      body.coconet-theme .osiris-ants-logo img {
+        filter: none;
+        height: 27px !important;
+        width: auto !important;
+      }
+      body.coconet-theme .project-mobile-burger {
+        display: none !important;
+      }
+      body.coconet-theme article.content.project-content > .osiris-hero,
+      body.coconet-theme .osiris-hero {
+        width: 100vw;
+        margin: 0 calc(50% - 50vw);
+        background: var(--coconet-deep) !important;
+        background-color: var(--coconet-deep) !important;
+        min-height: 525px;
+        display: flex;
+        align-items: center;
+      }
+      body.coconet-theme .osiris-hero-inner {
+        width: min(1100px, 100%);
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: nowrap;
+        background: transparent !important;
+        transform: translateX(115px);
+      }
+      body.coconet-theme .osiris-hero-logo {
+        flex: 0 1 45%;
+        display: flex;
+        justify-content: flex-start;
+      }
+      body.coconet-theme .osiris-hero-logo img {
+        width: min(366px, 100%);
+        height: auto;
+        display: block;
+      }
+      body.coconet-theme .osiris-hero-copy {
+        flex: 0 1 55%;
+        text-align: left;
+        transform: translateX(-36px);
+      }
+      body.coconet-theme .osiris-hero-copy p {
+        color: var(--coconet-white) !important;
+        font-size: 1.35rem;
+        line-height: 1.45;
+        font-weight: 600;
+        max-width: 540px;
+        margin: 0 0 1rem 0;
+      }
+      body.coconet-theme .osiris-hero-more {
+        color: var(--coconet-white) !important;
+        border-color: var(--coconet-accent) !important;
+        background: var(--coconet-accent) !important;
+      }
+      body.coconet-theme .osiris-hero-more:hover {
+        color: var(--coconet-white) !important;
+        border-color: var(--coconet-white) !important;
+        background: transparent !important;
+      }
+      body.coconet-theme .project-content {
+        max-width: none;
+        margin: 0;
+        padding: 0;
+      }
+      body.coconet-theme article.content.project-content,
+      body.coconet-theme article.content.project-content > .osiris-hero,
+      body.coconet-theme .osiris-hero {
+        margin-top: 0 !important;
+      }
+      .coconet-intro {
+        width: 100vw;
+        margin: 0 calc(50% - 50vw) 0;
+        border-left: 0;
+        min-height: 132px;
+        height: 132px;
+        padding: 0;
+        color: #1d1d1f;
+        line-height: 1.6;
+        font-size: 1.02rem;
+        background: var(--coconet-primary) !important;
+        background-color: var(--coconet-primary) !important;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .coconet-intro-head {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        transform: translateY(4px);
+      }
+      .coconet-intro-icon {
+        width: 46px;
+        height: 46px;
+        flex: 0 0 auto;
+      }
+      .coconet-intro-title {
+        margin: 0;
+        font-size: 1.72rem;
+        line-height: 1.2;
+        font-weight: 700;
+        color: var(--coconet-white);
+      }
+      .coconet-intro--light .coconet-intro-title {
+        color: #132a25;
+      }
+      .coconet-module {
+        width: 100vw;
+        margin: 0 calc(50% - 50vw);
+        padding: 2rem 0;
+        box-sizing: border-box;
+        border-radius: 0;
+      }
+      .coconet-inner {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        box-sizing: border-box;
+      }
+      body.coconet-theme section.coconet-module.coconet-module--deep,
+      body.coconet-theme
+        article.content.project-content
+        > section.coconet-module.coconet-module--deep {
+        background: var(--coconet-deep) !important;
+        background-color: var(--coconet-deep) !important;
+        background-image: none !important;
+      }
+      body.coconet-theme section.coconet-module.coconet-module--primary,
+      body.coconet-theme
+        article.content.project-content
+        > section.coconet-module.coconet-module--primary {
+        background: var(--coconet-primary) !important;
+        background-color: var(--coconet-primary) !important;
+        background-image: none !important;
+      }
+      body.coconet-theme section.coconet-module.coconet-module--accent,
+      body.coconet-theme
+        article.content.project-content
+        > section.coconet-module.coconet-module--accent {
+        background: var(--coconet-accent) !important;
+        background-color: var(--coconet-accent) !important;
+        background-image: none !important;
+      }
+      .coconet-module--deep {
+        background: var(--coconet-deep);
+        color: var(--coconet-white);
+      }
+      .coconet-module--accent {
+        background: var(--coconet-accent);
+        color: var(--coconet-white);
+      }
+      .coconet-module--primary {
+        background: var(--coconet-primary);
+        color: var(--coconet-white);
+      }
+      .coconet-module-title {
+        margin: 0 0 2rem 0;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-size: clamp(1.25rem, 2.2vw, 1.7rem);
+        line-height: 1.2;
+        font-weight: 700;
+      }
+      .coconet-module-title img {
+        width: 26px;
+        height: 26px;
+        flex: 0 0 auto;
+      }
+      .coconet-module p {
+        margin: 0 0 0.95rem;
+        line-height: 1.62;
+      }
+      .coconet-module p:last-child {
+        margin-bottom: 0;
+      }
+      .coconet-module ul {
+        margin: 0;
+        padding-left: 2.1rem;
+        line-height: 1.62;
+        display: grid;
+        gap: 0.55rem;
+      }
+      .coconet-pills {
+        display: block;
+        margin: 0.6rem 0 1.25rem;
+      }
+      .coconet-funding-row {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        gap: 0.85rem;
+        margin-bottom: 0.75rem;
+        align-items: stretch;
+        width: 100%;
+      }
+      .coconet-funding-row--quad {
+        grid-template-columns: 16% 34% 16% 34%;
+      }
+      .coconet-funding-row--project {
+        grid-template-columns: 16% 34% 16% 34%;
+      }
+      .coconet-funding-row--project .coconet-pill-value {
+        grid-column: 2 / 5;
+      }
+      .coconet-funding-row:last-child {
+        margin-bottom: 0;
+      }
+      .coconet-pill {
+        border-radius: 999px;
+        min-height: 54px;
+        padding: 0.68rem 1.1rem;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        line-height: 1.3;
+        font-weight: 700;
+      }
+      .coconet-pill-label {
+        background: #ffffff !important;
+        background-color: #ffffff !important;
+        background-image: none !important;
+        color: #19d88e !important;
+        border: 0;
+        font-size: 0.8rem;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        box-shadow: inset 0 0 0 9999px #ffffff !important;
+        -webkit-box-shadow: inset 0 0 0 9999px #ffffff !important;
+        -webkit-text-fill-color: #19d88e !important;
+      }
+      .coconet-pill-value {
+        border: 2px solid rgba(255, 255, 255, 0.9);
+        color: #ffffff !important;
+        background: transparent !important;
+        background-color: transparent !important;
+        background-image: none !important;
+        font-size: 0.95rem;
+        font-weight: 700;
+        box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        -webkit-text-fill-color: #ffffff !important;
+      }
+      .coconet-funding-logos {
+        width: 100%;
+        max-width: 760px;
+        display: block;
+        margin: 0 auto;
+      }
+      #financiacion-mod {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+      }
+      .coconet-logos-module {
+        width: 100vw;
+        margin: 0 calc(50% - 50vw);
+        background: #ffffff !important;
+        background-color: #ffffff !important;
+        background-image: none !important;
+        padding: 1.2rem 0 1.6rem;
+        box-sizing: border-box;
+      }
+      .coconet-logos-module .coconet-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .coconet-logos-module--after-footer {
+        margin-top: 0;
+        padding: 1.2rem 0 1.6rem;
+      }
+      #tecnologia-mod {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+      }
+      #tecnologia-mod::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("../../pages/Gaia6G/iconogaia.svg");
+        background-repeat: repeat;
+        background-size: 190px 190px;
+        background-position: 0 0;
+        opacity: 0.08;
+        pointer-events: none;
+        z-index: 0;
+      }
+      #tecnologia-mod .coconet-inner {
+        position: relative;
+        z-index: 1;
+      }
+      #infraestructura-mod {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+      }
+      #infraestructura-mod::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("../../pages/Gaia6G/iconogaia.svg");
+        background-repeat: repeat;
+        background-size: 190px 190px;
+        background-position: 0 0;
+        opacity: 0.08;
+        pointer-events: none;
+        z-index: 0;
+      }
+      #infraestructura-mod .coconet-inner {
+        position: relative;
+        z-index: 1;
+      }
+      #infraestructura-mod .coconet-about-grid {
+        max-width: 1020px;
+      }
+      #infraestructura-mod .coconet-about-col p {
+        max-width: 52ch;
+      }
+      #infraestructura-mod .coconet-about-col p strong {
+        font-weight: 800;
+        color: #19d88e !important;
+      }
+      #lotes-mod,
+      #infraestructura-mod,
+      #actuaciones-mod,
+      #cronograma-mod,
+      #arquitectura-mod,
+      #ecosistema-mod,
+      #impacto-mod,
+      #about-mod,
+      #objetivos-mod,
+      #tecnologia-mod,
+      #casos-mod,
+      #publicaciones-mod {
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important;
+      }
+      #about-mod .coconet-module-title,
+      #about-mod p {
+        color: #ffffff !important;
+      }
+      #publicaciones-mod .coconet-module-title,
+      #publicaciones-mod .coconet-pubs-group h3,
+      #publicaciones-mod .coconet-pubs,
+      #publicaciones-mod .coconet-pubs li {
+        color: #132a25 !important;
+      }
+      #publicaciones-mod .coconet-pubs a {
+        color: #19d88e !important;
+        text-decoration: underline !important;
+        text-decoration-thickness: 2px;
+        font-weight: 700;
+      }
+      .coconet-about-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+        align-items: start;
+      }
+      .coconet-about-col {
+        display: grid;
+        gap: 1.1rem;
+      }
+      .coconet-about-col p {
+        margin: 0;
+      }
+      .coconet-about-col--right {
+        padding-top: 0;
+      }
+      .coconet-grid {
+        display: block;
+      }
+      .coconet-card {
+        border: 0;
+        background: transparent;
+        border-radius: 0;
+        padding: 0;
+        margin: 0 0 0.85rem 0;
+      }
+      .coconet-card h3 {
+        margin: 0 0 0.4rem 0;
+        color: #ffffff;
+        font-size: 1rem;
+        line-height: 1.3;
+        font-weight: 700;
+      }
+      .coconet-card p {
+        margin: 0;
+        color: #ffffff;
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+      #objetivos-mod .coconet-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+      #objetivos-mod .coconet-card {
+        background: rgba(255, 255, 255, 0.62) !important;
+        border: 2px solid rgba(19, 42, 37, 0.55);
+        border-radius: 12px;
+        padding: 1rem 1.05rem;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      #objetivos-mod .coconet-card h3,
+      #objetivos-mod .coconet-card p {
+        color: #132a25 !important;
+      }
+      #objetivos-mod .coconet-module-title {
+        color: #132a25 !important;
+      }
+      #objetivos-mod .coconet-accordion-toggle {
+        border-color: #132a25;
+        color: #132a25;
+        background: rgba(19, 42, 37, 0.08);
+      }
+      #objetivos-mod .coconet-accordion[open] .coconet-accordion-toggle {
+        background: #132a25;
+        color: #ffffff;
+      }
+      #tecnologia-mod .coconet-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+      #tecnologia-mod .coconet-card {
+        background: linear-gradient(
+          145deg,
+          #ffffff 0%,
+          #f3e9ff 100%
+        ) !important;
+        border: 2px solid rgba(139, 92, 246, 0.62);
+        border-radius: 18px;
+        padding: 1.05rem 1.15rem;
+        margin: 0;
+        box-sizing: border-box;
+        box-shadow: 0 10px 24px rgba(76, 42, 133, 0.16);
+        position: relative;
+        overflow: hidden;
+      }
+      #tecnologia-mod .coconet-card::after {
+        content: "";
+        position: absolute;
+        right: -34px;
+        top: -34px;
+        width: 110px;
+        height: 110px;
+        border-radius: 999px;
+        background: rgba(139, 92, 246, 0.14);
+        pointer-events: none;
+      }
+      #tecnologia-mod .coconet-card h3,
+      #tecnologia-mod .coconet-card p {
+        color: #132a25 !important;
+      }
+      #tecnologia-mod .coconet-card h3 {
+        font-size: 1.05rem;
+        letter-spacing: 0.01em;
+      }
+      #tecnologia-mod .coconet-module-title {
+        color: #132a25 !important;
+      }
+      #tecnologia-mod .coconet-accordion-toggle {
+        border-color: #6d28d9;
+        color: #6d28d9;
+        background: rgba(139, 92, 246, 0.12);
+      }
+      #tecnologia-mod .coconet-accordion[open] .coconet-accordion-toggle {
+        background: #6d28d9;
+        color: #ffffff;
+      }
+      #tecnologia-mod .coconet-card:nth-child(2n) {
+        transform: translateY(14px);
+      }
+      #arquitectura-mod {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+      }
+      #arquitectura-mod::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            circle at 12% 20%,
+            rgba(139, 92, 246, 0.2) 0%,
+            transparent 36%
+          ),
+          radial-gradient(
+            circle at 90% 86%,
+            rgba(139, 92, 246, 0.16) 0%,
+            transparent 34%
+          );
+        pointer-events: none;
+        z-index: 0;
+      }
+      #arquitectura-mod .coconet-inner {
+        position: relative;
+        z-index: 1;
+      }
+      .coconet-arch-flow {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.9rem;
+        margin-bottom: 1rem;
+      }
+      .coconet-arch-node {
+        position: relative;
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 1rem 1rem 1.05rem;
+        min-height: 154px;
+        box-sizing: border-box;
+      }
+      .coconet-arch-node:not(:last-child)::after {
+        content: "→";
+        position: absolute;
+        right: -0.62rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1.25rem;
+        height: 1.25rem;
+        border-radius: 999px;
+        background: #19d88e;
+        color: #ffffff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.78rem;
+        font-weight: 700;
+        box-shadow: 0 0 0 4px #132a25;
+        z-index: 2;
+      }
+      .coconet-arch-kicker {
+        margin: 0 0 0.45rem;
+        color: #c8b1ff;
+        font-size: 0.74rem;
+        line-height: 1.2;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 800;
+      }
+      .coconet-arch-node h3 {
+        margin: 0 0 0.35rem;
+        color: #ffffff;
+        font-size: 1.03rem;
+        line-height: 1.25;
+      }
+      .coconet-arch-node p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.94);
+        font-size: 0.94rem;
+        line-height: 1.46;
+      }
+      .coconet-arch-services {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.9rem;
+      }
+      .coconet-arch-service {
+        border-radius: 14px;
+        border: 2px dashed rgba(139, 92, 246, 0.85);
+        background: rgba(139, 92, 246, 0.12);
+        padding: 0.95rem 1rem;
+      }
+      .coconet-arch-service h3 {
+        margin: 0 0 0.35rem;
+        color: #ffffff;
+        font-size: 1rem;
+        line-height: 1.25;
+      }
+      .coconet-arch-service p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 0.93rem;
+        line-height: 1.46;
+      }
+      #arquitectura-mod .coconet-module-title,
+      #arquitectura-mod .coconet-arch-kicker,
+      #arquitectura-mod .coconet-arch-node h3,
+      #arquitectura-mod .coconet-arch-node p,
+      #arquitectura-mod .coconet-arch-service h3,
+      #arquitectura-mod .coconet-arch-service p {
+        color: #ffffff !important;
+      }
+      .coconet-cases-grid {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        gap: 0.95rem;
+      }
+      .coconet-case {
+        border: 2px solid rgba(255, 255, 255, 0.88);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 1rem 1.05rem 1.05rem;
+        box-sizing: border-box;
+        min-height: 0;
+        position: relative;
+        overflow: hidden;
+      }
+      .coconet-case::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: #19d88e;
+        opacity: 0.95;
+      }
+      .coconet-case--wide {
+        grid-column: span 7;
+      }
+      .coconet-case--narrow {
+        grid-column: span 5;
+      }
+      .coconet-case--medium {
+        grid-column: span 6;
+      }
+      .coconet-case--full {
+        grid-column: 1 / -1;
+      }
+      .coconet-case-index {
+        margin: 0 0 0.5rem;
+        color: #d8c7ff;
+        font-size: 0.78rem;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        font-weight: 800;
+      }
+      .coconet-case h3 {
+        margin: 0 0 0.42rem;
+        color: #ffffff;
+        font-size: 1.04rem;
+        line-height: 1.28;
+        font-weight: 700;
+      }
+      .coconet-case p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.96);
+        font-size: 0.94rem;
+        line-height: 1.5;
+      }
+      #casos-mod .coconet-case-index,
+      #casos-mod .coconet-case h3,
+      #casos-mod .coconet-case p {
+        color: #ffffff !important;
+      }
+      #casos-mod .coconet-module-title {
+        color: #132a25 !important;
+      }
+      #casos-mod .coconet-module-title {
+        color: #132a25 !important;
+      }
+      .coconet-eco-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.95rem;
+      }
+      .coconet-eco-card {
+        border: 2px solid rgba(255, 255, 255, 0.86);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 1rem 1.05rem;
+        box-sizing: border-box;
+      }
+      .coconet-eco-card--full {
+        grid-column: 1 / -1;
+      }
+      .coconet-eco-card h3 {
+        margin: 0 0 0.55rem;
+        color: #ffffff;
+        font-size: 1rem;
+        line-height: 1.25;
+        font-weight: 700;
+      }
+      .coconet-eco-card p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.96);
+        line-height: 1.52;
+        font-size: 0.95rem;
+      }
+      .coconet-eco-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.48rem;
+      }
+      .coconet-eco-tag {
+        display: inline-flex;
+        align-items: center;
+        border-radius: 999px;
+        border: 1.5px solid rgba(255, 255, 255, 0.82);
+        background: rgba(255, 255, 255, 0.12);
+        color: #ffffff;
+        padding: 0.35rem 0.65rem;
+        line-height: 1.2;
+        font-size: 0.83rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      #ecosistema-mod .coconet-eco-link {
+        display: inline-block;
+        color: #ffffff !important;
+        text-decoration: underline !important;
+        text-decoration-thickness: 2px;
+        font-weight: 800;
+        transition:
+          transform 0.18s ease,
+          opacity 0.18s ease;
+        transform-origin: center;
+      }
+      #ecosistema-mod .coconet-eco-link:hover {
+        transform: scale(1.06);
+        opacity: 0.95;
+      }
+      #ecosistema-mod .coconet-module-title,
+      #ecosistema-mod .coconet-module-title img,
+      #ecosistema-mod .coconet-eco-card h3,
+      #ecosistema-mod .coconet-eco-card p,
+      #ecosistema-mod .coconet-eco-tag {
+        color: #ffffff !important;
+      }
+      #ecosistema-mod .coconet-module-title img {
+        filter: brightness(0) invert(1);
+      }
+      .coconet-impact-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.95rem;
+      }
+      .coconet-impact-card {
+        border: 2px solid rgba(255, 255, 255, 0.86);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 1rem 1.05rem;
+        box-sizing: border-box;
+        min-height: 148px;
+        position: relative;
+        overflow: hidden;
+      }
+      .coconet-impact-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: #19d88e;
+      }
+      .coconet-impact-index {
+        margin: 0 0 0.48rem;
+        color: #d8c7ff;
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 800;
+      }
+      .coconet-impact-card p {
+        margin: 0;
+        color: #ffffff;
+        font-size: 0.95rem;
+        line-height: 1.52;
+      }
+      #impacto-mod .coconet-module-title,
+      #impacto-mod .coconet-impact-index,
+      #impacto-mod .coconet-impact-card p {
+        color: #ffffff !important;
+      }
+      #objetivos-mod .coconet-card h3 {
+        margin: 0;
+        font-size: 1.03rem;
+      }
+      #objetivos-mod .coconet-card p {
+        margin-top: 0.85rem;
+      }
+      .coconet-accordion {
+        margin: 0;
+      }
+      .coconet-accordion summary {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.8rem;
+        cursor: pointer;
+      }
+      .coconet-accordion summary::-webkit-details-marker {
+        display: none;
+      }
+      .coconet-accordion-toggle {
+        width: 28px;
+        height: 28px;
+        flex: 0 0 28px;
+        border-radius: 999px;
+        border: 1.5px solid rgba(255, 255, 255, 0.85);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        line-height: 1;
+        font-weight: 700;
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.06);
+        transition:
+          transform 0.15s ease,
+          background 0.15s ease;
+      }
+      .coconet-accordion[open] .coconet-accordion-toggle {
+        transform: rotate(45deg);
+        background: rgba(255, 255, 255, 0.2);
+      }
+      .coconet-pubs-group {
+        margin-top: 1rem;
+      }
+      .coconet-pubs-group h3 {
+        margin: 0 0 0.55rem 0;
+        font-size: 1.03rem;
+        color: #ffffff;
+        font-weight: 700;
+      }
+      .coconet-pubs {
+        margin: 0;
+        padding-left: 1.2rem;
+        display: grid;
+        gap: 0.65rem;
+        line-height: 1.5;
+      }
+      .coconet-pubs a {
+        color: #ffffff;
+        text-decoration: underline;
+      }
+      .coconet-lotes-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.95rem;
+      }
+      .coconet-lote {
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 2px solid #132a25;
+        padding: 1rem;
+      }
+      .coconet-lote h3 {
+        margin: 0 0 0.4rem;
+        color: #ffffff;
+        font-size: 1.02rem;
+      }
+      .coconet-lote p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.94);
+        font-size: 0.95rem;
+      }
+      #lotes-mod .coconet-module-title,
+      #lotes-mod .coconet-lote h3,
+      #lotes-mod .coconet-lote p,
+      #lotes-mod .coconet-lote-total {
+        color: #132a25 !important;
+      }
+      #lotes-mod .coconet-lotes-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        grid-auto-flow: row;
+      }
+      #lotes-mod .coconet-lote {
+        border: 2px solid #132a25 !important;
+      }
+      .coconet-lote-total {
+        margin-top: 1rem;
+        padding-top: 0.9rem;
+        border-top: 0;
+        font-weight: 700;
+      }
+      .coconet-list-plain {
+        margin: 0;
+        padding-left: 1.25rem;
+        display: grid;
+        gap: 0.65rem;
+        line-height: 1.58;
+      }
+      .coconet-list-plain li {
+        margin: 0;
+      }
+      .coconet-module--light .coconet-module-title,
+      .coconet-module--light p,
+      .coconet-module--light li {
+        color: #132a25 !important;
+      }
+      .coconet-module--light .coconet-card {
+        border-color: rgba(76, 42, 133, 0.32);
+        background: rgba(255, 255, 255, 0.9);
+      }
+      .coconet-module--light .coconet-card h3,
+      .coconet-module--light .coconet-card p {
+        color: #132a25 !important;
+      }
+      .coconet-module--light .coconet-accordion-toggle {
+        border-color: #6d28d9;
+        color: #6d28d9;
+        background: rgba(139, 92, 246, 0.14);
+      }
+      .coconet-module--light
+        .coconet-accordion[open]
+        .coconet-accordion-toggle {
+        background: #6d28d9;
+        color: #ffffff;
+      }
+      .coconet-module--deep .coconet-card h3,
+      .coconet-module--deep .coconet-card p,
+      .coconet-module--deep .coconet-module-title,
+      .coconet-module--deep .coconet-pubs {
+        color: var(--coconet-white);
+      }
+      body.coconet-theme .main-footer {
+        margin-top: 0 !important;
+        background: var(--coconet-primary) !important;
+      }
+      body.coconet-theme .main-footer,
+      body.coconet-theme .main-footer a,
+      body.coconet-theme .main-footer h2,
+      body.coconet-theme .main-footer p,
+      body.coconet-theme .main-footer li,
+      body.coconet-theme .footer-social a,
+      body.coconet-theme .footer-social-strong {
+        color: var(--coconet-deep) !important;
+      }
+      body.coconet-theme .main-footer .footer-ants-logo {
+        width: 65px !important;
+        height: auto !important;
+      }
+      body.coconet-theme .main-footer .footer-top-link {
+        color: var(--coconet-accent) !important;
+        border-color: var(--coconet-accent) !important;
+        background: transparent !important;
+        transition: transform 0.18s ease !important;
+      }
+      body.coconet-theme .main-footer .footer-top-link:hover {
+        color: var(--coconet-accent) !important;
+        background: transparent !important;
+        border-color: var(--coconet-accent) !important;
+        transform: scale(1.08) !important;
+      }
+      .coconet-footer-title-wrap {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.9rem;
+        max-width: 380px;
+      }
+      .coconet-footer-title {
+        margin: 0;
+        font-size: clamp(1.45rem, 2.38vw, 2rem) !important;
+      }
+      body.coconet-theme .main-footer .footer-items {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, max-content));
+        column-gap: 1.2rem;
+        row-gap: 0.4rem;
+        align-items: start;
+        justify-content: start;
+      }
+      .gaia-lead {
+        margin: 0;
+        color: #ffffff;
+        font-size: 0.95rem;
+        line-height: 1.62;
+        font-weight: 400;
+      }
+      .gaia-split {
+        display: grid;
+        grid-template-columns: 1.25fr 1fr;
+        gap: 1.15rem;
+        align-items: start;
+      }
+      .gaia-note {
+        border: 2px solid rgba(255, 255, 255, 0.75);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.07);
+        padding: 1rem 1.05rem;
+        color: rgba(255, 255, 255, 0.96);
+        line-height: 1.55;
+        font-size: 0.95rem;
+      }
+      .gaia-objectives {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.9rem;
+      }
+      .gaia-objective {
+        border: 2px solid rgba(19, 42, 37, 0.55);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 0.95rem 1rem;
+      }
+      .gaia-objective h3 {
+        margin: 0 0 0.42rem;
+        color: #132a25;
+        font-size: 0.98rem;
+        line-height: 1.32;
+      }
+      .gaia-objective p {
+        margin: 0;
+        color: #132a25;
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+      .gaia-tech-list {
+        display: grid;
+        gap: 0.8rem;
+      }
+      .gaia-tech-row {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        align-items: center;
+        gap: 0.95rem;
+        border: 2px solid rgba(19, 42, 37, 0.24);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.82);
+        padding: 0.78rem 0.9rem;
+      }
+      .gaia-tech-label {
+        border-radius: 999px;
+        border: 2px solid #19d88e;
+        color: #132a25;
+        font-weight: 800;
+        font-size: 0.83rem;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        padding: 0.32rem 0.62rem;
+        display: inline-flex;
+        justify-self: start;
+        background: rgba(25, 216, 142, 0.15);
+      }
+      .gaia-tech-row p {
+        margin: 0;
+        color: #132a25;
+        font-size: 0.92rem;
+        line-height: 1.5;
+      }
+      .gaia-timeline {
+        position: relative;
+        display: grid;
+        gap: 0.9rem;
+        padding-left: 1.2rem;
+      }
+      .gaia-timeline::before {
+        content: "";
+        position: absolute;
+        left: 0.24rem;
+        top: 0.15rem;
+        bottom: 0.15rem;
+        width: 2px;
+        background: rgba(255, 255, 255, 0.7);
+      }
+      .gaia-milestone {
+        position: relative;
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.12);
+        padding: 0.88rem 0.95rem;
+      }
+      .gaia-milestone::before {
+        content: "";
+        position: absolute;
+        left: -1.2rem;
+        top: 0.92rem;
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: #ffffff;
+        border: 2px solid #19d88e;
+      }
+      .gaia-milestone h3 {
+        margin: 0 0 0.32rem;
+        color: #ffffff;
+        font-size: 0.98rem;
+        line-height: 1.32;
+      }
+      .gaia-milestone p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.96);
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+      #actuaciones-mod .coconet-module-title {
+        color: #132a25 !important;
+      }
+      #actuaciones-mod .coconet-module-title img {
+        filter: brightness(0) saturate(100%) invert(13%) sepia(18%)
+          saturate(907%) hue-rotate(117deg) brightness(95%) contrast(92%) !important;
+      }
+      #actuaciones-mod .gaia-timeline::before {
+        background: #132a25 !important;
+      }
+      #actuaciones-mod .gaia-milestone {
+        border-color: #132a25 !important;
+        background: transparent !important;
+      }
+      #actuaciones-mod .gaia-milestone::before {
+        border-color: #132a25 !important;
+        background: #132a25 !important;
+      }
+      #actuaciones-mod .gaia-milestone h3,
+      #actuaciones-mod .gaia-milestone p {
+        color: #132a25 !important;
+      }
+      .gaia-roadmap {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.82rem;
+      }
+      .gaia-phase {
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 0.9rem 0.9rem 0.95rem;
+      }
+      .gaia-phase-kicker {
+        margin: 0 0 0.42rem;
+        color: #19d88e;
+        font-size: 0.75rem;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        font-weight: 800;
+      }
+      .gaia-phase h3 {
+        margin: 0 0 0.34rem;
+        color: #ffffff;
+        font-size: 0.96rem;
+        line-height: 1.32;
+      }
+      .gaia-phase p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 0.88rem;
+        line-height: 1.5;
+      }
+      #cronograma-mod .coconet-module-title,
+      #cronograma-mod .gaia-phase-kicker,
+      #cronograma-mod .gaia-phase h3,
+      #cronograma-mod .gaia-phase p {
+        color: #ffffff !important;
+      }
+      .gaia-phase {
+        position: relative;
+      }
+      .gaia-phase:not(:last-child)::after {
+        content: "→";
+        position: absolute;
+        right: -0.58rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1.25rem;
+        height: 1.25rem;
+        border-radius: 999px;
+        background: #19d88e;
+        color: #132a25;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.78rem;
+        font-weight: 800;
+        box-shadow: 0 0 0 4px #132a25;
+        z-index: 2;
+      }
+      .gaia-arch {
+        display: grid;
+        grid-template-columns: 1.5fr 0.8fr;
+        gap: 0.92rem;
+        align-items: stretch;
+      }
+      .gaia-arch-stack {
+        display: grid;
+        gap: 0.75rem;
+      }
+      .gaia-layer {
+        position: relative;
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.09);
+        padding: 0.88rem 0.92rem;
+      }
+      .gaia-layer:not(:last-child)::after {
+        content: "↓";
+        position: absolute;
+        left: 50%;
+        bottom: -0.78rem;
+        transform: translateX(-50%);
+        width: 1.3rem;
+        height: 1.3rem;
+        border-radius: 999px;
+        background: #19d88e;
+        color: #132a25;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        font-weight: 800;
+        box-shadow: 0 0 0 4px #132a25;
+        z-index: 2;
+      }
+      .gaia-layer h3 {
+        margin: 0 0 0.32rem;
+        color: #ffffff;
+        font-size: 0.98rem;
+      }
+      .gaia-layer p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+      .gaia-control {
+        border: 2px dashed rgba(25, 216, 142, 0.92);
+        border-radius: 14px;
+        background: rgba(25, 216, 142, 0.12);
+        padding: 1.35rem 1.1rem;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100%;
+        height: 100%;
+        align-self: stretch;
+        box-sizing: border-box;
+      }
+      .gaia-control h3 {
+        margin: 0 0 0.4rem;
+        font-size: 0.98rem;
+        color: #ffffff;
+      }
+      .gaia-control p {
+        margin: 0;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.95);
+      }
+      #arquitectura-mod .coconet-module-title,
+      #arquitectura-mod .gaia-layer h3,
+      #arquitectura-mod .gaia-layer p,
+      #arquitectura-mod .gaia-control h3,
+      #arquitectura-mod .gaia-control p {
+        color: #ffffff !important;
+      }
+      .gaia-cases {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 0.86rem;
+      }
+      .gaia-case {
+        border: 2px solid rgba(19, 42, 37, 0.54);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.86);
+        padding: 0.9rem 0.95rem;
+      }
+      .gaia-case--w {
+        grid-column: span 3;
+      }
+      .gaia-case--n {
+        grid-column: span 2;
+      }
+      .gaia-case h3 {
+        margin: 0 0 0.35rem;
+        color: #132a25;
+        font-size: 0.96rem;
+      }
+      .gaia-case p {
+        margin: 0;
+        color: #132a25;
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+      .gaia-infra-stack {
+        display: grid;
+        gap: 0.95rem;
+      }
+      .gaia-infra-media-split {
+        display: grid;
+        grid-template-columns: 1.22fr 0.78fr;
+        gap: 0.75rem;
+        align-items: stretch;
+      }
+      .gaia-infra-hero {
+        margin: 0;
+        display: grid;
+        gap: 0.75rem;
+      }
+      .gaia-infra-hero img {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+        border: 0;
+        object-fit: cover;
+        min-height: 270px;
+        background: transparent;
+      }
+      .gaia-infra-hero figcaption {
+        color: #132a25;
+        font-size: 0.84rem;
+        line-height: 1.35;
+        font-weight: 700;
+      }
+      .gaia-cap-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.62rem;
+        margin-bottom: 1.35rem;
+      }
+      .gaia-cap-item {
+        border-top: 2px solid #132a25;
+        padding-top: 0.55rem;
+      }
+      .gaia-cap-item h3 {
+        margin: 0 0 0.25rem;
+        color: #132a25;
+        font-size: 1.045rem;
+        line-height: 1.25;
+      }
+      .gaia-cap-item p {
+        margin: 0;
+        color: #132a25;
+        font-size: 0.985rem;
+        line-height: 1.45;
+      }
+      .gaia-infra-support {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0.5rem;
+        height: 100%;
+        width: 84%;
+        justify-self: center;
+      }
+      .gaia-infra-support figure {
+        margin: 0;
+        display: grid;
+        gap: 0.55rem;
+      }
+      .gaia-infra-support img {
+        width: 86%;
+        max-width: 86%;
+        border-radius: 0;
+        border: 0;
+        object-fit: cover;
+        min-height: 90px;
+        background: transparent;
+        margin: 0 auto;
+      }
+      .gaia-infra-support figcaption {
+        color: #132a25;
+        font-size: 0.72rem;
+        line-height: 1.22;
+        font-weight: 700;
+      }
+      .gaia-campus-map {
+        margin-top: 2.15rem;
+        border-top: 2px solid #132a25;
+        padding-top: 1.85rem;
+      }
+      .gaia-campus-map h3 {
+        margin: 0 0 0.5rem;
+        color: #132a25;
+        font-size: 1.02rem;
+        line-height: 1.3;
+      }
+      .gaia-campus-map p {
+        margin: 0 0 0.75rem;
+        color: #132a25;
+        line-height: 1.58;
+        max-width: 78ch;
+      }
+      .gaia-lab-link {
+        color: #19d88e !important;
+        text-decoration: underline !important;
+        text-decoration-thickness: 2px;
+        font-weight: 800;
+        display: inline-block;
+        transition:
+          transform 0.18s ease,
+          opacity 0.18s ease;
+        transform-origin: center;
+      }
+      .gaia-lab-link:hover {
+        transform: scale(1.06);
+        opacity: 0.95;
+      }
+      .gaia-campus-map figure {
+        margin: 0;
+        display: grid;
+        gap: 0.42rem;
+      }
+      .gaia-campus-map img {
+        width: 100%;
+        max-height: 560px;
+        object-fit: contain;
+        border-radius: 0;
+        border: 0;
+        background: #f8fbfa;
+      }
+      .gaia-campus-map figcaption {
+        color: #132a25;
+        font-size: 0.84rem;
+        font-weight: 700;
+        line-height: 1.35;
+      }
+      .gaia-ecosystem {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 0.95rem;
+      }
+      .gaia-ecosystem-panel {
+        border: 2px solid rgba(255, 255, 255, 0.82);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.12);
+        padding: 0.92rem 0.96rem;
+      }
+      .gaia-ecosystem-panel h3 {
+        margin: 0 0 0.4rem;
+        color: #ffffff;
+        font-size: 0.96rem;
+      }
+      .gaia-ecosystem-panel p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.96);
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+      .gaia-ecosystem-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.46rem;
+        margin-top: 0.72rem;
+      }
+      .gaia-ecosystem-tags span {
+        display: inline-flex;
+        align-items: center;
+        border-radius: 999px;
+        border: 1.5px solid rgba(255, 255, 255, 0.88);
+        padding: 0.3rem 0.62rem;
+        color: #ffffff;
+        font-size: 0.8rem;
+        font-weight: 800;
+        background: rgba(255, 255, 255, 0.08);
+      }
+      .gaia-impact-lead {
+        margin: 0 0 0.95rem;
+        color: rgba(255, 255, 255, 0.96);
+        max-width: 70ch;
+        line-height: 1.55;
+      }
+      .gaia-impact-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.8rem;
+      }
+      .gaia-impact {
+        border: 2px solid rgba(255, 255, 255, 0.82);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 0.86rem 0.92rem;
+      }
+      .gaia-impact h3 {
+        margin: 0 0 0.3rem;
+        color: #ffffff;
+        font-size: 0.83rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      .gaia-impact p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.96);
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+      #impacto-mod,
+      #impacto-mod .coconet-module-title,
+      #impacto-mod .gaia-impact-lead,
+      #impacto-mod .gaia-impact h3,
+      #impacto-mod .gaia-impact p {
+        color: #ffffff !important;
+      }
+      @media (max-width: 980px) {
+        body.coconet-theme .osiris-nav-more {
+          display: none !important;
+        }
+        body.coconet-theme .osiris-project-nav .osiris-nav-secondary {
+          display: inline-flex;
+        }
+        body.coconet-theme.project-menu-open .osiris-project-nav,
+        body.coconet-theme .osiris-project-nav.is-open {
+          background: var(--coconet-primary) !important;
+          border-top: 1px solid rgba(19, 42, 37, 0.22) !important;
+        }
+        body.coconet-theme.project-menu-open .osiris-project-nav a,
+        body.coconet-theme .osiris-project-nav.is-open a {
+          color: var(--coconet-deep) !important;
+        }
+        body.coconet-theme .main-footer .footer-items {
+          grid-template-columns: repeat(2, minmax(0, max-content));
+        }
+        body.coconet-theme .project-mobile-burger {
+          display: inline-flex !important;
+          color: var(--coconet-accent) !important;
+          border-color: rgba(25, 216, 142, 0.45) !important;
+          background: rgba(25, 216, 142, 0.12) !important;
+        }
+        body.coconet-theme .project-mobile-burger-icon {
+          color: var(--coconet-accent) !important;
+        }
+        body.coconet-theme .osiris-ants-logo {
+          display: none !important;
+        }
+        body.coconet-theme .osiris-hero-inner {
+          flex-direction: column;
+          text-align: center;
+          gap: 1.5rem;
+          padding: 2rem 1.25rem;
+          transform: none;
+        }
+        body.coconet-theme .osiris-project-topbar {
+          margin-bottom: 0 !important;
+        }
+        body.coconet-theme article.content.project-content {
+          margin-top: 0 !important;
+          padding-top: 0 !important;
+        }
+        body.coconet-theme .osiris-hero-logo {
+          justify-content: center;
+        }
+        body.coconet-theme .osiris-hero-logo img {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        body.coconet-theme .osiris-hero-copy {
+          text-align: center;
+          transform: none !important;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        body.coconet-theme .osiris-hero-copy p {
+          font-size: 1.08rem;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        body.coconet-theme .osiris-hero-more {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .coconet-intro {
+          min-height: 114px;
+          height: 114px;
+        }
+        .coconet-intro-head {
+          transform: translateY(3px);
+        }
+        .coconet-module {
+          margin: 0 calc(50% - 50vw);
+        }
+        .coconet-inner {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+        .coconet-funding-row {
+          grid-template-columns: 1fr;
+        }
+        .coconet-funding-row--quad {
+          grid-template-columns: 1fr;
+        }
+        #objetivos-mod .coconet-grid {
+          grid-template-columns: 1fr;
+        }
+        #tecnologia-mod .coconet-grid {
+          grid-template-columns: 1fr;
+        }
+        .coconet-arch-flow,
+        .coconet-arch-services {
+          grid-template-columns: 1fr;
+        }
+        .coconet-cases-grid {
+          grid-template-columns: 1fr;
+        }
+        .coconet-eco-grid {
+          grid-template-columns: 1fr;
+        }
+        .coconet-impact-grid {
+          grid-template-columns: 1fr;
+        }
+        .coconet-case--wide,
+        .coconet-case--narrow,
+        .coconet-case--medium,
+        .coconet-case--full {
+          grid-column: auto;
+        }
+        .coconet-arch-node:not(:last-child)::after {
+          right: 50%;
+          top: auto;
+          bottom: -0.72rem;
+          transform: translateX(50%) rotate(90deg);
+        }
+        .coconet-lotes-grid {
+          grid-template-columns: 1fr;
+        }
+        .gaia-split,
+        .gaia-roadmap,
+        .gaia-arch,
+        .gaia-ecosystem,
+        .gaia-objectives,
+        .gaia-impact-grid {
+          grid-template-columns: 1fr;
+        }
+        .gaia-cap-grid {
+          grid-template-columns: 1fr;
+        }
+        .gaia-infra-support {
+          grid-template-columns: 1fr;
+        }
+        .gaia-infra-media-split {
+          grid-template-columns: 1fr;
+        }
+        .gaia-tech-row {
+          grid-template-columns: 1fr;
+          align-items: start;
+        }
+        .gaia-cases {
+          grid-template-columns: 1fr;
+        }
+        .gaia-case--w,
+        .gaia-case--n {
+          grid-column: auto;
+        }
+        .gaia-phase:not(:last-child)::after {
+          display: none;
+        }
+        #tecnologia-mod .coconet-card:nth-child(2n) {
+          transform: none;
+        }
+        #lotes-mod,
+        #infraestructura-mod,
+        #actuaciones-mod,
+        #cronograma-mod,
+        #arquitectura-mod,
+        #ecosistema-mod,
+        #impacto-mod,
+        #about-mod,
+        #objetivos-mod,
+        #tecnologia-mod,
+        #casos-mod,
+        #publicaciones-mod {
+          padding-top: 3.6rem !important;
+          padding-bottom: 3.6rem !important;
+        }
+        .coconet-about-grid {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+        .coconet-about-col--right {
+          padding-top: 0;
+        }
+      }
+      @media (max-width: 700px) {
+        body.coconet-theme .main-footer .footer-items {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body id="top" class="osiris-theme coconet-theme mobile-ready">
+    <div class="page-wrap">
+      <header class="topbar osiris-project-topbar">
+        <div class="osiris-project-topbar-inner">
+          <a
+            class="osiris-project-logo"
+            href="./index.html"
+            aria-label="Gaia·6G"
+          >
+            <img src="../../pages/Gaia6G/iconogaia.svg" alt="Gaia·6G" />
+          </a>
+          <nav class="osiris-project-nav">
+            <a href="#about-mod">ABOUT</a>
+            <a href="#objetivos-mod">OBJETIVOS</a>
+            <a href="#tecnologia-mod">TECNOLOGÍA</a>
+            <a href="#arquitectura-mod">ARQUITECTURA</a>
+            <a href="#casos-mod">CASOS</a>
+            <a href="#publicaciones-mod">PUBLICACIONES</a>
+            <details class="osiris-nav-more">
+              <summary class="osiris-nav-more-trigger">MÁS</summary>
+              <div
+                class="osiris-nav-more-menu"
+                style="
+                  background: #e6ecea !important;
+                  background-color: #e6ecea !important;
+                "
+              >
+                <a href="#actuaciones-mod">ACTUACIONES</a>
+                <a href="#cronograma-mod">CRONOGRAMA</a>
+                <a href="#infraestructura-mod">INFRAESTRUCTURA</a>
+                <a href="#ecosistema-mod">ECOSISTEMA</a>
+                <a href="#impacto-mod">IMPACTO</a>
+              </div>
+            </details>
+            <a class="osiris-nav-secondary" href="#actuaciones-mod"
+              >ACTUACIONES</a
+            >
+            <a class="osiris-nav-secondary" href="#cronograma-mod"
+              >CRONOGRAMA</a
+            >
+            <a class="osiris-nav-secondary" href="#infraestructura-mod"
+              >INFRAESTRUCTURA</a
+            >
+            <a class="osiris-nav-secondary" href="#ecosistema-mod"
+              >ECOSISTEMA</a
+            >
+            <a class="osiris-nav-secondary" href="#impacto-mod">IMPACTO</a>
+          </nav>
+          <a
+            class="osiris-ants-logo"
+            href="../../index.html"
+            aria-label="Home ants"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="../../pages/Gaia6G/Logo-ants-b.svg" alt="ANTS" />
+          </a>
+        </div>
+      </header>
+
+      <article class="content project-content">
+        <section
+          class="osiris-hero"
+          style="
+            background: #132a25 !important;
+            background-color: #132a25 !important;
+          "
+        >
+          <div class="osiris-hero-inner">
+            <div class="osiris-hero-logo">
+              <img src="../../pages/Gaia6G/logogaia.svg" alt="Gaia·6G logo" />
+            </div>
+            <div class="osiris-hero-copy">
+              <p
+                >Infraestructura experimental<br />para la evolución de
+                GAIA-5G<br />hacia redes B5G/6G<br />multidominio y autónomas</p
+              >
+              <a class="btn osiris-hero-more" href="#publicaciones-mod"
+                >PUBLICACIONES ↓</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="ccn-mod"
+          class="coconet-intro coconet-intro--light"
+          style="
+            background: #ffffff !important;
+            background-color: #ffffff !important;
+            background-image: none !important;
+          "
+        >
+          <div class="coconet-inner">
+            <div class="coconet-intro-head">
+              <img
+                class="coconet-intro-icon"
+                src="../../pages/Gaia6G/iconogaia.svg"
+                alt="Gaia icono"
+              />
+              <h3 class="coconet-intro-title"
+                >Infraestructura experimental B5G/6G</h3
+              >
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="financiacion-mod"
+          class="coconet-module coconet-module--deep"
+          style="
+            background: #19d88e !important;
+            background-color: #19d88e !important;
+            background-image: none !important;
+          "
+        >
+          <div class="coconet-inner">
+            <div class="coconet-pills">
+              <div class="coconet-funding-row coconet-funding-row--quad">
+                <div class="coconet-pill coconet-pill-label">Programa</div>
+                <div class="coconet-pill coconet-pill-value">UNICO I+D 6G</div>
+                <div class="coconet-pill coconet-pill-label">Financiación</div>
+                <div class="coconet-pill coconet-pill-value"
+                  >Unión Europea - NextGenerationEU</div
+                >
+              </div>
+              <div class="coconet-funding-row coconet-funding-row--quad">
+                <div class="coconet-pill coconet-pill-label">Componente</div>
+                <div class="coconet-pill coconet-pill-value"
+                  >PRTR (Componente 15)</div
+                >
+                <div class="coconet-pill coconet-pill-label">Expediente</div>
+                <div class="coconet-pill coconet-pill-value"
+                  >TSI-064100-2023-0013</div
+                >
+              </div>
+              <div class="coconet-funding-row coconet-funding-row--quad">
+                <div class="coconet-pill coconet-pill-label">Ejecución</div>
+                <div class="coconet-pill coconet-pill-value"
+                  >01/12/2022 - 30/11/2024</div
+                >
+                <div class="coconet-pill coconet-pill-label">Entidad</div>
+                <div class="coconet-pill coconet-pill-value"
+                  >Universidad de Murcia</div
+                >
+              </div>
+              <div class="coconet-funding-row coconet-funding-row--quad">
+                <div class="coconet-pill coconet-pill-label"
+                  >Responsable técnico</div
+                >
+                <div class="coconet-pill coconet-pill-value"
+                  >Antonio Fernando Skarmeta Gómez</div
+                >
+                <div class="coconet-pill coconet-pill-label"
+                  >Infraestructura base</div
+                >
+                <div class="coconet-pill coconet-pill-value"
+                  >GAIA-5G (Campus de Espinardo)</div
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="lotes-mod"
+          class="coconet-module coconet-module--primary"
+          style="
+            background: #e6ecea !important;
+            background-color: #e6ecea !important;
+            background-image: none !important;
+          "
+        >
+          <div class="coconet-inner">
+            <h2 class="coconet-module-title"
+              ><img src="../../pages/Gaia6G/iconogaia.svg" alt="" /> Presupuesto
+              económico detallado</h2
+            >
+            <div class="coconet-lotes-grid">
+              <article class="coconet-lote"
+                ><h3>Presupuesto total</h3
+                ><p
+                  >Importe consolidado de la actuación: 645.989,74 EUR.</p
+                ></article
+              >
+              <article class="coconet-lote"
+                ><h3>Bloques de inversión</h3
+                ><p
+                  >Computación · Red e infraestructura de red · Otros recursos
+                  (software y UAVs).</p
+                ></article
+              >
+              <article class="coconet-lote"
+                ><h3>NOKIA Modular Private Wireless (MPW)</h3
+                ><p
+                  >Precio unitario: 315.000,00 EUR · Unidades: 1 · Importe:
+                  315.000,00 EUR</p
+                ></article
+              >
+              <article class="coconet-lote"
+                ><h3>Servidor ThinkSystem SR650 + NVIDIA A100</h3
+                ><p
+                  >Precio unitario: 33.716,87 EUR · Unidades: 2 · Importe:
+                  67.433,74 EUR</p
+                ></article
+              >
+              <article class="coconet-lote"
+                ><h3>Servidor con slots FPGA y switch P4 integrado</h3
+                ><p
+                  >Precio unitario: 63.575,00 EUR · Unidades: 1 · Importe:
+                  63.575,00 EUR</p
+                ></article
+              >
+              <article class="coconet-lote"
+                ><h3>Switch P4 Tofino2 con slots FPGA</h3
+                ><p
+                  >Precio unitario: 28.995,00 EUR · Unidades: 1 · Importe:
+                  28.995,00 EUR</p
+                ></article
+              >
+              <article class="coconet-lote"
+                ><h3>Servidores edge outdoor Supermicro</h3
+                ><p
+                  >Precio unitario: 10.000,00 EUR · Unidades: 2 · Importe:
+                  20.000,00 EUR</p
+                ></article
+              >
+              <article class="coconet-lote"
+                ><h3>DPUs NVIDIA BlueField 2</h3
+                ><p
+                  >Precio unitario: 2.539,00 EUR · Unidades: 4 · Importe:
+                  10.156,00 EUR</p
+                ></article
+              >
+              <article class="coconet-lote"
+                ><h3>CWP OBUs Cohda Wireless Vehicular</h3
+                ><p
+                  >Precio unitario: 3.105,00 EUR · Unidades: 3 · Importe:
+                  9.315,00 EUR</p
+                ></article
+              >
+              <article class="coconet-lote"
+                ><h3>CWP RSU MK06</h3
+                ><p
+                  >Precio unitario: 3.357,00 EUR · Unidades: 2 · Importe:
+                  6.714,00 EUR</p
+                ></article
+              >
+              <article class="coconet-lote"
+                ><h3>RAM 64GB para nodos</h3
+                ><p
+                  >Precio unitario: 2.048,00 EUR · Unidades: 32 · Importe:
+                  65.536,00 EUR</p
+                ></article
+              >
+              <article class="coconet-lote"
+                ><h3>Licencias AW2S</h3
+                ><p
+                  >Precio unitario: 5.500,00 EUR · Unidades: 2 · Importe:
+                  11.000,00 EUR</p
+                ></article
+              >
+            </div>
+            <p class="coconet-lote-total"
+              >Resumen económico: total del presupuesto 645.989,74 EUR</p
+            >
+          </div>
+        </section>
+
+        <section class="coconet-logos-module">
+          <div class="coconet-inner">
+            <img
+              class="coconet-funding-logos"
+              src="../../pages/6GCoCoNet/logooficialescoconet.jpg"
+              alt="Logos oficiales CoCoNet"
+            />
+          </div>
+        </section>
+
+        <section
+          id="about-mod"
+          class="coconet-module coconet-module--deep"
+          style="
+            background: #132a25 !important;
+            background-color: #132a25 !important;
+            background-image: none !important;
+          "
+        >
+          <div class="coconet-inner">
+            <h2 class="coconet-module-title"
+              ><img src="../../pages/Gaia6G/iconogaia.svg" alt="" /> Sobre
+              GAIA·6G</h2
+            >
+            <div class="coconet-about-grid">
+              <div class="coconet-about-col coconet-about-col--left">
+                <p
+                  >Gaia·6G es la infraestructura experimental de la Universidad
+                  de Murcia para evolucionar GAIA-5G hacia redes B5G/6G
+                  multidominio, autónomas y validables en condiciones reales.</p
+                >
+                <p
+                  >Integra red, cómputo y servicios en un mismo continuo
+                  operativo para coordinar campus, laboratorio indoor, edge
+                  distribuido y cloud bajo una lógica de gestión programable
+                  extremo a extremo.</p
+                >
+              </div>
+              <div class="coconet-about-col coconet-about-col--right">
+                <p
+                  >El objetivo es habilitar pruebas avanzadas en movilidad
+                  conectada, IoT, verticales urbanos e industria con ciclos
+                  rápidos de validación, medición y transferencia
+                  tecnológica.</p
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="objetivos-mod"
+          class="coconet-module coconet-module--primary"
+          style="
+            background: #e6ecea !important;
+            background-color: #e6ecea !important;
+            background-image: none !important;
+          "
+        >
+          <div class="coconet-inner">
+            <h2 class="coconet-module-title"
+              ><img src="../../pages/Gaia6G/iconogaia.svg" alt="" /> Objetivos
+              estratégicos</h2
+            >
+            <div class="coconet-grid">
+              <details class="coconet-card coconet-accordion">
+                <summary>
+                  <h3>Evolución de infraestructura</h3>
+                  <span class="coconet-accordion-toggle" aria-hidden="true"
+                    >+</span
+                  >
+                </summary>
+                <p
+                  >Actualizar GAIA-5G con equipamiento de red, cómputo y
+                  almacenamiento orientado a experimentación B5G/6G.</p
+                >
+              </details>
+              <details class="coconet-card coconet-accordion">
+                <summary>
+                  <h3>Operación zero-touch</h3>
+                  <span class="coconet-accordion-toggle" aria-hidden="true"
+                    >+</span
+                  >
+                </summary>
+                <p
+                  >Aplicar principios ZSM para automatizar despliegue,
+                  supervisión y adaptación de servicios en entornos
+                  heterogéneos.</p
+                >
+              </details>
+              <details class="coconet-card coconet-accordion">
+                <summary>
+                  <h3>IA distribuida</h3>
+                  <span class="coconet-accordion-toggle" aria-hidden="true"
+                    >+</span
+                  >
+                </summary>
+                <p
+                  >Tomar decisiones de orquestación y offloading en tiempo real
+                  entre fog, edge y cloud según contexto operativo.</p
+                >
+              </details>
+              <details class="coconet-card coconet-accordion">
+                <summary>
+                  <h3>Validación reproducible</h3>
+                  <span class="coconet-accordion-toggle" aria-hidden="true"
+                    >+</span
+                  >
+                </summary>
+                <p
+                  >Construir escenarios experimentales medibles y comparables
+                  para IoT, movilidad conectada y servicios críticos.</p
+                >
+              </details>
+              <details class="coconet-card coconet-accordion">
+                <summary>
+                  <h3>Federación de testbeds</h3>
+                  <span class="coconet-accordion-toggle" aria-hidden="true"
+                    >+</span
+                  >
+                </summary>
+                <p
+                  >Conectar GAIA·6G con plataformas nacionales y europeas para
+                  pruebas cooperativas y escalado de resultados.</p
+                >
+              </details>
+              <details class="coconet-card coconet-accordion">
+                <summary>
+                  <h3>Transferencia tecnológica</h3>
+                  <span class="coconet-accordion-toggle" aria-hidden="true"
+                    >+</span
+                  >
+                </summary>
+                <p
+                  >Reducir distancia entre investigación y despliegue real con
+                  pilotos junto a empresas y administraciones.</p
+                >
+              </details>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="tecnologia-mod"
+          class="coconet-module coconet-module--accent"
+          style="
+            background: #ffffff !important;
+            background-color: #ffffff !important;
+          "
+        >
+          <div class="coconet-inner">
+            <h2 class="coconet-module-title"
+              ><img src="../../pages/Gaia6G/iconogaia.svg" alt="" /> Capacidades
+              tecnológicas</h2
+            >
+            <div class="gaia-tech-list">
+              <article class="gaia-tech-row"
+                ><span class="gaia-tech-label">Continuo fog-edge-cloud</span
+                ><p
+                  >Distribución de tareas según latencia, disponibilidad de
+                  recursos y criticidad del servicio.</p
+                ></article
+              >
+              <article class="gaia-tech-row"
+                ><span class="gaia-tech-label">SDN/NFV y slicing</span
+                ><p
+                  >Control programable de red para aislar, ajustar y escalar
+                  servicios por caso de uso.</p
+                ></article
+              >
+              <article class="gaia-tech-row"
+                ><span class="gaia-tech-label">IA distribuida/federada</span
+                ><p
+                  >Entrenamiento e inferencia cooperativa en nodos heterogéneos
+                  sin centralizar datos sensibles.</p
+                ></article
+              >
+              <article class="gaia-tech-row"
+                ><span class="gaia-tech-label">IoT + LP-WAN + 5G/B5G</span
+                ><p
+                  >Integración nativa de LoRaWAN/NB-IoT con conectividad de
+                  nueva generación para verticales mixtos.</p
+                ></article
+              >
+              <article class="gaia-tech-row"
+                ><span class="gaia-tech-label">Movilidad y PC5</span
+                ><p
+                  >Comunicación vehículo-infraestructura y offloading dinámico
+                  para decisiones de baja latencia.</p
+                ></article
+              >
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="actuaciones-mod"
+          class="coconet-module coconet-module--accent"
+          style="
+            background: #19d88e !important;
+            background-color: #19d88e !important;
+            background-image: none !important;
+          "
+        >
+          <div class="coconet-inner">
+            <h2 class="coconet-module-title"
+              ><img src="../../pages/Gaia6G/iconogaia.svg" alt="" /> Actuaciones
+              técnicas clave</h2
+            >
+            <div class="gaia-timeline">
+              <article class="gaia-milestone"
+                ><h3>Ampliación de red 5G y laboratorio indoor</h3
+                ><p
+                  >Extensión de cobertura y de capacidad de ensayo para validar
+                  servicios B5G/6G en entorno controlado y real.</p
+                ></article
+              >
+              <article class="gaia-milestone"
+                ><h3>Despliegue de cómputo especializado</h3
+                ><p
+                  >Integración de servidores con GPU, nodos edge y recursos de
+                  virtualización avanzada.</p
+                ></article
+              >
+              <article class="gaia-milestone"
+                ><h3>Red programable de alto rendimiento</h3
+                ><p
+                  >Equipamiento de switching y capacidades P4/SDN para
+                  experimentar con planos de control y datos.</p
+                ></article
+              >
+              <article class="gaia-milestone"
+                ><h3>Movilidad cooperativa terrestre/UAV</h3
+                ><p
+                  >OBUs, RSUs y recursos de sensorización para escenarios ITS y
+                  operación asistida en tiempo real.</p
+                ></article
+              >
+              <article class="gaia-milestone"
+                ><h3>Plataforma de datos y trazabilidad</h3
+                ><p
+                  >Canalización de datos, almacenamiento y observabilidad para
+                  experimentos reproducibles.</p
+                ></article
+              >
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="cronograma-mod"
+          class="coconet-module coconet-module--deep"
+          style="
+            background: #132a25 !important;
+            background-color: #132a25 !important;
+            background-image: none !important;
+          "
+        >
+          <div class="coconet-inner">
+            <h2 class="coconet-module-title"
+              ><img src="../../pages/Gaia6G/iconogaia.svg" alt="" /> Cronograma
+              de ejecución</h2
+            >
+            <div class="gaia-roadmap">
+              <article class="gaia-phase"
+                ><p class="gaia-phase-kicker">Fase 01</p
+                ><h3>Obtención de equipamiento</h3
+                ><p
+                  >Adquisición de infraestructura prioritaria para red, cómputo
+                  y validación de casos.</p
+                ></article
+              >
+              <article class="gaia-phase"
+                ><p class="gaia-phase-kicker">Fase 02</p
+                ><h3>Despliegue e integración</h3
+                ><p
+                  >Puesta en servicio de nodos y plataformas sobre la base GAIA
+                  existente.</p
+                ></article
+              >
+              <article class="gaia-phase"
+                ><p class="gaia-phase-kicker">Fase 03</p
+                ><h3>Verificación técnica</h3
+                ><p
+                  >Comprobación de rendimiento, interoperabilidad y estabilidad
+                  de los elementos desplegados.</p
+                ></article
+              >
+              <article class="gaia-phase"
+                ><p class="gaia-phase-kicker">Fase 04</p
+                ><h3>Validación experimental</h3
+                ><p
+                  >Ejecución beta de escenarios y evaluación de madurez
+                  operativa de la infraestructura.</p
+                ></article
+              >
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="arquitectura-mod"
+          class="coconet-module coconet-module--deep"
+          style="
+            background: #132a25 !important;
+            background-color: #132a25 !important;
+            background-image: none !important;
+          "
+        >
+          <div class="coconet-inner">
+            <h2 class="coconet-module-title"
+              ><img src="../../pages/Gaia6G/iconogaia.svg" alt="" />
+              Arquitectura técnica GAIA·6G</h2
+            >
+            <div class="gaia-arch">
+              <div class="gaia-arch-stack">
+                <article class="gaia-layer"
+                  ><h3>Capa de acceso</h3
+                  ><p
+                    >IoT, LP-WAN y 5G/B5G para captura y transporte de datos en
+                    escenarios campus, urbanos e industriales.</p
+                  ></article
+                >
+                <article class="gaia-layer"
+                  ><h3>Capa edge/MEC</h3
+                  ><p
+                    >Procesamiento cercano al dato para inferencia, control y
+                    respuesta en baja latencia.</p
+                  ></article
+                >
+                <article class="gaia-layer"
+                  ><h3>Capa core/cloud</h3
+                  ><p
+                    >Analítica intensiva, entrenamiento de modelos y
+                    coordinación global de recursos y servicios.</p
+                  ></article
+                >
+              </div>
+              <aside class="gaia-control"
+                ><h3>Plano de control inteligente</h3
+                ><p
+                  >Orquestación basada en IA, SDN/NFV, slicing y automatización
+                  ZSM para placement dinámico, optimización de coste/latencia y
+                  resiliencia extremo a extremo.</p
+                ></aside
+              >
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="casos-mod"
+          class="coconet-module coconet-module--primary"
+          style="
+            background: #e6ecea !important;
+            background-color: #e6ecea !important;
+            background-image: none !important;
+          "
+        >
+          <div class="coconet-inner">
+            <h2 class="coconet-module-title"
+              ><img src="../../pages/Gaia6G/iconogaia.svg" alt="" /> Casos de
+              uso avanzados</h2
+            >
+            <div class="gaia-cases">
+              <article class="gaia-case gaia-case--w"
+                ><h3>Smart Campus conectado</h3
+                ><p
+                  >Monitorización en tiempo real de recursos, movilidad y
+                  energía para operación más eficiente y sostenible.</p
+                ></article
+              >
+              <article class="gaia-case gaia-case--w"
+                ><h3>Movilidad cooperativa ITS</h3
+                ><p
+                  >Coordinación vehículo-infraestructura con apoyo edge para
+                  decisiones de tráfico en baja latencia.</p
+                ></article
+              >
+              <article class="gaia-case gaia-case--n"
+                ><h3>Autoprotección distribuida</h3
+                ><p
+                  >Detección cooperativa de anomalías y respuesta coordinada
+                  entre nodos.</p
+                ></article
+              >
+              <article class="gaia-case gaia-case--n"
+                ><h3>Operación con UAV</h3
+                ><p
+                  >Integración de drones para captación de datos y servicios de
+                  inspección inteligentes.</p
+                ></article
+              >
+              <article class="gaia-case gaia-case--n"
+                ><h3>Federación de experimentos</h3
+                ><p
+                  >Ejecución de pruebas conjuntas con otros testbeds para
+                  validar interoperabilidad y escalado.</p
+                ></article
+              >
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="infraestructura-mod"
+          class="coconet-module coconet-module--light"
+          style="
+            background: #ffffff !important;
+            background-color: #ffffff !important;
+            background-image: none !important;
+          "
+        >
+          <div class="coconet-inner">
+            <h2 class="coconet-module-title"
+              ><img src="../../pages/Gaia6G/iconogaia.svg" alt="" />
+              Infraestructura actual de partida</h2
+            >
+            <div class="gaia-infra-stack">
+              <div class="gaia-cap-grid">
+                <article class="gaia-cap-item">
+                  <h3>Red 5G en campus</h3>
+                  <p
+                    >Despliegue propio con cobertura exterior y laboratorio
+                    indoor para pruebas avanzadas.</p
+                  >
+                </article>
+                <article class="gaia-cap-item">
+                  <h3>IoT y LP-WAN</h3>
+                  <p
+                    >Capas LoRaWAN/NB-IoT integradas con la infraestructura
+                    experimental.</p
+                  >
+                </article>
+                <article class="gaia-cap-item">
+                  <h3>Backbone programable</h3>
+                  <p
+                    >Enlaces 40/100 Gbps con soporte SDN/P4 para escenarios de
+                    alta exigencia.</p
+                  >
+                </article>
+                <article class="gaia-cap-item">
+                  <h3>Cómputo distribuido</h3>
+                  <p
+                    >Clústeres Proxmox, OpenStack, Kubernetes y entornos
+                    hiperconvergentes.</p
+                  >
+                </article>
+              </div>
+              <div class="gaia-infra-media-split">
+                <figure class="gaia-infra-hero">
+                  <img
+                    src="../../pages/02.gaialab/assets/wirednetwork.png"
+                    alt="Equipamiento de red cableada"
+                  />
+                  <figcaption
+                    >Equipamiento de red cableada con backbone de alta capacidad
+                    y red programable para escenarios SDN/P4.</figcaption
+                  >
+                </figure>
+                <div class="gaia-infra-support">
+                  <figure>
+                    <img
+                      src="../../pages/02.gaialab/assets/feature2lab.png"
+                      alt="Infraestructura de virtualización GAIA Lab"
+                    />
+                    <figcaption
+                      >Infraestructura de virtualización: sedes ATICA, PLEIADES
+                      y GAIA con soporte Proxmox, OpenStack, OSM y
+                      Kubernetes.</figcaption
+                    >
+                  </figure>
+                  <figure>
+                    <img
+                      src="../../pages/02.gaialab/assets/3gpp.png"
+                      alt="Conectividad 3GPP y 5G SA"
+                    />
+                    <figcaption
+                      >Conectividad 3GPP/5G SA para experimentación avanzada en
+                      acceso radio y servicios B5G/6G.</figcaption
+                    >
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <div class="gaia-campus-map">
+              <h3>Infraestructura multiacceso del Campus de Espinardo</h3>
+              <p
+                >Con los dispositivos, nodos y tecnologías integrados en una red
+                heterogénea multiacceso, el mapa del Campus de Espinardo muestra
+                la base territorial de GAIA·6G y su conexión con
+                <a
+                  class="gaia-lab-link"
+                  href="../../en/gaialab/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >gaia lab</a
+                >
+                para experimentación coordinada en escenarios reales.</p
+              >
+              <figure>
+                <img
+                  src="../../pages/02.gaialab/assets/espinardo.png"
+                  alt="Espinardo Map - infraestructura multiacceso"
+                />
+                <figcaption
+                  >Campus de Espinardo · UMU · Despliegue de infraestructura
+                  multiacceso.</figcaption
+                >
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="ecosistema-mod"
+          class="coconet-module coconet-module--accent"
+          style="
+            background: #19d88e !important;
+            background-color: #19d88e !important;
+            background-image: none !important;
+          "
+        >
+          <div class="coconet-inner">
+            <h2 class="coconet-module-title"
+              ><img src="../../pages/Gaia6G/iconogaia.svg" alt="" /> Ecosistema
+              y federación</h2
+            >
+            <div class="gaia-ecosystem">
+              <article class="gaia-ecosystem-panel">
+                <h3>Interoperabilidad abierta</h3>
+                <p
+                  >GAIA·6G se diseña para operar con infraestructuras nacionales
+                  y europeas, acelerando validación conjunta y compartición de
+                  resultados.</p
+                >
+                <div class="gaia-ecosystem-tags"
+                  ><span>5TONIC</span><span>Open6G</span
+                  ><span>5G Playground</span><span>GP4L/GEANT</span
+                  ><span>IoT federado</span></div
+                >
+              </article>
+              <article class="gaia-ecosystem-panel">
+                <h3>Programas y proyectos vinculados</h3>
+                <p
+                  >R3CAV, INSPIRE5G+,
+                  <a
+                    class="coconet-eco-link"
+                    href="https://cerberus.inf.um.es/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >CERBERUS</a
+                  >, NANCY, RIGOUROUS, AI@Edge,
+                  <a
+                    class="coconet-eco-link"
+                    href="../perseo/index.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >PERSEO</a
+                  >,
+                  <a
+                    class="coconet-eco-link"
+                    href="../6gcoconet/index.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >6G·CoCoNet</a
+                  >
+                  y otras iniciativas cooperativas.</p
+                >
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="impacto-mod"
+          class="coconet-module coconet-module--deep"
+          style="
+            background: #132a25 !important;
+            background-color: #132a25 !important;
+            background-image: none !important;
+          "
+        >
+          <div class="coconet-inner">
+            <h2 class="coconet-module-title"
+              ><img src="../../pages/Gaia6G/iconogaia.svg" alt="" /> Impacto y
+              explotación</h2
+            >
+            <p class="gaia-impact-lead"
+              >La infraestructura se orienta a impacto real: investigación
+              transferible, validación reproducible y adopción progresiva en
+              verticales estratégicos.</p
+            >
+            <div class="gaia-impact-grid">
+              <article class="gaia-impact"
+                ><h3>Investigación</h3
+                ><p
+                  >Refuerzo de capacidades científicas y docentes en 5G/B5G/6G e
+                  IA distribuida.</p
+                ></article
+              >
+              <article class="gaia-impact"
+                ><h3>Ciencia abierta</h3
+                ><p
+                  >Publicación de resultados, datos y metodologías con foco en
+                  reproducibilidad.</p
+                ></article
+              >
+              <article class="gaia-impact"
+                ><h3>Transferencia</h3
+                ><p
+                  >Mayor tracción con industria y administraciones en pilotos y
+                  demostradores.</p
+                ></article
+              >
+              <article class="gaia-impact"
+                ><h3>Escalabilidad</h3
+                ><p
+                  >Base tecnológica para nuevos servicios en movilidad,
+                  sostenibilidad e industria.</p
+                ></article
+              >
+            </div>
+          </div>
+        </section>
+        <section
+          id="publicaciones-mod"
+          class="coconet-module coconet-module--deep"
+          style="
+            background: #ffffff !important;
+            background-color: #ffffff !important;
+            background-image: none !important;
+          "
+        >
+          <div class="coconet-inner">
+            <h2 class="coconet-module-title"
+              ><img src="../../pages/Gaia6G/iconogaia.svg" alt="" />
+              Publicaciones</h2
+            >
+            <div class="coconet-pubs-group">
+              <h3>Publicaciones aceptadas (con DOI)</h3>
+              <ol class="coconet-pubs">
+                <li
+                  >G. Ingles-Munoz, A. Gil-Martinez, J. A. Lopez-Pastor, A.
+                  Algaba-Brazalez, A. Skarmeta and J. L. Gomez-Tornero,
+                  "Integrated Sensing and Communication Using a Smart Leaky-Wave
+                  Antenna," in IEEE Transactions on Network Science and
+                  Engineering, vol. 13, pp. 6871-6890, 2026, doi:
+                  <a
+                    href="https://doi.org/10.1109/TNSE.2026.3662043"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >10.1109/TNSE.2026.3662043</a
+                  >.</li
+                >
+                <li
+                  >A. Gil-Martinez, J. Perez-Valero, J. A. Lopez-Pastor, J. L.
+                  Gomez-Tornero and A. Skarmeta-Gomez, "Ambiguity Resolution of
+                  Two Conformal Leaky-Wave Antennas via Deep Learning," 2025
+                  International Conference on Indoor Positioning and Indoor
+                  Navigation (IPIN), Tampere, Finland, 2025, pp. 1-7, doi:
+                  <a
+                    href="https://doi.org/10.1109/IPIN66788.2025.11213126"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >10.1109/IPIN66788.2025.11213126</a
+                  >.</li
+                >
+                <li
+                  >A. Gil-Martinez, D. Canete-Rebenaque, M. Poveda-Garcia, A.
+                  Algaba-Brazalez and J. Luis Gomez-Tornero, "Multibeam
+                  Microstrip Leaky-Wave Antenna Array for Passive 2-D Scanning
+                  in the 5 GHz Wi-Fi Band," in IEEE Open Journal of Antennas and
+                  Propagation, vol. 7, no. 2, pp. 718-727, April 2026, doi:
+                  <a
+                    href="https://doi.org/10.1109/OJAP.2025.3624307"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >10.1109/OJAP.2025.3624307</a
+                  >.</li
+                >
+                <li
+                  >A. Gil Martinez, A. Rabadan-Parra, D. Canete-Rebenaque, A.
+                  Skarmeta and J. L. Gomez Tornero, "Vehicle localization and
+                  tracking for urban toll collection using BLE smartphones and
+                  multi beam antenna unit," in IEEE Transactions on Intelligent
+                  Transportation Systems, doi:
+                  <a
+                    href="https://doi.org/10.1109/TITS.2026.3673855"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >10.1109/TITS.2026.3673855</a
+                  >.</li
+                >
+              </ol>
+            </div>
+            <div class="coconet-pubs-group">
+              <h3>Publicaciones aceptadas (DOI pendiente)</h3>
+              <ol class="coconet-pubs">
+                <li
+                  >A. Gil-Martinez, R. Pedreno-Martinez, A. Algaba-Brazalez, D.
+                  Canete-Rebenaque, A. Skarmeta and J. L. Gomez-Tornero,
+                  "Triangular Arrays of Frequency-Scanned Antennas for Efficient
+                  Fully-Azimuthal 1D and 2D Direction Finding Using Bluetooth
+                  Beacons," in 2026 20th European Conference on Antennas and
+                  Propagation (EuCAP).</li
+                >
+                <li
+                  >A. Gil-Martinez, Aritra Roy, Julien Sarrazin and A. Skarmeta,
+                  "Enhanced RSSI-Based DoA Estimation with Monopulse Ambiguity
+                  Suppression Using a Frequency-Beam Scanning LWA," in 2026
+                  International Radar Symposium.</li
+                >
+                <li
+                  >A. Gil-Martinez, A. Skarmeta and J. L. Gomez-Tornero, "A 2-D
+                  Leaky-Wave Antenna Array for joint sensing, communication and
+                  wireless power transfer," in The 12th International Conference
+                  on Antennas and Electromagnetic Systems, Catania, Sicily,
+                  Italy, 3 - 6 June, 2026.</li
+                >
+                <li
+                  >A. Gil-Martinez, J. Perez-Valero, Julien Sarrazin, Guido
+                  Valerio, A. Skarmeta and J. L. Gomez-Tornero, "Monopulse-based
+                  blind spot correction using a full-azimuthal leaky-wave
+                  antenna array," in The 12th International Conference on
+                  Antennas and Electromagnetic Systems, Catania, Sicily, Italy,
+                  3 - 6 June, 2026.</li
+                >
+              </ol>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <footer class="main-footer">
+        <div class="main-footer-inner">
+          <div>
+            <div class="coconet-footer-title-wrap">
+              <h2 class="footer-title coconet-footer-title"
+                >Infraestructura experimental para la evolución de GAIA-5G hacia
+                redes B5G/6G multidominio y autónomas</h2
+              >
+            </div>
+            <ul class="footer-items">
+              <li><a href="#about-mod">About</a></li>
+              <li><a href="#objetivos-mod">Objetivos</a></li>
+              <li><a href="#tecnologia-mod">Tecnología</a></li>
+              <li><a href="#actuaciones-mod">Actuaciones</a></li>
+              <li><a href="#cronograma-mod">Cronograma</a></li>
+              <li><a href="#arquitectura-mod">Arquitectura</a></li>
+              <li><a href="#casos-mod">Casos de uso</a></li>
+              <li><a href="#infraestructura-mod">Infraestructura</a></li>
+              <li><a href="#ecosistema-mod">Ecosistema</a></li>
+              <li><a href="#impacto-mod">Impacto</a></li>
+              <li><a href="#publicaciones-mod">Publicaciones</a></li>
+            </ul>
+          </div>
+          <div class="footer-brand">
+            <a
+              class="footer-umu-link"
+              href="https://www.um.es/web/informatica/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="footer-umu-logo"
+                src="../../pages/Gaia6G/Inform tica-RGB-Convivencia_A-01TR.png"
+                alt="Facultad de Informática - Universidad de Murcia"
+              />
+            </a>
+            <div class="footer-brand-lower">
+              <a
+                class="footer-ants-link"
+                href="../../index.html"
+                aria-label="Home ants"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="footer-ants-logo"
+                  src="../../pages/Gaia6G/Logo-ants-b.svg"
+                  alt="ANTS"
+                />
+              </a>
+              <div class="footer-social">
+                <a
+                  href="https://www.linkedin.com/company/ants-research-group/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Follow ants on
+                  <span class="footer-social-strong">LinkedIn ↗</span></a
+                >
+                <a
+                  href="https://x.com/ants_fium"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Follow ants on
+                  <span class="footer-social-strong">X ↗</span></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="footer-top">
+            <a class="footer-top-link" href="#top" aria-label="Back to top"
+              >↑</a
+            >
+          </div>
+        </div>
+      </footer>
+
+      <section class="coconet-logos-module coconet-logos-module--after-footer">
+        <div class="coconet-inner">
+          <img
+            class="coconet-funding-logos"
+            src="../../pages/6GCoCoNet/logooficialescoconet.jpg"
+            alt="Logos oficiales CoCoNet"
+          />
+        </div>
+      </section>
+    </div>
+
+    <script src="../../assets/js/mobile-project-menu.js?v=20260408-6"></script>
+    <script>
+      (function () {
+        const more = document.querySelector(".osiris-nav-more");
+        if (!more) return;
+        document.addEventListener("click", function (ev) {
+          if (!more.contains(ev.target)) more.removeAttribute("open");
+        });
+        more
+          .querySelectorAll(".osiris-nav-more-menu a")
+          .forEach(function (link) {
+            link.addEventListener("click", function () {
+              more.removeAttribute("open");
+            });
+          });
+      })();
+    </script>
+  </body>
+</html>
