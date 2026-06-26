@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../../../favicons-proyectos/faviconperseo.ico" />
+  <link rel="apple-touch-icon" href="../../../favicons-proyectos/faviconperseomobile.png" />
+  <title>Objetivos</title>
+  <link rel="stylesheet" href="../../../css-site/site.css?v=20260408-6" />
+  <style>
+    :root { --nav-height: 64px; }
+    body.osiris-theme .osiris-project-topbar,
+    body.osiris-theme .main-footer {
+      background: linear-gradient(to bottom right, #ff8000 0%, #377a5b 50%, #cb5d39 100%) !important;
+      background-color: #ff8000 !important;
+    }
+    body.osiris-theme .osiris-project-logo img {
+      height: 42px !important;
+      width: auto;
+    }
+    .perseo-mobile-toggle {
+      display: none;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      width: 38px;
+      height: 38px;
+      padding: 0;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+    }
+    .perseo-mobile-toggle-icon {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.35rem;
+      line-height: 1;
+      font-weight: 700;
+      display: inline-block;
+      transform: translateY(-1px);
+    }
+    .project-content {
+      max-width: 1000px;
+      margin: 1rem auto 0;
+      padding: 0 1.5rem;
+      box-sizing: border-box;
+    }
+    .project-content img {
+      max-width: 100%;
+      height: auto;
+    }
+    .perseo-about-hero {
+      width: 100vw;
+      height: 400px;
+      margin: 0 calc(50% - 50vw);
+      background: #f5f1e6 !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+    .perseo-about-hero h1 {
+      margin: 0;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.2rem, 6vw, 4.2rem);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #377a5b !important;
+      text-align: center;
+    }
+    .perseo-stripes-band {
+      width: 100vw;
+      margin: 0 calc(50% - 50vw);
+      height: 120px;
+      padding: 0;
+      box-sizing: border-box;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          to bottom,
+          #ff8000 0%,
+          #ff8000 25%,
+          #f5f1e6 25%,
+          #f5f1e6 50%,
+          #377a5b 50%,
+          #377a5b 75%,
+          #cb5d39 75%,
+          #cb5d39 100%
+        ) !important;
+      background-color: #ff8000 !important;
+    }
+    .perseo-about-text {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.4rem 1.5rem 2.6rem;
+      box-sizing: border-box;
+      color: #1f332a !important;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 1.01rem;
+      line-height: 1.74;
+      text-align: left !important;
+    }
+    .perseo-about-text p {
+      margin: 0 0 1.15rem 0;
+      color: #1f332a !important;
+      text-align: left !important;
+    }
+    .perseo-figure-left {
+      float: left;
+      width: clamp(280px, 42vw, 500px);
+      margin: 0.15rem 1.35rem 0.8rem 0;
+      border-radius: 10px;
+    }
+    .perseo-figure-right {
+      float: right;
+      width: clamp(300px, 44vw, 520px);
+      margin: 0.25rem 0 0.9rem 1.35rem;
+      border-radius: 0;
+    }
+    .perseo-highlight {
+      margin: 1.2rem 0 1.25rem;
+      padding: 1rem 1.1rem;
+      border-left: 6px solid #ff8000;
+      background: rgba(255, 128, 0, 0.08);
+      color: #1f332a !important;
+      font-weight: 600;
+    }
+    .perseo-objectives-intro {
+      margin-bottom: 1.4rem;
+      color: #1f332a !important;
+    }
+    .perseo-objectives-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .perseo-objective-card {
+      border: 4.5px solid #377a5b;
+      border-radius: 16px;
+      background: #f5f1e6;
+      box-shadow: 0 10px 20px rgba(31, 51, 42, 0.06);
+      padding: 1rem 1rem 1.05rem;
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr);
+      grid-template-rows: 80px auto;
+      gap: 0.02rem 0.85rem;
+      align-items: start;
+    }
+    .perseo-objective-num {
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      background: #f5f1e6;
+      border: 2px solid #377a5b;
+      color: #377a5b !important;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      margin-top: 0.1rem;
+    }
+    .perseo-objective-title {
+      margin: 0;
+      color: #377a5b !important;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.02rem;
+      font-weight: 700;
+      line-height: 1.25;
+      text-align: left !important;
+      height: 80px;
+    }
+    .perseo-objective-desc {
+      margin: 0;
+      grid-column: 1 / -1;
+      grid-row: 2;
+      color: #1f332a !important;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 0.94rem;
+      line-height: 1.58;
+      text-align: left !important;
+    }
+    .perseo-about-text p.perseo-objective-title {
+      color: #377a5b !important;
+    }
+    @media (max-width: 860px) {
+      .perseo-mobile-toggle {
+        display: inline-flex;
+        order: 2;
+        margin-left: auto;
+        margin-right: 0;
+      }
+      body.osiris-theme .osiris-project-topbar-inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      body.osiris-theme .osiris-project-logo {
+        order: 1;
+        display: inline-flex;
+        align-items: center;
+        margin-right: auto;
+        margin-left: 0;
+      }
+      body.osiris-theme .osiris-project-logo img {
+        height: 30px !important;
+        width: auto !important;
+        display: block !important;
+      }
+      body.osiris-theme .osiris-ants-logo {
+        display: none !important;
+      }
+      body.osiris-theme .osiris-project-nav {
+        display: none !important;
+        order: 3;
+        width: 100%;
+        margin-top: 0.45rem;
+        padding: 0.55rem 0 0.2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.22);
+      }
+      body.perseo-menu-open.osiris-theme .osiris-project-nav {
+        display: flex !important;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.45rem;
+      }
+      body.perseo-menu-open .perseo-mobile-toggle-icon {
+        font-size: 1.2rem;
+      }
+      .perseo-figure-left,
+      .perseo-figure-right {
+        float: none;
+        width: 100%;
+        margin: 0.4rem 0 1rem 0;
+      }
+      .perseo-objectives-grid {
+        grid-template-columns: 1fr;
+      }
+      .perseo-objective-card {
+        grid-template-columns: 42px minmax(0, 1fr);
+        grid-template-rows: auto auto;
+      }
+      .perseo-objective-title {
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body id="top" class="osiris-theme mobile-ready">
+  <div class="page-wrap">
+    <header class="topbar osiris-project-topbar">
+      <div class="osiris-project-topbar-inner">
+        <button class="perseo-mobile-toggle" id="perseoMobileToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="perseoMainNav">
+          <span class="perseo-mobile-toggle-icon" aria-hidden="true">&#9776;</span>
+        </button>
+        <a class="osiris-project-logo" href="../index.html" aria-label="Home PERSEO">
+          <img src="../../../pages/08.perseo/assets/iconoperseo.svg" alt="PERSEO">
+        </a>
+        <nav class="osiris-project-nav" id="perseoMainNav">
+          <a href="../contexto/index.html">SOBRE PERSEO</a>
+          <a href="./index.html">OBJETIVOS</a>
+          <a href="../index.html#recursos-promocionales">RECURSOS PROMOCIONALES</a>
+        </nav>
+        <a class="osiris-ants-logo" href="../../../index.html" aria-label="Home ants" target="_blank" rel="noopener noreferrer">
+          <img src="../../../pages/01.ants-home/assets/ants_footer.png" alt="ANTS">
+        </a>
+      </div>
+    </header>
+    <article class="content project-content"><section class="perseo-about-hero">
+  <h1>OBJETIVOS</h1>
+</section>
+<section class="perseo-stripes-band" aria-label="Franjas PERSEO"></section>
+<section class="perseo-about-text">
+  <p class="perseo-objectives-intro">De acuerdo con los avances tecnológicos propuestos y con el fin de avanzar en la aplicabilidad de la plataforma IoT planteada en PERSEIDES, el objetivo principal de PERSEO (Plataforma IntEligente paRa la geStión de rEcursos basados en iOt) es el desarrollo experimental de una plataforma inteligente y segura para la optimización de recursos, mediante tecnologías innovadoras (IA, IoT, Blockchain, HMI) y focalizando para la explotación y validación de resultados en pilotos reales del sector agrícola. Este ambicioso objetivo cuenta con los objetivos específicos que se describen a continuación:</p>
+  <div class="perseo-objectives-grid" aria-label="Objetivos específicos PERSEO">
+    <article class="perseo-objective-card">
+      <div class="perseo-objective-num">1</div>
+      <p class="perseo-objective-title">Digitalización segura de los elementos y procesos agrarios mediante IoT</p>
+      <p class="perseo-objective-desc">Desarrollo de prototipos IoT serán la base de la recogida de datos en tiempo real y que interaccionarán con el equipamiento agrícola. El proceso de digitalización agrícola requiere desarrollos en prototipos hardware IoT que mejoren los sistemas de recogida de datos y comunicación con el equipamiento y sistemas agrícolas. También es clave adaptar la funcionalidad de la plataforma de datos para integrar fuentes abiertas de datos externas como imágenes de satelitales y/o drones, información y predicción meteorológica (Copernico), además de recursos científicos de procesamiento de datos (AI) como los disponibles por el proyecto europeo AI4EU.</p>
+    </article>
+    <article class="perseo-objective-card">
+      <div class="perseo-objective-num">2</div>
+      <p class="perseo-objective-title">Eficiencia de recursos a través de algoritmos IA y servicios inteligentes</p>
+      <p class="perseo-objective-desc">Para controlar y optimizar la sostenibilidad del proceso agrícola, será necesaria la obtención de conocimiento, que será generado a través de todos los datos recabados gracias al desarrollo experimental de IA. Para conseguir esto se desarrollarán y entrenará algoritmos de aprendizaje para predecir tendencias, patrones con los cuales se consiga una gestión cada vez más eficiente de los recursos naturales. El uso de fuentes de datos externas (meteorológicas, imágenes satelitales/drones) será de gran utilizad para enriquecer los algoritmos de IA, y generar los diferentes módulos que habilitarán los servicios inteligentes que pondrán a disposición del usuario final recomendaciones sobre las mejores decisiones con relación a la gestión optima de los recursos en las explotaciones agrícolas.</p>
+    </article>
+    <article class="perseo-objective-card">
+      <div class="perseo-objective-num">3</div>
+      <p class="perseo-objective-title">Digitalización total. Integración de los procesos manuales de los trabajadores del campo mediante interfaces Hombre-Máquina (HMI)</p>
+      <p class="perseo-objective-desc">Muchos de los datos que se introducen en el sistema forman parte de actuaciones no automatizadas dentro del proceso agrario, que son llevados a cabo por parte del personal que trabaja y gestiona los cultivos. Por lo tanto, las diferentes actividades que se realicen por parte de los trabajadores tendrán que poder registrarse también dentro de la solución PERSEO para dar una visión global y completa del proceso de gestión de la explotación agrícola. Esto podrá realizarse a través de la introducción de estos datos usando dispositivos digitales como pueden ser teléfonos móviles o tabletas por parte de los trabajadores. Para ellos, se implementarán nuevas interfaces HMI intuitivos a usuarios agrícolas para facilitar las tareas de inserción de datos.</p>
+    </article>
+    <article class="perseo-objective-card">
+      <div class="perseo-objective-num">4</div>
+      <p class="perseo-objective-title">Validación de la solución en pruebas pre-comerciales (Puesta a punto técnica)</p>
+      <p class="perseo-objective-desc">Desde el inicio, PERSEO involucrará a las partes interesadas clave para validar la solución integrada en un entorno operativo. El objetivo es garantizar que la solución integrada sea completamente funcional en entornos operativos y entornos complejos del mundo real. Esto se llevará a cabo para permitir que la diversa gama de IoT se integre de manera confiable en un ecosistema de IoT interoperable. Finalmente, la validación eliminará cualquier irregularidad que pueda ocurrir durante este proceso de ajuste técnico.</p>
+    </article>
+    <article class="perseo-objective-card">
+      <div class="perseo-objective-num">5</div>
+      <p class="perseo-objective-title">Rápida Producción (Puesta a punto operacional)</p>
+      <p class="perseo-objective-desc">El objetivo principal es brindar la máxima utilidad a las grandes empresas agrícolas, cooperativas agrícolas y explotaciones agrícolas de al menos 100h de tierra, fortalecer su posición en el mercado y los procesos cotidianos; y facilitar la cohesión de la gestión agrícola. Por lo tanto, utilizando la metodología iterativa en espiral, el modelo de negocio buscará la validación en entornos operativos, con clientes referentes en el sector (los primeros en adoptar y las partes interesadas potenciales).</p>
+    </article>
+    <article class="perseo-objective-card">
+      <div class="perseo-objective-num">6</div>
+      <p class="perseo-objective-title">Refinamiento para la comercialización (Puesta a punto comercial)</p>
+      <p class="perseo-objective-desc">Aprovechando el impulso de los objetivos anteriores, se diseñará una estrategia de despliegue en el mercado de PERSEO. Este lanzamiento en el mercado se basará en las experiencias y los claros impactos económicos obtenidos a lo largo de la validación del mercado precomercial y el proceso de ajuste. También se adaptará a las características y circunstancias específicas del mercado de cada zona y país. El posicionamiento y la diferenciación del producto son partes clave de la estrategia de marketing de PERSEO y se actualizarán continuamente (según sea necesario) para mantener nuestro producto por delante de la competencia.</p>
+    </article>
+  </div>
+</section>
+<section class="perseo-stripes-band" aria-label="Franjas PERSEO"></section></article>
+    <footer class="main-footer" style="margin-top:0 !important;">
+      <div class="main-footer-inner">
+        <div>
+          <h2 class="footer-title">Plataforma intEligente<br>paRa la geStión de rEcursos<br>basados en iOt</h2>
+          <ul class="footer-items">
+            <li><a href="../contexto/index.html">Sobre Perseo</a></li>
+            <li><a href="./index.html">Objetivos</a></li>
+            <li><a href="../index.html#recursos-promocionales">Recursos promocionales</a></li>
+          </ul>
+        </div>
+        <div class="footer-brand">
+          <a class="footer-umu-link" href="https://www.um.es/web/informatica/" target="_blank" rel="noopener noreferrer">
+            <img class="footer-umu-logo" src="../../../pages/01.ants-home/assets/Inform tica-RGB-Convivencia_A-BLTR.png" alt="Facultad de Informática - Universidad de Murcia">
+          </a>
+          <div class="footer-brand-lower">
+            <a class="footer-ants-link" href="../../../index.html" aria-label="Home ants" target="_blank" rel="noopener noreferrer">
+              <img class="footer-ants-logo" src="../../../pages/01.ants-home/assets/ants_footer.png" alt="ANTS">
+            </a>
+            <div class="footer-social">
+              <a href="https://www.linkedin.com/company/ants-research-group/" target="_blank" rel="noopener noreferrer">Follow ants on <span class="footer-social-strong">LinkedIn ↗</span></a>
+              <a href="https://x.com/ants_fium" target="_blank" rel="noopener noreferrer">Follow ants on <span class="footer-social-strong">X ↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-top">
+          <a class="footer-top-link" href="#top" aria-label="Back to top">↑</a>
+        </div>
+      </div>
+    </footer>
+    <section style="width:100vw; height:115px; margin:0 calc(50% - 50vw); background:#ffffff !important; display:flex; align-items:center; justify-content:center; padding:0 1.5rem; box-sizing:border-box;">
+      <img src="../../../pages/16.vinci/assets/logosoficialesvinci.svg" alt="Logos oficiales VINCI" style="max-width:765px; width:85%; height:auto; display:block; margin:0 auto;">
+    </section>
+  </div>
+
+  <script src="../../../assets/js/mobile-project-menu.js?v=20260408-6"></script>
+
+  <script>
+    (function () {
+      const menuToggle = document.getElementById('perseoMobileToggle');
+      const menuNav = document.getElementById('perseoMainNav');
+      const menuIcon = menuToggle ? menuToggle.querySelector('.perseo-mobile-toggle-icon') : null;
+      if (!menuToggle || !menuNav) return;
+
+      const closeMenu = () => {
+        document.body.classList.remove('perseo-menu-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Abrir menu');
+        if (menuIcon) menuIcon.innerHTML = '&#9776;';
+      };
+
+      menuToggle.addEventListener('click', () => {
+        const isOpen = document.body.classList.toggle('perseo-menu-open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.setAttribute('aria-label', isOpen ? 'Cerrar menu' : 'Abrir menu');
+        if (menuIcon) menuIcon.innerHTML = isOpen ? '&#10005;' : '&#9776;';
+      });
+
+      menuNav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', closeMenu);
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 860) closeMenu();
+      });
+    })();
+  </script>
+
+  <script>
+    const ROUTE_MAP = {
+  "/en/ants-home": "en/ants-home/index.html",
+  "/en/ants-home/": "en/ants-home/index.html",
+  "/en/demeter-5-0": "en/demeter-5-0/index.html",
+  "/en/demeter-5-0/": "en/demeter-5-0/index.html",
+  "/en/gaialab": "en/gaialab/index.html",
+  "/en/gaialab/": "en/gaialab/index.html",
+  "/en/news": "en/news/index.html",
+  "/en/news/": "en/news/index.html",
+  "/en/news/nemesis": "en/news/nemesis/index.html",
+  "/en/news/nemesis/": "en/news/nemesis/index.html",
+  "/en/news/osiris-en-mobisec": "en/news/osiris-en-mobisec/index.html",
+  "/en/news/osiris-en-mobisec/": "en/news/osiris-en-mobisec/index.html",
+  "/en/news/osiris-nota-de-prensa": "en/news/osiris-nota-de-prensa/index.html",
+  "/en/news/osiris-nota-de-prensa/": "en/news/osiris-nota-de-prensa/index.html",
+  "/en/perseo": "en/es/perseo/index.html",
+  "/en/perseo/": "en/es/perseo/index.html",
+  "/en/es/perseo": "en/es/perseo/index.html",
+  "/en/es/perseo/": "en/es/perseo/index.html",
+  "/en/reminder": "en/reminder/index.html",
+  "/en/reminder/": "en/reminder/index.html",
+  "/en/reminder/ethicalissues": "en/reminder/ethicalissues/index.html",
+  "/en/reminder/ethicalissues/": "en/reminder/ethicalissues/index.html",
+  "/en/reminder/interdisciplinaryresearch": "en/reminder/interdisciplinaryresearch/index.html",
+  "/en/reminder/interdisciplinaryresearch/": "en/reminder/interdisciplinaryresearch/index.html",
+  "/en/reminder/partners": "en/reminder/partners/index.html",
+  "/en/reminder/partners/": "en/reminder/partners/index.html",
+  "/en/reminder/view-project-deliverables": "en/reminder/view-project-deliverables/index.html",
+  "/en/reminder/view-project-deliverables/": "en/reminder/view-project-deliverables/index.html",
+  "/en/research-lines": "en/research-lines/index.html",
+  "/en/research-lines/": "en/research-lines/index.html",
+  "/en/research-projects": "en/research-projects/index.html",
+  "/en/research-projects/": "en/research-projects/index.html",
+  "/en/vinci": "en/vinci/index.html",
+  "/en/vinci/": "en/vinci/index.html",
+  "/es/eden": "es/eden/index.html",
+  "/es/eden/": "es/eden/index.html",
+  "/es/geminis": "es/geminis/index.html",
+  "/es/geminis/": "es/geminis/index.html",
+  "/es/news": "es/news/feria-cientifica-santomera/index.html",
+  "/es/news/": "es/news/feria-cientifica-santomera/index.html",
+  "/es/news/feria-cientifica-santomera": "es/news/feria-cientifica-santomera/index.html",
+  "/es/news/feria-cientifica-santomera/": "es/news/feria-cientifica-santomera/index.html",
+  "/es/news/osiris-big-data-master": "es/news/osiris-big-data-master/index.html",
+  "/es/news/osiris-big-data-master/": "es/news/osiris-big-data-master/index.html",
+  "/es/news/osiris-unibit": "es/news/osiris-unibit/index.html",
+  "/es/news/osiris-unibit/": "es/news/osiris-unibit/index.html",
+  "/es/orciber-5g": "es/orciber-5g/index.html",
+  "/es/orciber-5g/": "es/orciber-5g/index.html",
+  "/es/osiris": "es/osiris/index.html",
+  "/es/osiris/": "es/osiris/index.html",
+  "/es/osiris/del-campo-a-la-mesa": "es/osiris/del-campo-a-la-mesa/index.html",
+  "/es/osiris/del-campo-a-la-mesa/": "es/osiris/del-campo-a-la-mesa/index.html",
+  "/es/osiris/impacto-y-beneficios": "es/osiris/impacto-y-beneficios/index.html",
+  "/es/osiris/impacto-y-beneficios/": "es/osiris/impacto-y-beneficios/index.html",
+  "/es/osiris/tecnologias-y-metodologia": "es/osiris/tecnologias-y-metodologia/index.html",
+  "/es/osiris/tecnologias-y-metodologia/": "es/osiris/tecnologias-y-metodologia/index.html",
+  "/es/perseo": "es/perseo/index.html",
+  "/es/perseo/": "es/perseo/index.html",
+  "/es/perseo/contexto": "es/perseo/contexto/index.html",
+  "/es/perseo/contexto/": "es/perseo/contexto/index.html",
+  "/es/perseo/objetivos": "es/perseo/objetivos/index.html",
+  "/es/perseo/objetivos/": "es/perseo/objetivos/index.html",
+  "/es/perseo": "es/perseo/index.html",
+  "/es/perseo/": "es/perseo/index.html",
+  "en/ants-home": "en/ants-home/index.html",
+  "en/ants-home/": "en/ants-home/index.html",
+  "en/demeter-5-0": "en/demeter-5-0/index.html",
+  "en/demeter-5-0/": "en/demeter-5-0/index.html",
+  "en/gaialab": "en/gaialab/index.html",
+  "en/gaialab/": "en/gaialab/index.html",
+  "en/news": "en/news/index.html",
+  "en/news/": "en/news/index.html",
+  "en/news/nemesis": "en/news/nemesis/index.html",
+  "en/news/nemesis/": "en/news/nemesis/index.html",
+  "en/news/osiris-en-mobisec": "en/news/osiris-en-mobisec/index.html",
+  "en/news/osiris-en-mobisec/": "en/news/osiris-en-mobisec/index.html",
+  "en/news/osiris-nota-de-prensa": "en/news/osiris-nota-de-prensa/index.html",
+  "en/news/osiris-nota-de-prensa/": "en/news/osiris-nota-de-prensa/index.html",
+  "en/perseo": "en/es/perseo/index.html",
+  "en/perseo/": "en/es/perseo/index.html",
+  "en/es/perseo": "en/es/perseo/index.html",
+  "en/es/perseo/": "en/es/perseo/index.html",
+  "en/reminder": "en/reminder/index.html",
+  "en/reminder/": "en/reminder/index.html",
+  "en/reminder/ethicalissues": "en/reminder/ethicalissues/index.html",
+  "en/reminder/ethicalissues/": "en/reminder/ethicalissues/index.html",
+  "en/reminder/interdisciplinaryresearch": "en/reminder/interdisciplinaryresearch/index.html",
+  "en/reminder/interdisciplinaryresearch/": "en/reminder/interdisciplinaryresearch/index.html",
+  "en/reminder/partners": "en/reminder/partners/index.html",
+  "en/reminder/partners/": "en/reminder/partners/index.html",
+  "en/reminder/view-project-deliverables": "en/reminder/view-project-deliverables/index.html",
+  "en/reminder/view-project-deliverables/": "en/reminder/view-project-deliverables/index.html",
+  "en/research-lines": "en/research-lines/index.html",
+  "en/research-lines/": "en/research-lines/index.html",
+  "en/research-projects": "en/research-projects/index.html",
+  "en/research-projects/": "en/research-projects/index.html",
+  "en/vinci": "en/vinci/index.html",
+  "en/vinci/": "en/vinci/index.html",
+  "es/eden": "es/eden/index.html",
+  "es/eden/": "es/eden/index.html",
+  "es/geminis": "es/geminis/index.html",
+  "es/geminis/": "es/geminis/index.html",
+  "es/news": "es/news/feria-cientifica-santomera/index.html",
+  "es/news/": "es/news/feria-cientifica-santomera/index.html",
+  "es/news/feria-cientifica-santomera": "es/news/feria-cientifica-santomera/index.html",
+  "es/news/feria-cientifica-santomera/": "es/news/feria-cientifica-santomera/index.html",
+  "es/news/osiris-big-data-master": "es/news/osiris-big-data-master/index.html",
+  "es/news/osiris-big-data-master/": "es/news/osiris-big-data-master/index.html",
+  "es/news/osiris-unibit": "es/news/osiris-unibit/index.html",
+  "es/news/osiris-unibit/": "es/news/osiris-unibit/index.html",
+  "es/orciber-5g": "es/orciber-5g/index.html",
+  "es/orciber-5g/": "es/orciber-5g/index.html",
+  "es/osiris": "es/osiris/index.html",
+  "es/osiris/": "es/osiris/index.html",
+  "es/osiris/del-campo-a-la-mesa": "es/osiris/del-campo-a-la-mesa/index.html",
+  "es/osiris/del-campo-a-la-mesa/": "es/osiris/del-campo-a-la-mesa/index.html",
+  "es/osiris/impacto-y-beneficios": "es/osiris/impacto-y-beneficios/index.html",
+  "es/osiris/impacto-y-beneficios/": "es/osiris/impacto-y-beneficios/index.html",
+  "es/osiris/tecnologias-y-metodologia": "es/osiris/tecnologias-y-metodologia/index.html",
+  "es/osiris/tecnologias-y-metodologia/": "es/osiris/tecnologias-y-metodologia/index.html",
+  "es/perseo": "es/perseo/index.html",
+  "es/perseo/": "es/perseo/index.html",
+  "es/perseo/contexto": "es/perseo/contexto/index.html",
+  "es/perseo/contexto/": "es/perseo/contexto/index.html",
+  "es/perseo/objetivos": "es/perseo/objetivos/index.html",
+  "es/perseo/objetivos/": "es/perseo/objetivos/index.html",
+  "es/perseo": "es/perseo/index.html",
+  "es/perseo/": "es/perseo/index.html"
+};
+    const CURRENT_LANG = 'es';
+    const CURRENT_ROUTE = '/es/perseo/objetivos/';
+    const ROOT_PREFIX = '../../../';
+    const ASSET_BASE = '../../../pages/08.perseo/assets';
+
+    const hasProtocol = (v) => /^(https?:|mailto:|tel:|javascript:)/i.test(v);
+    const normalizeAntsRoute = (value) => {
+      try {
+        const u = new URL(value);
+        const host = (u.hostname || '').toLowerCase();
+        if (u.protocol !== 'http:' && u.protocol !== 'https:') return null;
+        if (host !== 'ants.inf.um.es' && host !== 'www.ants.inf.um.es') return null;
+        return u.pathname || '/';
+      } catch {
+        return null;
+      }
+    };
+    const swapLang = (route) => {
+      const parts = route.replace(/^\/+/, '').split('/').filter(Boolean);
+      if (parts.length < 2) return null;
+      parts[0] = parts[0] === 'en' ? 'es' : (parts[0] === 'es' ? 'en' : null);
+      if (!parts[0]) return null;
+      return '/' + parts.join('/');
+    };
+    const isMedia = (value) => /\.(png|jpe?g|gif|webp|svg|pdf|mp4|webm|mp3|ogg|txt|csv|css|js|ico)$/i.test(value);
+    const mediaBaseName = (value) => {
+      const clean = value.split('?')[0].split('#')[0];
+      const parts = clean.split('/');
+      return parts[parts.length - 1] || clean;
+    };
+    const localizeMedia = (value) => {
+      const rawBase = mediaBaseName(value);
+      const base = (() => {
+        try {
+          return decodeURIComponent(rawBase);
+        } catch {
+          return rawBase;
+        }
+      })();
+      return (ASSET_BASE + '/' + base).replace(/\\/g, '/');
+    };
+
+    const normalizeRoute = (value) => {
+      const route = value.replace(/^\/+/, '').replace(/\/+$/, '');
+      if (!route) return CURRENT_LANG + '/';
+      const parts = route.split('/').filter(Boolean);
+      if (parts[0] === 'en' || parts[0] === 'es') return parts.join('/');
+      return CURRENT_LANG + '/' + parts.join('/');
+    };
+
+    const resolveRoute = (rawHref) => {
+      if (!rawHref || rawHref.startsWith('#')) return null;
+      const [href, hash] = rawHref.split('#', 2);
+      if (!href) return null;
+      const normalizedHref = normalizeAntsRoute(href) || href;
+      if (!normalizedHref.startsWith('/')) {
+        if (href.startsWith('http') || hasProtocol(href)) return null;
+        return null;
+      }
+
+      const candidates = [];
+      const route = normalizeRoute(normalizedHref);
+      candidates.push(route);
+      candidates.push(route + '/');
+      candidates.push(route.replace(/\/$/, ''));
+
+      for (const c of candidates) {
+        if (ROUTE_MAP[c]) return { path: ROUTE_MAP[c], hash: hash ? '#' + hash : '' };
+      }
+      const altRoute = swapLang(route);
+      if (altRoute) {
+        const altCandidates = [altRoute, altRoute + '/', altRoute.replace(/\/$/, '')];
+        for (const c of altCandidates) {
+          if (ROUTE_MAP[c]) return { path: ROUTE_MAP[c], hash: hash ? '#' + hash : '' };
+        }
+      }
+      return null;
+    };
+
+    const resolveLocal = (base, href) => {
+      if (!href || href.startsWith('#')) return href;
+      const [clean, hash] = href.split('#', 2);
+      if (!clean) return href;
+
+      const resolved = resolveRoute(clean);
+      if (resolved) {
+        return (ROOT_PREFIX + resolved.path).replace(/\\/g, '/') + resolved.hash;
+      }
+
+      const antsHref = normalizeAntsRoute(clean);
+      if (antsHref && isMedia(antsHref)) {
+        return localizeMedia(antsHref) + (hash ? '#' + hash : '');
+      }
+
+      if (hasProtocol(clean) || /^(https?:)?\//.test(clean)) return href;
+      if (clean.startsWith('./') || clean.startsWith('../')) return href;
+      if (isMedia(clean)) {
+        return localizeMedia(clean) + (hash ? '#' + hash : '');
+      }
+      return clean;
+    };
+
+    document.querySelectorAll('a[href]').forEach((a) => {
+      const href = a.getAttribute('href');
+      const fixed = resolveLocal('', href);
+      if (fixed && fixed !== href) a.setAttribute('href', fixed);
+    });
+
+    const ASSET_MARK = 'pages/';
+    const ASSET_SEGMENT = ASSET_BASE.includes(ASSET_MARK)
+      ? (() => {
+          const i = ASSET_BASE.indexOf(ASSET_MARK);
+          return {
+            root: ASSET_BASE.slice(0, i) + ASSET_MARK,
+            segment: ASSET_BASE.slice(i + ASSET_MARK.length),
+          };
+        })()
+      : null;
+
+    const collectAssetCandidates = () => {
+      const out = [];
+      if (!ASSET_SEGMENT) return out;
+      let current = ASSET_SEGMENT.segment;
+      out.push(current);
+      while (current.includes('/')) {
+        current = current.slice(0, current.lastIndexOf('/'));
+        if (current) out.push(current);
+      }
+      if (!out.includes('01.ants-home/assets')) out.push('01.ants-home/assets');
+      return [...new Set(out)];
+    };
+
+    const assetCandidatePrefixes = collectAssetCandidates();
+
+    const setImageSrcWithFallback = (img, rawSrc) => {
+      if (!ASSET_SEGMENT || !rawSrc) return;
+      const fileName = (() => {
+        const rawBase = mediaBaseName(rawSrc);
+        try {
+          return decodeURIComponent(rawBase);
+        } catch {
+          return rawBase;
+        }
+      })();
+      const candidates = assetCandidatePrefixes.map((segment) =>
+        (ASSET_SEGMENT.root + segment + '/' + fileName).replace(/\\/g, '/')
+      );
+
+      let index = 0;
+      const onError = () => {
+        if (index >= candidates.length) return;
+        img.src = candidates[index];
+        index += 1;
+      };
+
+      img.addEventListener('error', onError);
+      onError();
+    };
+
+    document.querySelectorAll('img[src]').forEach((img) => {
+      const src = img.getAttribute('src');
+      if (!src || hasProtocol(src) || src.startsWith('data:')) return;
+      if (/^\//.test(src)) {
+        if (src.startsWith('/pages/')) return;
+        if (isMedia(src)) {
+          setImageSrcWithFallback(img, src);
+          return;
+        }
+        img.setAttribute('src', (ROOT_PREFIX + src.replace(/^\//, '')).replace(/\\/g, '/'));
+        return;
+      }
+      if (!src.includes('../') && !src.includes('./') && isMedia(src)) {
+        setImageSrcWithFallback(img, src);
+      }
+    });
+
+    document.querySelectorAll('[style]').forEach((el) => {
+      const style = el.getAttribute('style');
+      if (!style || !style.includes('url(')) return;
+
+      const nextStyle = style.replace(/url\(\s*([^)]*?)\s*\)/g, (m, raw) => {
+        const trimmed = raw.trim();
+        const quote = trimmed[0] === '"' || trimmed[0] === "'" ? trimmed[0] : '';
+        const rawPath = quote ? trimmed.slice(1, -1) : trimmed;
+        if (!rawPath || rawPath.startsWith('data:') || hasProtocol(rawPath)) return m;
+        if (!isMedia(rawPath)) return m;
+        return 'url(' + quote + localizeMedia(rawPath) + quote + ')';
+      });
+
+      if (nextStyle !== style) {
+        el.setAttribute('style', nextStyle);
+      }
+    });
+  </script>
+</body>
+</html>

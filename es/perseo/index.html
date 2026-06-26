@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../../favicons-proyectos/faviconperseo.ico" />
+  <link rel="apple-touch-icon" href="../../favicons-proyectos/faviconperseomobile.png" />
+  <title>PERSEO</title>
+  <link rel="stylesheet" href="../../css-site/site.css?v=20260408-6" />
+  <style>
+    :root { --nav-height: 64px; }
+    body.osiris-theme .osiris-project-topbar,
+    body.osiris-theme .main-footer {
+      background: linear-gradient(to bottom right, #ff8000 0%, #377a5b 50%, #cb5d39 100%) !important;
+      background-color: #ff8000 !important;
+    }
+    body.osiris-theme .osiris-project-logo img {
+      height: 42px !important;
+      width: auto;
+    }
+    body.osiris-theme .osiris-hero-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: -37px;
+    }
+    body.osiris-theme .osiris-hero-logo img.perseo-hero-mark {
+      width: clamp(230px, 28vw, 490px) !important;
+      height: auto !important;
+      margin-left: 22px;
+      display: block;
+    }
+    body.osiris-theme .osiris-hero-logo img.perseo-hero-stripes {
+      height: auto !important;
+      width: clamp(391px, 47.6vw, 833px) !important;
+      max-width: none !important;
+      margin-top: 1rem;
+      display: block;
+    }
+    body.osiris-theme .osiris-hero-inner {
+      gap: 88px;
+    }
+    body.osiris-theme .osiris-hero-copy {
+      max-width: 360px;
+      margin-left: 0;
+    }
+    body.osiris-theme .osiris-hero-copy p {
+      color: #377a5b !important;
+    }
+    body.osiris-theme .osiris-hero-more {
+      color: #ff8000 !important;
+      border-color: #ff8000 !important;
+      margin-top: 0.7rem;
+      white-space: nowrap;
+    }
+    body.osiris-theme .osiris-hero-more:hover {
+      background: #ff8000 !important;
+      color: #f5f1e6 !important;
+      border-color: #ff8000 !important;
+    }
+    .perseo-mobile-toggle {
+      display: none;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      width: 38px;
+      height: 38px;
+      padding: 0;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+    }
+    .perseo-mobile-toggle-icon {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.35rem;
+      line-height: 1;
+      font-weight: 700;
+      display: inline-block;
+      transform: translateY(-1px);
+    }
+    .perseo-funding-module {
+      width: 100vw;
+      min-height: 310px;
+      margin: 0 calc(50% - 50vw);
+      background: #cb5d39 !important;
+      color: #f5f1e6 !important;
+      box-sizing: border-box;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+    .perseo-funding-module:has(.perseo-coord details[open]) {
+      align-items: flex-start;
+      padding: 2rem 0 2.4rem;
+    }
+    body.osiris-theme article.content.project-content > section.perseo-funding-module {
+      background: #cb5d39 !important;
+      background-color: #cb5d39 !important;
+      background-image: none !important;
+      color: #f5f1e6 !important;
+    }
+    .perseo-funding-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .perseo-funding-row {
+      display: grid;
+      width: 1000px;
+      max-width: 100%;
+      grid-template-columns: 40% 60%;
+      gap: 0.85rem;
+      margin-bottom: 0.85rem;
+      align-items: stretch;
+    }
+    .perseo-pill-label,
+    .perseo-pill-value {
+      border-radius: 999px;
+      min-height: 54px;
+      padding: 0.72rem 1.2rem;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .perseo-pill-label {
+      border: 2px solid #f5f1e6;
+      background: #cb5d39;
+      color: #f5f1e6 !important;
+      font-size: 0.8rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    .perseo-pill-value {
+      background: #f5f1e6;
+      color: #cb5d39 !important;
+      font-size: 0.95rem;
+      border: none !important;
+      box-shadow: none !important;
+      outline: none !important;
+    }
+    body.osiris-theme .perseo-funding-module .perseo-pill-value {
+      background: #f5f1e6 !important;
+      border: 0 !important;
+      box-shadow: none !important;
+    }
+    .perseo-coord {
+      margin-top: 0.2rem;
+      display: grid;
+      width: 1000px;
+      max-width: 100%;
+      grid-template-columns: 40% 60%;
+      gap: 0.85rem;
+      align-items: stretch;
+    }
+    .perseo-coord details {
+      margin: 0;
+      width: 100%;
+    }
+    .perseo-coord summary {
+      list-style: none;
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      width: 100%;
+    }
+    .perseo-coord summary::-webkit-details-marker {
+      display: none;
+    }
+    .perseo-coord .perseo-pill-value {
+      position: relative;
+      padding-right: 2.1rem;
+    }
+    .perseo-coord .perseo-pill-value::after {
+      content: "▾";
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1rem;
+      color: #cb5d39;
+    }
+    .perseo-coord details[open] .perseo-pill-value::after {
+      content: "▴";
+    }
+    .perseo-coord-content {
+      margin-top: 0.8rem;
+      margin-bottom: 1.1rem;
+      border: 1.5px solid #f5f1e6;
+      border-radius: 14px;
+      padding: 1rem 1.1rem;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 0.92rem;
+      line-height: 1.62;
+      color: #f5f1e6 !important;
+      background: rgba(0, 0, 0, 0.08);
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      display: none;
+      width: 100%;
+      grid-column: 1 / -1;
+    }
+    .perseo-coord:has(details[open]) .perseo-coord-content {
+      display: block;
+      margin-top: 1.15rem;
+      margin-bottom: 1.4rem;
+    }
+    .perseo-coord-content p {
+      margin: 0 0 0.9rem 0;
+      text-align: left !important;
+      color: #f5f1e6 !important;
+    }
+    .perseo-coord-content p:last-child {
+      margin-bottom: 0;
+    }
+    .perseo-coord-photo {
+      float: left;
+      width: clamp(140px, 18vw, 230px);
+      height: auto;
+      border-radius: 10px;
+      margin: 0 1rem 0.6rem 0;
+      border: 2px solid #f5f1e6;
+      object-fit: cover;
+    }
+    .perseo-dual-module {
+      width: 100vw;
+      height: 570px;
+      margin: 0 calc(50% - 50vw);
+      background: linear-gradient(to bottom right, #ff8000 0%, #377a5b 100%) !important;
+      color: #f5f1e6 !important;
+      box-sizing: border-box;
+      display: flex;
+      align-items: stretch;
+    }
+    .perseo-stripes-band {
+      width: 100vw;
+      margin: 0 calc(50% - 50vw);
+      height: 120px;
+      padding: 0;
+      box-sizing: border-box;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          to bottom,
+          #ff8000 0%,
+          #ff8000 25%,
+          #f5f1e6 25%,
+          #f5f1e6 50%,
+          #377a5b 50%,
+          #377a5b 75%,
+          #cb5d39 75%,
+          #cb5d39 100%
+        ) !important;
+      background-color: #ff8000 !important;
+    }
+    .perseo-dual-inner {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.2rem;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .perseo-dual-card {
+      max-width: 450px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.95rem;
+    }
+    .perseo-dual-card h2 {
+      margin: 0;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.5rem, 3.2vw, 2.1rem);
+      line-height: 1.05;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #f5f1e6 !important;
+      text-align: left;
+    }
+    .perseo-dual-card p {
+      margin: 0;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 1rem;
+      line-height: 1.62;
+      color: #f5f1e6 !important;
+      text-align: left !important;
+    }
+    .perseo-dual-card--about {
+      align-self: flex-start;
+      margin-top: 82px;
+      margin-right: auto;
+      text-align: left;
+    }
+    .perseo-dual-card--goals {
+      align-self: flex-start;
+      margin-top: 220px;
+      margin-left: auto;
+      text-align: right;
+    }
+    .perseo-dual-card--goals h2,
+    .perseo-dual-card--goals p {
+      text-align: right !important;
+    }
+    .perseo-dual-btn {
+      margin-top: 0.2rem;
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      border: 1.5px solid #f5f1e6;
+      border-radius: 999px;
+      padding: 0.62rem 1.08rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      text-decoration: none !important;
+      color: #f5f1e6 !important;
+      background: transparent;
+      white-space: nowrap;
+    }
+    .perseo-dual-card--goals .perseo-dual-btn {
+      align-self: flex-end;
+    }
+    .perseo-dual-card--about .perseo-dual-btn:hover {
+      background: #ff8000 !important;
+      background-color: #ff8000 !important;
+      background-image: none !important;
+      box-shadow: inset 0 0 0 999px #ff8000 !important;
+      color: #f5f1e6 !important;
+      -webkit-text-fill-color: #f5f1e6 !important;
+      border-color: #ff8000 !important;
+    }
+    .perseo-dual-card--goals .perseo-dual-btn:hover {
+      background: #377a5b !important;
+      background-color: #377a5b !important;
+      background-image: none !important;
+      box-shadow: inset 0 0 0 999px #377a5b !important;
+      color: #f5f1e6 !important;
+      -webkit-text-fill-color: #f5f1e6 !important;
+      border-color: #377a5b !important;
+    }
+    .perseo-promos {
+      width: 100vw;
+      margin: 0 calc(50% - 50vw);
+      background: #f5f1e6 !important;
+      padding: 2.6rem 0 2.9rem;
+      box-sizing: border-box;
+    }
+    .perseo-promos-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      box-sizing: border-box;
+    }
+    .perseo-promos-title {
+      margin: 0 0 1.25rem 0;
+      text-align: center !important;
+      color: #cb5d39 !important;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .perseo-promos-slider {
+      position: relative;
+      overflow: hidden;
+      border: none !important;
+      border-radius: 0 !important;
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+    .perseo-promos-track {
+      display: flex;
+      width: 100%;
+      transition: transform 420ms ease;
+      will-change: transform;
+    }
+    .perseo-promo-slide {
+      min-width: 100%;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .perseo-promo-slide img,
+    .perseo-promo-slide iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      background: transparent;
+    }
+    .perseo-promo-slide img {
+      width: 100% !important;
+      height: 100% !important;
+      max-width: none !important;
+      object-fit: contain !important;
+      object-position: center center !important;
+    }
+    .perseo-promo-slide iframe {
+      object-fit: cover;
+    }
+    #perseoVideoHost {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #perseoVideoHost iframe,
+    #perseoVideoHost .perseo-video-fallback {
+      width: min(100%, 747px) !important;
+      max-width: 747px !important;
+      aspect-ratio: 16 / 9;
+      height: auto !important;
+      display: block;
+      margin: 0 auto;
+    }
+    .perseo-video-fallback {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: #000;
+    }
+    .perseo-video-fallback img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .perseo-video-fallback .play {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      background: rgba(0, 0, 0, 0.32);
+      text-decoration: none;
+    }
+    .perseo-promos-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: 2px solid #cb5d39;
+      background: rgba(245, 241, 230, 0.92);
+      color: #cb5d39 !important;
+      font-size: 1.35rem;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 2;
+    }
+    .perseo-promos-nav:hover {
+      background: #cb5d39;
+      color: #f5f1e6 !important;
+      border-color: #cb5d39;
+    }
+    .perseo-promos-nav.prev { left: 0.85rem; }
+    .perseo-promos-nav.next { right: 0.85rem; }
+    #sobre-perseo-objetivos,
+    #recursos-promocionales {
+      scroll-margin-top: calc(var(--nav-height) + 10px);
+    }
+    @media (max-width: 820px) {
+      body.osiris-theme .osiris-project-topbar-inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .perseo-mobile-toggle {
+        display: inline-flex;
+        order: 2;
+        margin-left: auto;
+        margin-right: 0;
+      }
+      body.osiris-theme .osiris-project-logo {
+        order: 1;
+        display: inline-flex;
+        align-items: center;
+        margin-right: auto;
+        margin-left: 0;
+      }
+      body.osiris-theme .osiris-project-logo img {
+        height: 30px !important;
+        width: auto !important;
+        display: block !important;
+      }
+      body.osiris-theme .osiris-ants-logo {
+        display: none !important;
+      }
+      body.osiris-theme .osiris-project-nav {
+        display: none !important;
+        order: 3;
+        width: 100%;
+        margin-top: 0.45rem;
+        padding: 0.55rem 0 0.2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.22);
+      }
+      body.perseo-menu-open.osiris-theme .osiris-project-nav {
+        display: flex !important;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.45rem;
+      }
+      body.perseo-menu-open .perseo-mobile-toggle-icon {
+        font-size: 1.2rem;
+      }
+      body.osiris-theme .osiris-hero-logo {
+        width: 100%;
+        margin-left: 0;
+        align-items: center;
+      }
+      body.osiris-theme .osiris-hero-logo img.perseo-hero-mark {
+        margin-left: 0;
+      }
+      body.osiris-theme .osiris-hero-logo img.perseo-hero-stripes {
+        margin-left: 0;
+      }
+      .perseo-funding-module {
+        display: block;
+        min-height: 0;
+        padding: 1.2rem 0 1.35rem;
+      }
+      .perseo-funding-inner {
+        width: 100%;
+        padding: 0 1rem;
+      }
+      .perseo-funding-row,
+      .perseo-coord {
+        width: 100%;
+      }
+      .perseo-pill-label,
+      .perseo-pill-value {
+        min-height: 50px;
+      }
+      .perseo-funding-row {
+        grid-template-columns: 1fr;
+      }
+      .perseo-coord {
+        grid-template-columns: 1fr;
+      }
+      .perseo-coord details {
+        width: 100%;
+      }
+      .perseo-coord-content {
+        grid-column: 1;
+      }
+      .perseo-dual-module {
+        height: auto;
+        min-height: 570px;
+      }
+      .perseo-dual-inner {
+        grid-template-columns: 1fr;
+        gap: 1.4rem;
+        padding: 2rem 1.5rem 2.3rem;
+      }
+      .perseo-dual-card,
+      .perseo-dual-card--about,
+      .perseo-dual-card--goals {
+        margin: 0;
+        max-width: none;
+      }
+      .perseo-dual-card--goals h2,
+      .perseo-dual-card--goals p {
+        text-align: left !important;
+      }
+      .perseo-dual-card--goals .perseo-dual-btn {
+        align-self: flex-start;
+      }
+      .perseo-promos {
+        padding: 2rem 0 2.2rem;
+      }
+      .perseo-promos-inner {
+        padding: 0 1rem;
+      }
+      .perseo-promos-nav {
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+      }
+    }
+    .project-content {
+      max-width: 1000px;
+      margin: 1rem auto 0;
+      padding: 0 1.5rem;
+      box-sizing: border-box;
+    }
+    .project-content img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body id="top" class="osiris-theme mobile-ready">
+  <div class="page-wrap">
+    <header class="topbar osiris-project-topbar">
+      <div class="osiris-project-topbar-inner">
+        <button class="perseo-mobile-toggle" id="perseoMobileToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="perseoMainNav">
+          <span class="perseo-mobile-toggle-icon" aria-hidden="true">&#9776;</span>
+        </button>
+        <a class="osiris-project-logo" href="./index.html" aria-label="Home PERSEO">
+          <img src="../../pages/08.perseo/assets/iconoperseo.svg" alt="PERSEO">
+        </a>
+        <nav class="osiris-project-nav" id="perseoMainNav">
+          <a href="./contexto/index.html">SOBRE PERSEO</a>
+          <a href="./objetivos/index.html">OBJETIVOS</a>
+          <a href="#recursos-promocionales">RECURSOS PROMOCIONALES</a>
+        </nav>
+        <a class="osiris-ants-logo" href="../../index.html" aria-label="Home ants" target="_blank" rel="noopener noreferrer">
+          <img src="../../pages/01.ants-home/assets/ants_footer.png" alt="ANTS">
+        </a>
+      </div>
+    </header>
+    <article class="content project-content"><section class="osiris-hero">
+  <div class="osiris-hero-inner">
+    <div class="osiris-hero-logo">
+      <img class="perseo-hero-mark" src="../../pages/08.perseo/assets/logoperseo.svg" alt="PERSEO">
+      <img class="perseo-hero-stripes" src="../../pages/08.perseo/assets/PERSEO_web_FRANJAS.svg" alt="Franjas PERSEO">
+    </div>
+    <div class="osiris-hero-copy">
+      <p>
+        Plataforma<br>
+        intEligente<br>
+        paRa la geStión<br>
+        de rEcursos<br>
+        basados en iOt
+      </p>
+      <a class="btn osiris-hero-more" href="#sobre-perseo-objetivos">
+        LEER MÁS ↓
+      </a>
+    </div>
+  </div>
+</section>
+<section class="perseo-funding-module" aria-label="Financiación PERSEO" style="background:#cb5d39 !important; background-color:#cb5d39 !important; background-image:none !important;">
+  <div class="perseo-funding-inner">
+    <div class="perseo-funding-row">
+      <div class="perseo-pill-label">CÓDIGO DEL PROYECTO</div>
+      <div class="perseo-pill-value" style="background:#f5f1e6 !important; color:#cb5d39 !important; border:0 !important; box-shadow:none !important;">PDC2021-121561-I00</div>
+    </div>
+    <div class="perseo-funding-row">
+      <div class="perseo-pill-label">CUANTÍA DEL PROYECTO</div>
+      <div class="perseo-pill-value" style="background:#f5f1e6 !important; color:#cb5d39 !important; border:0 !important; box-shadow:none !important;">135.700,00 €</div>
+    </div>
+    <div class="perseo-coord">
+      <div class="perseo-pill-label">COORDINADOR DEL PROYECTO</div>
+      <details>
+        <summary class="perseo-pill-value" style="background:#f5f1e6 !important; color:#cb5d39 !important; border:0 !important; box-shadow:none !important;">Antonio Skarmeta</summary>
+      </details>
+      <div class="perseo-coord-content">
+        <img class="perseo-coord-photo" src="../../pages/08.perseo/assets/antonio-skarmeta.jpg" alt="Antonio Skarmeta">
+        <p>Obtuvo su Doctorado en Informática por la Universidad de Murcia en el año 1995. Titular de Universidad por la Universidad de Murcia en al año 1997 y Catedrático de Ingeniería Telemática desde el año 2009. Vicedecano de Infraestructuras de la Facultad de Informática entre los años 1991 a 1993 y posteriormente vicedecano de Relaciones Externas del 1997 a 1999. Ha sido director del departamento de Ingeniería de la Información y las Comunicaciones desde 2001 hasta 2007. Coordinador del programa de doctorado en Tecnologías de la Información y Telemáticas Avanzadas desde el 2002 hasta el 2010, con mención de calidad del Ministerio. Desde el año 2008 es coordinador de la Oficina de Proyectos Europeos de la Universidad de Murcia, adscrita al vicerrectorado de Investigación. Desde la misma ha sido responsable del proyecto de Eurociencia concedido a la Universidad de Murcia, así como del proyecto COFUND concedido asociado al proyecto U-IMPACT-COFUND que ha coordinado como investigador principal. Actualmente es además representante nacional del MINECO en el programa H2020 para el pilar de Ciencia Excelente en el área de MARIE SKŁODOWSKA-CURIE, así como representante en el grupo de Recursos Humanos y movilidad de la Comisión Europea.</p>
+        <p>Antonio Skarmeta es responsable de grupo de investigación de Sistemas Inteligentes y Telemática de la Universidad de Murcia, grupo identificado como excelencia por la convocatoria de proyectos regionales, y que es lider en la Universidad de Murcia en cuanto a financiación y producción científica. Además el investigador ha sido invesrtigador responsable de varios proyectos financiados con fondos FEDER relativos a Equipamiento Científico-Técnico y Equipamiento de Redes UNMU05-23-002, UNMU13-2E-2536 PEANA: Plataforma Experimental Avanzada de iNternet de las cosAs: Smart Ambient Campus – IoT as a Service” y UNMU08-2R-008 Constelación de PLEIADES así como ayudas para los Parques Tecnológicos LabConect@2, PCT-430000-2010-005, y Proces@2, PCT-430000-2010-006. Ha dirigido 21 tesis doctorales, participado en 20 proyectos europeos y ha sido coordinador de varios proyectos internacionales entre ellos relativos H2020, Regiones del Conocimiento, TEMPUS y Potencial de Investigación. Tiene 27 contratos de investigación con numerosas empresas regionales, nacionales e internacionales así como es autor de 6 patentes 2 de ellas en explotación y 20 registros de la propiedad.</p>
+        <p>Es autor de más de 120 publicaciones en revistas internacionales, 200 artículos en congresos. Además ha participado en numerosos comités de programas de conferencias en informática, seguridad, redes móviles e Internet de las Cosas como PERCOM, ICC, Globecomm, Adhoc NoW, IEEE SMC, ACM Group, IEEE MSN, TrustBus, etc., siendo chair/cochair de las conferencias WF-IoT 2015, 29016 y 2018, GIoTS 2017, y de los workshops/tracks on IoT de Globecomm e ICC 2015 y 2016, así como de PITSaC on Pervasive Internet of Things for Smart Cities organizado en el marco de la conferencia IEEE AINA, workshop esIoT. Además es editor asociado de la revista IEEE Trans SMC.Part B, Security and Communication Networks, y ha participado como editor en diversos special issue como los de IEE Proc. Communication, IJIPT journal, Computer Networks y International Journal of Web and Grid Services, Mobile Information System, Personal Mobile Communications.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="perseo-stripes-band" aria-label="Franjas PERSEO"></section>
+<section id="sobre-perseo-objetivos" class="perseo-dual-module" aria-label="Sobre PERSEO y Objetivos">
+  <div class="perseo-dual-inner">
+    <div class="perseo-dual-card perseo-dual-card--about">
+      <h2>SOBRE PERSEO</h2>
+      <p>En la región del Mediterráneo, la agricultura de regadío aporta el 75% de la producción final. PERSEO impulsa tecnologías TIC para optimizar el uso del agua, habilitar fuentes no convencionales para fertilización e irrigación y reducir el impacto ambiental mediante técnicas de Agricultura de Precisión.</p>
+      <a class="perseo-dual-btn" href="/es/perseo/contexto">SABER MÁS ↗</a>
+    </div>
+    <div class="perseo-dual-card perseo-dual-card--goals">
+      <h2>OBJETIVOS</h2>
+      <p>El objetivo principal de PERSEO es desarrollar experimentalmente una plataforma inteligente y segura para optimizar recursos con tecnologías innovadoras (IA, IoT, Blockchain y HMI), validada en pilotos reales del sector agrícola para su explotación práctica.</p>
+      <a class="perseo-dual-btn" href="/es/perseo/objetivos">VER OBJETIVOS ↗</a>
+    </div>
+  </div>
+</section>
+<section id="recursos-promocionales" class="perseo-promos" aria-label="Recursos promocionales">
+  <div class="perseo-promos-inner">
+    <h2 class="perseo-promos-title">RECURSOS PROMOCIONALES</h2>
+    <div class="perseo-promos-slider" id="perseoPromosSlider">
+      <button class="perseo-promos-nav prev" id="perseoPromosPrev" aria-label="Anterior">‹</button>
+      <div class="perseo-promos-track" id="perseoPromosTrack">
+        <div class="perseo-promo-slide">
+          <div id="perseoVideoHost" data-embed="https://www.youtube-nocookie.com/embed/-vVYH-H4fqw?rel=0" data-watch="https://youtu.be/-vVYH-H4fqw?si=Vfjq_q8Fh9F88zU1"></div>
+        </div>
+        <div class="perseo-promo-slide">
+          <img src="../../pages/08.perseo/assets/cartel1.png" alt="Cartel promocional 1 de PERSEO">
+        </div>
+        <div class="perseo-promo-slide">
+          <img src="../../pages/08.perseo/assets/cartel2.png" alt="Cartel promocional 2 de PERSEO">
+        </div>
+        <div class="perseo-promo-slide">
+          <img src="../../pages/08.perseo/assets/rollup.png" alt="Rollup promocional de PERSEO">
+        </div>
+      </div>
+      <button class="perseo-promos-nav next" id="perseoPromosNext" aria-label="Siguiente">›</button>
+    </div>
+  </div>
+</section>
+</article>
+<section class="perseo-stripes-band" aria-label="Franjas PERSEO"></section>
+    <footer class="main-footer" style="margin-top:0 !important;">
+      <div class="main-footer-inner">
+        <div>
+          <h2 class="footer-title">Plataforma intEligente<br>paRa la geStión de rEcursos<br>basados en iOt</h2>
+          <ul class="footer-items">
+            <li><a href="./contexto/index.html">Sobre Perseo</a></li>
+            <li><a href="./objetivos/index.html">Objetivos</a></li>
+            <li><a href="#recursos-promocionales">Recursos promocionales</a></li>
+          </ul>
+        </div>
+        <div class="footer-brand">
+          <a class="footer-umu-link" href="https://www.um.es/web/informatica/" target="_blank" rel="noopener noreferrer">
+            <img class="footer-umu-logo" src="../../pages/01.ants-home/assets/Inform tica-RGB-Convivencia_A-BLTR.png" alt="Facultad de Informática - Universidad de Murcia">
+          </a>
+          <div class="footer-brand-lower">
+            <a class="footer-ants-link" href="../../index.html" aria-label="Home ants" target="_blank" rel="noopener noreferrer">
+              <img class="footer-ants-logo" src="../../pages/01.ants-home/assets/ants_footer.png" alt="ANTS">
+            </a>
+            <div class="footer-social">
+              <a href="https://www.linkedin.com/company/ants-research-group/" target="_blank" rel="noopener noreferrer">Follow ants on <span class="footer-social-strong">LinkedIn ↗</span></a>
+              <a href="https://x.com/ants_fium" target="_blank" rel="noopener noreferrer">Follow ants on <span class="footer-social-strong">X ↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-top">
+          <a class="footer-top-link" href="#top" aria-label="Back to top">↑</a>
+        </div>
+      </div>
+    </footer>
+    <section style="width:100vw; height:115px; margin:0 calc(50% - 50vw); background:#ffffff !important; display:flex; align-items:center; justify-content:center; padding:0 1.5rem; box-sizing:border-box;">
+      <img src="../../pages/16.vinci/assets/logosoficialesvinci.svg" alt="Logos oficiales VINCI" style="max-width:765px; width:85%; height:auto; display:block; margin:0 auto;">
+    </section>
+  </div>
+
+  <script src="../../assets/js/mobile-project-menu.js?v=20260408-6"></script>
+
+  <script>
+    (function () {
+      const menuToggle = document.getElementById('perseoMobileToggle');
+      const menuNav = document.getElementById('perseoMainNav');
+      const menuIcon = menuToggle ? menuToggle.querySelector('.perseo-mobile-toggle-icon') : null;
+      if (menuToggle && menuNav) {
+        const closeMenu = () => {
+          document.body.classList.remove('perseo-menu-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.setAttribute('aria-label', 'Abrir menu');
+          if (menuIcon) menuIcon.innerHTML = '&#9776;';
+        };
+        menuToggle.addEventListener('click', () => {
+          const isOpen = document.body.classList.toggle('perseo-menu-open');
+          menuToggle.setAttribute('aria-expanded', String(isOpen));
+          menuToggle.setAttribute('aria-label', isOpen ? 'Cerrar menu' : 'Abrir menu');
+          if (menuIcon) menuIcon.innerHTML = isOpen ? '&#10005;' : '&#9776;';
+        });
+        menuNav.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', closeMenu);
+        });
+        window.addEventListener('resize', () => {
+          if (window.innerWidth > 820) closeMenu();
+        });
+      }
+
+      const videoHost = document.getElementById('perseoVideoHost');
+      if (videoHost) {
+        const embedUrl = videoHost.getAttribute('data-embed');
+        const watchUrl = videoHost.getAttribute('data-watch');
+        if (window.location.protocol === 'file:') {
+          videoHost.innerHTML = `
+            <a class="perseo-video-fallback" href="${watchUrl}" target="_blank" rel="noopener noreferrer" aria-label="Ver video en YouTube">
+              <img src="https://img.youtube.com/vi/-vVYH-H4fqw/maxresdefault.jpg" alt="Video PERSEO">
+              <span class="play">VER VIDEO EN YOUTUBE ↗</span>
+            </a>
+          `;
+        } else {
+          videoHost.innerHTML = `
+            <iframe src="${embedUrl}" title="Video PERSEO" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+          `;
+        }
+      }
+
+      const slider = document.getElementById('perseoPromosSlider');
+      const track = document.getElementById('perseoPromosTrack');
+      const prev = document.getElementById('perseoPromosPrev');
+      const next = document.getElementById('perseoPromosNext');
+      if (!slider || !track || !prev || !next) return;
+
+      const slides = Array.from(track.children);
+      if (!slides.length) return;
+      let index = 0;
+      let timer = null;
+
+      const goTo = (i) => {
+        index = (i + slides.length) % slides.length;
+        track.style.transform = `translateX(-${index * 100}%)`;
+      };
+
+      const start = () => {
+        stop();
+        timer = window.setInterval(() => goTo(index + 1), 4000);
+      };
+      const stop = () => {
+        if (timer) {
+          window.clearInterval(timer);
+          timer = null;
+        }
+      };
+
+      prev.addEventListener('click', () => { goTo(index - 1); start(); });
+      next.addEventListener('click', () => { goTo(index + 1); start(); });
+      slider.addEventListener('mouseenter', stop);
+      slider.addEventListener('mouseleave', start);
+
+      goTo(0);
+      start();
+    })();
+  </script>
+
+  <script>
+    const ROUTE_MAP = {
+  "/en/ants-home": "en/ants-home/index.html",
+  "/en/ants-home/": "en/ants-home/index.html",
+  "/en/demeter-5-0": "en/demeter-5-0/index.html",
+  "/en/demeter-5-0/": "en/demeter-5-0/index.html",
+  "/en/gaialab": "en/gaialab/index.html",
+  "/en/gaialab/": "en/gaialab/index.html",
+  "/en/news": "en/news/index.html",
+  "/en/news/": "en/news/index.html",
+  "/en/news/nemesis": "en/news/nemesis/index.html",
+  "/en/news/nemesis/": "en/news/nemesis/index.html",
+  "/en/news/osiris-en-mobisec": "en/news/osiris-en-mobisec/index.html",
+  "/en/news/osiris-en-mobisec/": "en/news/osiris-en-mobisec/index.html",
+  "/en/news/osiris-nota-de-prensa": "en/news/osiris-nota-de-prensa/index.html",
+  "/en/news/osiris-nota-de-prensa/": "en/news/osiris-nota-de-prensa/index.html",
+  "/en/perseo": "en/es/perseo/index.html",
+  "/en/perseo/": "en/es/perseo/index.html",
+  "/en/es/perseo": "en/es/perseo/index.html",
+  "/en/es/perseo/": "en/es/perseo/index.html",
+  "/en/reminder": "en/reminder/index.html",
+  "/en/reminder/": "en/reminder/index.html",
+  "/en/reminder/ethicalissues": "en/reminder/ethicalissues/index.html",
+  "/en/reminder/ethicalissues/": "en/reminder/ethicalissues/index.html",
+  "/en/reminder/interdisciplinaryresearch": "en/reminder/interdisciplinaryresearch/index.html",
+  "/en/reminder/interdisciplinaryresearch/": "en/reminder/interdisciplinaryresearch/index.html",
+  "/en/reminder/partners": "en/reminder/partners/index.html",
+  "/en/reminder/partners/": "en/reminder/partners/index.html",
+  "/en/reminder/view-project-deliverables": "en/reminder/view-project-deliverables/index.html",
+  "/en/reminder/view-project-deliverables/": "en/reminder/view-project-deliverables/index.html",
+  "/en/research-lines": "en/research-lines/index.html",
+  "/en/research-lines/": "en/research-lines/index.html",
+  "/en/research-projects": "en/research-projects/index.html",
+  "/en/research-projects/": "en/research-projects/index.html",
+  "/en/vinci": "en/vinci/index.html",
+  "/en/vinci/": "en/vinci/index.html",
+  "/es/eden": "es/eden/index.html",
+  "/es/eden/": "es/eden/index.html",
+  "/es/geminis": "es/geminis/index.html",
+  "/es/geminis/": "es/geminis/index.html",
+  "/es/news": "es/news/feria-cientifica-santomera/index.html",
+  "/es/news/": "es/news/feria-cientifica-santomera/index.html",
+  "/es/news/feria-cientifica-santomera": "es/news/feria-cientifica-santomera/index.html",
+  "/es/news/feria-cientifica-santomera/": "es/news/feria-cientifica-santomera/index.html",
+  "/es/news/osiris-big-data-master": "es/news/osiris-big-data-master/index.html",
+  "/es/news/osiris-big-data-master/": "es/news/osiris-big-data-master/index.html",
+  "/es/news/osiris-unibit": "es/news/osiris-unibit/index.html",
+  "/es/news/osiris-unibit/": "es/news/osiris-unibit/index.html",
+  "/es/orciber-5g": "es/orciber-5g/index.html",
+  "/es/orciber-5g/": "es/orciber-5g/index.html",
+  "/es/osiris": "es/osiris/index.html",
+  "/es/osiris/": "es/osiris/index.html",
+  "/es/osiris/del-campo-a-la-mesa": "es/osiris/del-campo-a-la-mesa/index.html",
+  "/es/osiris/del-campo-a-la-mesa/": "es/osiris/del-campo-a-la-mesa/index.html",
+  "/es/osiris/impacto-y-beneficios": "es/osiris/impacto-y-beneficios/index.html",
+  "/es/osiris/impacto-y-beneficios/": "es/osiris/impacto-y-beneficios/index.html",
+  "/es/osiris/tecnologias-y-metodologia": "es/osiris/tecnologias-y-metodologia/index.html",
+  "/es/osiris/tecnologias-y-metodologia/": "es/osiris/tecnologias-y-metodologia/index.html",
+  "/es/perseo": "es/perseo/index.html",
+  "/es/perseo/": "es/perseo/index.html",
+  "/es/perseo/contexto": "es/perseo/contexto/index.html",
+  "/es/perseo/contexto/": "es/perseo/contexto/index.html",
+  "/es/perseo/objetivos": "es/perseo/objetivos/index.html",
+  "/es/perseo/objetivos/": "es/perseo/objetivos/index.html",
+  "/es/perseo": "es/perseo/index.html",
+  "/es/perseo/": "es/perseo/index.html",
+  "en/ants-home": "en/ants-home/index.html",
+  "en/ants-home/": "en/ants-home/index.html",
+  "en/demeter-5-0": "en/demeter-5-0/index.html",
+  "en/demeter-5-0/": "en/demeter-5-0/index.html",
+  "en/gaialab": "en/gaialab/index.html",
+  "en/gaialab/": "en/gaialab/index.html",
+  "en/news": "en/news/index.html",
+  "en/news/": "en/news/index.html",
+  "en/news/nemesis": "en/news/nemesis/index.html",
+  "en/news/nemesis/": "en/news/nemesis/index.html",
+  "en/news/osiris-en-mobisec": "en/news/osiris-en-mobisec/index.html",
+  "en/news/osiris-en-mobisec/": "en/news/osiris-en-mobisec/index.html",
+  "en/news/osiris-nota-de-prensa": "en/news/osiris-nota-de-prensa/index.html",
+  "en/news/osiris-nota-de-prensa/": "en/news/osiris-nota-de-prensa/index.html",
+  "en/perseo": "en/es/perseo/index.html",
+  "en/perseo/": "en/es/perseo/index.html",
+  "en/es/perseo": "en/es/perseo/index.html",
+  "en/es/perseo/": "en/es/perseo/index.html",
+  "en/reminder": "en/reminder/index.html",
+  "en/reminder/": "en/reminder/index.html",
+  "en/reminder/ethicalissues": "en/reminder/ethicalissues/index.html",
+  "en/reminder/ethicalissues/": "en/reminder/ethicalissues/index.html",
+  "en/reminder/interdisciplinaryresearch": "en/reminder/interdisciplinaryresearch/index.html",
+  "en/reminder/interdisciplinaryresearch/": "en/reminder/interdisciplinaryresearch/index.html",
+  "en/reminder/partners": "en/reminder/partners/index.html",
+  "en/reminder/partners/": "en/reminder/partners/index.html",
+  "en/reminder/view-project-deliverables": "en/reminder/view-project-deliverables/index.html",
+  "en/reminder/view-project-deliverables/": "en/reminder/view-project-deliverables/index.html",
+  "en/research-lines": "en/research-lines/index.html",
+  "en/research-lines/": "en/research-lines/index.html",
+  "en/research-projects": "en/research-projects/index.html",
+  "en/research-projects/": "en/research-projects/index.html",
+  "en/vinci": "en/vinci/index.html",
+  "en/vinci/": "en/vinci/index.html",
+  "es/eden": "es/eden/index.html",
+  "es/eden/": "es/eden/index.html",
+  "es/geminis": "es/geminis/index.html",
+  "es/geminis/": "es/geminis/index.html",
+  "es/news": "es/news/feria-cientifica-santomera/index.html",
+  "es/news/": "es/news/feria-cientifica-santomera/index.html",
+  "es/news/feria-cientifica-santomera": "es/news/feria-cientifica-santomera/index.html",
+  "es/news/feria-cientifica-santomera/": "es/news/feria-cientifica-santomera/index.html",
+  "es/news/osiris-big-data-master": "es/news/osiris-big-data-master/index.html",
+  "es/news/osiris-big-data-master/": "es/news/osiris-big-data-master/index.html",
+  "es/news/osiris-unibit": "es/news/osiris-unibit/index.html",
+  "es/news/osiris-unibit/": "es/news/osiris-unibit/index.html",
+  "es/orciber-5g": "es/orciber-5g/index.html",
+  "es/orciber-5g/": "es/orciber-5g/index.html",
+  "es/osiris": "es/osiris/index.html",
+  "es/osiris/": "es/osiris/index.html",
+  "es/osiris/del-campo-a-la-mesa": "es/osiris/del-campo-a-la-mesa/index.html",
+  "es/osiris/del-campo-a-la-mesa/": "es/osiris/del-campo-a-la-mesa/index.html",
+  "es/osiris/impacto-y-beneficios": "es/osiris/impacto-y-beneficios/index.html",
+  "es/osiris/impacto-y-beneficios/": "es/osiris/impacto-y-beneficios/index.html",
+  "es/osiris/tecnologias-y-metodologia": "es/osiris/tecnologias-y-metodologia/index.html",
+  "es/osiris/tecnologias-y-metodologia/": "es/osiris/tecnologias-y-metodologia/index.html",
+  "es/perseo": "es/perseo/index.html",
+  "es/perseo/": "es/perseo/index.html",
+  "es/perseo/contexto": "es/perseo/contexto/index.html",
+  "es/perseo/contexto/": "es/perseo/contexto/index.html",
+  "es/perseo/objetivos": "es/perseo/objetivos/index.html",
+  "es/perseo/objetivos/": "es/perseo/objetivos/index.html",
+  "es/perseo": "es/perseo/index.html",
+  "es/perseo/": "es/perseo/index.html"
+};
+    const CURRENT_LANG = 'es';
+    const CURRENT_ROUTE = '/es/perseo/';
+    const ROOT_PREFIX = '../../';
+    const ASSET_BASE = '../../pages/08.perseo/assets';
+
+    const hasProtocol = (v) => /^(https?:|mailto:|tel:|javascript:)/i.test(v);
+    const normalizeAntsRoute = (value) => {
+      try {
+        const u = new URL(value);
+        const host = (u.hostname || '').toLowerCase();
+        if (u.protocol !== 'http:' && u.protocol !== 'https:') return null;
+        if (host !== 'ants.inf.um.es' && host !== 'www.ants.inf.um.es') return null;
+        return u.pathname || '/';
+      } catch {
+        return null;
+      }
+    };
+    const swapLang = (route) => {
+      const parts = route.replace(/^\/+/, '').split('/').filter(Boolean);
+      if (parts.length < 2) return null;
+      parts[0] = parts[0] === 'en' ? 'es' : (parts[0] === 'es' ? 'en' : null);
+      if (!parts[0]) return null;
+      return '/' + parts.join('/');
+    };
+    const isMedia = (value) => /\.(png|jpe?g|gif|webp|svg|pdf|mp4|webm|mp3|ogg|txt|csv|css|js|ico)$/i.test(value);
+    const mediaBaseName = (value) => {
+      const clean = value.split('?')[0].split('#')[0];
+      const parts = clean.split('/');
+      return parts[parts.length - 1] || clean;
+    };
+    const localizeMedia = (value) => {
+      const rawBase = mediaBaseName(value);
+      const base = (() => {
+        try {
+          return decodeURIComponent(rawBase);
+        } catch {
+          return rawBase;
+        }
+      })();
+      return (ASSET_BASE + '/' + base).replace(/\\/g, '/');
+    };
+
+    const normalizeRoute = (value) => {
+      const route = value.replace(/^\/+/, '').replace(/\/+$/, '');
+      if (!route) return CURRENT_LANG + '/';
+      const parts = route.split('/').filter(Boolean);
+      if (parts[0] === 'en' || parts[0] === 'es') return parts.join('/');
+      return CURRENT_LANG + '/' + parts.join('/');
+    };
+
+    const resolveRoute = (rawHref) => {
+      if (!rawHref || rawHref.startsWith('#')) return null;
+      const [href, hash] = rawHref.split('#', 2);
+      if (!href) return null;
+      const normalizedHref = normalizeAntsRoute(href) || href;
+      if (!normalizedHref.startsWith('/')) {
+        if (href.startsWith('http') || hasProtocol(href)) return null;
+        return null;
+      }
+
+      const candidates = [];
+      const route = normalizeRoute(normalizedHref);
+      candidates.push(route);
+      candidates.push(route + '/');
+      candidates.push(route.replace(/\/$/, ''));
+
+      for (const c of candidates) {
+        if (ROUTE_MAP[c]) return { path: ROUTE_MAP[c], hash: hash ? '#' + hash : '' };
+      }
+      const altRoute = swapLang(route);
+      if (altRoute) {
+        const altCandidates = [altRoute, altRoute + '/', altRoute.replace(/\/$/, '')];
+        for (const c of altCandidates) {
+          if (ROUTE_MAP[c]) return { path: ROUTE_MAP[c], hash: hash ? '#' + hash : '' };
+        }
+      }
+      return null;
+    };
+
+    const resolveLocal = (base, href) => {
+      if (!href || href.startsWith('#')) return href;
+      const [clean, hash] = href.split('#', 2);
+      if (!clean) return href;
+
+      const resolved = resolveRoute(clean);
+      if (resolved) {
+        return (ROOT_PREFIX + resolved.path).replace(/\\/g, '/') + resolved.hash;
+      }
+
+      const antsHref = normalizeAntsRoute(clean);
+      if (antsHref && isMedia(antsHref)) {
+        return localizeMedia(antsHref) + (hash ? '#' + hash : '');
+      }
+
+      if (hasProtocol(clean) || /^(https?:)?\//.test(clean)) return href;
+      if (clean.startsWith('./') || clean.startsWith('../')) return href;
+      if (isMedia(clean)) {
+        return localizeMedia(clean) + (hash ? '#' + hash : '');
+      }
+      return clean;
+    };
+
+    document.querySelectorAll('a[href]').forEach((a) => {
+      const href = a.getAttribute('href');
+      const fixed = resolveLocal('', href);
+      if (fixed && fixed !== href) a.setAttribute('href', fixed);
+    });
+
+    const ASSET_MARK = 'pages/';
+    const ASSET_SEGMENT = ASSET_BASE.includes(ASSET_MARK)
+      ? (() => {
+          const i = ASSET_BASE.indexOf(ASSET_MARK);
+          return {
+            root: ASSET_BASE.slice(0, i) + ASSET_MARK,
+            segment: ASSET_BASE.slice(i + ASSET_MARK.length),
+          };
+        })()
+      : null;
+
+    const collectAssetCandidates = () => {
+      const out = [];
+      if (!ASSET_SEGMENT) return out;
+      let current = ASSET_SEGMENT.segment;
+      out.push(current);
+      while (current.includes('/')) {
+        current = current.slice(0, current.lastIndexOf('/'));
+        if (current) out.push(current);
+      }
+      if (!out.includes('01.ants-home/assets')) out.push('01.ants-home/assets');
+      return [...new Set(out)];
+    };
+
+    const assetCandidatePrefixes = collectAssetCandidates();
+
+    const setImageSrcWithFallback = (img, rawSrc) => {
+      if (!ASSET_SEGMENT || !rawSrc) return;
+      const fileName = (() => {
+        const rawBase = mediaBaseName(rawSrc);
+        try {
+          return decodeURIComponent(rawBase);
+        } catch {
+          return rawBase;
+        }
+      })();
+      const candidates = assetCandidatePrefixes.map((segment) =>
+        (ASSET_SEGMENT.root + segment + '/' + fileName).replace(/\\/g, '/')
+      );
+
+      let index = 0;
+      const onError = () => {
+        if (index >= candidates.length) return;
+        img.src = candidates[index];
+        index += 1;
+      };
+
+      img.addEventListener('error', onError);
+      onError();
+    };
+
+    document.querySelectorAll('img[src]').forEach((img) => {
+      const src = img.getAttribute('src');
+      if (!src || hasProtocol(src) || src.startsWith('data:')) return;
+      if (/^\//.test(src)) {
+        if (src.startsWith('/pages/')) return;
+        if (isMedia(src)) {
+          setImageSrcWithFallback(img, src);
+          return;
+        }
+        img.setAttribute('src', (ROOT_PREFIX + src.replace(/^\//, '')).replace(/\\/g, '/'));
+        return;
+      }
+      if (!src.includes('../') && !src.includes('./') && isMedia(src)) {
+        setImageSrcWithFallback(img, src);
+      }
+    });
+
+    document.querySelectorAll('[style]').forEach((el) => {
+      const style = el.getAttribute('style');
+      if (!style || !style.includes('url(')) return;
+
+      const nextStyle = style.replace(/url\(\s*([^)]*?)\s*\)/g, (m, raw) => {
+        const trimmed = raw.trim();
+        const quote = trimmed[0] === '"' || trimmed[0] === "'" ? trimmed[0] : '';
+        const rawPath = quote ? trimmed.slice(1, -1) : trimmed;
+        if (!rawPath || rawPath.startsWith('data:') || hasProtocol(rawPath)) return m;
+        if (!isMedia(rawPath)) return m;
+        return 'url(' + quote + localizeMedia(rawPath) + quote + ')';
+      });
+
+      if (nextStyle !== style) {
+        el.setAttribute('style', nextStyle);
+      }
+    });
+  </script>
+</body>
+</html>
