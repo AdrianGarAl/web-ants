@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../../favicons-proyectos/Favicon-DEMETER.ico" />
+  <link rel="apple-touch-icon" href="../../favicons-proyectos/Favicon-DEMETER-mobile.png" />
+  <title>DEMETER 5.0</title>
+  <link rel="stylesheet" href="../../css-site/site.css?v=20260408-6" />
+  <style>
+    :root { --nav-height: 64px; }
+    body.osiris-theme .osiris-project-topbar {
+      background: #455351 !important;
+    }
+    body.osiris-theme .main-footer {
+      background: #455351 !important;
+      background-color: #455351 !important;
+    }
+    body.osiris-theme .demeter-hero {
+      width: 100vw;
+      margin: 0 calc(50% - 50vw);
+      height: 525px;
+      overflow: hidden;
+      background: #152620 !important;
+      background-color: #152620 !important;
+    }
+    body.osiris-theme .demeter-hero-inner {
+      max-width: 1000px;
+      height: 100%;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 150px;
+    }
+    .demeter-hero-logo-wrap {
+      position: relative;
+      width: 420px;
+      height: 230px;
+      transform: translateY(52px);
+      z-index: 3;
+    }
+    .demeter-hero-logo {
+      position: relative;
+      z-index: 1;
+      height: 126.5px;
+      width: auto;
+      display: block;
+    }
+    .demeter-hero-copy {
+      max-width: 350px;
+      transform: translateY(-3px);
+      z-index: 3;
+    }
+    .demeter-cotton-overlay {
+      position: absolute;
+      top: 0;
+      left: -123px;
+      height: calc(100% - 64px);
+      width: auto;
+      z-index: 4;
+      pointer-events: none;
+    }
+    .demeter-hero-copy p {
+      margin: 0;
+      color: #f3f1e7 !important;
+      font-size: 1.35rem !important;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-weight: 700;
+      line-height: 1.18;
+      text-align: left;
+    }
+    body.osiris-theme .demeter-hero .osiris-hero-more {
+      margin-top: 1.25rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      color: #ae9f85 !important;
+      border-color: #ae9f85 !important;
+      border-radius: 0 !important;
+      padding: 0.62rem 1.1rem;
+    }
+    body.osiris-theme .demeter-hero .osiris-hero-more:hover {
+      background: #ae9f85 !important;
+      color: #152620 !important;
+    }
+    body.osiris-theme .osiris-project-logo img {
+      height: 61px !important;
+      width: auto !important;
+      max-height: none !important;
+    }
+    body.osiris-theme .project-mobile-burger {
+      display: none !important;
+    }
+    @media (max-width: 980px) {
+      body.osiris-theme .project-mobile-burger {
+        display: inline-flex !important;
+      }
+      body.osiris-theme .osiris-ants-logo {
+        display: none !important;
+      }
+      body.osiris-theme .osiris-project-logo img {
+        height: 40px !important;
+      }
+      body.osiris-theme .demeter-hero {
+        height: auto;
+      }
+      body.osiris-theme .demeter-hero-inner {
+        position: relative;
+        flex-direction: column;
+        gap: 1.2rem;
+        padding: 2.2rem 1rem 1.6rem;
+        align-items: center;
+      }
+      .demeter-hero-logo-wrap {
+        width: min(78vw, 300px);
+        height: auto;
+        transform: none;
+      }
+      .demeter-hero-logo {
+        width: 100%;
+        max-width: 230px;
+        height: auto;
+        margin: 0 auto;
+      }
+      .demeter-hero-copy {
+        max-width: 330px;
+        transform: none;
+        text-align: center;
+      }
+      .demeter-cotton-overlay {
+        display: none !important;
+      }
+      .demeter-hero-copy p {
+        font-size: 1.08rem !important;
+        line-height: 1.4;
+        text-align: center;
+      }
+    }
+    .project-content {
+      max-width: 1000px;
+      margin: 1rem auto 0;
+      padding: 0 1.5rem;
+      box-sizing: border-box;
+    }
+    .project-content img {
+      max-width: 100%;
+      height: auto;
+    }
+    .demeter-copy {
+      max-width: none;
+      margin: 0;
+    }
+    .demeter-section {
+      width: 100%;
+      margin: 0;
+      border-radius: 0;
+      padding: 0;
+      border: none;
+    }
+    #about,
+    #objectives,
+    #how-it-works,
+    #impact,
+    #consortium,
+    #publications {
+      scroll-margin-top: calc(var(--nav-height) + 18px);
+    }
+    .demeter-section:last-child {
+      margin-bottom: 0;
+    }
+    .demeter-section-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3.1rem 1.5rem;
+      box-sizing: border-box;
+    }
+    body.osiris-theme .demeter-copy .demeter-section:nth-of-type(1),
+    body.osiris-theme .demeter-copy .demeter-section:nth-of-type(5),
+    body.osiris-theme .demeter-copy .demeter-section:nth-of-type(9) { background-color: #f3f1e7 !important; color: #152620 !important; }
+    body.osiris-theme .demeter-copy .demeter-section:nth-of-type(2),
+    body.osiris-theme .demeter-copy .demeter-section:nth-of-type(6) { background-color: #455351 !important; color: #f3f1e7 !important; }
+    body.osiris-theme .demeter-copy .demeter-section:nth-of-type(3),
+    body.osiris-theme .demeter-copy .demeter-section:nth-of-type(7) { background-color: #152620 !important; color: #f3f1e7 !important; }
+    body.osiris-theme .demeter-copy .demeter-section:nth-of-type(4),
+    body.osiris-theme .demeter-copy .demeter-section:nth-of-type(8) { background-color: #ae9f85 !important; color: #152620 !important; }
+    .demeter-section-head {
+      max-width: 1000px;
+      margin: 0 0 1.45rem;
+      display: grid;
+      grid-template-columns: 24px auto 24px;
+      gap: 0.28rem;
+      align-items: center;
+      justify-content: center;
+    }
+    .demeter-section-head-imago {
+      width: 27px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    .demeter-section-head-title {
+      margin: 0;
+      color: inherit !important;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .demeter-section p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+    .demeter-section a {
+      color: inherit;
+      text-decoration: underline;
+    }
+    .demeter-publication-card {
+      max-width: 1000px;
+      margin: 1rem auto 0;
+      border: 1px solid #f3f1e7;
+    }
+    .demeter-publication-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1.2fr 1.15fr 1fr;
+      gap: 0;
+    }
+    .demeter-pub-head {
+      background: #ae9f85 !important;
+      color: #152620 !important;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      padding: 0.72rem 0.8rem;
+      border-right: 1px solid #f3f1e7;
+      text-align: center;
+    }
+    .demeter-pub-head:last-child {
+      border-right: none;
+    }
+    .demeter-pub-cell {
+      background: #f3f1e7 !important;
+      color: #152620 !important;
+      padding: 0.85rem 0.8rem;
+      border-top: 1px solid #f3f1e7;
+      border-right: 1px solid #455351;
+      font-size: 0.9rem;
+      line-height: 1.3;
+      text-align: center;
+    }
+    .demeter-pub-cell:last-child {
+      border-right: none;
+    }
+    .demeter-pub-title {
+      font-weight: 700;
+      text-align: left;
+    }
+    .demeter-pub-doi a {
+      color: #152620 !important;
+      text-decoration: underline;
+      font-weight: 700;
+      word-break: break-word;
+      display: inline-block;
+      transition: transform 0.16s ease;
+      transform-origin: center;
+    }
+    .demeter-pub-doi a:hover {
+      transform: scale(1.06);
+    }
+    .demeter-consortium-cards {
+      max-width: 1000px;
+      margin: 1.2rem auto 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.8rem;
+    }
+    .demeter-consortium-card {
+      background: #ffffff !important;
+      border: 1px solid #455351;
+      padding: 0;
+      text-align: center;
+      color: #152620 !important;
+      text-decoration: none !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      overflow: hidden;
+    }
+    .demeter-consortium-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(21, 38, 32, 0.15);
+    }
+    .demeter-consortium-card--nath {
+      background: #ffffff !important;
+      border-color: #455351 !important;
+      color: #152620 !important;
+    }
+    .demeter-consortium-logo-cell {
+      width: 100%;
+      min-height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 0.7rem;
+      box-sizing: border-box;
+      border-bottom: 1px solid rgba(21, 38, 32, 0.25);
+      background: rgba(243, 241, 231, 0.42);
+    }
+    .demeter-consortium-text-cell {
+      width: 100%;
+      padding: 0.7rem 0.7rem 0.85rem;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      align-items: center;
+      justify-content: center;
+    }
+    .demeter-consortium-card--nath .demeter-consortium-logo-cell {
+      background: #ef8b34 !important;
+      border-bottom-color: rgba(21, 38, 32, 0.3);
+    }
+    .demeter-consortium-card--nath .demeter-consortium-text-cell {
+      background: #ffffff !important;
+    }
+    .demeter-consortium-card img {
+      width: 100%;
+      max-width: 128px;
+      height: 58px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
+    .demeter-consortium-card-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.84rem;
+      line-height: 1.2;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+    }
+    .demeter-consortium-card-role {
+      font-size: 0.74rem;
+      line-height: 1.25;
+    }
+    .demeter-objective-cards {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.65rem;
+      padding-left: 0;
+      list-style: none;
+    }
+    .demeter-objective-card {
+      background: #ae9f85 !important;
+      border: 1px solid #152620;
+      color: #152620 !important;
+      padding: 0.75rem 0.8rem;
+      box-sizing: border-box;
+      min-height: 150px;
+    }
+    .demeter-objective-head {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-bottom: 0.55rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+    }
+    .demeter-objective-head img {
+      width: 18px;
+      height: auto;
+      display: block;
+    }
+    .demeter-objective-card p {
+      margin: 0;
+      color: #152620 !important;
+      font-size: 0.88rem;
+      line-height: 1.34;
+      font-weight: 500;
+    }
+    .demeter-objectives-subtitle {
+      max-width: 1000px;
+      margin: 1rem auto 0.55rem;
+      color: #152620 !important;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .demeter-capability-cards {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.55rem;
+      list-style: none;
+      padding-left: 0;
+    }
+    .demeter-capability-card {
+      background: rgba(243, 241, 231, 0.55);
+      border: 1px solid #152620;
+      color: #152620 !important;
+      padding: 0.55rem 0.65rem;
+      font-size: 0.82rem;
+      line-height: 1.3;
+      font-weight: 500;
+    }
+    .demeter-how-layout {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 1rem;
+      align-items: stretch;
+    }
+    .demeter-how-cards {
+      list-style: none;
+      padding-left: 0;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+      width: calc(100% - 45px);
+    }
+    .demeter-how-card {
+      background: #f3f1e7;
+      border: 1px solid #455351;
+      color: #152620 !important;
+      padding: 0.65rem 0.75rem;
+      font-size: 0.9rem;
+      line-height: 1.35;
+      font-weight: 500;
+    }
+    .demeter-how-figure {
+      margin: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .demeter-how-figure img {
+      width: 75%;
+      height: auto;
+      display: block;
+      border: none;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+    .demeter-impact-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem;
+    }
+    .demeter-impact-card {
+      background: #f3f1e7 !important;
+      border: 1px solid #152620 !important;
+      color: #152620 !important;
+      padding: 0.75rem 0.85rem;
+    }
+    .demeter-impact-card h4 {
+      margin: 0 0 0.4rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+      color: #152620 !important;
+    }
+    .demeter-impact-card p {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.35;
+      color: #152620 !important;
+    }
+    @media (max-width: 980px) {
+      .demeter-publication-grid {
+        display: flex;
+        flex-direction: column;
+      }
+      .demeter-pub-head,
+      .demeter-pub-cell {
+        border-right: none;
+      }
+      .demeter-pub-head {
+        text-align: left;
+        padding: 0.85rem 0.9rem;
+      }
+      .demeter-pub-cell {
+        text-align: left;
+        padding: 0.95rem 0.9rem 1.05rem;
+      }
+      .demeter-publication-grid > :nth-child(1) { order: 1; }
+      .demeter-publication-grid > :nth-child(5) { order: 2; }
+      .demeter-publication-grid > :nth-child(2) { order: 3; }
+      .demeter-publication-grid > :nth-child(6) { order: 4; }
+      .demeter-publication-grid > :nth-child(3) { order: 5; }
+      .demeter-publication-grid > :nth-child(7) { order: 6; }
+      .demeter-publication-grid > :nth-child(4) { order: 7; }
+      .demeter-publication-grid > :nth-child(8) { order: 8; }
+      .demeter-pub-cell + .demeter-pub-head {
+        border-top: 1px solid #f3f1e7;
+      }
+      .demeter-consortium-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    .demeter-about-layout {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.25fr 0.95fr;
+      gap: 1.25rem;
+      align-items: start;
+    }
+    .demeter-about-text p {
+      color: #f3f1e7 !important;
+      margin: 0 0 1rem;
+    }
+    .demeter-about-text p:last-child {
+      margin-bottom: 0;
+    }
+    .demeter-about-figure {
+      margin: 0;
+    }
+    .demeter-about-figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid rgba(243, 241, 231, 0.35);
+    }
+    .demeter-funding-module {
+      width: 100vw;
+      margin: 0 calc(50% - 50vw);
+      background: #f3f1e7 !important;
+      background-color: #f3f1e7 !important;
+      padding: 2.4rem 1.5rem;
+      box-sizing: border-box;
+    }
+    .demeter-funding-text {
+      max-width: 1000px;
+      margin: 0 auto;
+      color: #455351 !important;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: clamp(0.85rem, 1.275vw, 1.575rem);
+      font-weight: 500;
+      line-height: 1.22;
+      text-align: center;
+      letter-spacing: 0.01em;
+    }
+    .demeter-funding-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 46px 1fr 46px;
+      gap: 1rem;
+      align-items: center;
+    }
+    .demeter-funding-imago {
+      width: 34px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+    @media (max-width: 980px) {
+      .demeter-funding-inner {
+        grid-template-columns: 1fr;
+      }
+      .demeter-funding-imago {
+        display: none;
+      }
+    }
+    .demeter-finance-module {
+      width: 100vw;
+      margin: 0 calc(50% - 50vw);
+      background: #455351 !important;
+      background-color: #455351 !important;
+      padding: 2.9rem 1rem 3.4rem;
+      box-sizing: border-box;
+    }
+    .demeter-finance-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .demeter-finance-row {
+      display: grid;
+      grid-template-columns: 0.9fr 1fr 0.9fr 0.95fr;
+      gap: 0;
+      margin-bottom: 0.28rem;
+    }
+    .demeter-finance-row:last-child {
+      margin-bottom: 0;
+    }
+    .demeter-finance-row--two {
+      grid-template-columns: 0.9fr 2.85fr;
+    }
+    .demeter-finance-row--entities {
+      grid-template-columns: 0.9fr repeat(4, 1fr);
+    }
+    .demeter-finance-row--total {
+      grid-template-columns: 0.9fr 2.85fr;
+      align-items: stretch;
+    }
+    .demeter-finance-label,
+    .demeter-finance-value {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      font-family: 'IBM Plex Sans', sans-serif;
+      line-height: 1.08;
+    }
+    .demeter-finance-label {
+      background: #152620 !important;
+      color: #f3f1e7 !important;
+      border: 1px solid #152620;
+      padding: 0.7rem 1.05rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+      justify-content: flex-start;
+    }
+    .demeter-finance-value {
+      background: #f3f1e7 !important;
+      color: #152620 !important;
+      border: 1px solid #152620;
+      padding: 0.7rem 1.05rem;
+      font-size: 0.76rem;
+      font-weight: 500;
+      justify-content: center;
+      text-align: center;
+    }
+    .demeter-finance-value--left {
+      justify-content: flex-start;
+      text-align: left;
+    }
+    .demeter-finance-value--big {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .demeter-finance-subgrid {
+      display: grid;
+      grid-template-columns: 1.35fr 1.5fr;
+      gap: 0;
+    }
+    .demeter-finance-subgrid .demeter-finance-label,
+    .demeter-finance-subgrid .demeter-finance-value {
+      min-height: 42px;
+      font-size: 0.72rem;
+      padding-top: 0.45rem;
+      padding-bottom: 0.45rem;
+    }
+    .demeter-finance-subgrid .demeter-finance-value {
+      justify-content: flex-start;
+      text-align: left;
+    }
+    @media (max-width: 980px) {
+      .demeter-section-inner {
+        padding: 2.35rem 1rem;
+      }
+      .demeter-section-head {
+        margin-bottom: 1.1rem;
+      }
+      .demeter-section-head-title {
+        font-size: clamp(1.8rem, 8.6vw, 2.45rem);
+      }
+      .demeter-objective-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .demeter-impact-grid {
+        grid-template-columns: 1fr;
+      }
+      .demeter-about-layout {
+        grid-template-columns: 1fr;
+      }
+      .demeter-how-layout {
+        grid-template-columns: 1fr;
+      }
+      .demeter-how-cards {
+        width: 100%;
+      }
+      .demeter-how-figure img {
+        width: 56%;
+      }
+      .demeter-finance-row,
+      .demeter-finance-row--two,
+      .demeter-finance-row--entities,
+      .demeter-finance-row--total {
+        grid-template-columns: 1fr;
+      }
+      .demeter-finance-subgrid {
+        grid-template-columns: 1fr;
+      }
+      .demeter-finance-label,
+      .demeter-finance-value {
+        min-height: 46px;
+      }
+    }
+    @media (max-width: 640px) {
+      .demeter-section-inner {
+        padding: 2rem 0.9rem;
+      }
+      .demeter-section-head {
+        grid-template-columns: 20px auto 20px;
+      }
+      .demeter-section-head-imago {
+        width: 18px;
+      }
+      .demeter-section-head-title {
+        font-size: clamp(1.45rem, 9vw, 1.95rem);
+      }
+      .demeter-objective-cards {
+        grid-template-columns: 1fr;
+      }
+      .demeter-objective-card {
+        min-height: 0;
+      }
+      .demeter-capability-cards {
+        grid-template-columns: 1fr;
+      }
+      .demeter-consortium-cards {
+        grid-template-columns: 1fr;
+      }
+      .demeter-how-figure img {
+        width: 66%;
+      }
+      .demeter-funding-text {
+        font-size: 0.88rem;
+        line-height: 1.35;
+      }
+    }
+  </style>
+</head>
+<body id="top" class="osiris-theme">
+  <div class="page-wrap">
+    <header class="topbar osiris-project-topbar">
+      <div class="osiris-project-topbar-inner">
+        <a class="osiris-project-logo" href="./index.html" aria-label="DEMETER 5.0">
+          <img src="../../pages/11.demeter-5-0/assets/demeter-imago-negativo.svg" alt="DEMETER 5.0">
+        </a>
+        <nav class="osiris-project-nav">
+          <a href="#about">ABOUT</a>
+          <a href="#objectives">OBJECTIVES</a>
+          <a href="#how-it-works">HOW IT WORKS</a>
+          <a href="#impact">IMPACT</a>
+          <a href="#consortium">CONSORTIUM</a>
+          <a href="#publications">PUBLICATIONS</a>
+        </nav>
+        <a class="osiris-ants-logo" href="../../index.html" aria-label="Home ants" target="_blank" rel="noopener noreferrer">
+          <img src="../../pages/01.ants-home/assets/ants_footer.png" alt="ANTS">
+        </a>
+      </div>
+    </header>
+    <section class="osiris-hero demeter-hero" style="background:#152620 !important; background-color:#152620 !important;">
+      <div class="osiris-hero-inner demeter-hero-inner">
+        <img class="demeter-cotton-overlay" src="../../pages/11.demeter-5-0/assets/algodon.png" alt="" aria-hidden="true">
+        <div class="demeter-hero-logo-wrap">
+          <img class="demeter-hero-logo" src="../../pages/11.demeter-5-0/assets/demeter-logo-negativo.svg" alt="DEMETER 5.0">
+        </div>
+        <div class="osiris-hero-copy demeter-hero-copy">
+          <p style="color:#f3f1e7 !important;">
+            Growing sustainable<br>
+            cotton through AI,<br>
+            robotics and traceable<br>
+            intelligence
+          </p>
+          <a class="btn osiris-hero-more" href="#publications">
+            PUBLICATIONS <span aria-hidden="true" style="font-size:1rem; line-height:1;">↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="demeter-funding-module" aria-label="Funding statement" style="width:100vw; margin:0 calc(50% - 50vw); background:#f3f1e7 !important; background-color:#f3f1e7 !important; padding:2.4rem 1.5rem; box-sizing:border-box;">
+      <div class="demeter-funding-inner">
+        <img class="demeter-funding-imago" src="../../pages/11.demeter-5-0/assets/demeter-imago-positivo.svg" alt="" aria-hidden="true">
+        <p class="demeter-funding-text" style="color:#455351 !important;">DEMETER 5.0 is funded under the 2022 Call for Strategic Line Projects, issued by the Ministry of Science and Innovation and managed by the Spanish State Research Agency (AEI). The University of Murcia (UMU) is the main beneficiary of the project, with participation from the Spanish National Research Council (CSIC) and leading companies in the agricultural and technology sectors.</p>
+        <img class="demeter-funding-imago" src="../../pages/11.demeter-5-0/assets/demeter-imago-positivo.svg" alt="" aria-hidden="true">
+      </div>
+    </section>
+    <section class="demeter-finance-module" aria-label="Funding details" style="background:#455351 !important; background-color:#455351 !important;">
+      <div class="demeter-finance-inner">
+        <div class="demeter-finance-row">
+          <div class="demeter-finance-label" style="background:#152620 !important; color:#f3f1e7 !important; border-color:#152620 !important;">Funding program</div>
+          <div class="demeter-finance-value" style="background:#f3f1e7 !important; color:#152620 !important; border-color:#152620 !important;">2022 Strategic Line Projects</div>
+          <div class="demeter-finance-label" style="background:#152620 !important; color:#f3f1e7 !important; border-color:#152620 !important;">Main beneficiary</div>
+          <div class="demeter-finance-value" style="background:#f3f1e7 !important; color:#152620 !important; border-color:#152620 !important;">University of Murcia (UMU)</div>
+        </div>
+        <div class="demeter-finance-row demeter-finance-row--two">
+          <div class="demeter-finance-label" style="background:#152620 !important; color:#f3f1e7 !important; border-color:#152620 !important;">Project reference number</div>
+          <div class="demeter-finance-value demeter-finance-value--left" style="background:#f3f1e7 !important; color:#152620 !important; border-color:#152620 !important;">PLEC2022-009289</div>
+        </div>
+        <div class="demeter-finance-row demeter-finance-row--entities">
+          <div class="demeter-finance-label" style="background:#152620 !important; color:#f3f1e7 !important; border-color:#152620 !important;">Participating entities</div>
+          <div class="demeter-finance-value" style="background:#f3f1e7 !important; color:#152620 !important; border-color:#152620 !important;">University of Murcia (UMU)</div>
+          <div class="demeter-finance-value" style="background:#f3f1e7 !important; color:#152620 !important; border-color:#152620 !important;">Spanish National Research Council (CSIC)</div>
+          <div class="demeter-finance-value" style="background:#f3f1e7 !important; color:#152620 !important; border-color:#152620 !important;">Riegos y Tecnología, S.L. (RITEC)</div>
+          <div class="demeter-finance-value" style="background:#f3f1e7 !important; color:#152620 !important; border-color:#152620 !important;">NATH 2004, S.L.</div>
+        </div>
+        <div class="demeter-finance-row demeter-finance-row--total">
+          <div class="demeter-finance-label" style="background:#152620 !important; color:#f3f1e7 !important; border-color:#152620 !important;">Total budget</div>
+          <div>
+            <div class="demeter-finance-value demeter-finance-value--left demeter-finance-value--big" style="background:#f3f1e7 !important; color:#152620 !important; border-color:#152620 !important;">€1,353,159</div>
+            <div class="demeter-finance-subgrid">
+              <div class="demeter-finance-label" style="background:#152620 !important; color:#f3f1e7 !important; border-color:#152620 !important;">Budget allocated to the University of Murcia</div>
+              <div class="demeter-finance-value" style="background:#f3f1e7 !important; color:#152620 !important; border-color:#152620 !important;">€392,849.92 (29.03% of the total)</div>
+              <div class="demeter-finance-label" style="background:#152620 !important; color:#f3f1e7 !important; border-color:#152620 !important;">Total subsidy</div>
+              <div class="demeter-finance-value" style="background:#f3f1e7 !important; color:#152620 !important; border-color:#152620 !important;">€409,584.39</div>
+              <div class="demeter-finance-label" style="background:#152620 !important; color:#f3f1e7 !important; border-color:#152620 !important;">Total loan</div>
+              <div class="demeter-finance-value" style="background:#f3f1e7 !important; color:#152620 !important; border-color:#152620 !important;">€149,270.76</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="width:100vw; margin:0 calc(50% - 50vw); background:#ffffff !important; display:flex; align-items:center; justify-content:center; padding:0.7rem 1.5rem 0.5rem; box-sizing:border-box; flex-direction:column;">
+      <img src="../../pages/16.vinci/assets/logosoficialesvinci.svg" alt="Logos oficiales VINCI" style="max-width:765px; width:85%; height:auto; display:block; margin:0 auto;">
+      <p style="margin:0.9rem auto 0; max-width:1000px; text-align:center; color:#152620 !important; font-family:'IBM Plex Sans', sans-serif; font-size:clamp(0.5rem, 0.875vw, 0.775rem); font-weight:500; line-height:1.28; transform:translateY(-25px);">DEMETER 5.0 is part of the State Plan for Scientific, Technical, and Innovation Research, aligning with national and European strategies for digitalization and agricultural sustainability.</p>
+    </section>
+    <article class="content project-content">
+<div class="demeter-copy">
+<section class="demeter-section" id="about" style="background:#152620 !important; background-color:#152620 !important; color:#f3f1e7 !important;">
+  <div class="demeter-section-inner">
+  <div class="demeter-section-head">
+    <img class="demeter-section-head-imago" src="../../pages/11.demeter-5-0/assets/demeter-imago-negativo.svg" alt="" aria-hidden="true">
+    <h3 class="demeter-section-head-title" style="color:#f3f1e7 !important;">About</h3>
+    <img class="demeter-section-head-imago" src="../../pages/11.demeter-5-0/assets/demeter-imago-negativo.svg" alt="" aria-hidden="true">
+  </div>
+  <div class="demeter-about-layout">
+    <div class="demeter-about-text">
+      <p><strong>DEMETER 5.0</strong> drives the digital transformation of hydroponic cotton production in controlled greenhouse environments. It combines <strong>AI, IoT sensing, blockchain traceability, and robotics</strong> to deliver a more precise, efficient, and climate-smart production model.</p>
+      <p>The initiative responds to a strategic European challenge: reducing dependence on external cotton supply while improving sustainability, operational reliability, and transparent traceability across the full agricultural value chain.</p>
+      <p>Through interoperable data infrastructures, decision-support services, and deployable automation workflows, DEMETER 5.0 translates research outcomes into real production capabilities for the agri-food sector.</p>
+    </div>
+    <figure class="demeter-about-figure">
+      <img src="MEMORIA_DEMETER v4 FINAL.jpg" alt="DEMETER 5.0 project overview">
+    </figure>
+  </div>
+  </div>
+</section>
+<section class="demeter-section" id="objectives" style="background:#ae9f85 !important; background-color:#ae9f85 !important; color:#152620 !important;">
+  <div class="demeter-section-inner">
+  <div class="demeter-section-head">
+    <img class="demeter-section-head-imago" src="../../pages/11.demeter-5-0/assets/demeter-imago-positivo.svg" alt="" aria-hidden="true">
+    <h3 class="demeter-section-head-title" style="color:#152620 !important;">Objectives</h3>
+    <img class="demeter-section-head-imago" src="../../pages/11.demeter-5-0/assets/demeter-imago-positivo.svg" alt="" aria-hidden="true">
+  </div>
+  <ul class="demeter-objective-cards">
+    <li class="demeter-objective-card">
+      <div class="demeter-objective-head"><img src="../../pages/11.demeter-5-0/assets/demeter-imago-positivo.svg" alt="" aria-hidden="true">Objective 1</div>
+      <p><strong>Plan and execute a blockchain-based distributed digital platform</strong> in a hydroponic cotton greenhouse scenario, integrating sensing, monitoring, and control capabilities.</p>
+    </li>
+    <li class="demeter-objective-card">
+      <div class="demeter-objective-head"><img src="../../pages/11.demeter-5-0/assets/demeter-imago-positivo.svg" alt="" aria-hidden="true">Objective 2</div>
+      <p><strong>Design a selective cotton harvesting framework</strong> using Robotics and AI to improve collection precision and operational efficiency.</p>
+    </li>
+    <li class="demeter-objective-card">
+      <div class="demeter-objective-head"><img src="../../pages/11.demeter-5-0/assets/demeter-imago-positivo.svg" alt="" aria-hidden="true">Objective 3</div>
+      <p><strong>Improve cotton productivity in Spain and Europe</strong> by minimizing water and fertilizer use through optimized fertigation management.</p>
+    </li>
+  </ul>
+  <h4 class="demeter-objectives-subtitle">Enabling Capabilities</h4>
+  <ul class="demeter-capability-cards">
+    <li class="demeter-capability-card">AI-based decision-support services for irrigation, nutrition, and operational planning.</li>
+    <li class="demeter-capability-card">End-to-end traceability of production events using blockchain-supported records.</li>
+    <li class="demeter-capability-card">Interoperable System of Systems (SoS) integration of sensors, actuators, analytics, and control modules.</li>
+    <li class="demeter-capability-card">Technology transfer and adoption support through active participation of industrial partners.</li>
+  </ul>
+  </div>
+</section>
+<section class="demeter-section" id="how-it-works" style="background:#ffffff !important; background-color:#ffffff !important; color:#152620 !important;">
+  <div class="demeter-section-inner">
+  <div class="demeter-section-head">
+    <img class="demeter-section-head-imago" src="../../pages/11.demeter-5-0/assets/demeter-imago-positivo.svg" alt="" aria-hidden="true">
+    <h3 class="demeter-section-head-title" style="color:#152620 !important;">How It Works</h3>
+    <img class="demeter-section-head-imago" src="../../pages/11.demeter-5-0/assets/demeter-imago-positivo.svg" alt="" aria-hidden="true">
+  </div>
+  <div class="demeter-how-layout">
+    <figure class="demeter-how-figure">
+      <img src="MEMORIA_DEMETER v4 FINAL2.jpg" alt="DEMETER 5.0 technical diagram">
+    </figure>
+    <div>
+      <ul class="demeter-how-cards">
+        <li class="demeter-how-card"><strong>Multilayer SoS Orchestration:</strong> The platform coordinates heterogeneous components and services using system-level KPIs for reliability, robustness, responsiveness, and security.</li>
+        <li class="demeter-how-card"><strong>FIWARE-Based Data Management:</strong> Monitoring and control modules operate over interoperable data flows, including brokered integration of greenhouse, sensing, and external data sources.</li>
+        <li class="demeter-how-card"><strong>CPS and Edge-Cloud Control:</strong> Cyber-Physical System gateways connect sensors and actuators to local and cloud services for continuous monitoring and remote operation.</li>
+        <li class="demeter-how-card"><strong>AI + Decision Support:</strong> Analytics, modeling, and knowledge-base services generate actionable recommendations for irrigation, fertigation, and operational optimization.</li>
+        <li class="demeter-how-card"><strong>Robotics for Selective Harvesting:</strong> Vision-guided robotic systems support adaptive cotton boll detection and collection with improved quality and repeatability.</li>
+        <li class="demeter-how-card"><strong>Blockchain Traceability and Data Governance:</strong> Critical production events are recorded in distributed ledgers to improve transparency, verifiability, and trusted data sharing.</li>
+        <li class="demeter-how-card"><strong>Iterative Validation Loop:</strong> The workflow follows sensing, analysis, decision, actuation, and verification cycles to continuously refine agronomic and technical performance.</li>
+      </ul>
+    </div>
+  </div>
+  </div>
+</section>
+<section class="demeter-section" id="impact" style="background:#455351 !important; background-color:#455351 !important; color:#f3f1e7 !important;">
+  <div class="demeter-section-inner">
+  <div class="demeter-section-head">
+    <img class="demeter-section-head-imago" src="../../pages/11.demeter-5-0/assets/demeter-imago-negativo.svg" alt="" aria-hidden="true">
+    <h3 class="demeter-section-head-title" style="color:#f3f1e7 !important;">Impact</h3>
+    <img class="demeter-section-head-imago" src="../../pages/11.demeter-5-0/assets/demeter-imago-negativo.svg" alt="" aria-hidden="true">
+  </div>
+  <p style="color:#f3f1e7 !important; max-width:1000px; margin:0 auto 1rem; font-weight:600;">DEMETER 5.0 is expected to deliver measurable impact across agronomic performance, digital innovation, industrial uptake, and sustainability governance, in direct alignment with the project memory.</p>
+  <div class="demeter-impact-grid">
+    <article class="demeter-impact-card" style="background:#f3f1e7 !important; background-color:#f3f1e7 !important; border:1px solid #152620 !important;">
+      <h4 style="color:#152620 !important;">Agronomic Impact</h4>
+      <p style="color:#152620 !important;">Precision irrigation and fertigation strategies target lower water and fertilizer use, improved crop control, and better consistency in cotton fiber quality and productivity.</p>
+    </article>
+    <article class="demeter-impact-card" style="background:#f3f1e7 !important; background-color:#f3f1e7 !important; border:1px solid #152620 !important;">
+      <h4 style="color:#152620 !important;">Technological Impact</h4>
+      <p style="color:#152620 !important;">The project validates integrated operation of IoT, AI, CPS, robotics, and blockchain within a real greenhouse production setting, strengthening Agriculture 5.0 readiness.</p>
+    </article>
+    <article class="demeter-impact-card" style="background:#f3f1e7 !important; background-color:#f3f1e7 !important; border:1px solid #152620 !important;">
+      <h4 style="color:#152620 !important;">Economic And Industrial Impact</h4>
+      <p style="color:#152620 !important;">Traceable, data-driven workflows improve value-chain trust and support transfer of deployable technology outcomes to participating industrial partners.</p>
+    </article>
+    <article class="demeter-impact-card" style="background:#f3f1e7 !important; background-color:#f3f1e7 !important; border:1px solid #152620 !important;">
+      <h4 style="color:#152620 !important;">Sustainability And Governance</h4>
+      <p style="color:#152620 !important;">Blockchain-backed records enhance transparency, verifiability, and trusted data exchange, supporting green-transition objectives and responsible production practices.</p>
+    </article>
+  </div>
+  </div>
+</section>
+<section class="demeter-section" id="consortium" style="background:#f3f1e7 !important; background-color:#f3f1e7 !important; color:#152620 !important;">
+  <div class="demeter-section-inner">
+  <div class="demeter-section-head">
+    <img class="demeter-section-head-imago" src="../../pages/11.demeter-5-0/assets/demeter-imago-positivo.svg" alt="" aria-hidden="true">
+    <h3 class="demeter-section-head-title">Consortium</h3>
+    <img class="demeter-section-head-imago" src="../../pages/11.demeter-5-0/assets/demeter-imago-positivo.svg" alt="" aria-hidden="true">
+  </div>
+  <p>The consortium combines complementary scientific, technological, and industrial capabilities to ensure both research quality and application readiness.</p>
+  <div class="demeter-consortium-cards">
+    <a class="demeter-consortium-card" href="https://www.um.es/" target="_blank" rel="noopener noreferrer">
+      <div class="demeter-consortium-logo-cell">
+        <img src="../../pages/11.demeter-5-0/assets/umu.png" alt="University of Murcia logo">
+      </div>
+      <div class="demeter-consortium-text-cell">
+        <div class="demeter-consortium-card-title">University of Murcia (UMU)</div>
+        <div class="demeter-consortium-card-role">project coordination, architecture design, system-level KPIs, and integration of AI/DSS and digital platform services.</div>
+      </div>
+    </a>
+    <a class="demeter-consortium-card" href="https://www.csic.es/" target="_blank" rel="noopener noreferrer">
+      <div class="demeter-consortium-logo-cell">
+        <img src="../../pages/11.demeter-5-0/assets/csic.svg.png" alt="CSIC logo">
+      </div>
+      <div class="demeter-consortium-text-cell">
+        <div class="demeter-consortium-card-title">Spanish National Research Council (CSIC)</div>
+        <div class="demeter-consortium-card-role">agronomic experimentation, scientific validation, and crop-performance assessment.</div>
+      </div>
+    </a>
+    <a class="demeter-consortium-card" href="http://www.ritec.es/" target="_blank" rel="noopener noreferrer">
+      <div class="demeter-consortium-logo-cell">
+        <img src="../../pages/11.demeter-5-0/assets/ritec.png" alt="RITEC logo">
+      </div>
+      <div class="demeter-consortium-text-cell">
+        <div class="demeter-consortium-card-title">Riegos y Tecnología, S.L. (RITEC)</div>
+        <div class="demeter-consortium-card-role">irrigation technologies, operational greenhouse deployment, and engineering transfer to production environments.</div>
+      </div>
+    </a>
+    <a class="demeter-consortium-card demeter-consortium-card--nath" href="https://www.nath.es/" target="_blank" rel="noopener noreferrer">
+      <div class="demeter-consortium-logo-cell" style="background:#ef8b34 !important; background-color:#ef8b34 !important;">
+        <img src="../../pages/11.demeter-5-0/assets/nath.webp" alt="NATH 2004 logo">
+      </div>
+      <div class="demeter-consortium-text-cell">
+        <div class="demeter-consortium-card-title">NATH 2004, S.L.</div>
+        <div class="demeter-consortium-card-role">industrial uptake, value-chain connectivity, and traceability-oriented deployment support.</div>
+      </div>
+    </a>
+  </div>
+  </div>
+</section>
+<section class="demeter-section" id="publications" style="background:#152620 !important; background-color:#152620 !important; color:#f3f1e7 !important;">
+  <div class="demeter-section-inner">
+  <div class="demeter-section-head">
+    <img class="demeter-section-head-imago" src="../../pages/11.demeter-5-0/assets/demeter-imago-negativo.svg" alt="" aria-hidden="true">
+    <h3 class="demeter-section-head-title" style="color:#f3f1e7 !important;">Publications & Contributions</h3>
+    <img class="demeter-section-head-imago" src="../../pages/11.demeter-5-0/assets/demeter-imago-negativo.svg" alt="" aria-hidden="true">
+  </div>
+  <p style="color:#f3f1e7 !important;">This section gathers DEMETER 5.0 publications and technical contributions, including validated results, deployment insights, and traceability evidence.</p>
+  <div class="demeter-publication-card">
+    <div class="demeter-publication-grid">
+      <div class="demeter-pub-head" style="background:#ae9f85 !important; color:#152620 !important;">Title</div>
+      <div class="demeter-pub-head" style="background:#ae9f85 !important; color:#152620 !important;">Authors</div>
+      <div class="demeter-pub-head" style="background:#ae9f85 !important; color:#152620 !important;">Journal/Conference</div>
+      <div class="demeter-pub-head" style="background:#ae9f85 !important; color:#152620 !important;">DOI</div>
+      <div class="demeter-pub-cell demeter-pub-title" style="background:#f3f1e7 !important; color:#152620 !important;">Transfer and Deep Learning Models for Daily Reference Evapotranspiration Estimation and Forecasting in Spain from Local to National Scale</div>
+      <div class="demeter-pub-cell" style="background:#f3f1e7 !important; color:#152620 !important;">Yu Ye, Aurora González-Vidal, Miguel A. Zamora-Izquierdo, Antonio F. Skarmeta</div>
+      <div class="demeter-pub-cell" style="background:#f3f1e7 !important; color:#152620 !important;">Smart Agricultural Technology (Elsevier)</div>
+      <div class="demeter-pub-cell demeter-pub-doi" style="background:#f3f1e7 !important; color:#152620 !important;"><a href="https://www.sciencedirect.com/science/article/pii/S2772375525001194?via%3Dihub" target="_blank" rel="noopener noreferrer" style="color:#152620 !important;">10.1016/j.atech.2025.100886</a></div>
+    </div>
+  </div>
+  </div>
+</section>
+</div>
+</article>
+    <footer class="main-footer" style="margin-top:0 !important;">
+      <div class="main-footer-inner">
+        <div>
+          <h2 class="footer-title">Growing sustainable<br>cotton through AI,<br>robotics and traceable<br>intelligence</h2>
+          <ul class="footer-items">
+            <li><a href="#about">About</a></li>
+            <li><a href="#objectives">Objectives</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#impact">Impact</a></li>
+            <li><a href="#consortium">Consortium</a></li>
+            <li><a href="#publications">Publications</a></li>
+          </ul>
+        </div>
+        <div class="footer-brand">
+          <a class="footer-umu-link" href="https://www.um.es/web/informatica/" target="_blank" rel="noopener noreferrer">
+            <img class="footer-umu-logo" src="../../pages/01.ants-home/assets/Inform tica-RGB-Convivencia_A-BLTR.png" alt="Facultad de Informática - Universidad de Murcia">
+          </a>
+          <div class="footer-brand-lower">
+            <a class="footer-ants-link" href="../../index.html" aria-label="Home ants" target="_blank" rel="noopener noreferrer">
+              <img class="footer-ants-logo" src="../../pages/01.ants-home/assets/ants_footer.png" alt="ANTS">
+            </a>
+            <div class="footer-social">
+              <a href="https://www.linkedin.com/company/ants-research-group/" target="_blank" rel="noopener noreferrer">Follow ants on <span class="footer-social-strong">LinkedIn ↗</span></a>
+              <a href="https://x.com/ants_fium" target="_blank" rel="noopener noreferrer">Follow ants on <span class="footer-social-strong">X ↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-top">
+          <a class="footer-top-link" href="#top" aria-label="Back to top">↑</a>
+        </div>
+      </div>
+    </footer>
+    <section style="width:100vw; height:115px; margin:0 calc(50% - 50vw); background:#ffffff !important; display:flex; align-items:center; justify-content:center; padding:0 1.5rem; box-sizing:border-box;">
+      <img src="../../pages/16.vinci/assets/logosoficialesvinci.svg" alt="Logos oficiales VINCI" style="max-width:765px; width:85%; height:auto; display:block; margin:0 auto;">
+    </section>
+  </div>
+
+  <script src="../../assets/js/mobile-project-menu.js?v=20260408-6"></script>
+
+  <script>
+    const ROUTE_MAP = {
+  "/en/ants-home": "en/ants-home/index.html",
+  "/en/ants-home/": "en/ants-home/index.html",
+  "/en/demeter-5-0": "en/demeter-5-0/index.html",
+  "/en/demeter-5-0/": "en/demeter-5-0/index.html",
+  "/en/gaialab": "en/gaialab/index.html",
+  "/en/gaialab/": "en/gaialab/index.html",
+  "/en/news": "en/news/index.html",
+  "/en/news/": "en/news/index.html",
+  "/en/news/nemesis": "en/news/nemesis/index.html",
+  "/en/news/nemesis/": "en/news/nemesis/index.html",
+  "/en/news/osiris-en-mobisec": "en/news/osiris-en-mobisec/index.html",
+  "/en/news/osiris-en-mobisec/": "en/news/osiris-en-mobisec/index.html",
+  "/en/news/osiris-nota-de-prensa": "en/news/osiris-nota-de-prensa/index.html",
+  "/en/news/osiris-nota-de-prensa/": "en/news/osiris-nota-de-prensa/index.html",
+  "/en/perseo": "en/es/perseo/index.html",
+  "/en/perseo/": "en/es/perseo/index.html",
+  "/en/es/perseo": "en/es/perseo/index.html",
+  "/en/es/perseo/": "en/es/perseo/index.html",
+  "/en/reminder": "en/reminder/index.html",
+  "/en/reminder/": "en/reminder/index.html",
+  "/en/reminder/ethicalissues": "en/reminder/ethicalissues/index.html",
+  "/en/reminder/ethicalissues/": "en/reminder/ethicalissues/index.html",
+  "/en/reminder/interdisciplinaryresearch": "en/reminder/interdisciplinaryresearch/index.html",
+  "/en/reminder/interdisciplinaryresearch/": "en/reminder/interdisciplinaryresearch/index.html",
+  "/en/reminder/partners": "en/reminder/partners/index.html",
+  "/en/reminder/partners/": "en/reminder/partners/index.html",
+  "/en/reminder/view-project-deliverables": "en/reminder/view-project-deliverables/index.html",
+  "/en/reminder/view-project-deliverables/": "en/reminder/view-project-deliverables/index.html",
+  "/en/research-lines": "en/research-lines/index.html",
+  "/en/research-lines/": "en/research-lines/index.html",
+  "/en/research-projects": "en/research-projects/index.html",
+  "/en/research-projects/": "en/research-projects/index.html",
+  "/en/vinci": "en/vinci/index.html",
+  "/en/vinci/": "en/vinci/index.html",
+  "/es/eden": "es/eden/index.html",
+  "/es/eden/": "es/eden/index.html",
+  "/es/geminis": "es/geminis/index.html",
+  "/es/geminis/": "es/geminis/index.html",
+  "/es/news": "es/news/feria-cientifica-santomera/index.html",
+  "/es/news/": "es/news/feria-cientifica-santomera/index.html",
+  "/es/news/feria-cientifica-santomera": "es/news/feria-cientifica-santomera/index.html",
+  "/es/news/feria-cientifica-santomera/": "es/news/feria-cientifica-santomera/index.html",
+  "/es/news/osiris-big-data-master": "es/news/osiris-big-data-master/index.html",
+  "/es/news/osiris-big-data-master/": "es/news/osiris-big-data-master/index.html",
+  "/es/news/osiris-unibit": "es/news/osiris-unibit/index.html",
+  "/es/news/osiris-unibit/": "es/news/osiris-unibit/index.html",
+  "/es/orciber-5g": "es/orciber-5g/index.html",
+  "/es/orciber-5g/": "es/orciber-5g/index.html",
+  "/es/osiris": "es/osiris/index.html",
+  "/es/osiris/": "es/osiris/index.html",
+  "/es/osiris/del-campo-a-la-mesa": "es/osiris/del-campo-a-la-mesa/index.html",
+  "/es/osiris/del-campo-a-la-mesa/": "es/osiris/del-campo-a-la-mesa/index.html",
+  "/es/osiris/impacto-y-beneficios": "es/osiris/impacto-y-beneficios/index.html",
+  "/es/osiris/impacto-y-beneficios/": "es/osiris/impacto-y-beneficios/index.html",
+  "/es/osiris/tecnologias-y-metodologia": "es/osiris/tecnologias-y-metodologia/index.html",
+  "/es/osiris/tecnologias-y-metodologia/": "es/osiris/tecnologias-y-metodologia/index.html",
+  "/es/perseo": "es/perseo/index.html",
+  "/es/perseo/": "es/perseo/index.html",
+  "/es/perseo/contexto": "es/perseo/contexto/index.html",
+  "/es/perseo/contexto/": "es/perseo/contexto/index.html",
+  "/es/perseo": "es/es/perseo/index.html",
+  "/es/perseo/": "es/es/perseo/index.html",
+  "en/ants-home": "en/ants-home/index.html",
+  "en/ants-home/": "en/ants-home/index.html",
+  "en/demeter-5-0": "en/demeter-5-0/index.html",
+  "en/demeter-5-0/": "en/demeter-5-0/index.html",
+  "en/gaialab": "en/gaialab/index.html",
+  "en/gaialab/": "en/gaialab/index.html",
+  "en/news": "en/news/index.html",
+  "en/news/": "en/news/index.html",
+  "en/news/nemesis": "en/news/nemesis/index.html",
+  "en/news/nemesis/": "en/news/nemesis/index.html",
+  "en/news/osiris-en-mobisec": "en/news/osiris-en-mobisec/index.html",
+  "en/news/osiris-en-mobisec/": "en/news/osiris-en-mobisec/index.html",
+  "en/news/osiris-nota-de-prensa": "en/news/osiris-nota-de-prensa/index.html",
+  "en/news/osiris-nota-de-prensa/": "en/news/osiris-nota-de-prensa/index.html",
+  "en/perseo": "en/es/perseo/index.html",
+  "en/perseo/": "en/es/perseo/index.html",
+  "en/es/perseo": "en/es/perseo/index.html",
+  "en/es/perseo/": "en/es/perseo/index.html",
+  "en/reminder": "en/reminder/index.html",
+  "en/reminder/": "en/reminder/index.html",
+  "en/reminder/ethicalissues": "en/reminder/ethicalissues/index.html",
+  "en/reminder/ethicalissues/": "en/reminder/ethicalissues/index.html",
+  "en/reminder/interdisciplinaryresearch": "en/reminder/interdisciplinaryresearch/index.html",
+  "en/reminder/interdisciplinaryresearch/": "en/reminder/interdisciplinaryresearch/index.html",
+  "en/reminder/partners": "en/reminder/partners/index.html",
+  "en/reminder/partners/": "en/reminder/partners/index.html",
+  "en/reminder/view-project-deliverables": "en/reminder/view-project-deliverables/index.html",
+  "en/reminder/view-project-deliverables/": "en/reminder/view-project-deliverables/index.html",
+  "en/research-lines": "en/research-lines/index.html",
+  "en/research-lines/": "en/research-lines/index.html",
+  "en/research-projects": "en/research-projects/index.html",
+  "en/research-projects/": "en/research-projects/index.html",
+  "en/vinci": "en/vinci/index.html",
+  "en/vinci/": "en/vinci/index.html",
+  "es/eden": "es/eden/index.html",
+  "es/eden/": "es/eden/index.html",
+  "es/geminis": "es/geminis/index.html",
+  "es/geminis/": "es/geminis/index.html",
+  "es/news": "es/news/feria-cientifica-santomera/index.html",
+  "es/news/": "es/news/feria-cientifica-santomera/index.html",
+  "es/news/feria-cientifica-santomera": "es/news/feria-cientifica-santomera/index.html",
+  "es/news/feria-cientifica-santomera/": "es/news/feria-cientifica-santomera/index.html",
+  "es/news/osiris-big-data-master": "es/news/osiris-big-data-master/index.html",
+  "es/news/osiris-big-data-master/": "es/news/osiris-big-data-master/index.html",
+  "es/news/osiris-unibit": "es/news/osiris-unibit/index.html",
+  "es/news/osiris-unibit/": "es/news/osiris-unibit/index.html",
+  "es/orciber-5g": "es/orciber-5g/index.html",
+  "es/orciber-5g/": "es/orciber-5g/index.html",
+  "es/osiris": "es/osiris/index.html",
+  "es/osiris/": "es/osiris/index.html",
+  "es/osiris/del-campo-a-la-mesa": "es/osiris/del-campo-a-la-mesa/index.html",
+  "es/osiris/del-campo-a-la-mesa/": "es/osiris/del-campo-a-la-mesa/index.html",
+  "es/osiris/impacto-y-beneficios": "es/osiris/impacto-y-beneficios/index.html",
+  "es/osiris/impacto-y-beneficios/": "es/osiris/impacto-y-beneficios/index.html",
+  "es/osiris/tecnologias-y-metodologia": "es/osiris/tecnologias-y-metodologia/index.html",
+  "es/osiris/tecnologias-y-metodologia/": "es/osiris/tecnologias-y-metodologia/index.html",
+  "es/perseo": "es/perseo/index.html",
+  "es/perseo/": "es/perseo/index.html",
+  "es/perseo/contexto": "es/perseo/contexto/index.html",
+  "es/perseo/contexto/": "es/perseo/contexto/index.html",
+  "es/perseo": "es/es/perseo/index.html",
+  "es/perseo/": "es/es/perseo/index.html"
+};
+    const CURRENT_LANG = 'en';
+    const CURRENT_ROUTE = '/en/demeter-5-0/';
+    const ROOT_PREFIX = '../../';
+    const ASSET_BASE = '../../pages/11.demeter-5-0/assets';
+
+    const hasProtocol = (v) => /^(https?:|mailto:|tel:|javascript:)/i.test(v);
+    const normalizeAntsRoute = (value) => {
+      try {
+        const u = new URL(value);
+        const host = (u.hostname || '').toLowerCase();
+        if (u.protocol !== 'http:' && u.protocol !== 'https:') return null;
+        if (host !== 'ants.inf.um.es' && host !== 'www.ants.inf.um.es') return null;
+        return u.pathname || '/';
+      } catch {
+        return null;
+      }
+    };
+    const swapLang = (route) => {
+      const parts = route.replace(/^\/+/, '').split('/').filter(Boolean);
+      if (parts.length < 2) return null;
+      parts[0] = parts[0] === 'en' ? 'es' : (parts[0] === 'es' ? 'en' : null);
+      if (!parts[0]) return null;
+      return '/' + parts.join('/');
+    };
+    const isMedia = (value) => /\.(png|jpe?g|gif|webp|svg|pdf|mp4|webm|mp3|ogg|txt|csv|css|js|ico)$/i.test(value);
+    const mediaBaseName = (value) => {
+      const clean = value.split('?')[0].split('#')[0];
+      const parts = clean.split('/');
+      return parts[parts.length - 1] || clean;
+    };
+    const localizeMedia = (value) => {
+      const rawBase = mediaBaseName(value);
+      const base = (() => {
+        try {
+          return decodeURIComponent(rawBase);
+        } catch {
+          return rawBase;
+        }
+      })();
+      return (ASSET_BASE + '/' + base).replace(/\\/g, '/');
+    };
+
+    const normalizeRoute = (value) => {
+      const route = value.replace(/^\/+/, '').replace(/\/+$/, '');
+      if (!route) return CURRENT_LANG + '/';
+      const parts = route.split('/').filter(Boolean);
+      if (parts[0] === 'en' || parts[0] === 'es') return parts.join('/');
+      return CURRENT_LANG + '/' + parts.join('/');
+    };
+
+    const resolveRoute = (rawHref) => {
+      if (!rawHref || rawHref.startsWith('#')) return null;
+      const [href, hash] = rawHref.split('#', 2);
+      if (!href) return null;
+      const normalizedHref = normalizeAntsRoute(href) || href;
+      if (!normalizedHref.startsWith('/')) {
+        if (href.startsWith('http') || hasProtocol(href)) return null;
+        return null;
+      }
+
+      const candidates = [];
+      const route = normalizeRoute(normalizedHref);
+      candidates.push(route);
+      candidates.push(route + '/');
+      candidates.push(route.replace(/\/$/, ''));
+
+      for (const c of candidates) {
+        if (ROUTE_MAP[c]) return { path: ROUTE_MAP[c], hash: hash ? '#' + hash : '' };
+      }
+      const altRoute = swapLang(route);
+      if (altRoute) {
+        const altCandidates = [altRoute, altRoute + '/', altRoute.replace(/\/$/, '')];
+        for (const c of altCandidates) {
+          if (ROUTE_MAP[c]) return { path: ROUTE_MAP[c], hash: hash ? '#' + hash : '' };
+        }
+      }
+      return null;
+    };
+
+    const resolveLocal = (base, href) => {
+      if (!href || href.startsWith('#')) return href;
+      const [clean, hash] = href.split('#', 2);
+      if (!clean) return href;
+
+      const resolved = resolveRoute(clean);
+      if (resolved) {
+        return (ROOT_PREFIX + resolved.path).replace(/\\/g, '/') + resolved.hash;
+      }
+
+      const antsHref = normalizeAntsRoute(clean);
+      if (antsHref && isMedia(antsHref)) {
+        return localizeMedia(antsHref) + (hash ? '#' + hash : '');
+      }
+
+      if (hasProtocol(clean) || /^(https?:)?\//.test(clean)) return href;
+      if (clean.startsWith('./') || clean.startsWith('../')) return href;
+      if (isMedia(clean)) {
+        return localizeMedia(clean) + (hash ? '#' + hash : '');
+      }
+      return clean;
+    };
+
+    document.querySelectorAll('a[href]').forEach((a) => {
+      const href = a.getAttribute('href');
+      const fixed = resolveLocal('', href);
+      if (fixed && fixed !== href) a.setAttribute('href', fixed);
+    });
+
+    const ASSET_MARK = 'pages/';
+    const ASSET_SEGMENT = ASSET_BASE.includes(ASSET_MARK)
+      ? (() => {
+          const i = ASSET_BASE.indexOf(ASSET_MARK);
+          return {
+            root: ASSET_BASE.slice(0, i) + ASSET_MARK,
+            segment: ASSET_BASE.slice(i + ASSET_MARK.length),
+          };
+        })()
+      : null;
+
+    const collectAssetCandidates = () => {
+      const out = [];
+      if (!ASSET_SEGMENT) return out;
+      let current = ASSET_SEGMENT.segment;
+      out.push(current);
+      while (current.includes('/')) {
+        current = current.slice(0, current.lastIndexOf('/'));
+        if (current) out.push(current);
+      }
+      if (!out.includes('01.ants-home/assets')) out.push('01.ants-home/assets');
+      return [...new Set(out)];
+    };
+
+    const assetCandidatePrefixes = collectAssetCandidates();
+
+    const setImageSrcWithFallback = (img, rawSrc) => {
+      if (!ASSET_SEGMENT || !rawSrc) return;
+      const fileName = (() => {
+        const rawBase = mediaBaseName(rawSrc);
+        try {
+          return decodeURIComponent(rawBase);
+        } catch {
+          return rawBase;
+        }
+      })();
+      const candidates = assetCandidatePrefixes.map((segment) =>
+        (ASSET_SEGMENT.root + segment + '/' + fileName).replace(/\\/g, '/')
+      );
+
+      let index = 0;
+      const onError = () => {
+        if (index >= candidates.length) return;
+        img.src = candidates[index];
+        index += 1;
+      };
+
+      img.addEventListener('error', onError);
+      onError();
+    };
+
+    document.querySelectorAll('img[src]').forEach((img) => {
+      const src = img.getAttribute('src');
+      if (!src || hasProtocol(src) || src.startsWith('data:')) return;
+      if (/^\//.test(src)) {
+        if (src.startsWith('/pages/')) return;
+        if (isMedia(src)) {
+          setImageSrcWithFallback(img, src);
+          return;
+        }
+        img.setAttribute('src', (ROOT_PREFIX + src.replace(/^\//, '')).replace(/\\/g, '/'));
+        return;
+      }
+      if (!src.includes('../') && !src.includes('./') && isMedia(src)) {
+        setImageSrcWithFallback(img, src);
+      }
+    });
+
+    document.querySelectorAll('[style]').forEach((el) => {
+      const style = el.getAttribute('style');
+      if (!style || !style.includes('url(')) return;
+
+      const nextStyle = style.replace(/url\(\s*([^)]*?)\s*\)/g, (m, raw) => {
+        const trimmed = raw.trim();
+        const quote = trimmed[0] === '"' || trimmed[0] === "'" ? trimmed[0] : '';
+        const rawPath = quote ? trimmed.slice(1, -1) : trimmed;
+        if (!rawPath || rawPath.startsWith('data:') || hasProtocol(rawPath)) return m;
+        if (!isMedia(rawPath)) return m;
+        return 'url(' + quote + localizeMedia(rawPath) + quote + ')';
+      });
+
+      if (nextStyle !== style) {
+        el.setAttribute('style', nextStyle);
+      }
+    });
+  </script>
+</body>
+</html>
