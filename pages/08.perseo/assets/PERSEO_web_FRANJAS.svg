@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="160" viewBox="0 0 2000 160" role="img" aria-label="Franja PERSEO de cuatro líneas inclinadas">
-  <rect width="2000" height="160" fill="none"/>
-  <g transform="skewX(-16) translate(60,0)">
-    <polygon points="0,34 1840,24 1840,42 0,52" fill="#ff8000"/>
-    <polygon points="0,52 1840,42 1840,60 0,70" fill="#f5f1e6"/>
-    <polygon points="0,70 1840,60 1840,78 0,88" fill="#377a5b"/>
-    <polygon points="0,88 1840,78 1840,96 0,106" fill="#cb5d39"/>
-  </g>
-</svg>
